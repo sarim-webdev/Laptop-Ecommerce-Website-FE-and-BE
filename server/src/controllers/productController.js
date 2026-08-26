@@ -2,7 +2,10 @@ import Product from "../models/Product.js";
 import Category from "../models/Category.js";
 import mongoose from "mongoose";
 import cloudinary from "../config/cloudinary.js";
-
+import {
+  uploadMultipleImages,
+  deleteImage,
+} from "../services/cloudinaryService.js";
 import { successResponse, errorResponse } from "../utils/apiResponse.js";
 
 /* =========================================
@@ -311,34 +314,13 @@ export const createProduct = async (req, res, next) => {
    UPLOAD IMAGES TO CLOUDINARY
 ========================================= */
 
-    const images = [];
-
-    if (Array.isArray(req.files) && req.files.length > 0) {
-      for (const file of req.files) {
-        const result = await new Promise((resolve, reject) => {
-          const uploadStream = cloudinary.uploader.upload_stream(
-            {
-              folder: "nexora/products",
-              resource_type: "image",
-            },
-            (error, result) => {
-              if (error) {
-                reject(error);
-              } else {
-                resolve(result);
-              }
-            },
-          );
-
-          uploadStream.end(file.buffer);
-        });
-
-        images.push({
-          url: result.secure_url,
-          publicId: result.public_id,
-        });
-      }
-    }
+    const images =
+  Array.isArray(req.files) && req.files.length > 0
+    ? await uploadMultipleImages(
+        req.files.map((file) => file.buffer),
+        "nexora/products"
+      )
+    : [];
 
     /* =========================================
        CREATE PRODUCT
@@ -614,104 +596,156 @@ export const updateProduct = async (req, res, next) => {
     }
 
     /* =========================================
-       HANDLE EXISTING IMAGES
-    ========================================= */
+   HANDLE EXISTING IMAGES
+========================================= */
 
-    let existingImages = [];
+let existingImageIds = [];
 
-    if (req.body.existingImages !== undefined) {
-      try {
-        existingImages =
-          typeof req.body.existingImages === "string"
-            ? JSON.parse(req.body.existingImages)
-            : req.body.existingImages;
+if (req.body.existingImages !== undefined) {
+  try {
+    const parsed =
+      typeof req.body.existingImages === "string"
+        ? JSON.parse(req.body.existingImages)
+        : req.body.existingImages;
 
-        if (!Array.isArray(existingImages)) {
-          existingImages = [];
-        }
-      } catch (error) {
-        return errorResponse(res, 400, "Invalid existing images data.");
-      }
-    } else {
-      /*
-        If frontend does not send existingImages,
-        keep all current images.
-      */
-
-      existingImages = product.images.map((image) => image.publicId);
-    }
-
-    /* =========================================
-       CHECK IMAGE LIMIT
-    ========================================= */
-
-    const newFilesCount = Array.isArray(req.files) ? req.files.length : 0;
-
-    if (existingImages.length + newFilesCount > 5) {
+    if (!Array.isArray(parsed)) {
       return errorResponse(
         res,
         400,
-        "A product can have a maximum of 5 images.",
+        "Invalid existing images data."
       );
     }
 
-    /* =========================================
-       FIND REMOVED OLD IMAGES
-    ========================================= */
+    existingImageIds = parsed
+      .filter(
+        (publicId) =>
+          typeof publicId === "string" &&
+          publicId.trim()
+      )
+      .map((publicId) => publicId.trim());
 
-    const removedImages = product.images.filter(
-      (oldImage) => !existingImages.includes(oldImage.publicId),
+  } catch (error) {
+    return errorResponse(
+      res,
+      400,
+      "Invalid existing images data."
     );
+  }
+} else {
+  existingImageIds = product.images
+    .filter(
+      (image) =>
+        image &&
+        image.url &&
+        image.publicId
+    )
+    .map((image) => image.publicId);
+}
 
-    /* =========================================
-       DELETE REMOVED IMAGES FROM CLOUDINARY
-    ========================================= */
 
-    for (const image of removedImages) {
-      if (!image.publicId) {
-        continue;
-      }
+/* =========================================
+   VALID CURRENT IMAGES
+========================================= */
 
-      try {
-        await cloudinary.uploader.destroy(image.publicId);
-      } catch (cloudinaryError) {
-        console.error(
-          `Failed to delete removed Cloudinary image ${image.publicId}:`,
-          cloudinaryError.message,
-        );
-      }
-    }
+const validCurrentImages = product.images.filter(
+  (image) =>
+    image &&
+    typeof image.url === "string" &&
+    image.url.trim() &&
+    typeof image.publicId === "string" &&
+    image.publicId.trim()
+);
 
-    /* =========================================
-       KEEP EXISTING IMAGES
-    ========================================= */
 
-    const keptExistingImages = product.images.filter((image) =>
-      existingImages.includes(image.publicId),
+/* =========================================
+   NEW IMAGES COUNT
+========================================= */
+
+const newFilesCount = Array.isArray(req.files)
+  ? req.files.length
+  : 0;
+
+if (existingImageIds.length + newFilesCount > 5) {
+  return errorResponse(
+    res,
+    400,
+    "A product can have a maximum of 5 images."
+  );
+}
+
+
+/* =========================================
+   FIND REMOVED OLD IMAGES
+========================================= */
+
+const removedImages =
+  validCurrentImages.filter(
+    (oldImage) =>
+      !existingImageIds.includes(
+        oldImage.publicId
+      )
+  );
+
+
+/* =========================================
+   DELETE REMOVED IMAGES
+========================================= */
+
+for (const image of removedImages) {
+  try {
+    await deleteImage(image.publicId);
+  } catch (cloudinaryError) {
+    console.error(
+      `Failed to delete image ${image.publicId}:`,
+      cloudinaryError.message
     );
+  }
+}
 
-    /* =========================================
-       UPLOAD NEW IMAGES
-    ========================================= */
 
-    const newImages = Array.isArray(req.files)
-      ? req.files.map((file) => {
-          const image = {
-            url: file.path,
-            publicId: file.filename,
-          };
+/* =========================================
+   KEEP EXISTING IMAGES
+========================================= */
 
-          uploadedNewImages.push(image);
+const keptExistingImages =
+  validCurrentImages.filter((image) =>
+    existingImageIds.includes(
+      image.publicId
+    )
+  );
 
-          return image;
-        })
-      : [];
 
-    /* =========================================
-       FINAL IMAGES
-    ========================================= */
+/* =========================================
+   UPLOAD NEW IMAGES
+========================================= */
 
-    product.images = [...keptExistingImages, ...newImages];
+const newImages =
+  Array.isArray(req.files) &&
+  req.files.length > 0
+    ? await uploadMultipleImages(
+        req.files.map(
+          (file) => file.buffer
+        ),
+        "nexora/products"
+      )
+    : [];
+
+
+/* =========================================
+   TRACK NEW IMAGES
+========================================= */
+
+uploadedNewImages.push(...newImages);
+
+
+/* =========================================
+   FINAL IMAGES
+========================================= */
+
+product.images = [
+  ...keptExistingImages,
+  ...newImages,
+];
 
     /* =========================================
        SAVE PRODUCT
