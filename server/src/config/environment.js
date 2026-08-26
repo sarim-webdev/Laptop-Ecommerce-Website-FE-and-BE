@@ -6,7 +6,8 @@ const requiredEnvVariables = [
   "PORT",
   "MONGODB_URI",
   "JWT_SECRET_KEY",
-  "CLIENT_URL",
+  "CLIENT_URL_LOCAL",
+  "CLIENT_URL_PRODUCTION",
   "CLOUDINARY_CLOUD_NAME",
   "CLOUDINARY_API_KEY",
   "CLOUDINARY_API_SECRET",
@@ -35,7 +36,10 @@ const env = {
 
   jwtSecretKey: process.env.JWT_SECRET_KEY,
 
-  clientUrl: process.env.CLIENT_URL,
+   clientUrls: {
+    local: process.env.CLIENT_URL_LOCAL,
+    production: process.env.CLIENT_URL_PRODUCTION,
+  },
 
   cloudinary: {
     cloudName: process.env.CLOUDINARY_CLOUD_NAME,
