@@ -14,7 +14,6 @@ import env from "../config/environment.js";
 
 import {
   uploadImage,
-  deleteImage,
 } from "../services/cloudinaryService.js";
 
 /* =========================================
@@ -23,11 +22,9 @@ import {
 
 const cookieOptions = {
   httpOnly: true,
-
   secure: env.nodeEnv === "production",
-
-  sameSite: env.nodeEnv === "production" ? "none" : "lax",
-
+  sameSite: "lax",
+  path: "/",
   maxAge: 7 * 24 * 60 * 60 * 1000,
 };
 
