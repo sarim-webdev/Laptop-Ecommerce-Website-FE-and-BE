@@ -89,10 +89,7 @@ export const getProducts = async (req, res, next) => {
     const products = await Product.find({
       isActive: true,
     })
-      .populate(
-        "category",
-        "name slug description"
-      )
+      .populate("category", "name slug description")
       .sort({
         featured: -1,
         createdAt: -1,
@@ -106,7 +103,7 @@ export const getProducts = async (req, res, next) => {
       res,
       200,
       "Products retrieved successfully.",
-      products
+      products,
     );
   } catch (error) {
     next(error);
@@ -128,11 +125,7 @@ export const getProductById = async (req, res, next) => {
     ========================================= */
 
     if (!mongoose.isValidObjectId(id)) {
-      return errorResponse(
-        res,
-        400,
-        "Invalid product ID."
-      );
+      return errorResponse(res, 400, "Invalid product ID.");
     }
 
     /* =========================================
@@ -142,21 +135,14 @@ export const getProductById = async (req, res, next) => {
     const product = await Product.findOne({
       _id: id,
       isActive: true,
-    }).populate(
-      "category",
-      "name slug"
-    );
+    }).populate("category", "name slug");
 
     /* =========================================
        PRODUCT NOT FOUND
     ========================================= */
 
     if (!product) {
-      return errorResponse(
-        res,
-        404,
-        "Product not found."
-      );
+      return errorResponse(res, 404, "Product not found.");
     }
 
     /* =========================================
@@ -167,7 +153,7 @@ export const getProductById = async (req, res, next) => {
       res,
       200,
       "Product retrieved successfully.",
-      product
+      product,
     );
   } catch (error) {
     next(error);
@@ -198,19 +184,11 @@ export const createProduct = async (req, res, next) => {
     ========================================= */
 
     if (typeof name !== "string" || !name.trim()) {
-      return errorResponse(
-        res,
-        400,
-        "Product name is required.",
-      );
+      return errorResponse(res, 400, "Product name is required.");
     }
 
     if (typeof description !== "string" || !description.trim()) {
-      return errorResponse(
-        res,
-        400,
-        "Product description is required.",
-      );
+      return errorResponse(res, 400, "Product description is required.");
     }
 
     if (name.trim().length < 3) {
@@ -249,10 +227,7 @@ export const createProduct = async (req, res, next) => {
 
     const numericStock = Number(stock);
 
-    if (
-      !Number.isInteger(numericStock) ||
-      numericStock < 0
-    ) {
+    if (!Number.isInteger(numericStock) || numericStock < 0) {
       return errorResponse(
         res,
         400,
@@ -266,10 +241,7 @@ export const createProduct = async (req, res, next) => {
 
     let numericCompareAtPrice = null;
 
-    if (
-      compareAtPrice !== undefined &&
-      compareAtPrice !== ""
-    ) {
+    if (compareAtPrice !== undefined && compareAtPrice !== "") {
       numericCompareAtPrice = Number(compareAtPrice);
 
       if (
@@ -302,39 +274,24 @@ export const createProduct = async (req, res, next) => {
     ========================================= */
 
     if (!category) {
-      return errorResponse(
-        res,
-        400,
-        "Product category is required.",
-      );
+      return errorResponse(res, 400, "Product category is required.");
     }
 
     if (!mongoose.isValidObjectId(category)) {
-      return errorResponse(
-        res,
-        400,
-        "Invalid category ID.",
-      );
+      return errorResponse(res, 400, "Invalid category ID.");
     }
 
     const existingCategory = await Category.findById(category);
 
     if (!existingCategory) {
-      return errorResponse(
-        res,
-        404,
-        "Category not found.",
-      );
+      return errorResponse(res, 404, "Category not found.");
     }
 
     /* =========================================
        BRAND
     ========================================= */
 
-    const productBrand =
-      typeof brand === "string"
-        ? brand.trim()
-        : "";
+    const productBrand = typeof brand === "string" ? brand.trim() : "";
 
     /* =========================================
        CREATE UNIQUE SLUG
@@ -348,20 +305,40 @@ export const createProduct = async (req, res, next) => {
        PARSE SPECIFICATIONS
     ========================================= */
 
-    const specifications = parseSpecifications(
-      req.body.specifications,
-    );
+    const specifications = parseSpecifications(req.body.specifications);
 
     /* =========================================
-       PROCESS CLOUDINARY IMAGES
-    ========================================= */
+   UPLOAD IMAGES TO CLOUDINARY
+========================================= */
 
-    const images = Array.isArray(req.files)
-      ? req.files.map((file) => ({
-          url: file.path,
-          publicId: file.filename,
-        }))
-      : [];
+    const images = [];
+
+    if (Array.isArray(req.files) && req.files.length > 0) {
+      for (const file of req.files) {
+        const result = await new Promise((resolve, reject) => {
+          const uploadStream = cloudinary.uploader.upload_stream(
+            {
+              folder: "nexora/products",
+              resource_type: "image",
+            },
+            (error, result) => {
+              if (error) {
+                reject(error);
+              } else {
+                resolve(result);
+              }
+            },
+          );
+
+          uploadStream.end(file.buffer);
+        });
+
+        images.push({
+          url: result.secure_url,
+          publicId: result.public_id,
+        });
+      }
+    }
 
     /* =========================================
        CREATE PRODUCT
@@ -388,9 +365,7 @@ export const createProduct = async (req, res, next) => {
 
       specifications,
 
-      featured:
-        featured === true ||
-        featured === "true",
+      featured: featured === true || featured === "true",
 
       rating: 0,
 
@@ -403,43 +378,27 @@ export const createProduct = async (req, res, next) => {
        POPULATE CATEGORY
     ========================================= */
 
-    await product.populate(
-      "category",
-      "name slug",
-    );
+    await product.populate("category", "name slug");
 
     /* =========================================
        SUCCESS RESPONSE
     ========================================= */
 
-    return successResponse(
-      res,
-      201,
-      "Product created successfully.",
-      product,
-    );
+    return successResponse(res, 201, "Product created successfully.", product);
   } catch (error) {
     /* =========================================
        CLEAN CLOUDINARY IMAGES
        IF DATABASE CREATION FAILS
     ========================================= */
 
-    if (
-      Array.isArray(req.files) &&
-      req.files.length > 0
-    ) {
+    if (Array.isArray(req.files) && req.files.length > 0) {
       for (const file of req.files) {
         try {
           if (file.filename) {
-            await cloudinary.uploader.destroy(
-              file.filename,
-            );
+            await cloudinary.uploader.destroy(file.filename);
           }
         } catch (cloudinaryError) {
-          console.error(
-            "Cloudinary cleanup failed:",
-            cloudinaryError.message,
-          );
+          console.error("Cloudinary cleanup failed:", cloudinaryError.message);
         }
       }
     }
@@ -465,11 +424,7 @@ export const updateProduct = async (req, res, next) => {
     ========================================= */
 
     if (!mongoose.isValidObjectId(id)) {
-      return errorResponse(
-        res,
-        400,
-        "Invalid product ID."
-      );
+      return errorResponse(res, 400, "Invalid product ID.");
     }
 
     /* =========================================
@@ -479,11 +434,7 @@ export const updateProduct = async (req, res, next) => {
     const product = await Product.findById(id);
 
     if (!product) {
-      return errorResponse(
-        res,
-        404,
-        "Product not found."
-      );
+      return errorResponse(res, 404, "Product not found.");
     }
 
     /* =========================================
@@ -494,18 +445,14 @@ export const updateProduct = async (req, res, next) => {
       const name = req.body.name.trim();
 
       if (!name) {
-        return errorResponse(
-          res,
-          400,
-          "Product name cannot be empty."
-        );
+        return errorResponse(res, 400, "Product name cannot be empty.");
       }
 
       if (name.length < 3) {
         return errorResponse(
           res,
           400,
-          "Product name must be at least 3 characters."
+          "Product name must be at least 3 characters.",
         );
       }
 
@@ -513,16 +460,13 @@ export const updateProduct = async (req, res, next) => {
         return errorResponse(
           res,
           400,
-          "Product name cannot exceed 150 characters."
+          "Product name cannot exceed 150 characters.",
         );
       }
 
       product.name = name;
 
-      product.slug = await createUniqueSlug(
-        name,
-        id
-      );
+      product.slug = await createUniqueSlug(name, id);
     }
 
     /* =========================================
@@ -530,22 +474,17 @@ export const updateProduct = async (req, res, next) => {
     ========================================= */
 
     if (req.body.description !== undefined) {
-      const description =
-        req.body.description.trim();
+      const description = req.body.description.trim();
 
       if (!description) {
-        return errorResponse(
-          res,
-          400,
-          "Product description cannot be empty."
-        );
+        return errorResponse(res, 400, "Product description cannot be empty.");
       }
 
       if (description.length < 20) {
         return errorResponse(
           res,
           400,
-          "Product description must be at least 20 characters."
+          "Product description must be at least 20 characters.",
         );
       }
 
@@ -553,7 +492,7 @@ export const updateProduct = async (req, res, next) => {
         return errorResponse(
           res,
           400,
-          "Product description cannot exceed 5000 characters."
+          "Product description cannot exceed 5000 characters.",
         );
       }
 
@@ -565,18 +504,13 @@ export const updateProduct = async (req, res, next) => {
     ========================================= */
 
     if (req.body.price !== undefined) {
-      const numericPrice = Number(
-        req.body.price
-      );
+      const numericPrice = Number(req.body.price);
 
-      if (
-        !Number.isFinite(numericPrice) ||
-        numericPrice < 0
-      ) {
+      if (!Number.isFinite(numericPrice) || numericPrice < 0) {
         return errorResponse(
           res,
           400,
-          "Product price must be a valid non-negative number."
+          "Product price must be a valid non-negative number.",
         );
       }
 
@@ -587,34 +521,24 @@ export const updateProduct = async (req, res, next) => {
        UPDATE COMPARE AT PRICE
     ========================================= */
 
-    if (
-      req.body.compareAtPrice !== undefined
-    ) {
-      if (
-        req.body.compareAtPrice === ""
-      ) {
+    if (req.body.compareAtPrice !== undefined) {
+      if (req.body.compareAtPrice === "") {
         product.compareAtPrice = null;
       } else {
-        const numericCompareAtPrice =
-          Number(
-            req.body.compareAtPrice
-          );
+        const numericCompareAtPrice = Number(req.body.compareAtPrice);
 
         if (
-          !Number.isFinite(
-            numericCompareAtPrice
-          ) ||
+          !Number.isFinite(numericCompareAtPrice) ||
           numericCompareAtPrice < 0
         ) {
           return errorResponse(
             res,
             400,
-            "Compare-at price must be a valid non-negative number."
+            "Compare-at price must be a valid non-negative number.",
           );
         }
 
-        product.compareAtPrice =
-          numericCompareAtPrice;
+        product.compareAtPrice = numericCompareAtPrice;
       }
     }
 
@@ -623,32 +547,16 @@ export const updateProduct = async (req, res, next) => {
     ========================================= */
 
     if (req.body.category !== undefined) {
-      const categoryId =
-        req.body.category;
+      const categoryId = req.body.category;
 
-      if (
-        !mongoose.isValidObjectId(
-          categoryId
-        )
-      ) {
-        return errorResponse(
-          res,
-          400,
-          "Invalid category ID."
-        );
+      if (!mongoose.isValidObjectId(categoryId)) {
+        return errorResponse(res, 400, "Invalid category ID.");
       }
 
-      const category =
-        await Category.findById(
-          categoryId
-        );
+      const category = await Category.findById(categoryId);
 
       if (!category) {
-        return errorResponse(
-          res,
-          404,
-          "Category not found."
-        );
+        return errorResponse(res, 404, "Category not found.");
       }
 
       product.category = categoryId;
@@ -659,15 +567,10 @@ export const updateProduct = async (req, res, next) => {
     ========================================= */
 
     if (req.body.brand !== undefined) {
-      const brand =
-        req.body.brand.trim();
+      const brand = req.body.brand.trim();
 
       if (brand.length > 100) {
-        return errorResponse(
-          res,
-          400,
-          "Brand cannot exceed 100 characters."
-        );
+        return errorResponse(res, 400, "Brand cannot exceed 100 characters.");
       }
 
       product.brand = brand;
@@ -678,19 +581,13 @@ export const updateProduct = async (req, res, next) => {
     ========================================= */
 
     if (req.body.stock !== undefined) {
-      const numericStock =
-        Number(req.body.stock);
+      const numericStock = Number(req.body.stock);
 
-      if (
-        !Number.isInteger(
-          numericStock
-        ) ||
-        numericStock < 0
-      ) {
+      if (!Number.isInteger(numericStock) || numericStock < 0) {
         return errorResponse(
           res,
           400,
-          "Product stock must be a valid non-negative integer."
+          "Product stock must be a valid non-negative integer.",
         );
       }
 
@@ -703,25 +600,17 @@ export const updateProduct = async (req, res, next) => {
 
     if (req.body.featured !== undefined) {
       product.featured =
-        req.body.featured === true ||
-        req.body.featured === "true";
+        req.body.featured === true || req.body.featured === "true";
     }
 
     /* =========================================
        UPDATE SPECIFICATIONS
     ========================================= */
 
-    if (
-      req.body.specifications !==
-      undefined
-    ) {
-      const specifications =
-        parseSpecifications(
-          req.body.specifications
-        );
+    if (req.body.specifications !== undefined) {
+      const specifications = parseSpecifications(req.body.specifications);
 
-      product.specifications =
-        specifications;
+      product.specifications = specifications;
     }
 
     /* =========================================
@@ -730,29 +619,18 @@ export const updateProduct = async (req, res, next) => {
 
     let existingImages = [];
 
-    if (
-      req.body.existingImages !== undefined
-    ) {
+    if (req.body.existingImages !== undefined) {
       try {
         existingImages =
-          typeof req.body.existingImages ===
-          "string"
-            ? JSON.parse(
-                req.body.existingImages
-              )
+          typeof req.body.existingImages === "string"
+            ? JSON.parse(req.body.existingImages)
             : req.body.existingImages;
 
-        if (
-          !Array.isArray(existingImages)
-        ) {
+        if (!Array.isArray(existingImages)) {
           existingImages = [];
         }
       } catch (error) {
-        return errorResponse(
-          res,
-          400,
-          "Invalid existing images data."
-        );
+        return errorResponse(res, 400, "Invalid existing images data.");
       }
     } else {
       /*
@@ -760,30 +638,20 @@ export const updateProduct = async (req, res, next) => {
         keep all current images.
       */
 
-      existingImages =
-        product.images.map(
-          (image) => image.publicId
-        );
+      existingImages = product.images.map((image) => image.publicId);
     }
 
     /* =========================================
        CHECK IMAGE LIMIT
     ========================================= */
 
-    const newFilesCount =
-      Array.isArray(req.files)
-        ? req.files.length
-        : 0;
+    const newFilesCount = Array.isArray(req.files) ? req.files.length : 0;
 
-    if (
-      existingImages.length +
-        newFilesCount >
-      5
-    ) {
+    if (existingImages.length + newFilesCount > 5) {
       return errorResponse(
         res,
         400,
-        "A product can have a maximum of 5 images."
+        "A product can have a maximum of 5 images.",
       );
     }
 
@@ -791,33 +659,25 @@ export const updateProduct = async (req, res, next) => {
        FIND REMOVED OLD IMAGES
     ========================================= */
 
-    const removedImages =
-      product.images.filter(
-        (oldImage) =>
-          !existingImages.includes(
-            oldImage.publicId
-          )
-      );
+    const removedImages = product.images.filter(
+      (oldImage) => !existingImages.includes(oldImage.publicId),
+    );
 
     /* =========================================
        DELETE REMOVED IMAGES FROM CLOUDINARY
     ========================================= */
 
-    for (
-      const image of removedImages
-    ) {
+    for (const image of removedImages) {
       if (!image.publicId) {
         continue;
       }
 
       try {
-        await cloudinary.uploader.destroy(
-          image.publicId
-        );
+        await cloudinary.uploader.destroy(image.publicId);
       } catch (cloudinaryError) {
         console.error(
           `Failed to delete removed Cloudinary image ${image.publicId}:`,
-          cloudinaryError.message
+          cloudinaryError.message,
         );
       }
     }
@@ -826,42 +686,32 @@ export const updateProduct = async (req, res, next) => {
        KEEP EXISTING IMAGES
     ========================================= */
 
-    const keptExistingImages =
-      product.images.filter(
-        (image) =>
-          existingImages.includes(
-            image.publicId
-          )
-      );
+    const keptExistingImages = product.images.filter((image) =>
+      existingImages.includes(image.publicId),
+    );
 
     /* =========================================
        UPLOAD NEW IMAGES
     ========================================= */
 
-    const newImages =
-      Array.isArray(req.files)
-        ? req.files.map((file) => {
-            const image = {
-              url: file.path,
-              publicId: file.filename,
-            };
+    const newImages = Array.isArray(req.files)
+      ? req.files.map((file) => {
+          const image = {
+            url: file.path,
+            publicId: file.filename,
+          };
 
-            uploadedNewImages.push(
-              image
-            );
+          uploadedNewImages.push(image);
 
-            return image;
-          })
-        : [];
+          return image;
+        })
+      : [];
 
     /* =========================================
        FINAL IMAGES
     ========================================= */
 
-    product.images = [
-      ...keptExistingImages,
-      ...newImages,
-    ];
+    product.images = [...keptExistingImages, ...newImages];
 
     /* =========================================
        SAVE PRODUCT
@@ -873,45 +723,29 @@ export const updateProduct = async (req, res, next) => {
        POPULATE CATEGORY
     ========================================= */
 
-    await product.populate(
-      "category",
-      "name slug"
-    );
+    await product.populate("category", "name slug");
 
     /* =========================================
        RESPONSE
     ========================================= */
 
-    return successResponse(
-      res,
-      200,
-      "Product updated successfully.",
-      product
-    );
-
+    return successResponse(res, 200, "Product updated successfully.", product);
   } catch (error) {
-
     /* =========================================
        CLEAN NEW CLOUDINARY IMAGES
        IF UPDATE FAILS
     ========================================= */
 
-    if (
-      uploadedNewImages.length > 0
-    ) {
-      for (
-        const image of uploadedNewImages
-      ) {
+    if (uploadedNewImages.length > 0) {
+      for (const image of uploadedNewImages) {
         try {
           if (image.publicId) {
-            await cloudinary.uploader.destroy(
-              image.publicId
-            );
+            await cloudinary.uploader.destroy(image.publicId);
           }
         } catch (cloudinaryError) {
           console.error(
             `Failed to cleanup new Cloudinary image ${image.publicId}:`,
-            cloudinaryError.message
+            cloudinaryError.message,
           );
         }
       }
@@ -936,11 +770,7 @@ export const deleteProduct = async (req, res, next) => {
     ========================================= */
 
     if (!mongoose.isValidObjectId(id)) {
-      return errorResponse(
-        res,
-        400,
-        "Invalid product ID."
-      );
+      return errorResponse(res, 400, "Invalid product ID.");
     }
 
     /* =========================================
@@ -950,11 +780,7 @@ export const deleteProduct = async (req, res, next) => {
     const product = await Product.findById(id);
 
     if (!product) {
-      return errorResponse(
-        res,
-        404,
-        "Product not found."
-      );
+      return errorResponse(res, 404, "Product not found.");
     }
 
     /* =========================================
@@ -962,11 +788,7 @@ export const deleteProduct = async (req, res, next) => {
     ========================================= */
 
     if (!product.isActive) {
-      return errorResponse(
-        res,
-        400,
-        "Product is already deleted."
-      );
+      return errorResponse(res, 400, "Product is already deleted.");
     }
 
     /* =========================================
@@ -981,12 +803,7 @@ export const deleteProduct = async (req, res, next) => {
        RESPONSE
     ========================================= */
 
-    return successResponse(
-      res,
-      200,
-      "Product deleted successfully.",
-      null
-    );
+    return successResponse(res, 200, "Product deleted successfully.", null);
   } catch (error) {
     next(error);
   }
