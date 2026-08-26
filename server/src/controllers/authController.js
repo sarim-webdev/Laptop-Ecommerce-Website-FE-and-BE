@@ -12,16 +12,13 @@ import { sendWelcomeEmail, sendEmail } from "../services/emailService.js";
 
 import env from "../config/environment.js";
 
-import {
-  uploadImage,
-} from "../services/cloudinaryService.js";
+import { uploadImage } from "../services/cloudinaryService.js";
 
 /* =========================================
    COOKIE OPTIONS
 ========================================= */
 
-const isProduction =
-  env.nodeEnv === "production";
+const isProduction = env.nodeEnv === "production";
 
 const cookieOptions = {
   httpOnly: true,
@@ -81,39 +78,35 @@ export const register = async (req, res, next) => {
     ========================================= */
 
     let avatar = {
-  url: "",
-  publicId: "",
-};
+      url: "",
+      publicId: "",
+    };
 
-if (req.file) {
-  const image = await uploadImage(
-    req.file.buffer,
-    "nexora/profiles"
-  );
+    if (req.file) {
+      const image = await uploadImage(req.file.buffer, "nexora/profiles");
 
-  avatar = {
-    url: image.url,
-    publicId: image.publicId,
-  };
-}
+      avatar = {
+        url: image.url,
+        publicId: image.publicId,
+      };
+    }
     /* =========================================
        PREPARE ADDRESS
     ========================================= */
 
-    const addresses =
-      address?.trim()
-        ? [
-            {
-              fullName: name,
-              phone: phone || "",
-              address: address.trim(),
-              city: city?.trim() || "",
-              state: state?.trim() || "",
-              postalCode: postalCode?.trim() || "",
-              country: country?.trim() || "",
-            },
-          ]
-        : [];
+    const addresses = address?.trim()
+      ? [
+          {
+            fullName: name,
+            phone: phone || "",
+            address: address.trim(),
+            city: city?.trim() || "",
+            state: state?.trim() || "",
+            postalCode: postalCode?.trim() || "",
+            country: country?.trim() || "",
+          },
+        ]
+      : [];
 
     /* =========================================
        CREATE USER
@@ -147,15 +140,9 @@ if (req.file) {
     ========================================= */
 
     try {
-      await sendWelcomeEmail(
-        user.email,
-        user.name,
-      );
+      await sendWelcomeEmail(user.email, user.name);
     } catch (emailError) {
-      console.error(
-        "Welcome email failed:",
-        emailError.message,
-      );
+      console.error("Welcome email failed:", emailError.message);
     }
 
     /* =========================================
@@ -346,7 +333,12 @@ export const forgotPassword = async (req, res, next) => {
        RESET URL
     ========================================= */
 
-    const resetUrl = `${env.clientUrl}/reset-password/${resetToken}`;
+    const clientUrl =
+      env.nodeEnv === "production"
+        ? env.clientUrls.production
+        : env.clientUrls.local;
+
+    const resetUrl = `${clientUrl}/reset-password/${resetToken}`;
 
     /* =========================================
        SEND RESET EMAIL
