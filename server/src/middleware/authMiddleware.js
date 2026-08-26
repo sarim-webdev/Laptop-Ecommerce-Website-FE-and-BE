@@ -3,6 +3,12 @@ import env from "../config/environment.js";
 
 const authMiddleware = (req, res, next) => {
   try {
+    console.log("========== AUTH DEBUG ==========");
+    console.log("NODE ENV:", env.nodeEnv);
+    console.log("COOKIES:", req.cookies);
+    console.log("TOKEN:", req.cookies?.token);
+    console.log("JWT SECRET EXISTS:", !!env.jwtSecretKey);
+
     const token = req.cookies?.token;
 
     if (!token) {
@@ -17,6 +23,8 @@ const authMiddleware = (req, res, next) => {
       env.jwtSecretKey
     );
 
+    console.log("JWT DECODED:", decoded);
+
     req.user = {
       _id: decoded.id,
       id: decoded.id,
@@ -24,7 +32,10 @@ const authMiddleware = (req, res, next) => {
     };
 
     next();
+
   } catch (error) {
+    console.error("AUTH ERROR:", error);
+
     if (error.name === "TokenExpiredError") {
       return res.status(401).json({
         success: false,

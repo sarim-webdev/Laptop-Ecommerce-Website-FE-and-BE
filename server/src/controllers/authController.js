@@ -20,10 +20,13 @@ import {
    COOKIE OPTIONS
 ========================================= */
 
+const isProduction =
+  env.nodeEnv === "production";
+
 const cookieOptions = {
   httpOnly: true,
-  secure: env.nodeEnv === "production",
-  sameSite: "lax",
+  secure: isProduction,
+  sameSite: isProduction ? "none" : "lax",
   path: "/",
   maxAge: 7 * 24 * 60 * 60 * 1000,
 };
