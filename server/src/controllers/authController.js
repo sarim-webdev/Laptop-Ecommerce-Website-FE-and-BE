@@ -12,6 +12,11 @@ import { sendWelcomeEmail, sendEmail } from "../services/emailService.js";
 
 import env from "../config/environment.js";
 
+import {
+  uploadImage,
+  deleteImage,
+} from "../services/cloudinaryService.js";
+
 /* =========================================
    COOKIE OPTIONS
 ========================================= */
@@ -75,11 +80,22 @@ export const register = async (req, res, next) => {
        PREPARE AVATAR
     ========================================= */
 
-    const avatar = {
-      url: req.file?.path || "",
-      publicId: req.file?.filename || "",
-    };
+    let avatar = {
+  url: "",
+  publicId: "",
+};
 
+if (req.file) {
+  const image = await uploadImage(
+    req.file.buffer,
+    "nexora/profiles"
+  );
+
+  avatar = {
+    url: image.url,
+    publicId: image.publicId,
+  };
+}
     /* =========================================
        PREPARE ADDRESS
     ========================================= */
