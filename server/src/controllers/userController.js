@@ -11,6 +11,7 @@ import {
 } from "../utils/apiResponse.js";
 
 import {
+  uploadImage,
   deleteImage,
 } from "../services/cloudinaryService.js";
 
@@ -275,6 +276,15 @@ export const uploadAvatar = async (
     }
 
     /* =========================================
+       UPLOAD NEW AVATAR TO CLOUDINARY
+    ========================================= */
+
+    const image = await uploadImage(
+      req.file.buffer,
+      "nexora/profiles"
+    );
+
+    /* =========================================
        DELETE OLD AVATAR
     ========================================= */
 
@@ -292,37 +302,12 @@ export const uploadAvatar = async (
     }
 
     /* =========================================
-       GET CLOUDINARY DATA
-       
-       multer-storage-cloudinary puts these
-       values inside req.file
-    ========================================= */
-
-    const imageUrl =
-      req.file.path ||
-      req.file.secure_url ||
-      "";
-
-    const publicId =
-      req.file.filename ||
-      req.file.public_id ||
-      "";
-
-    if (!imageUrl || !publicId) {
-      return errorResponse(
-        res,
-        500,
-        "Avatar upload failed"
-      );
-    }
-
-    /* =========================================
        SAVE AVATAR
     ========================================= */
 
     user.avatar = {
-      url: imageUrl,
-      publicId: publicId,
+      url: image.url,
+      publicId: image.publicId,
     };
 
     await user.save();
