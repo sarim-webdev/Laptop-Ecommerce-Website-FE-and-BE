@@ -56,17 +56,17 @@ const ForgotPassword = () => {
   };
 
   return (
-    <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[#05080d] px-4 py-16 text-white sm:px-6 lg:px-8">
+    <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[#0B1220] px-4 py-16 text-white sm:px-6 lg:px-8">
 
       {/* =========================================
           BACKGROUND GLOW
       ========================================= */}
 
-      <div className="pointer-events-none absolute -left-40 top-10 h-80 w-80 rounded-full bg-cyan-500/10 blur-3xl" />
+      <div className="pointer-events-none absolute -left-40 top-10 h-80 w-80 rounded-full bg-sky-500/10 blur-3xl" />
 
       <div className="pointer-events-none absolute -bottom-40 -right-40 h-96 w-96 rounded-full bg-blue-600/10 blur-3xl" />
 
-      <div className="pointer-events-none absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-400/[0.025] blur-3xl" />
+      <div className="pointer-events-none absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-sky-500/[0.025] blur-3xl" />
 
       <div className="relative mx-auto w-full max-w-md">
 
@@ -74,11 +74,11 @@ const ForgotPassword = () => {
             CARD
         ========================================= */}
 
-        <div className="overflow-hidden rounded-3xl border border-white/10 bg-[#0b1119]/95 p-6 shadow-[0_25px_80px_rgba(0,0,0,0.45)] backdrop-blur-xl sm:p-8">
+        <div className="overflow-hidden rounded-3xl border border-[#263449] bg-[#111C2E]/95 p-6 shadow-[0_25px_80px_rgba(0,0,0,0.45)] backdrop-blur-xl sm:p-8">
 
           {/* Top Accent */}
 
-          <div className="mx-auto mb-8 h-1 w-16 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500" />
+          <div className="mx-auto mb-8 h-1 w-16 rounded-full bg-gradient-to-r from-sky-400 to-blue-600" />
 
           {/* =========================================
               LOGO / HEADER
@@ -88,16 +88,16 @@ const ForgotPassword = () => {
 
             <Link
               to="/"
-              className="inline-block text-2xl font-black tracking-tight text-white transition hover:text-cyan-400"
+              className="inline-block text-2xl font-black tracking-tight text-white transition hover:text-sky-400"
             >
-              NEXORA<span className="text-cyan-400">.</span>
+              NEXORA<span className="text-sky-400">.</span>
             </Link>
 
             <h1 className="mt-6 text-2xl font-black tracking-tight text-white">
               Forgot your password?
             </h1>
 
-            <p className="mt-3 text-sm leading-6 text-gray-400">
+            <p className="mt-3 text-sm leading-6 text-slate-400">
               Enter your email address and we'll send you a
               password reset link.
             </p>
@@ -137,7 +137,7 @@ const ForgotPassword = () => {
 
               <label
                 htmlFor="email"
-                className="mb-2 block text-sm font-semibold text-gray-300"
+                className="mb-2 block text-sm font-semibold text-slate-300"
               >
                 Email Address
               </label>
@@ -157,20 +157,20 @@ const ForgotPassword = () => {
                   w-full
                   rounded-xl
                   border
-                  border-white/10
-                  bg-[#070c12]
+                  border-[#263449]
+                  bg-[#0B1220]
                   px-4
                   py-3
                   text-sm
                   text-white
-                  placeholder:text-gray-600
+                  placeholder:text-slate-500
                   outline-none
                   transition-all
                   duration-300
-                  focus:border-cyan-400/60
-                  focus:bg-[#0a1119]
+                  focus:border-sky-400/60
+                  focus:bg-[#111C2E]
                   focus:ring-4
-                  focus:ring-cyan-400/10
+                  focus:ring-sky-400/10
                 "
               />
 
@@ -201,10 +201,10 @@ const ForgotPassword = () => {
                 items-center
                 text-sm
                 font-semibold
-                text-gray-400
+                text-slate-400
                 transition-all
                 duration-300
-                hover:text-cyan-400
+                hover:text-sky-400
               "
             >
               ← Back to Sign In
@@ -218,7 +218,7 @@ const ForgotPassword = () => {
             FOOTER TEXT
         ========================================= */}
 
-        <p className="mt-6 text-center text-xs text-gray-600">
+        <p className="mt-6 text-center text-xs text-slate-500">
           © {new Date().getFullYear()} NEXORA. All rights reserved.
         </p>
 

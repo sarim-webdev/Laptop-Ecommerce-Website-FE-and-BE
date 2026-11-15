@@ -178,7 +178,7 @@ const ReviewsSection = ({ productId }) => {
               key={star}
               className={
                 star <= rating
-                  ? "text-yellow-400"
+                  ? "text-sky-400"
                   : "text-slate-700"
               }
             >
@@ -208,7 +208,7 @@ const ReviewsSection = ({ productId }) => {
 
 
   return (
-    <section className="mt-12 border-t border-white/10 pt-10">
+    <section className="mt-12 border-t border-[#263449] pt-10">
 
       {/* =========================================
           HEADER
@@ -216,7 +216,7 @@ const ReviewsSection = ({ productId }) => {
 
       <div className="mb-8">
 
-        <span className="text-xs font-bold uppercase tracking-[0.2em] text-cyan-400">
+        <span className="text-xs font-bold uppercase tracking-[0.2em] text-sky-400">
           Customer Feedback
         </span>
 
@@ -224,7 +224,7 @@ const ReviewsSection = ({ productId }) => {
           Customer Reviews
         </h2>
 
-        <p className="mt-2 text-sm text-slate-500">
+        <p className="mt-2 text-sm text-slate-400">
           See what customers are saying about this product.
         </p>
 
@@ -239,9 +239,9 @@ const ReviewsSection = ({ productId }) => {
 
         {/* Overall Rating */}
 
-        <div className="rounded-3xl border border-white/10 bg-[#0b1119] p-6">
+        <div className="rounded-3xl border border-[#263449] bg-[#111C2E] p-6">
 
-          <p className="text-sm font-semibold text-slate-400">
+          <p className="text-sm font-semibold text-slate-300">
             Overall Rating
           </p>
 
@@ -251,7 +251,7 @@ const ReviewsSection = ({ productId }) => {
               {summary.averageRating.toFixed(1)}
             </span>
 
-            <span className="pb-2 text-sm text-slate-500">
+            <span className="pb-2 text-sm text-slate-400">
               / 5
             </span>
 
@@ -265,7 +265,7 @@ const ReviewsSection = ({ productId }) => {
             )}
           </div>
 
-          <p className="mt-3 text-sm text-slate-500">
+          <p className="mt-3 text-sm text-slate-400">
             Based on{" "}
             <span className="font-semibold text-white">
               {summary.totalReviews}
@@ -278,7 +278,7 @@ const ReviewsSection = ({ productId }) => {
 
         {/* Rating Breakdown */}
 
-        <div className="rounded-3xl border border-white/10 bg-[#0b1119] p-6">
+        <div className="rounded-3xl border border-[#263449] bg-[#111C2E] p-6">
 
           <h3 className="text-sm font-bold text-white">
             Rating Breakdown
@@ -314,14 +314,14 @@ const ReviewsSection = ({ productId }) => {
                 className="flex items-center gap-3"
               >
 
-                <span className="w-8 text-xs font-semibold text-slate-400">
+                <span className="w-8 text-xs font-semibold text-slate-300">
                   {item.stars} ★
                 </span>
 
-                <div className="h-2 flex-1 overflow-hidden rounded-full bg-white/5">
+                <div className="h-2 flex-1 overflow-hidden rounded-full bg-[#172338]">
 
                   <div
-                    className="h-full rounded-full bg-yellow-400 transition-all duration-500"
+                    className="h-full rounded-full bg-sky-400 transition-all duration-500"
                     style={{
                       width: `${getPercentage(
                         item.count
@@ -331,7 +331,7 @@ const ReviewsSection = ({ productId }) => {
 
                 </div>
 
-                <span className="w-6 text-right text-xs text-slate-500">
+                <span className="w-6 text-right text-xs text-slate-400">
                   {item.count}
                 </span>
 
@@ -350,7 +350,7 @@ const ReviewsSection = ({ productId }) => {
           REVIEW FORM
       ========================================= */}
 
-      <div className="mt-8 rounded-3xl border border-white/10 bg-gradient-to-br from-[#0c131d] to-[#070b11] p-6 sm:p-8">
+      <div className="mt-8 rounded-3xl border border-[#263449] bg-gradient-to-br from-[#111C2E] to-[#0B1220] p-6 sm:p-8">
 
         <div className="mb-6">
 
@@ -358,7 +358,7 @@ const ReviewsSection = ({ productId }) => {
             Write a Review
           </h3>
 
-          <p className="mt-1 text-sm text-slate-500">
+          <p className="mt-1 text-sm text-slate-400">
             Share your experience with this product.
           </p>
 
@@ -367,9 +367,9 @@ const ReviewsSection = ({ productId }) => {
 
         {!isAuthenticated ? (
 
-          <div className="rounded-2xl border border-cyan-400/10 bg-cyan-400/5 p-5">
+          <div className="rounded-2xl border border-sky-400/20 bg-sky-400/10 p-5">
 
-            <p className="text-sm text-slate-400">
+            <p className="text-sm text-slate-300">
               Please login to write a review.
             </p>
 
@@ -406,7 +406,7 @@ const ReviewsSection = ({ productId }) => {
                       }
                       className={`text-3xl transition ${
                         star <= form.rating
-                          ? "text-yellow-400"
+                          ? "text-sky-400"
                           : "text-slate-700"
                       } hover:scale-110`}
                     >
@@ -436,7 +436,7 @@ const ReviewsSection = ({ productId }) => {
                 onChange={handleChange}
                 maxLength={150}
                 placeholder="Give your review a title"
-                className="w-full rounded-xl border border-white/10 bg-[#070c12] px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-cyan-400/40"
+                className="w-full rounded-xl border border-[#263449] bg-[#0B1220] px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-400 focus:border-sky-400/40"
               />
 
             </div>
@@ -457,7 +457,7 @@ const ReviewsSection = ({ productId }) => {
                 maxLength={1000}
                 rows={5}
                 placeholder="Tell us about your experience..."
-                className="w-full resize-none rounded-xl border border-white/10 bg-[#070c12] px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-cyan-400/40"
+                className="w-full resize-none rounded-xl border border-[#263449] bg-[#0B1220] px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-400 focus:border-sky-400/40"
               />
 
             </div>
@@ -486,7 +486,7 @@ const ReviewsSection = ({ productId }) => {
             <button
               type="submit"
               disabled={submitting}
-              className="rounded-xl bg-cyan-400 px-6 py-3 text-sm font-bold text-black transition hover:bg-cyan-300 disabled:cursor-not-allowed disabled:opacity-50"
+              className="rounded-xl bg-gradient-to-r from-sky-400 to-blue-600 px-6 py-3 text-sm font-bold text-[#0B1220] transition hover:from-sky-300 hover:to-blue-500 disabled:cursor-not-allowed disabled:opacity-50"
             >
               {submitting
                 ? "Submitting..."
@@ -512,7 +512,7 @@ const ReviewsSection = ({ productId }) => {
             Customer Reviews
           </h3>
 
-          <span className="text-sm text-slate-500">
+          <span className="text-sm text-slate-400">
             {reviews.length} reviews
           </span>
 
@@ -523,11 +523,11 @@ const ReviewsSection = ({ productId }) => {
 
         {loading && (
 
-          <div className="rounded-2xl border border-white/10 bg-[#0b1119] p-8 text-center">
+          <div className="rounded-2xl border border-[#263449] bg-[#111C2E] p-8 text-center">
 
-            <div className="mx-auto h-8 w-8 animate-spin rounded-full border-4 border-white/10 border-t-cyan-400" />
+            <div className="mx-auto h-8 w-8 animate-spin rounded-full border-4 border-[#263449] border-t-sky-400" />
 
-            <p className="mt-3 text-sm text-slate-500">
+            <p className="mt-3 text-sm text-slate-400">
               Loading reviews...
             </p>
 
@@ -553,7 +553,7 @@ const ReviewsSection = ({ productId }) => {
           !error &&
           reviews.length === 0 && (
 
-            <div className="rounded-3xl border border-white/10 bg-[#0b1119] p-10 text-center">
+            <div className="rounded-3xl border border-[#263449] bg-[#111C2E] p-10 text-center">
 
               <div className="text-4xl">
                 ⭐
@@ -563,7 +563,7 @@ const ReviewsSection = ({ productId }) => {
                 No Reviews Yet
               </h3>
 
-              <p className="mt-2 text-sm text-slate-500">
+              <p className="mt-2 text-sm text-slate-400">
                 Be the first customer to review this product.
               </p>
 
@@ -583,14 +583,14 @@ const ReviewsSection = ({ productId }) => {
 
                 <article
                   key={review._id}
-                  className="rounded-3xl border border-white/10 bg-[#0b1119] p-6"
+                  className="rounded-3xl border border-[#263449] bg-[#111C2E] p-6"
                 >
 
                   <div className="flex items-start gap-4">
 
                     {/* Avatar */}
 
-                    <div className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-full bg-cyan-400/10 font-bold text-cyan-400">
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-full bg-sky-400/10 font-bold text-sky-400">
 
                       {review.user?.avatar?.url ? (
 
@@ -642,7 +642,7 @@ const ReviewsSection = ({ productId }) => {
                           review.rating
                         )}
 
-                        <span className="text-xs text-slate-600">
+                        <span className="text-xs text-slate-400">
                           {new Date(
                             review.createdAt
                           ).toLocaleDateString()}
@@ -661,7 +661,7 @@ const ReviewsSection = ({ productId }) => {
 
                       {review.comment && (
 
-                        <p className="mt-2 text-sm leading-6 text-slate-400">
+                        <p className="mt-2 text-sm leading-6 text-slate-300">
                           {review.comment}
                         </p>
 

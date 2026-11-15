@@ -105,8 +105,8 @@ const Checkout = () => {
 
         const price = Number(
           product?.price ??
-            item?.price ??
-            0
+          item?.price ??
+          0
         );
 
         const quantity = Number(
@@ -238,7 +238,7 @@ const Checkout = () => {
       if (!response?.success) {
         throw new Error(
           response?.message ||
-            "Unable to create order."
+          "Unable to create order."
         );
       }
 
@@ -322,8 +322,8 @@ const Checkout = () => {
       } else {
         setError(
           backendMessage ||
-            err?.message ||
-            "Something went wrong while placing your order."
+          err?.message ||
+          "Something went wrong while placing your order."
         );
       }
     } finally {
@@ -337,7 +337,7 @@ const Checkout = () => {
 
   if (cartLoading && cartItems.length === 0) {
     return (
-      <main className="min-h-screen bg-[#05080d]">
+      <main className="min-h-screen bg-[#0B1220]">
         <div className="flex min-h-[70vh] items-center justify-center">
           <Loader />
         </div>
@@ -351,7 +351,7 @@ const Checkout = () => {
 
   if (!cartItems.length) {
     return (
-      <main className="min-h-screen bg-[#05080d] px-4 py-16">
+      <main className="min-h-screen bg-[#0B1220] px-4 py-16">
         <div className="mx-auto flex min-h-[65vh] max-w-lg items-center justify-center">
 
           <div
@@ -359,8 +359,8 @@ const Checkout = () => {
               w-full
               rounded-3xl
               border
-              border-white/[0.08]
-              bg-white/[0.035]
+              border-[#263449]
+              bg-[#111C2E]
               p-8
               text-center
               shadow-2xl
@@ -380,9 +380,9 @@ const Checkout = () => {
                 justify-center
                 rounded-2xl
                 border
-                border-cyan-400/10
-                bg-cyan-400/[0.06]
-                text-cyan-400
+                border-sky-400/10
+                bg-sky-400/[0.06]
+                text-sky-400
               "
             >
               <Package size={38} />
@@ -407,7 +407,7 @@ const Checkout = () => {
                 max-w-md
                 text-sm
                 leading-6
-                text-gray-500
+                text-slate-400
               "
             >
               Add a laptop to your cart before
@@ -422,18 +422,18 @@ const Checkout = () => {
                 items-center
                 gap-2
                 rounded-xl
-                bg-cyan-500
+                bg-sky-400
                 px-6
                 py-3.5
                 text-sm
                 font-black
-                text-[#031018]
+                text-[#0B1220]
                 shadow-lg
-                shadow-cyan-500/10
+                shadow-sky-500/10
                 transition-all
                 duration-300
-                hover:bg-cyan-400
-                hover:shadow-cyan-400/20
+                hover:bg-sky-300
+                hover:shadow-sky-400/20
               "
             >
               Explore Products
@@ -450,7 +450,7 @@ const Checkout = () => {
   ========================================= */
 
   return (
-    <main className="min-h-screen bg-[#05080d]">
+    <main className="min-h-screen bg-[#0B1220]">
 
       {/* =====================================
           HEADER
@@ -459,8 +459,8 @@ const Checkout = () => {
       <section
         className="
           border-b
-          border-white/[0.06]
-          bg-[#070b11]
+          border-[#263449]
+          bg-[#111C2E]
         "
       >
         <div
@@ -482,9 +482,9 @@ const Checkout = () => {
               gap-2
               text-sm
               font-semibold
-              text-gray-500
+              text-slate-400
               transition
-              hover:text-cyan-400
+              hover:text-sky-400
             "
           >
             <ArrowLeft size={16} />
@@ -499,7 +499,7 @@ const Checkout = () => {
                 font-black
                 uppercase
                 tracking-[0.25em]
-                text-cyan-400
+                text-sky-400
               "
             >
               NEXORA
@@ -522,7 +522,7 @@ const Checkout = () => {
               className="
                 mt-2
                 text-sm
-                text-gray-500
+                text-slate-400
                 sm:text-base
               "
             >
@@ -641,8 +641,8 @@ const Checkout = () => {
                 overflow-hidden
                 rounded-3xl
                 border
-                border-white/[0.08]
-                bg-white/[0.035]
+                border-[#263449]
+                bg-gradient-to-br from-[#172338] via-[#111C2E] to-[#0B1220]
                 shadow-2xl
                 shadow-black/10
                 backdrop-blur-xl
@@ -655,7 +655,7 @@ const Checkout = () => {
                   items-center
                   gap-3
                   border-b
-                  border-white/[0.06]
+                  border-[#263449]
                   px-5
                   py-5
                   sm:px-6
@@ -670,8 +670,8 @@ const Checkout = () => {
                     items-center
                     justify-center
                     rounded-xl
-                    bg-cyan-400/[0.08]
-                    text-cyan-400
+                    bg-sky-400/[0.08]
+                    text-sky-400
                   "
                 >
                   <MapPin size={19} />
@@ -693,7 +693,7 @@ const Checkout = () => {
                     className="
                       mt-0.5
                       text-xs
-                      text-gray-600
+                      text-slate-400
                     "
                   >
                     Where should we deliver your order?
@@ -718,7 +718,7 @@ const Checkout = () => {
                       font-bold
                       uppercase
                       tracking-wider
-                      text-gray-500
+                      text-slate-400
                     "
                   >
                     Full Name
@@ -736,19 +736,19 @@ const Checkout = () => {
                       w-full
                       rounded-xl
                       border
-                      border-white/[0.08]
-                      bg-black/20
+                      border-[#263449]
+                      bg-[#0B1220]
                       px-4
                       py-3.5
                       text-sm
                       text-white
                       outline-none
                       transition
-                      placeholder:text-gray-700
-                      focus:border-cyan-400/40
-                      focus:bg-black/30
+                      placeholder:text-slate-500
+                      focus:border-sky-400/40
+                      focus:bg-[#111C2E]
                       focus:ring-2
-                      focus:ring-cyan-400/10
+                      focus:ring-sky-400/10
                     "
                   />
 
@@ -767,7 +767,7 @@ const Checkout = () => {
                       font-bold
                       uppercase
                       tracking-wider
-                      text-gray-500
+                      text-slate-400
                     "
                   >
                     Phone Number
@@ -785,19 +785,19 @@ const Checkout = () => {
                       w-full
                       rounded-xl
                       border
-                      border-white/[0.08]
-                      bg-black/20
+                      border-[#263449]
+                      bg-[#0B1220]
                       px-4
                       py-3.5
                       text-sm
                       text-white
                       outline-none
                       transition
-                      placeholder:text-gray-700
-                      focus:border-cyan-400/40
-                      focus:bg-black/30
+                      placeholder:text-slate-500
+                      focus:border-sky-400/40
+                      focus:bg-[#111C2E]
                       focus:ring-2
-                      focus:ring-cyan-400/10
+                      focus:ring-sky-400/10
                     "
                   />
 
@@ -816,7 +816,7 @@ const Checkout = () => {
                       font-bold
                       uppercase
                       tracking-wider
-                      text-gray-500
+                      text-slate-400
                     "
                   >
                     Country
@@ -834,19 +834,19 @@ const Checkout = () => {
                       w-full
                       rounded-xl
                       border
-                      border-white/[0.08]
-                      bg-black/20
+                      border-[#263449]
+                      bg-[#0B1220]
                       px-4
                       py-3.5
                       text-sm
                       text-white
                       outline-none
                       transition
-                      placeholder:text-gray-700
-                      focus:border-cyan-400/40
-                      focus:bg-black/30
+                      placeholder:text-slate-500
+                      focus:border-sky-400/40
+                      focus:bg-[#111C2E]
                       focus:ring-2
-                      focus:ring-cyan-400/10
+                      focus:ring-sky-400/10
                     "
                   />
 
@@ -865,7 +865,7 @@ const Checkout = () => {
                       font-bold
                       uppercase
                       tracking-wider
-                      text-gray-500
+                      text-slate-400
                     "
                   >
                     Complete Address
@@ -884,19 +884,19 @@ const Checkout = () => {
                       resize-none
                       rounded-xl
                       border
-                      border-white/[0.08]
-                      bg-black/20
+                      border-[#263449]
+                      bg-[#0B1220]
                       px-4
                       py-3.5
                       text-sm
                       text-white
                       outline-none
                       transition
-                      placeholder:text-gray-700
-                      focus:border-cyan-400/40
-                      focus:bg-black/30
+                      placeholder:text-slate-500
+                      focus:border-sky-400/40
+                      focus:bg-[#111C2E]
                       focus:ring-2
-                      focus:ring-cyan-400/10
+                      focus:ring-sky-400/10
                     "
                   />
 
@@ -915,7 +915,7 @@ const Checkout = () => {
                       font-bold
                       uppercase
                       tracking-wider
-                      text-gray-500
+                      text-slate-400
                     "
                   >
                     City
@@ -933,19 +933,19 @@ const Checkout = () => {
                       w-full
                       rounded-xl
                       border
-                      border-white/[0.08]
-                      bg-black/20
+                      border-[#263449]
+                      bg-[#0B1220]
                       px-4
                       py-3.5
                       text-sm
                       text-white
                       outline-none
                       transition
-                      placeholder:text-gray-700
-                      focus:border-cyan-400/40
-                      focus:bg-black/30
+                      placeholder:text-slate-500
+                      focus:border-sky-400/40
+                      focus:bg-[#111C2E]
                       focus:ring-2
-                      focus:ring-cyan-400/10
+                      focus:ring-sky-400/10
                     "
                   />
 
@@ -964,7 +964,7 @@ const Checkout = () => {
                       font-bold
                       uppercase
                       tracking-wider
-                      text-gray-500
+                      text-slate-400
                     "
                   >
                     State / Province
@@ -982,19 +982,19 @@ const Checkout = () => {
                       w-full
                       rounded-xl
                       border
-                      border-white/[0.08]
-                      bg-black/20
+                      border-[#263449]
+                      bg-[#0B1220]
                       px-4
                       py-3.5
                       text-sm
                       text-white
                       outline-none
                       transition
-                      placeholder:text-gray-700
-                      focus:border-cyan-400/40
-                      focus:bg-black/30
+                      placeholder:text-slate-500
+                      focus:border-sky-400/40
+                      focus:bg-[#111C2E]
                       focus:ring-2
-                      focus:ring-cyan-400/10
+                      focus:ring-sky-400/10
                     "
                   />
 
@@ -1013,7 +1013,7 @@ const Checkout = () => {
                       font-bold
                       uppercase
                       tracking-wider
-                      text-gray-500
+                      text-slate-400
                     "
                   >
                     Postal Code
@@ -1031,19 +1031,19 @@ const Checkout = () => {
                       w-full
                       rounded-xl
                       border
-                      border-white/[0.08]
-                      bg-black/20
+                      border-[#263449]
+                      bg-[#0B1220]
                       px-4
                       py-3.5
                       text-sm
                       text-white
                       outline-none
                       transition
-                      placeholder:text-gray-700
-                      focus:border-cyan-400/40
-                      focus:bg-black/30
+                      placeholder:text-slate-500
+                      focus:border-sky-400/40
+                      focus:bg-[#111C2E]
                       focus:ring-2
-                      focus:ring-cyan-400/10
+                      focus:ring-sky-400/10
                     "
                   />
 
@@ -1062,8 +1062,8 @@ const Checkout = () => {
                 overflow-hidden
                 rounded-3xl
                 border
-                border-white/[0.08]
-                bg-white/[0.035]
+                border-[#263449]
+                bg-gradient-to-br from-[#172338] via-[#111C2E] to-[#0B1220]
                 shadow-2xl
                 shadow-black/10
                 backdrop-blur-xl
@@ -1076,7 +1076,7 @@ const Checkout = () => {
                   items-center
                   gap-3
                   border-b
-                  border-white/[0.06]
+                  border-[#263449]
                   px-5
                   py-5
                   sm:px-6
@@ -1091,8 +1091,8 @@ const Checkout = () => {
                     items-center
                     justify-center
                     rounded-xl
-                    bg-cyan-400/[0.08]
-                    text-cyan-400
+                    bg-sky-400/[0.08]
+                    text-sky-400
                   "
                 >
                   <CreditCard size={19} />
@@ -1114,7 +1114,7 @@ const Checkout = () => {
                     className="
                       mt-0.5
                       text-xs
-                      text-gray-600
+                      text-slate-400
                     "
                   >
                     Select your preferred payment option.
@@ -1139,10 +1139,9 @@ const Checkout = () => {
                     p-4
                     transition-all
                     duration-300
-                    ${
-                      paymentMethod === "COD"
-                        ? "border-cyan-400/30 bg-cyan-400/[0.06]"
-                        : "border-white/[0.07] bg-black/10 hover:border-white/[0.12]"
+                    ${paymentMethod === "COD"
+                      ? "border-sky-400/30 bg-sky-400/[0.06]"
+                      : "border-[#263449] bg-[#172338] hover:border-[#263449]"
                     }
                   `}
                 >
@@ -1159,7 +1158,7 @@ const Checkout = () => {
                         event.target.value
                       )
                     }
-                    className="h-4 w-4 accent-cyan-400"
+                    className="h-4 w-4 accent-sky-400"
                   />
 
                   <div
@@ -1171,8 +1170,8 @@ const Checkout = () => {
                       items-center
                       justify-center
                       rounded-xl
-                      bg-white/[0.05]
-                      text-cyan-400
+                      bg-[#172338]
+                      text-sky-400
                     "
                   >
                     <Truck size={19} />
@@ -1194,7 +1193,7 @@ const Checkout = () => {
                       className="
                         mt-1
                         text-xs
-                        text-gray-600
+                        text-slate-400
                       "
                     >
                       Pay when your order arrives.
@@ -1205,7 +1204,7 @@ const Checkout = () => {
                   {paymentMethod === "COD" && (
                     <CheckCircle2
                       size={18}
-                      className="text-cyan-400"
+                      className="text-sky-400"
                     />
                   )}
 
@@ -1224,10 +1223,9 @@ const Checkout = () => {
                     p-4
                     transition-all
                     duration-300
-                    ${
-                      paymentMethod === "ONLINE"
-                        ? "border-cyan-400/30 bg-cyan-400/[0.06]"
-                        : "border-white/[0.07] bg-black/10 hover:border-white/[0.12]"
+                    ${paymentMethod === "ONLINE"
+                      ? "border-sky-400/30 bg-sky-400/[0.06]"
+                      : "border-[#263449] bg-[#172338] hover:border-[#263449]"
                     }
                   `}
                 >
@@ -1244,7 +1242,7 @@ const Checkout = () => {
                         event.target.value
                       )
                     }
-                    className="h-4 w-4 accent-cyan-400"
+                    className="h-4 w-4 accent-sky-400"
                   />
 
                   <div
@@ -1256,8 +1254,8 @@ const Checkout = () => {
                       items-center
                       justify-center
                       rounded-xl
-                      bg-white/[0.05]
-                      text-cyan-400
+                      bg-[#172338]
+                      text-sky-400
                     "
                   >
                     <CreditCard size={19} />
@@ -1279,7 +1277,7 @@ const Checkout = () => {
                       className="
                         mt-1
                         text-xs
-                        text-gray-600
+                        text-slate-400
                       "
                     >
                       Online payment integration.
@@ -1290,7 +1288,7 @@ const Checkout = () => {
                   {paymentMethod === "ONLINE" && (
                     <CheckCircle2
                       size={18}
-                      className="text-cyan-400"
+                      className="text-sky-400"
                     />
                   )}
 
@@ -1337,8 +1335,8 @@ const Checkout = () => {
                 overflow-hidden
                 rounded-3xl
                 border
-                border-white/[0.08]
-                bg-white/[0.035]
+                border-[#263449]
+                bg-gradient-to-br from-[#172338] via-[#111C2E] to-[#0B1220]
                 shadow-2xl
                 shadow-black/20
                 backdrop-blur-xl
@@ -1350,7 +1348,7 @@ const Checkout = () => {
               <div
                 className="
                   border-b
-                  border-white/[0.06]
+                  border-[#263449]
                   px-5
                   py-5
                 "
@@ -1378,15 +1376,15 @@ const Checkout = () => {
                     className="
                       rounded-full
                       border
-                      border-cyan-400/10
-                      bg-cyan-400/[0.06]
+                      border-sky-400/10
+                      bg-sky-400/[0.06]
                       px-3
                       py-1
                       text-[10px]
                       font-black
                       uppercase
                       tracking-wider
-                      text-cyan-400
+                      text-sky-400
                     "
                   >
                     {cartCount}{" "}
@@ -1407,7 +1405,7 @@ const Checkout = () => {
                   space-y-4
                   overflow-y-auto
                   border-b
-                  border-white/[0.06]
+                  border-[#263449]
                   p-5
                 "
               >
@@ -1429,8 +1427,8 @@ const Checkout = () => {
                     const price =
                       Number(
                         product?.price ??
-                          item?.price ??
-                          0
+                        item?.price ??
+                        0
                       );
 
                     const quantity =
@@ -1457,7 +1455,7 @@ const Checkout = () => {
                       >
 
                         <div
-  className="
+                          className="
     relative
     flex
     h-20
@@ -1468,20 +1466,20 @@ const Checkout = () => {
     overflow-hidden
     rounded-xl
     border
-    border-white/[0.06]
-    bg-[#080d14]
+    border-[#263449]
+    bg-[#0B1220]
   "
->
-  <img
-    src={image}
-    alt={name}
-    className="
+                        >
+                          <img
+                            src={image}
+                            alt={name}
+                            className="
       h-full
       w-full
       object-contain
     "
-  />
-</div>
+                          />
+                        </div>
 
                         <div
                           className="
@@ -1496,7 +1494,7 @@ const Checkout = () => {
                               text-xs
                               font-bold
                               leading-5
-                              text-gray-300
+                              text-slate-300
                             "
                           >
                             {name}
@@ -1506,7 +1504,7 @@ const Checkout = () => {
                             className="
                               mt-1
                               text-xs
-                              text-gray-600
+                              text-slate-400
                             "
                           >
                             {formatPrice(price)} ×{" "}
@@ -1541,7 +1539,7 @@ const Checkout = () => {
                 className="
                   space-y-4
                   border-b
-                  border-white/[0.06]
+                  border-[#263449]
                   p-5
                 "
               >
@@ -1554,14 +1552,14 @@ const Checkout = () => {
                     text-sm
                   "
                 >
-                  <span className="text-gray-600">
+                  <span className="text-slate-400">
                     Subtotal
                   </span>
 
                   <span
                     className="
                       font-bold
-                      text-gray-300
+                      text-slate-300
                     "
                   >
                     {formatPrice(subtotal)}
@@ -1576,7 +1574,7 @@ const Checkout = () => {
                     text-sm
                   "
                 >
-                  <span className="text-gray-600">
+                  <span className="text-slate-400">
                     Shipping
                   </span>
 
@@ -1584,14 +1582,14 @@ const Checkout = () => {
                     className={
                       shipping === 0
                         ? "font-bold text-emerald-400"
-                        : "font-bold text-gray-300"
+                        : "font-bold text-slate-300"
                     }
                   >
                     {shipping === 0
                       ? "FREE"
                       : formatPrice(
-                          shipping
-                        )}
+                        shipping
+                      )}
                   </span>
                 </div>
 
@@ -1603,14 +1601,14 @@ const Checkout = () => {
                     text-sm
                   "
                 >
-                  <span className="text-gray-600">
+                  <span className="text-slate-400">
                     Estimated Tax
                   </span>
 
                   <span
                     className="
                       font-bold
-                      text-gray-300
+                      text-slate-300
                     "
                   >
                     {formatPrice(tax)}
@@ -1640,7 +1638,7 @@ const Checkout = () => {
                         font-bold
                         uppercase
                         tracking-wider
-                        text-gray-600
+                        text-slate-400
                       "
                     >
                       Total
@@ -1650,7 +1648,7 @@ const Checkout = () => {
                       className="
                         mt-1
                         text-[10px]
-                        text-gray-700
+                        text-slate-500
                       "
                     >
                       Including estimated tax
@@ -1662,7 +1660,7 @@ const Checkout = () => {
                     className="
                       text-2xl
                       font-black
-                      text-cyan-400
+                      text-sky-400
                     "
                   >
                     {formatPrice(total)}
@@ -1683,18 +1681,18 @@ const Checkout = () => {
                     justify-center
                     gap-2
                     rounded-xl
-                    bg-cyan-500
+                    bg-sky-400
                     px-5
                     py-4
                     text-sm
                     font-black
-                    text-[#031018]
+                    text-[#0B1220]
                     shadow-lg
-                    shadow-cyan-500/10
+                    shadow-sky-500/10
                     transition-all
                     duration-300
-                    hover:bg-cyan-400
-                    hover:shadow-cyan-400/20
+                    hover:bg-sky-300
+                    hover:shadow-sky-400/20
                     active:scale-[0.98]
                     disabled:cursor-not-allowed
                     disabled:opacity-50
@@ -1709,8 +1707,8 @@ const Checkout = () => {
                           animate-spin
                           rounded-full
                           border-2
-                          border-[#031018]/30
-                          border-t-[#031018]
+                          border-[#0B1220]/30
+                          border-t-[#0B1220]
                         "
                       />
 
@@ -1735,12 +1733,12 @@ const Checkout = () => {
                     gap-2
                     text-[10px]
                     font-semibold
-                    text-gray-600
+                    text-slate-400
                   "
                 >
                   <ShieldCheck
                     size={14}
-                    className="text-cyan-400"
+                    className="text-sky-400"
                   />
 
                   <span>
@@ -1765,8 +1763,8 @@ const Checkout = () => {
       <section
         className="
           border-t
-          border-white/[0.06]
-          bg-[#070b11]
+          border-[#263449]
+          bg-[#111C2E]
         "
       >
 
@@ -1796,8 +1794,8 @@ const Checkout = () => {
                 items-center
                 justify-center
                 rounded-xl
-                bg-cyan-400/[0.07]
-                text-cyan-400
+                bg-sky-400/[0.07]
+                text-sky-400
               "
             >
               <ShieldCheck size={20} />
@@ -1819,7 +1817,7 @@ const Checkout = () => {
                 className="
                   mt-1
                   text-xs
-                  text-gray-600
+                  text-slate-400
                 "
               >
                 Your order information is protected.
@@ -1840,8 +1838,8 @@ const Checkout = () => {
                 items-center
                 justify-center
                 rounded-xl
-                bg-cyan-400/[0.07]
-                text-cyan-400
+                bg-sky-400/[0.07]
+                text-sky-400
               "
             >
               <Truck size={20} />
@@ -1863,7 +1861,7 @@ const Checkout = () => {
                 className="
                   mt-1
                   text-xs
-                  text-gray-600
+                  text-slate-400
                 "
               >
                 Reliable delivery to your doorstep.
@@ -1884,8 +1882,8 @@ const Checkout = () => {
                 items-center
                 justify-center
                 rounded-xl
-                bg-cyan-400/[0.07]
-                text-cyan-400
+                bg-sky-400/[0.07]
+                text-sky-400
               "
             >
               <Package size={20} />
@@ -1907,7 +1905,7 @@ const Checkout = () => {
                 className="
                   mt-1
                   text-xs
-                  text-gray-600
+                  text-slate-400
                 "
               >
                 Shop with confidence.

@@ -8,7 +8,7 @@ import {
 
 const Hero = () => {
   return (
-    <section className="relative isolate min-h-[calc(100vh-78px)] overflow-hidden bg-slate-950">
+    <section className="relative isolate min-h-[calc(100vh-78px)] overflow-hidden bg-[#0B1220]">
 
       {/* =====================================================
           BACKGROUND IMAGE
@@ -34,7 +34,7 @@ const Hero = () => {
           OVERLAYS
       ===================================================== */}
 
-      <div className="absolute inset-0 -z-20 bg-black/20" />
+      <div className="absolute inset-0 -z-20 bg-[#0B1220]/20" />
 
       <div
         className="
@@ -42,9 +42,9 @@ const Hero = () => {
           inset-0
           -z-20
           bg-gradient-to-r
-          from-black/80
-          via-black/45
-          to-black/25
+          from-[#0B1220]/80
+          via-[#0B1220]/45
+          to-[#0B1220]/25
         "
       />
 
@@ -54,9 +54,9 @@ const Hero = () => {
           inset-0
           -z-20
           bg-gradient-to-b
-          from-black/20
+          from-[#0B1220]/20
           via-transparent
-          to-slate-950/80
+          to-[#0B1220]/80
         "
       />
 
@@ -68,7 +68,7 @@ const Hero = () => {
           -z-10
           h-24
           bg-gradient-to-t
-          from-slate-950
+          from-[#0B1220]
           to-transparent
         "
       />
@@ -87,7 +87,7 @@ const Hero = () => {
           h-80
           w-80
           rounded-full
-          bg-cyan-500/10
+          bg-sky-400/10
           blur-3xl
         "
       />
@@ -102,7 +102,7 @@ const Hero = () => {
           h-80
           w-80
           rounded-full
-          bg-blue-600/10
+          bg-blue-500/10
           blur-3xl
         "
       />
@@ -155,8 +155,8 @@ const Hero = () => {
               gap-2
               rounded-full
               border
-              border-white/20
-              bg-white/10
+              border-[#263449]
+              bg-[#111C2E]/80
               px-4
               py-2
               backdrop-blur-xl
@@ -172,7 +172,7 @@ const Hero = () => {
                   w-full
                   animate-ping
                   rounded-full
-                  bg-cyan-400
+                  bg-sky-400
                   opacity-60
                 "
               />
@@ -184,7 +184,7 @@ const Hero = () => {
                   h-2
                   w-2
                   rounded-full
-                  bg-cyan-400
+                  bg-sky-400
                 "
               />
             </span>
@@ -195,7 +195,7 @@ const Hero = () => {
                 font-bold
                 uppercase
                 tracking-[0.2em]
-                text-white/90
+                text-slate-300
                 sm:text-xs
               "
             >
@@ -228,7 +228,7 @@ const Hero = () => {
                 mt-1
                 block
                 bg-gradient-to-r
-                from-cyan-300
+                from-sky-300
                 via-sky-400
                 to-blue-500
                 bg-clip-text
@@ -251,7 +251,7 @@ const Hero = () => {
               px-2
               text-sm
               leading-6
-              text-slate-200/90
+              text-slate-300
               sm:mt-5
               sm:text-base
               sm:leading-7
@@ -287,19 +287,19 @@ const Hero = () => {
                 justify-center
                 gap-2
                 rounded-lg
-                bg-white
+                bg-sky-400
                 px-6
                 py-3
                 text-sm
                 font-bold
-                text-slate-950
+                text-[#0B1220]
                 shadow-xl
                 shadow-black/20
                 transition-all
                 duration-300
                 hover:-translate-y-0.5
-                hover:bg-cyan-50
-                hover:shadow-cyan-500/20
+                hover:bg-sky-300
+                hover:shadow-sky-500/20
                 active:translate-y-0
                 sm:w-auto
                 sm:min-w-[180px]
@@ -347,8 +347,8 @@ const Hero = () => {
                 gap-3
                 rounded-xl
                 border
-                border-white/10
-                bg-white/5
+                border-[#263449]
+                bg-[#111C2E]/80
                 px-4
                 py-3
                 backdrop-blur-sm
@@ -363,13 +363,13 @@ const Hero = () => {
                   items-center
                   justify-center
                   rounded-lg
-                  bg-cyan-400/10
+                  bg-sky-400/10
                 "
               >
                 <Truck
                   size={18}
                   strokeWidth={2}
-                  className="text-cyan-300"
+                  className="text-sky-400"
                 />
               </div>
 
@@ -394,8 +394,8 @@ const Hero = () => {
                 gap-3
                 rounded-xl
                 border
-                border-white/10
-                bg-white/5
+                border-[#263449]
+                bg-[#111C2E]/80
                 px-4
                 py-3
                 backdrop-blur-sm
@@ -410,13 +410,13 @@ const Hero = () => {
                   items-center
                   justify-center
                   rounded-lg
-                  bg-cyan-400/10
+                  bg-sky-400/10
                 "
               >
                 <ShieldCheck
                   size={18}
                   strokeWidth={2}
-                  className="text-cyan-300"
+                  className="text-sky-400"
                 />
               </div>
 
@@ -441,8 +441,8 @@ const Hero = () => {
                 gap-3
                 rounded-xl
                 border
-                border-white/10
-                bg-white/5
+                border-[#263449]
+                bg-[#111C2E]/80
                 px-4
                 py-3
                 backdrop-blur-sm
@@ -457,13 +457,13 @@ const Hero = () => {
                   items-center
                   justify-center
                   rounded-lg
-                  bg-cyan-400/10
+                  bg-sky-400/10
                 "
               >
                 <BadgeCheck
                   size={18}
                   strokeWidth={2}
-                  className="text-cyan-300"
+                  className="text-sky-400"
                 />
               </div>
 

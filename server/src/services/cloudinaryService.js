@@ -4,10 +4,7 @@ import cloudinary from "../config/cloudinary.js";
    UPLOAD SINGLE IMAGE
 ========================================= */
 
-export const uploadImage = async (
-  fileBuffer,
-  folder = "nexora/products"
-) => {
+export const uploadImage = async (fileBuffer, folder = "nexora/products") => {
   try {
     const result = await new Promise((resolve, reject) => {
       const uploadStream = cloudinary.uploader.upload_stream(
@@ -30,7 +27,7 @@ export const uploadImage = async (
           } else {
             resolve(result);
           }
-        }
+        },
       );
 
       uploadStream.end(fileBuffer);
@@ -44,8 +41,6 @@ export const uploadImage = async (
       format: result.format,
     };
   } catch (error) {
-    console.error("❌ Cloudinary upload failed:", error.message);
-
     throw new Error("Image upload failed");
   }
 };
@@ -56,20 +51,15 @@ export const uploadImage = async (
 
 export const uploadMultipleImages = async (
   fileBuffers,
-  folder = "nexora/products"
+  folder = "nexora/products",
 ) => {
   try {
     const uploadPromises = fileBuffers.map((fileBuffer) =>
-      uploadImage(fileBuffer, folder)
+      uploadImage(fileBuffer, folder),
     );
 
     return await Promise.all(uploadPromises);
   } catch (error) {
-    console.error(
-      "❌ Multiple image upload failed:",
-      error.message
-    );
-
     throw new Error("Images upload failed");
   }
 };
@@ -86,20 +76,12 @@ export const deleteImage = async (publicId) => {
 
     const result = await cloudinary.uploader.destroy(publicId);
 
-    if (
-      result.result !== "ok" &&
-      result.result !== "not found"
-    ) {
+    if (result.result !== "ok" && result.result !== "not found") {
       throw new Error("Cloudinary image deletion failed");
     }
 
     return result;
   } catch (error) {
-    console.error(
-      "❌ Cloudinary delete failed:",
-      error.message
-    );
-
     throw new Error("Image deletion failed");
   }
 };

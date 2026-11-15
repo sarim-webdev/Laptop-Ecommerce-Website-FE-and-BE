@@ -94,13 +94,13 @@ const ResetPassword = () => {
   };
 
   return (
-    <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-black px-4 py-16 text-white sm:px-6 lg:px-8">
+    <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[#0B1220] px-4 py-16 text-white sm:px-6 lg:px-8">
 
       {/* =========================================
           BACKGROUND GLOW
       ========================================= */}
 
-      <div className="pointer-events-none absolute -left-40 top-20 h-80 w-80 rounded-full bg-cyan-500/10 blur-3xl" />
+      <div className="pointer-events-none absolute -left-40 top-20 h-80 w-80 rounded-full bg-sky-500/10 blur-3xl" />
 
       <div className="pointer-events-none absolute -right-40 bottom-10 h-80 w-80 rounded-full bg-blue-600/10 blur-3xl" />
 
@@ -110,7 +110,7 @@ const ResetPassword = () => {
 
       <div className="relative z-10 w-full max-w-md">
 
-        <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 shadow-2xl shadow-black/40 backdrop-blur-xl sm:p-8">
+        <div className="rounded-3xl border border-[#263449] bg-[#111C2E] p-6 shadow-2xl shadow-black/40 backdrop-blur-xl sm:p-8">
 
           {/* =========================================
               LOGO / HEADER
@@ -120,13 +120,13 @@ const ResetPassword = () => {
 
             <Link
               to="/"
-              className="inline-block text-2xl font-black tracking-tight text-white transition hover:text-cyan-400"
+              className="inline-block text-2xl font-black tracking-tight text-white transition hover:text-sky-400"
             >
               NEXORA
-              <span className="text-cyan-400">.</span>
+              <span className="text-sky-400">.</span>
             </Link>
 
-            <div className="mx-auto mt-6 flex h-14 w-14 items-center justify-center rounded-2xl border border-cyan-400/20 bg-cyan-400/10">
+            <div className="mx-auto mt-6 flex h-14 w-14 items-center justify-center rounded-2xl border border-sky-400/20 bg-sky-400/10">
               <span className="text-2xl">🔐</span>
             </div>
 
@@ -134,7 +134,7 @@ const ResetPassword = () => {
               Reset Password
             </h1>
 
-            <p className="mt-2 text-sm leading-6 text-gray-400">
+            <p className="mt-2 text-sm leading-6 text-slate-400">
               Create a new secure password for your NEXORA account.
             </p>
 
@@ -175,7 +175,7 @@ const ResetPassword = () => {
 
               <label
                 htmlFor="password"
-                className="mb-2 block text-sm font-medium text-gray-300"
+                className="mb-2 block text-sm font-medium text-slate-300"
               >
                 New Password
               </label>
@@ -194,19 +194,19 @@ const ResetPassword = () => {
                   w-full
                   rounded-xl
                   border
-                  border-white/10
-                  bg-white/[0.05]
+                  border-[#263449]
+                  bg-[#0B1220]
                   px-4
                   py-3
                   text-sm
                   text-white
                   outline-none
                   transition
-                  placeholder:text-gray-600
-                  focus:border-cyan-400/50
-                  focus:bg-white/[0.07]
+                  placeholder:text-slate-500
+                  focus:border-sky-400/50
+                  focus:bg-[#111C2E]
                   focus:ring-4
-                  focus:ring-cyan-400/10
+                  focus:ring-sky-400/10
                 "
               />
 
@@ -218,7 +218,7 @@ const ResetPassword = () => {
 
               <label
                 htmlFor="confirmPassword"
-                className="mb-2 block text-sm font-medium text-gray-300"
+                className="mb-2 block text-sm font-medium text-slate-300"
               >
                 Confirm New Password
               </label>
@@ -237,19 +237,19 @@ const ResetPassword = () => {
                   w-full
                   rounded-xl
                   border
-                  border-white/10
-                  bg-white/[0.05]
+                  border-[#263449]
+                  bg-[#0B1220]
                   px-4
                   py-3
                   text-sm
                   text-white
                   outline-none
                   transition
-                  placeholder:text-gray-600
-                  focus:border-cyan-400/50
-                  focus:bg-white/[0.07]
+                  placeholder:text-slate-500
+                  focus:border-sky-400/50
+                  focus:bg-[#111C2E]
                   focus:ring-4
-                  focus:ring-cyan-400/10
+                  focus:ring-sky-400/10
                 "
               />
 
@@ -257,13 +257,13 @@ const ResetPassword = () => {
 
             {/* Password Hint */}
 
-            <div className="flex items-start gap-2 rounded-xl border border-white/5 bg-white/[0.025] px-4 py-3">
+            <div className="flex items-start gap-2 rounded-xl border border-[#263449] bg-[#0B1220] px-4 py-3">
 
-              <span className="mt-0.5 text-cyan-400">
+              <span className="mt-0.5 text-sky-400">
                 •
               </span>
 
-              <p className="text-xs leading-5 text-gray-500">
+              <p className="text-xs leading-5 text-slate-400">
                 Use at least 8 characters for your new password.
               </p>
 
@@ -289,7 +289,7 @@ const ResetPassword = () => {
 
             <Link
               to="/sign-in"
-              className="text-sm font-semibold text-cyan-400 transition hover:text-cyan-300"
+              className="text-sm font-semibold text-sky-400 transition hover:text-sky-300"
             >
               ← Back to Sign In
             </Link>
@@ -300,7 +300,7 @@ const ResetPassword = () => {
 
         {/* Bottom Branding */}
 
-        <p className="mt-6 text-center text-xs text-gray-600">
+        <p className="mt-6 text-center text-xs text-slate-500">
           © {new Date().getFullYear()} NEXORA. All rights reserved.
         </p>
 

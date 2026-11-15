@@ -142,7 +142,6 @@ export const register = async (req, res, next) => {
     try {
       await sendWelcomeEmail(user.email, user.name);
     } catch (emailError) {
-      console.error("Welcome email failed:", emailError.message);
     }
 
     /* =========================================

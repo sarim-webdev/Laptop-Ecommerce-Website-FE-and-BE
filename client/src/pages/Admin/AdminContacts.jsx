@@ -200,12 +200,12 @@ const AdminContacts = () => {
 
   if (loading) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-[#05080d] text-white">
+      <div className="flex min-h-screen items-center justify-center bg-[#0B1220] text-white">
         <div className="text-center">
 
-          <div className="mx-auto h-10 w-10 animate-spin rounded-full border-4 border-white/10 border-t-cyan-400" />
+          <div className="mx-auto h-10 w-10 animate-spin rounded-full border-4 border-[#263449] border-t-sky-400" />
 
-          <p className="mt-4 text-sm text-slate-500">
+          <p className="mt-4 text-sm text-slate-400">
             Loading contacts...
           </p>
 
@@ -220,17 +220,17 @@ const AdminContacts = () => {
   ========================================= */
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-[#05080d] px-4 py-6 text-white sm:px-6 lg:px-8 lg:py-8">
+    <section className="relative min-h-screen overflow-hidden bg-[#0B1220] px-4 py-6 text-white sm:px-6 lg:px-8 lg:py-8">
 
       {/* =====================================
           BACKGROUND GLOWS
       ===================================== */}
 
-      <div className="pointer-events-none absolute -left-40 top-10 h-96 w-96 rounded-full bg-cyan-500/[0.06] blur-3xl" />
+      <div className="pointer-events-none absolute -left-40 top-10 h-96 w-96 rounded-full bg-sky-400/[0.06] blur-3xl" />
 
       <div className="pointer-events-none absolute -right-40 top-1/3 h-96 w-96 rounded-full bg-blue-600/[0.05] blur-3xl" />
 
-      <div className="pointer-events-none absolute bottom-0 left-1/3 h-80 w-80 rounded-full bg-cyan-500/[0.03] blur-3xl" />
+      <div className="pointer-events-none absolute bottom-0 left-1/3 h-80 w-80 rounded-full bg-sky-400/[0.03] blur-3xl" />
 
 
       <div className="relative mx-auto max-w-7xl space-y-6">
@@ -243,7 +243,7 @@ const AdminContacts = () => {
 
           <div>
 
-            <span className="text-sm font-bold uppercase tracking-[0.2em] text-cyan-400">
+            <span className="text-sm font-bold uppercase tracking-[0.2em] text-sky-400">
               NEXORA ADMINISTRATION
             </span>
 
@@ -251,7 +251,7 @@ const AdminContacts = () => {
               Contact Messages
             </h1>
 
-            <p className="mt-2 max-w-xl text-sm leading-6 text-slate-500 sm:text-base">
+            <p className="mt-2 max-w-xl text-sm leading-6 text-slate-400 sm:text-base">
               Manage customer inquiries and support
               messages.
             </p>
@@ -263,7 +263,7 @@ const AdminContacts = () => {
             type="button"
             onClick={handleRefresh}
             disabled={refreshing}
-            className="rounded-xl border border-white/10 bg-[#0b1119] px-5 py-2.5 text-sm font-semibold text-slate-300 shadow-lg shadow-black/20 transition-all duration-300 hover:border-cyan-400/30 hover:bg-[#101923] hover:text-white disabled:cursor-not-allowed disabled:opacity-60"
+            className="rounded-xl border border-[#263449] bg-[#111C2E] px-5 py-2.5 text-sm font-semibold text-slate-300 shadow-lg shadow-black/20 transition-all duration-300 hover:border-sky-400/30 hover:bg-[#172338] hover:text-white disabled:cursor-not-allowed disabled:opacity-60"
           >
             {refreshing
               ? "Refreshing..."
@@ -304,9 +304,9 @@ const AdminContacts = () => {
 
           {/* Total */}
 
-          <div className="group rounded-2xl border border-white/10 bg-gradient-to-br from-[#0c131d] via-[#091019] to-[#05080d] p-5 shadow-xl shadow-black/20 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/30">
+          <div className="group rounded-2xl border border-[#263449] bg-gradient-to-br from-[#172338] via-[#111C2E] to-[#0B1220] p-5 shadow-xl shadow-black/20 transition-all duration-300 hover:-translate-y-1 hover:border-sky-400/30">
 
-            <p className="text-sm font-medium text-slate-500">
+            <p className="text-sm font-medium text-slate-400">
               Total Messages
             </p>
 
@@ -314,16 +314,16 @@ const AdminContacts = () => {
               {contacts.length}
             </p>
 
-            <div className="mt-4 h-1 w-12 rounded-full bg-cyan-400" />
+            <div className="mt-4 h-1 w-12 rounded-full bg-sky-400" />
 
           </div>
 
 
           {/* New */}
 
-          <div className="group rounded-2xl border border-white/10 bg-gradient-to-br from-[#0c131d] via-[#091019] to-[#05080d] p-5 shadow-xl shadow-black/20 transition-all duration-300 hover:-translate-y-1 hover:border-amber-400/30">
+          <div className="group rounded-2xl border border-[#263449] bg-gradient-to-br from-[#172338] via-[#111C2E] to-[#0B1220] p-5 shadow-xl shadow-black/20 transition-all duration-300 hover:-translate-y-1 hover:border-amber-400/30">
 
-            <p className="text-sm font-medium text-slate-500">
+            <p className="text-sm font-medium text-slate-400">
               New
             </p>
 
@@ -344,9 +344,9 @@ const AdminContacts = () => {
 
           {/* In Progress */}
 
-          <div className="group rounded-2xl border border-white/10 bg-gradient-to-br from-[#0c131d] via-[#091019] to-[#05080d] p-5 shadow-xl shadow-black/20 transition-all duration-300 hover:-translate-y-1 hover:border-blue-400/30">
+          <div className="group rounded-2xl border border-[#263449] bg-gradient-to-br from-[#172338] via-[#111C2E] to-[#0B1220] p-5 shadow-xl shadow-black/20 transition-all duration-300 hover:-translate-y-1 hover:border-blue-400/30">
 
-            <p className="text-sm font-medium text-slate-500">
+            <p className="text-sm font-medium text-slate-400">
               In Progress
             </p>
 
@@ -367,9 +367,9 @@ const AdminContacts = () => {
 
           {/* Resolved */}
 
-          <div className="group rounded-2xl border border-white/10 bg-gradient-to-br from-[#0c131d] via-[#091019] to-[#05080d] p-5 shadow-xl shadow-black/20 transition-all duration-300 hover:-translate-y-1 hover:border-emerald-400/30">
+          <div className="group rounded-2xl border border-[#263449] bg-gradient-to-br from-[#172338] via-[#111C2E] to-[#0B1220] p-5 shadow-xl shadow-black/20 transition-all duration-300 hover:-translate-y-1 hover:border-emerald-400/30">
 
-            <p className="text-sm font-medium text-slate-500">
+            <p className="text-sm font-medium text-slate-400">
               Resolved
             </p>
 
@@ -394,15 +394,15 @@ const AdminContacts = () => {
             CONTACTS TABLE
         ===================================== */}
 
-        <div className="overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-[#0c131d] via-[#091019] to-[#05080d] shadow-2xl shadow-black/30">
+        <div className="overflow-hidden rounded-3xl border border-[#263449] bg-gradient-to-br from-[#172338] via-[#111C2E] to-[#0B1220] shadow-2xl shadow-black/30">
 
           {/* Table Header */}
 
-          <div className="flex items-center justify-between border-b border-white/10 px-6 py-5">
+          <div className="flex items-center justify-between border-b border-[#263449] px-6 py-5">
 
             <div>
 
-              <span className="text-xs font-bold uppercase tracking-[0.18em] text-cyan-400">
+              <span className="text-xs font-bold uppercase tracking-[0.18em] text-sky-400">
                 Customer Support
               </span>
 
@@ -410,13 +410,13 @@ const AdminContacts = () => {
                 All Contact Messages
               </h2>
 
-              <p className="mt-1 text-xs text-slate-500">
+              <p className="mt-1 text-xs text-slate-400">
                 Review and manage customer inquiries.
               </p>
 
             </div>
 
-            <span className="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1 text-xs font-bold text-cyan-400">
+            <span className="rounded-full border border-sky-400/20 bg-sky-400/10 px-3 py-1 text-xs font-bold text-sky-400">
               {contacts.length}
             </span>
 
@@ -427,7 +427,7 @@ const AdminContacts = () => {
 
             <div className="px-6 py-16 text-center">
 
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-white/10 bg-[#070c12] text-2xl shadow-lg">
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-[#263449] bg-[#111C2E] text-2xl shadow-lg">
                 ✉️
               </div>
 
@@ -435,7 +435,7 @@ const AdminContacts = () => {
                 No contact messages
               </h2>
 
-              <p className="mt-1 text-sm text-slate-500">
+              <p className="mt-1 text-sm text-slate-400">
                 Customer messages will appear here.
               </p>
 
@@ -447,27 +447,27 @@ const AdminContacts = () => {
 
               <table className="min-w-full">
 
-                <thead className="border-b border-white/10 bg-white/[0.02]">
+                <thead className="border-b border-[#263449] bg-[#172338]">
 
                   <tr>
 
-                    <th className="px-6 py-4 text-left text-xs font-bold uppercase tracking-wider text-slate-500">
+                    <th className="px-6 py-4 text-left text-xs font-bold uppercase tracking-wider text-slate-400">
                       Customer
                     </th>
 
-                    <th className="px-6 py-4 text-left text-xs font-bold uppercase tracking-wider text-slate-500">
+                    <th className="px-6 py-4 text-left text-xs font-bold uppercase tracking-wider text-slate-400">
                       Subject
                     </th>
 
-                    <th className="px-6 py-4 text-left text-xs font-bold uppercase tracking-wider text-slate-500">
+                    <th className="px-6 py-4 text-left text-xs font-bold uppercase tracking-wider text-slate-400">
                       Status
                     </th>
 
-                    <th className="px-6 py-4 text-left text-xs font-bold uppercase tracking-wider text-slate-500">
+                    <th className="px-6 py-4 text-left text-xs font-bold uppercase tracking-wider text-slate-400">
                       Date
                     </th>
 
-                    <th className="px-6 py-4 text-right text-xs font-bold uppercase tracking-wider text-slate-500">
+                    <th className="px-6 py-4 text-right text-xs font-bold uppercase tracking-wider text-slate-400">
                       Actions
                     </th>
 
@@ -476,13 +476,13 @@ const AdminContacts = () => {
                 </thead>
 
 
-                <tbody className="divide-y divide-white/[0.06]">
+                <tbody className="divide-y divide-[#263449]">
 
                   {contacts.map((contact) => (
 
                     <tr
                       key={contact._id}
-                      className="transition duration-300 hover:bg-white/[0.025]"
+                      className="transition duration-300 hover:bg-[#172338]"
                     >
 
                       {/* Customer */}
@@ -496,7 +496,7 @@ const AdminContacts = () => {
                               "Unknown"}
                           </p>
 
-                          <p className="mt-1 text-sm text-slate-500">
+                          <p className="mt-1 text-sm text-slate-400">
                             {contact.email || "—"}
                           </p>
 
@@ -532,7 +532,7 @@ const AdminContacts = () => {
                               event.target.value
                             )
                           }
-                          className={`rounded-full border px-3 py-1.5 text-xs font-semibold outline-none transition focus:ring-2 focus:ring-cyan-400/20 ${getStatusClasses(
+                          className={`rounded-full border px-3 py-1.5 text-xs font-semibold outline-none transition focus:ring-2 focus:ring-sky-400/20 ${getStatusClasses(
                             contact.status
                           )}`}
                         >
@@ -560,7 +560,7 @@ const AdminContacts = () => {
 
                       {/* Date */}
 
-                      <td className="whitespace-nowrap px-6 py-5 text-sm text-slate-500">
+                      <td className="whitespace-nowrap px-6 py-5 text-sm text-slate-400">
 
                         {contact.createdAt
                           ? new Date(
@@ -584,7 +584,7 @@ const AdminContacts = () => {
                                 contact
                               )
                             }
-                            className="rounded-lg border border-white/10 bg-white/[0.04] px-3 py-2 text-xs font-semibold text-slate-300 transition hover:border-cyan-400/30 hover:bg-cyan-400/10 hover:text-cyan-400"
+                            className="rounded-lg border border-[#263449] bg-[#172338] px-3 py-2 text-xs font-semibold text-slate-300 transition hover:border-sky-400/30 hover:bg-sky-400/10 hover:text-sky-400"
                           >
                             View
                           </button>
@@ -627,17 +627,17 @@ const AdminContacts = () => {
 
         {selectedContact && (
 
-          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4 backdrop-blur-sm">
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#0B1220]/80 p-4 backdrop-blur-sm">
 
-            <div className="max-h-[90vh] w-full max-w-2xl overflow-y-auto overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-[#0c131d] via-[#091019] to-[#05080d] shadow-2xl shadow-black/60">
+            <div className="max-h-[90vh] w-full max-w-2xl overflow-y-auto overflow-hidden rounded-3xl border border-[#263449] bg-gradient-to-br from-[#172338] via-[#111C2E] to-[#0B1220] shadow-2xl shadow-black/60">
 
               {/* Modal Header */}
 
-              <div className="flex items-center justify-between border-b border-white/10 px-6 py-5">
+              <div className="flex items-center justify-between border-b border-[#263449] px-6 py-5">
 
                 <div>
 
-                  <span className="text-xs font-bold uppercase tracking-[0.18em] text-cyan-400">
+                  <span className="text-xs font-bold uppercase tracking-[0.18em] text-sky-400">
                     NEXORA SUPPORT
                   </span>
 
@@ -645,7 +645,7 @@ const AdminContacts = () => {
                     Contact Details
                   </h2>
 
-                  <p className="text-sm text-slate-500">
+                  <p className="text-sm text-slate-400">
                     Customer inquiry
                   </p>
 
@@ -657,7 +657,7 @@ const AdminContacts = () => {
                   onClick={() =>
                     setSelectedContact(null)
                   }
-                  className="rounded-xl border border-white/10 bg-white/[0.04] p-2 text-slate-500 transition hover:border-red-400/20 hover:bg-red-400/10 hover:text-red-400"
+                  className="rounded-xl border border-[#263449] bg-[#172338] p-2 text-slate-400 transition hover:border-red-400/20 hover:bg-red-400/10 hover:text-red-400"
                 >
                   ✕
                 </button>
@@ -673,9 +673,9 @@ const AdminContacts = () => {
 
                   {/* Name */}
 
-                  <div className="rounded-2xl border border-white/10 bg-[#070c12] p-4">
+                  <div className="rounded-2xl border border-[#263449] bg-[#0B1220] p-4">
 
-                    <p className="text-xs font-bold uppercase tracking-wider text-slate-500">
+                    <p className="text-xs font-bold uppercase tracking-wider text-slate-400">
                       Name
                     </p>
 
@@ -689,9 +689,9 @@ const AdminContacts = () => {
 
                   {/* Email */}
 
-                  <div className="rounded-2xl border border-white/10 bg-[#070c12] p-4">
+                  <div className="rounded-2xl border border-[#263449] bg-[#0B1220] p-4">
 
-                    <p className="text-xs font-bold uppercase tracking-wider text-slate-500">
+                    <p className="text-xs font-bold uppercase tracking-wider text-slate-400">
                       Email
                     </p>
 
@@ -709,7 +709,7 @@ const AdminContacts = () => {
 
                 <div>
 
-                  <p className="text-xs font-bold uppercase tracking-wider text-slate-500">
+                  <p className="text-xs font-bold uppercase tracking-wider text-slate-400">
                     Subject
                   </p>
 
@@ -725,11 +725,11 @@ const AdminContacts = () => {
 
                 <div>
 
-                  <p className="text-xs font-bold uppercase tracking-wider text-slate-500">
+                  <p className="text-xs font-bold uppercase tracking-wider text-slate-400">
                     Message
                   </p>
 
-                  <div className="mt-2 rounded-2xl border border-white/10 bg-[#070c12] p-5 text-sm leading-7 text-slate-300">
+                  <div className="mt-2 rounded-2xl border border-[#263449] bg-[#0B1220] p-5 text-sm leading-7 text-slate-300">
                     {selectedContact.message ||
                       "No message available."}
                   </div>
@@ -741,7 +741,7 @@ const AdminContacts = () => {
 
                 <div>
 
-                  <p className="text-xs font-bold uppercase tracking-wider text-slate-500">
+                  <p className="text-xs font-bold uppercase tracking-wider text-slate-400">
                     Status
                   </p>
 
@@ -761,14 +761,14 @@ const AdminContacts = () => {
 
               {/* Modal Footer */}
 
-              <div className="flex justify-end border-t border-white/10 px-6 py-4">
+              <div className="flex justify-end border-t border-[#263449] px-6 py-4">
 
                 <button
                   type="button"
                   onClick={() =>
                     setSelectedContact(null)
                   }
-                  className="rounded-xl bg-cyan-500 px-5 py-2.5 text-sm font-bold text-slate-950 shadow-lg shadow-cyan-500/10 transition hover:bg-cyan-400"
+                  className="rounded-xl bg-sky-400 px-5 py-2.5 text-sm font-bold text-[#0B1220] shadow-lg shadow-sky-500/10 transition hover:bg-sky-300"
                 >
                   Close
                 </button>

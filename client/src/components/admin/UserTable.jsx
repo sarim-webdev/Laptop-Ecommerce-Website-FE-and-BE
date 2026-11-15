@@ -128,10 +128,10 @@ const UserTable = ({
 
   if (loading) {
     return (
-      <div className="overflow-hidden rounded-3xl border border-white/10 bg-[#0b1119] shadow-2xl shadow-black/30">
+      <div className="overflow-hidden rounded-3xl border border-[#263449] bg-[#0B1220] shadow-2xl shadow-black/30">
 
         <div className="flex items-center justify-center px-6 py-16">
-          <div className="h-8 w-8 animate-spin rounded-full border-4 border-white/10 border-t-cyan-400" />
+          <div className="h-8 w-8 animate-spin rounded-full border-4 border-[#263449] border-t-sky-400" />
         </div>
 
       </div>
@@ -144,9 +144,9 @@ const UserTable = ({
 
   if (!users.length) {
     return (
-      <div className="rounded-3xl border border-white/10 bg-[#0b1119] px-6 py-16 text-center shadow-2xl shadow-black/30">
+      <div className="rounded-3xl border border-[#263449] bg-[#0B1220] px-6 py-16 text-center shadow-2xl shadow-black/30">
 
-        <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full border border-cyan-400/20 bg-cyan-400/10 text-2xl">
+        <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full border border-sky-400/20 bg-sky-400/10 text-2xl">
           👥
         </div>
 
@@ -154,7 +154,7 @@ const UserTable = ({
           No users found
         </h3>
 
-        <p className="mt-1 text-sm text-gray-500">
+        <p className="mt-1 text-sm text-slate-400">
           There are currently no users to display.
         </p>
 
@@ -163,18 +163,18 @@ const UserTable = ({
   }
 
   return (
-    <div className="overflow-hidden rounded-3xl border border-white/10 bg-[#0b1119] shadow-2xl shadow-black/30">
+    <div className="overflow-hidden rounded-3xl border border-[#263449] bg-[#0B1220] shadow-2xl shadow-black/30">
 
       {/* =========================================
           TABLE HEADER
       ========================================= */}
 
-      <div className="border-b border-white/10 bg-gradient-to-r from-[#0c131d] to-[#091019] px-6 py-5">
+      <div className="border-b border-[#263449] bg-gradient-to-r from-[#111C2E] to-[#0B1220] px-6 py-5">
 
         <div className="flex flex-col justify-between gap-2 sm:flex-row sm:items-center">
 
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-cyan-400">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-sky-400">
               NEXORA Administration
             </p>
 
@@ -182,12 +182,12 @@ const UserTable = ({
               Users
             </h2>
 
-            <p className="mt-1 text-sm text-gray-500">
+            <p className="mt-1 text-sm text-slate-400">
               Manage registered NEXORA users.
             </p>
           </div>
 
-          <span className="w-fit rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1 text-xs font-semibold text-cyan-400">
+          <span className="w-fit rounded-full border border-sky-400/20 bg-sky-400/10 px-3 py-1 text-xs font-semibold text-sky-400">
             {users.length}{" "}
             {users.length === 1
               ? "User"
@@ -206,27 +206,27 @@ const UserTable = ({
 
         <table className="min-w-[900px] w-full">
 
-          <thead className="bg-[#070c12]">
+          <thead className="bg-[#172338]">
 
-            <tr className="border-b border-white/10 text-left">
+            <tr className="border-b border-[#263449] text-left">
 
-              <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-gray-500">
+              <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-400">
                 User
               </th>
 
-              <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-gray-500">
+              <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-400">
                 Role
               </th>
 
-              <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-gray-500">
+              <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-400">
                 Status
               </th>
 
-              <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-gray-500">
+              <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-400">
                 Joined
               </th>
 
-              <th className="px-6 py-4 text-right text-xs font-bold uppercase tracking-wider text-gray-500">
+              <th className="px-6 py-4 text-right text-xs font-bold uppercase tracking-wider text-slate-400">
                 Actions
               </th>
 
@@ -234,7 +234,7 @@ const UserTable = ({
 
           </thead>
 
-          <tbody className="divide-y divide-white/[0.06]">
+          <tbody className="divide-y divide-[#263449]">
 
             {users.map((user) => {
               const userId = getUserId(user);
@@ -247,7 +247,7 @@ const UserTable = ({
               return (
                 <tr
                   key={userId}
-                  className="transition duration-300 hover:bg-cyan-400/[0.03]"
+                  className="transition duration-300 hover:bg-sky-400/[0.03]"
                 >
 
                   {/* User */}
@@ -260,10 +260,10 @@ const UserTable = ({
                         <img
                           src={avatar}
                           alt={getUserName(user)}
-                          className="h-11 w-11 rounded-full border border-white/10 object-cover"
+                          className="h-11 w-11 rounded-full border border-[#263449] object-cover"
                         />
                       ) : (
-                        <div className="flex h-11 w-11 items-center justify-center rounded-full border border-cyan-400/20 bg-cyan-400/10 text-sm font-bold text-cyan-400">
+                        <div className="flex h-11 w-11 items-center justify-center rounded-full border border-sky-400/20 bg-sky-400/10 text-sm font-bold text-sky-400">
                           {getUserName(user)
                             .charAt(0)
                             .toUpperCase()}
@@ -274,12 +274,12 @@ const UserTable = ({
 
                         <Link
                           to={`/admin/users/${userId}`}
-                          className="block truncate text-sm font-bold text-white transition hover:text-cyan-400"
+                          className="block truncate text-sm font-bold text-white transition hover:text-sky-400"
                         >
                           {getUserName(user)}
                         </Link>
 
-                        <p className="max-w-[240px] truncate text-xs text-gray-500">
+                        <p className="max-w-[240px] truncate text-xs text-slate-400">
                           {getUserEmail(user)}
                         </p>
 
@@ -295,8 +295,8 @@ const UserTable = ({
 
                     <span
                       className={`inline-flex rounded-full px-3 py-1 text-xs font-bold ${role === "admin"
-                          ? "border border-cyan-400/20 bg-cyan-400/10 text-cyan-400"
-                          : "border border-white/10 bg-white/5 text-gray-400"
+                          ? "border border-sky-400/20 bg-sky-400/10 text-sky-400"
+                          : "border border-[#263449] bg-[#172338] text-slate-400"
                         }`}
                     >
                       {role === "admin" ? "Admin" : "User"}
@@ -318,7 +318,7 @@ const UserTable = ({
 
                   <td className="px-6 py-4">
 
-                    <span className="text-sm text-gray-500">
+                    <span className="text-sm text-slate-400">
                       {user?.createdAt
                         ? new Date(
                           user.createdAt

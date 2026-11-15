@@ -645,7 +645,7 @@ const AdminProductForm = () => {
       <div className="flex min-h-[60vh] items-center justify-center">
         <Loader2
           size={32}
-          className="animate-spin text-cyan-400"
+          className="animate-spin text-sky-400"
         />
       </div>
     );
@@ -672,14 +672,14 @@ const AdminProductForm = () => {
             onClick={() =>
               navigate("/admin/products")
             }
-            className="mb-3 inline-flex items-center gap-2 text-sm font-semibold text-slate-400 transition hover:text-cyan-400"
+            className="mb-3 inline-flex items-center gap-2 text-sm font-semibold text-slate-400 transition hover:text-sky-400"
           >
             <ArrowLeft size={17} />
 
             Back to Products
           </button>
 
-          <p className="text-sm font-semibold text-cyan-400">
+          <p className="text-sm font-semibold text-sky-400">
             NEXORA Administration
           </p>
 
@@ -735,7 +735,7 @@ const AdminProductForm = () => {
             BASIC INFORMATION
         =================================== */}
 
-        <div className="rounded-2xl border border-slate-800 bg-slate-950 p-6 shadow-xl shadow-black/10">
+        <div className="rounded-2xl border border-[#263449] bg-[#111C2E] p-6 shadow-xl shadow-black/10">
 
           <div className="mb-6">
 
@@ -743,7 +743,7 @@ const AdminProductForm = () => {
               Basic Information
             </h2>
 
-            <p className="mt-1 text-sm text-slate-500">
+            <p className="mt-1 text-sm text-slate-400">
               Enter the main information about
               your laptop.
             </p>
@@ -771,7 +771,7 @@ const AdminProductForm = () => {
                 onChange={handleChange}
                 placeholder="e.g. Dell XPS 15"
                 maxLength={150}
-                className="w-full rounded-xl border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
+                className="w-full rounded-xl border border-[#263449] bg-[#0B1220] px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-400 focus:border-sky-500 focus:ring-2 focus:ring-sky-500/20"
               />
 
             </div>
@@ -795,10 +795,10 @@ const AdminProductForm = () => {
                 placeholder="Enter detailed product description..."
                 rows={6}
                 maxLength={5000}
-                className="w-full resize-none rounded-xl border border-slate-700 bg-slate-900 px-4 py-3 text-sm leading-6 text-white outline-none transition placeholder:text-slate-600 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
+                className="w-full resize-none rounded-xl border border-[#263449] bg-[#0B1220] px-4 py-3 text-sm leading-6 text-white outline-none transition placeholder:text-slate-400 focus:border-sky-500 focus:ring-2 focus:ring-sky-500/20"
               />
 
-              <p className="mt-1 text-right text-xs text-slate-600">
+              <p className="mt-1 text-right text-xs text-slate-400">
                 {formData.description.length}/5000
               </p>
 
@@ -820,7 +820,7 @@ const AdminProductForm = () => {
                 onChange={handleChange}
                 placeholder="e.g. Dell"
                 maxLength={100}
-                className="w-full rounded-xl border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
+                className="w-full rounded-xl border border-[#263449] bg-[#0B1220] px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-400 focus:border-sky-500 focus:ring-2 focus:ring-sky-500/20"
               />
 
             </div>
@@ -841,7 +841,7 @@ const AdminProductForm = () => {
                 name="category"
                 value={formData.category}
                 onChange={handleChange}
-                className="w-full rounded-xl border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white outline-none transition focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
+                className="w-full rounded-xl border border-[#263449] bg-[#0B1220] px-4 py-3 text-sm text-white outline-none transition focus:border-sky-500 focus:ring-2 focus:ring-sky-500/20"
               >
 
                 <option value="">
@@ -872,7 +872,7 @@ const AdminProductForm = () => {
             PRICING & INVENTORY
         =================================== */}
 
-        <div className="rounded-2xl border border-slate-800 bg-slate-950 p-6 shadow-xl shadow-black/10">
+        <div className="rounded-2xl border border-[#263449] bg-[#111C2E] p-6 shadow-xl shadow-black/10">
 
           <div className="mb-6">
 
@@ -880,7 +880,7 @@ const AdminProductForm = () => {
               Pricing & Inventory
             </h2>
 
-            <p className="mt-1 text-sm text-slate-500">
+            <p className="mt-1 text-sm text-slate-400">
               Set product pricing and available
               inventory.
             </p>
@@ -909,7 +909,7 @@ const AdminProductForm = () => {
                 min="0"
                 step="0.01"
                 placeholder="150000"
-                className="w-full rounded-xl border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
+                className="w-full rounded-xl border border-[#263449] bg-[#0B1220] px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-400 focus:border-sky-500 focus:ring-2 focus:ring-sky-500/20"
               />
 
             </div>
@@ -933,7 +933,7 @@ const AdminProductForm = () => {
                 min="0"
                 step="0.01"
                 placeholder="180000"
-                className="w-full rounded-xl border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
+                className="w-full rounded-xl border border-[#263449] bg-[#0B1220] px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-400 focus:border-sky-500 focus:ring-2 focus:ring-sky-500/20"
               />
 
             </div>
@@ -958,7 +958,7 @@ const AdminProductForm = () => {
                 min="0"
                 step="1"
                 placeholder="10"
-                className="w-full rounded-xl border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
+                className="w-full rounded-xl border border-[#263449] bg-[#0B1220] px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-400 focus:border-sky-500 focus:ring-2 focus:ring-sky-500/20"
               />
 
             </div>
@@ -968,7 +968,7 @@ const AdminProductForm = () => {
 
             <div className="flex items-end">
 
-              <label className="flex w-full cursor-pointer items-center gap-3 rounded-xl border border-slate-700 bg-slate-900 px-4 py-3">
+              <label className="flex w-full cursor-pointer items-center gap-3 rounded-xl border border-[#263449] bg-[#0B1220] px-4 py-3">
 
                 <input
                   type="checkbox"
@@ -977,7 +977,7 @@ const AdminProductForm = () => {
                     formData.featured
                   }
                   onChange={handleChange}
-                  className="h-4 w-4 accent-cyan-500"
+                  className="h-4 w-4 accent-sky-500"
                 />
 
                 <span>
@@ -985,7 +985,7 @@ const AdminProductForm = () => {
                     Featured Product
                   </span>
 
-                  <span className="block text-xs text-slate-500">
+                  <span className="block text-xs text-slate-400">
                     Show this product as featured.
                   </span>
                 </span>
@@ -1003,7 +1003,7 @@ const AdminProductForm = () => {
             PRODUCT IMAGES
         =================================== */}
 
-        <div className="rounded-2xl border border-slate-800 bg-slate-950 p-6 shadow-xl shadow-black/10">
+        <div className="rounded-2xl border border-[#263449] bg-[#111C2E] p-6 shadow-xl shadow-black/10">
 
           <div className="mb-6">
 
@@ -1011,7 +1011,7 @@ const AdminProductForm = () => {
               Product Images
             </h2>
 
-            <p className="mt-1 text-sm text-slate-500">
+            <p className="mt-1 text-sm text-slate-400">
               Upload up to 5 product images.
             </p>
 
@@ -1037,7 +1037,7 @@ const AdminProductForm = () => {
                         image.publicId ||
                         index
                       }
-                      className="group relative overflow-hidden rounded-xl border border-slate-700 bg-slate-900"
+                      className="group relative overflow-hidden rounded-xl border border-[#263449] bg-[#0B1220]"
                     >
 
                       <img
@@ -1087,7 +1087,7 @@ const AdminProductForm = () => {
 
                     <div
                       key={`${image.name}-${index}`}
-                      className="group relative overflow-hidden rounded-xl border border-cyan-500/30 bg-slate-900"
+                      className="group relative overflow-hidden rounded-xl border border-sky-500/30 bg-[#0B1220]"
                     >
 
                       <img
@@ -1129,9 +1129,9 @@ const AdminProductForm = () => {
             images.length <
             5 && (
 
-              <label className="flex cursor-pointer flex-col items-center justify-center rounded-xl border border-dashed border-slate-700 bg-slate-900/50 px-6 py-10 text-center transition hover:border-cyan-500/50 hover:bg-cyan-500/5">
+              <label className="flex cursor-pointer flex-col items-center justify-center rounded-xl border border-dashed border-[#263449] bg-[#0B1220]/50 px-6 py-10 text-center transition hover:border-sky-500/50 hover:bg-sky-500/5">
 
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-500/10 text-cyan-400">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-sky-500/10 text-sky-400">
 
                   <ImagePlus size={23} />
 
@@ -1141,7 +1141,7 @@ const AdminProductForm = () => {
                   Click to upload images
                 </p>
 
-                <p className="mt-1 text-xs text-slate-500">
+                <p className="mt-1 text-xs text-slate-400">
                   PNG, JPG, WEBP — Maximum 5 images
                 </p>
 
@@ -1163,7 +1163,7 @@ const AdminProductForm = () => {
             SPECIFICATIONS
         =================================== */}
 
-        <div className="rounded-2xl border border-slate-800 bg-slate-950 p-6 shadow-xl shadow-black/10">
+        <div className="rounded-2xl border border-[#263449] bg-[#111C2E] p-6 shadow-xl shadow-black/10">
 
           <div className="mb-6">
 
@@ -1171,7 +1171,7 @@ const AdminProductForm = () => {
               Laptop Specifications
             </h2>
 
-            <p className="mt-1 text-sm text-slate-500">
+            <p className="mt-1 text-sm text-slate-400">
               Add the technical specifications
               of the laptop.
             </p>
@@ -1298,7 +1298,7 @@ const AdminProductForm = () => {
               navigate("/admin/products")
             }
             disabled={saving}
-            className="rounded-xl border border-slate-700 bg-slate-900 px-6 py-3 text-sm font-semibold text-slate-300 transition hover:bg-slate-800 disabled:cursor-not-allowed disabled:opacity-50"
+            className="rounded-xl border border-[#263449] bg-[#0B1220] px-6 py-3 text-sm font-semibold text-slate-300 transition hover:bg-[#172338] disabled:cursor-not-allowed disabled:opacity-50"
           >
             Cancel
           </button>
@@ -1307,7 +1307,7 @@ const AdminProductForm = () => {
           <button
             type="submit"
             disabled={saving}
-            className="inline-flex items-center justify-center gap-2 rounded-xl bg-cyan-500 px-7 py-3 text-sm font-bold text-slate-950 shadow-lg shadow-cyan-500/10 transition hover:bg-cyan-400 disabled:cursor-not-allowed disabled:opacity-60"
+            className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-sky-400 to-blue-600 px-7 py-3 text-sm font-bold text-white shadow-lg shadow-sky-500/10 transition hover:from-sky-300 hover:to-blue-500 disabled:cursor-not-allowed disabled:opacity-60"
           >
 
             {saving ? (
@@ -1366,7 +1366,7 @@ const InputField = ({
         value={value}
         onChange={onChange}
         placeholder={placeholder}
-        className="w-full rounded-xl border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
+        className="w-full rounded-xl border border-[#263449] bg-[#0B1220] px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-400 focus:border-sky-500 focus:ring-2 focus:ring-sky-500/20"
       />
 
     </div>

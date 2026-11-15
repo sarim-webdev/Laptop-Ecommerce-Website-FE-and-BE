@@ -112,18 +112,18 @@ const ProductCard = ({ product }) => {
         overflow-hidden
         rounded-[24px]
         border
-        border-white/[0.08]
-        bg-white/[0.035]
+        border-[#263449]
+        bg-[#111C2E]
         shadow-xl
         shadow-black/20
         backdrop-blur-xl
         transition-all
         duration-500
         hover:-translate-y-1
-        hover:border-cyan-400/25
-        hover:bg-white/[0.055]
+        hover:border-sky-400/25
+        hover:bg-[#172338]
         hover:shadow-2xl
-        hover:shadow-cyan-500/[0.08]
+        hover:shadow-sky-500/[0.08]
       "
     >
 
@@ -136,9 +136,9 @@ const ProductCard = ({ product }) => {
           relative
           overflow-hidden
           bg-gradient-to-br
-          from-white/[0.07]
-          via-white/[0.025]
-          to-transparent
+          from-[#172338]
+          via-[#111C2E]
+          to-[#0B1220]
         "
       >
 
@@ -155,11 +155,11 @@ const ProductCard = ({ product }) => {
             -translate-x-1/2
             -translate-y-1/2
             rounded-full
-            bg-cyan-500/[0.07]
+            bg-sky-400/[0.07]
             blur-3xl
             transition-all
             duration-500
-            group-hover:bg-cyan-400/[0.12]
+            group-hover:bg-sky-400/[0.12]
           "
         />
 
@@ -174,15 +174,15 @@ const ProductCard = ({ product }) => {
               z-10
               rounded-full
               border
-              border-cyan-400/20
-              bg-cyan-400/10
+              border-sky-400/20
+              bg-sky-400/10
               px-3
               py-1.5
               text-[10px]
               font-black
               uppercase
               tracking-wider
-              text-cyan-400
+              text-sky-400
               backdrop-blur-md
             "
           >
@@ -228,7 +228,7 @@ const ProductCard = ({ product }) => {
            h-[280px]
            w-full
            overflow-hidden
-           bg-[#080d14]
+           bg-[#0B1220]
            sm:h-[320px]
   "
         >
@@ -269,16 +269,16 @@ const ProductCard = ({ product }) => {
             justify-center
             rounded-xl
             border
-            border-white/10
-            bg-black/60
-            text-gray-300
+            border-[#263449]
+            bg-[#0B1220]/80
+            text-slate-300
             opacity-0
             backdrop-blur-md
             transition-all
             duration-300
-            hover:border-cyan-400/30
-            hover:bg-cyan-400
-            hover:text-black
+            hover:border-sky-400/30
+            hover:bg-sky-400
+            hover:text-[#0B1220]
             group-hover:translate-y-0
             group-hover:opacity-100
           "
@@ -315,15 +315,15 @@ const ProductCard = ({ product }) => {
               w-fit
               rounded-full
               border
-              border-cyan-400/15
-              bg-cyan-400/[0.07]
+              border-sky-400/20
+              bg-sky-400/10
               px-2.5
               py-1
               text-[9px]
               font-black
               uppercase
               tracking-[0.15em]
-              text-cyan-400
+              text-sky-400
             "
           >
             {typeof category === "object"
@@ -344,7 +344,7 @@ const ProductCard = ({ product }) => {
             text-white
             transition-colors
             duration-300
-            hover:text-cyan-400
+            hover:text-sky-400
           "
         >
           {name || "NEXORA Laptop"}
@@ -358,7 +358,7 @@ const ProductCard = ({ product }) => {
               mt-1.5
               text-xs
               font-medium
-              text-gray-500
+              text-slate-400
             "
           >
             {brand}
@@ -374,7 +374,7 @@ const ProductCard = ({ product }) => {
               line-clamp-2
               text-sm
               leading-6
-              text-gray-500
+              text-slate-400
             "
           >
             {description}
@@ -398,7 +398,7 @@ const ProductCard = ({ product }) => {
                 flex
                 items-center
                 gap-0.5
-                text-cyan-400
+                text-sky-400
               "
             >
               {Array.from({
@@ -417,7 +417,7 @@ const ProductCard = ({ product }) => {
               className="
                 text-xs
                 font-bold
-                text-gray-300
+                text-slate-300
               "
             >
               {Number(rating).toFixed(1)}
@@ -427,7 +427,7 @@ const ProductCard = ({ product }) => {
               <span
                 className="
                   text-xs
-                  text-gray-600
+                  text-slate-400
                 "
               >
                 ({reviews})
@@ -447,7 +447,7 @@ const ProductCard = ({ product }) => {
           className="
             my-5
             border-t
-            border-white/[0.07]
+            border-[#263449]
           "
         />
 
@@ -472,7 +472,7 @@ const ProductCard = ({ product }) => {
                 font-bold
                 uppercase
                 tracking-wider
-                text-gray-600
+                text-slate-400
               "
             >
               Price
@@ -505,7 +505,7 @@ const ProductCard = ({ product }) => {
                   className="
                     text-xs
                     font-medium
-                    text-gray-600
+                    text-slate-400
                     line-through
                   "
                 >
@@ -536,20 +536,20 @@ const ProductCard = ({ product }) => {
               gap-2
               rounded-xl
               bg-gradient-to-r
-              from-cyan-500
+              from-sky-400
               to-blue-600
               px-4
               text-xs
               font-black
-              text-white
+              text-[#0B1220]
               shadow-lg
-              shadow-cyan-500/10
+              shadow-sky-500/10
               transition-all
               duration-300
               hover:-translate-y-0.5
-              hover:from-cyan-400
+              hover:from-sky-300
               hover:to-blue-500
-              hover:shadow-cyan-500/20
+              hover:shadow-sky-500/20
               active:translate-y-0
               disabled:cursor-not-allowed
               disabled:opacity-40
@@ -614,8 +614,8 @@ const ProductCard = ({ product }) => {
           origin-left
           scale-x-0
           bg-gradient-to-r
-          from-cyan-400
-          via-blue-500
+          from-sky-400
+          via-blue-600
           to-transparent
           transition-transform
           duration-500

@@ -21,22 +21,22 @@ const Button = ({
 
   const variants = {
     primary:
-      "bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500",
+      "bg-gradient-to-r from-sky-400 to-blue-600 text-[#0B1220] hover:from-sky-300 hover:to-blue-500 focus:ring-sky-400",
 
     secondary:
-      "bg-gray-800 text-white hover:bg-gray-700 focus:ring-gray-500",
+      "bg-[#172338] text-white hover:bg-[#1E304B] focus:ring-sky-400",
 
     outline:
-      "border border-gray-300 bg-transparent text-gray-800 hover:bg-gray-100 focus:ring-gray-400",
+      "border border-[#263449] bg-transparent text-slate-300 hover:bg-[#172338] hover:text-sky-400 focus:ring-sky-400",
 
     danger:
       "bg-red-600 text-white hover:bg-red-700 focus:ring-red-500",
 
     success:
-      "bg-green-600 text-white hover:bg-green-700 focus:ring-green-500",
+      "bg-emerald-600 text-white hover:bg-emerald-700 focus:ring-emerald-500",
 
     ghost:
-      "bg-transparent text-gray-700 hover:bg-gray-100 focus:ring-gray-300",
+      "bg-transparent text-slate-300 hover:bg-[#172338] hover:text-sky-400 focus:ring-sky-400",
   };
 
   const sizes = {

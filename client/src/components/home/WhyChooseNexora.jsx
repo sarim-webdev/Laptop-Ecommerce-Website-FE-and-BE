@@ -38,17 +38,17 @@ const features = [
 
 const WhyChooseNexora = () => {
   return (
-    <section className="relative overflow-hidden bg-black py-12 sm:py-14 md:py-16 lg:py-16">
+    <section className="relative overflow-hidden bg-[#0B1220] py-12 sm:py-14 md:py-16 lg:py-16">
 
       {/* =========================================
           DECORATIVE BACKGROUND
       ========================================= */}
 
-      <div className="pointer-events-none absolute -left-40 top-20 h-72 w-72 rounded-full bg-cyan-500/10 blur-3xl sm:h-80 sm:w-80" />
+      <div className="pointer-events-none absolute -left-40 top-20 h-72 w-72 rounded-full bg-sky-400/5 blur-3xl sm:h-80 sm:w-80" />
 
-      <div className="pointer-events-none absolute -right-40 bottom-10 h-72 w-72 rounded-full bg-blue-600/10 blur-3xl sm:h-80 sm:w-80" />
+      <div className="pointer-events-none absolute -right-40 bottom-10 h-72 w-72 rounded-full bg-blue-500/5 blur-3xl sm:h-80 sm:w-80" />
 
-      <div className="pointer-events-none absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-400/5 blur-3xl" />
+      <div className="pointer-events-none absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-sky-400/5 blur-3xl" />
 
       {/* =========================================
           CONTAINER
@@ -66,13 +66,13 @@ const WhyChooseNexora = () => {
 
           <div className="mb-4 inline-flex items-center gap-2 sm:mb-5">
 
-            <span className="h-px w-6 bg-cyan-400 sm:w-8" />
+            <span className="h-px w-6 bg-sky-400 sm:w-8" />
 
-            <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-cyan-400 sm:text-sm sm:tracking-[0.2em]">
+            <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-sky-400 sm:text-sm sm:tracking-[0.2em]">
               Why NEXORA
             </span>
 
-            <span className="h-px w-6 bg-cyan-400 sm:w-8" />
+            <span className="h-px w-6 bg-sky-400 sm:w-8" />
 
           </div>
 
@@ -84,7 +84,7 @@ const WhyChooseNexora = () => {
 
           {/* Description */}
 
-          <p className="mx-auto mt-4 max-w-xl text-sm leading-6 text-gray-400 sm:text-base sm:leading-7 lg:text-lg">
+          <p className="mx-auto mt-4 max-w-xl text-sm leading-6 text-slate-400 sm:text-base sm:leading-7 lg:text-lg">
             Premium technology. Exceptional performance. Designed for you.
           </p>
 
@@ -108,17 +108,17 @@ const WhyChooseNexora = () => {
                   overflow-hidden
                   rounded-2xl
                   border
-                  border-white/10
-                  bg-white/[0.03]
+                  border-[#263449]
+                  bg-[#111C2E]
                   p-5
                   shadow-lg
                   backdrop-blur-sm
                   transition-all
                   duration-300
                   hover:-translate-y-1
-                  hover:border-cyan-400/30
-                  hover:bg-white/[0.06]
-                  hover:shadow-cyan-500/10
+                  hover:border-sky-400/30
+                  hover:bg-[#15243A]
+                  hover:shadow-sky-500/10
                   sm:p-6
                   lg:p-7
                 "
@@ -126,7 +126,7 @@ const WhyChooseNexora = () => {
 
                 {/* Top Glow */}
 
-                <div className="pointer-events-none absolute -right-10 -top-10 h-24 w-24 rounded-full bg-cyan-400/10 opacity-0 blur-2xl transition-opacity duration-300 group-hover:opacity-100" />
+                <div className="pointer-events-none absolute -right-10 -top-10 h-24 w-24 rounded-full bg-sky-400/10 opacity-0 blur-2xl transition-opacity duration-300 group-hover:opacity-100" />
 
                 {/* Icon */}
 
@@ -141,12 +141,12 @@ const WhyChooseNexora = () => {
                     justify-center
                     rounded-xl
                     border
-                    border-cyan-400/10
-                    bg-cyan-400/10
+                    border-sky-400/10
+                    bg-sky-400/10
                     transition-all
                     duration-300
-                    group-hover:border-cyan-400/30
-                    group-hover:bg-cyan-400
+                    group-hover:border-sky-400/30
+                    group-hover:bg-sky-400
                     sm:mb-6
                     sm:h-14
                     sm:w-14
@@ -157,10 +157,10 @@ const WhyChooseNexora = () => {
                     size={24}
                     strokeWidth={2}
                     className="
-                      text-cyan-400
+                      text-sky-400
                       transition-colors
                       duration-300
-                      group-hover:text-black
+                      group-hover:text-[#0B1220]
                       sm:h-[27px]
                       sm:w-[27px]
                     "
@@ -175,7 +175,7 @@ const WhyChooseNexora = () => {
 
                 {/* Description */}
 
-                <p className="relative mt-3 text-sm leading-6 text-gray-400 sm:leading-7">
+                <p className="relative mt-3 text-sm leading-6 text-slate-400 sm:leading-7">
                   {feature.description}
                 </p>
 
@@ -191,7 +191,7 @@ const WhyChooseNexora = () => {
                     origin-left
                     scale-x-0
                     bg-gradient-to-r
-                    from-cyan-400
+                    from-sky-400
                     to-blue-500
                     transition-transform
                     duration-300

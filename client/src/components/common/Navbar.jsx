@@ -105,11 +105,10 @@ const Navbar = () => {
       tracking-wide
       transition-all
       duration-300
-      ${
-        isActive
-          ? "bg-slate-950 text-white shadow-lg shadow-slate-950/15"
-          : "text-slate-600 hover:bg-slate-100 hover:text-slate-950"
-      }
+      ${isActive
+      ? "bg-sky-400/10 text-sky-400 shadow-lg shadow-sky-500/10"
+      : "text-slate-300 hover:bg-white/10 hover:text-white"
+    }
     `;
 
   /* =========================================
@@ -128,11 +127,10 @@ const Navbar = () => {
       font-bold
       transition-all
       duration-300
-      ${
-        isActive
-          ? "border-cyan-500/20 bg-gradient-to-r from-slate-950 to-slate-800 text-white shadow-lg shadow-slate-950/10"
-          : "border-slate-200/70 bg-white/60 text-slate-700 hover:border-cyan-200 hover:bg-cyan-50/60 hover:text-cyan-700"
-      }
+      ${isActive
+      ? "border-sky-400/20 bg-sky-400/10 text-sky-400 shadow-lg shadow-sky-500/10"
+      : "border-[#263449] bg-white/5 text-slate-300 hover:border-sky-400/30 hover:bg-sky-400/10 hover:text-sky-400"
+    }
     `;
 
   return (
@@ -153,10 +151,10 @@ const Navbar = () => {
           items-center
           justify-between
           border-b
-          border-slate-200/80
-          bg-white/85
+          border-[#263449]
+          bg-[#0B1220]/95
           px-4
-          shadow-[0_12px_45px_rgba(15,23,42,0.10)]
+          shadow-[0_12px_45px_rgba(0,0,0,0.35)]
           backdrop-blur-2xl
           sm:h-[78px]
           sm:px-6
@@ -177,7 +175,7 @@ const Navbar = () => {
             h-px
             bg-gradient-to-r
             from-transparent
-            via-cyan-400/50
+            via-sky-400/50
             to-transparent
           "
         />
@@ -219,15 +217,15 @@ const Navbar = () => {
             justify-center
             rounded-2xl
             border
-            border-slate-200
-            bg-slate-50
-            text-slate-800
+            border-[#263449]
+            bg-[#172338]
+            text-white
             shadow-sm
             transition-all
             duration-300
-            hover:border-cyan-200
-            hover:bg-cyan-50
-            hover:text-cyan-700
+            hover:border-sky-400/30
+            hover:bg-sky-400/10
+            hover:text-sky-400
             active:scale-95
             md:hidden
           "
@@ -311,16 +309,16 @@ const Navbar = () => {
               justify-center
               rounded-2xl
               border
-              border-slate-200
-              bg-slate-50
-              text-slate-700
+              border-[#263449]
+              bg-[#172338]
+              text-slate-300
               shadow-sm
               transition-all
               duration-300
               hover:-translate-y-0.5
-              hover:border-cyan-200
-              hover:bg-cyan-50
-              hover:text-cyan-600
+              hover:border-sky-400/30
+              hover:bg-sky-400/10
+              hover:text-sky-400
               hover:shadow-md
               active:scale-95
             "
@@ -349,17 +347,17 @@ const Navbar = () => {
                   justify-center
                   rounded-full
                   bg-gradient-to-br
-                  from-cyan-400
-                  to-cyan-600
+                  from-sky-400
+                  to-blue-600
                   px-1
                   text-[9px]
                   font-black
                   leading-none
                   text-white
                   shadow-md
-                  shadow-cyan-500/30
+                  shadow-sky-500/30
                   ring-2
-                  ring-white
+                  ring-[#0B1220]
                 "
               >
                 {cartCount > 99 ? "99+" : cartCount}
@@ -389,15 +387,15 @@ const Navbar = () => {
                   gap-2.5
                   rounded-2xl
                   border
-                  border-slate-200
-                  bg-slate-50
+                  border-[#263449]
+                  bg-[#172338]
                   px-2
                   py-1.5
                   shadow-sm
                   transition-all
                   duration-300
-                  hover:border-cyan-200
-                  hover:bg-cyan-50/70
+                  hover:border-sky-400/30
+                  hover:bg-sky-400/10
                   hover:shadow-md
                 "
                 aria-expanded={isProfileOpen}
@@ -416,7 +414,7 @@ const Navbar = () => {
                       rounded-xl
                       object-cover
                       ring-2
-                      ring-white
+                      ring-[#0B1220]
                       shadow-sm
                     "
                   />
@@ -430,9 +428,9 @@ const Navbar = () => {
                       justify-center
                       rounded-xl
                       bg-gradient-to-br
-                      from-slate-950
-                      via-slate-800
-                      to-cyan-700
+                      from-sky-400
+                      via-blue-600
+                      to-blue-600
                       text-sm
                       font-black
                       text-white
@@ -450,7 +448,7 @@ const Navbar = () => {
                     truncate
                     text-sm
                     font-bold
-                    text-slate-800
+                    text-white
                     lg:block
                   "
                 >
@@ -464,10 +462,9 @@ const Navbar = () => {
                     text-slate-400
                     transition-all
                     duration-300
-                    ${
-                      isProfileOpen
-                        ? "rotate-180 text-cyan-600"
-                        : "group-hover:text-cyan-600"
+                    ${isProfileOpen
+                      ? "rotate-180 text-sky-400"
+                      : "group-hover:text-sky-400"
                     }
                   `}
                 />
@@ -488,9 +485,9 @@ const Navbar = () => {
                     overflow-hidden
                     rounded-[22px]
                     border
-                    border-slate-200
-                    bg-white/95
-                    shadow-[0_25px_70px_rgba(15,23,42,0.16)]
+                    border-[#263449]
+                    bg-[#111C2E]
+                    shadow-[0_25px_70px_rgba(0,0,0,0.45)]
                     backdrop-blur-xl
                   "
                 >
@@ -500,11 +497,11 @@ const Navbar = () => {
                   <div
                     className="
                       border-b
-                      border-slate-100
+                      border-white/10
                       bg-gradient-to-br
-                      from-slate-50
-                      via-white
-                      to-cyan-50/40
+                      from-[#172338]
+                      via-[#111C2E]
+                      to-sky-400/5
                       px-4
                       py-4
                     "
@@ -522,7 +519,7 @@ const Navbar = () => {
                             rounded-2xl
                             object-cover
                             ring-2
-                            ring-cyan-100
+                            ring-sky-400/20
                             shadow-sm
                           "
                         />
@@ -537,8 +534,8 @@ const Navbar = () => {
                             justify-center
                             rounded-2xl
                             bg-gradient-to-br
-                            from-slate-950
-                            to-cyan-700
+                            from-sky-400
+                            to-blue-600
                             text-sm
                             font-black
                             text-white
@@ -558,7 +555,7 @@ const Navbar = () => {
                             truncate
                             text-sm
                             font-black
-                            text-slate-950
+                            text-white
                           "
                         >
                           {user.name || "User"}
@@ -570,7 +567,7 @@ const Navbar = () => {
                             truncate
                             text-xs
                             font-medium
-                            text-slate-500
+                            text-slate-400
                           "
                         >
                           {user.email || ""}
@@ -585,16 +582,16 @@ const Navbar = () => {
                           mt-3
                           inline-flex
                           rounded-full
-                          bg-cyan-50
+                          bg-sky-400/10
                           px-3
                           py-1
                           text-[9px]
                           font-black
                           uppercase
                           tracking-[0.12em]
-                          text-cyan-700
+                          text-sky-400
                           ring-1
-                          ring-cyan-100
+                          ring-sky-400/20
                         "
                       >
                         Admin
@@ -619,39 +616,41 @@ const Navbar = () => {
                         py-3
                         text-sm
                         font-bold
-                        text-slate-700
+                        text-slate-300
                         transition-all
                         duration-200
-                        hover:bg-cyan-50
-                        hover:text-cyan-700
+                        hover:bg-sky-400/10
+                        hover:text-sky-400
                       "
                     >
                       <User size={17} strokeWidth={2.2} />
                       Profile
                     </Link>
 
-                    <Link
-                      to="/orders"
-                      onClick={() => setIsProfileOpen(false)}
-                      className="
-                        flex
-                        items-center
-                        gap-3
-                        rounded-2xl
-                        px-3
-                        py-3
-                        text-sm
-                        font-bold
-                        text-slate-700
-                        transition-all
-                        duration-200
-                        hover:bg-cyan-50
-                        hover:text-cyan-700
-                      "
-                    >
-                      <Package size={17} strokeWidth={2.2} />
-                      My Orders
-                    </Link>
+                    {user.role !== "admin" && (
+                      <Link
+                        to="/orders"
+                        onClick={() => setIsProfileOpen(false)}
+                        className="
+      flex
+      items-center
+      gap-3
+      rounded-2xl
+      px-3
+      py-3
+      text-sm
+      font-bold
+      text-slate-300
+      transition-all
+      duration-200
+      hover:bg-sky-400/10
+      hover:text-sky-400
+    "
+                      >
+                        <Package size={17} strokeWidth={2.2} />
+                        My Orders
+                      </Link>
+                    )}
 
                     {user.role === "admin" && (
                       <Link
@@ -666,11 +665,11 @@ const Navbar = () => {
                           py-3
                           text-sm
                           font-bold
-                          text-slate-700
+                          text-slate-300
                           transition-all
                           duration-200
-                          hover:bg-cyan-50
-                          hover:text-cyan-700
+                          hover:bg-sky-400/10
+                          hover:text-sky-400
                         "
                       >
                         <Settings
@@ -681,7 +680,7 @@ const Navbar = () => {
                       </Link>
                     )}
 
-                    <div className="my-2 border-t border-slate-100" />
+                    <div className="my-2 border-t border-white/10" />
 
                     <button
                       type="button"
@@ -700,7 +699,7 @@ const Navbar = () => {
                         text-red-600
                         transition-all
                         duration-200
-                        hover:bg-red-50
+                        hover:bg-red-500/10
                       "
                     >
                       <LogOut
@@ -723,21 +722,21 @@ const Navbar = () => {
                 hidden
                 rounded-full
                 bg-gradient-to-r
-                from-slate-950
-                to-slate-800
+                from-sky-400
+                to-blue-600
                 px-5
                 py-2.5
                 text-sm
                 font-black
                 text-white
                 shadow-lg
-                shadow-slate-950/15
+                shadow-black/30
                 transition-all
                 duration-300
                 hover:-translate-y-0.5
-                hover:from-cyan-500
-                hover:to-cyan-600
-                hover:shadow-cyan-500/25
+                hover:from-sky-400
+                hover:to-blue-600
+                hover:shadow-sky-500/25
                 active:translate-y-0
                 md:block
               "
@@ -761,13 +760,13 @@ const Navbar = () => {
                 justify-center
                 rounded-2xl
                 border
-                border-slate-200
-                bg-slate-50
+                border-[#263449]
+                bg-[#172338]
                 shadow-sm
                 transition-all
                 duration-300
-                hover:border-cyan-200
-                hover:bg-cyan-50
+                hover:border-sky-400/30
+                hover:bg-sky-400/10
                 active:scale-95
                 md:hidden
               "
@@ -794,8 +793,8 @@ const Navbar = () => {
                     justify-center
                     rounded-xl
                     bg-gradient-to-br
-                    from-slate-950
-                    to-cyan-700
+                    from-sky-400
+                    to-blue-600
                     text-xs
                     font-black
                     text-white
@@ -816,15 +815,15 @@ const Navbar = () => {
                 justify-center
                 rounded-2xl
                 border
-                border-slate-200
-                bg-slate-50
-                text-slate-700
+                border-[#263449]
+                bg-[#172338]
+                text-slate-300
                 shadow-sm
                 transition-all
                 duration-300
-                hover:border-cyan-200
-                hover:bg-cyan-50
-                hover:text-cyan-600
+                hover:border-sky-400/30
+                hover:bg-sky-400/10
+                hover:text-sky-400
                 active:scale-95
                 md:hidden
               "
@@ -849,9 +848,9 @@ const Navbar = () => {
             overflow-hidden
             rounded-[22px]
             border
-            border-slate-200
-            bg-white/90
-            shadow-[0_20px_55px_rgba(15,23,42,0.13)]
+            border-[#263449]
+            bg-[#0B1220]/95
+            shadow-[0_20px_55px_rgba(0,0,0,0.40)]
             backdrop-blur-2xl
             md:hidden
             sm:mx-5
@@ -894,7 +893,7 @@ const Navbar = () => {
                 Contact
               </NavLink>
 
-              <div className="my-2 border-t border-slate-100" />
+              <div className="my-2 border-t border-white/10" />
 
               {isAuthenticated && user ? (
                 <>
@@ -911,37 +910,40 @@ const Navbar = () => {
                       py-3.5
                       text-sm
                       font-bold
-                      text-slate-700
+                      text-slate-300
                       transition-all
-                      hover:bg-cyan-50
-                      hover:text-cyan-700
+                      hover:bg-sky-400/10
+                      hover:text-sky-400
                     "
                   >
                     <User size={18} strokeWidth={2.2} />
                     Profile
                   </Link>
 
-                  <Link
-                    to="/orders"
-                    onClick={closeMobileMenu}
-                    className="
-                      flex
-                      items-center
-                      gap-3
-                      rounded-2xl
-                      px-4
-                      py-3.5
-                      text-sm
-                      font-bold
-                      text-slate-700
-                      transition-all
-                      hover:bg-cyan-50
-                      hover:text-cyan-700
-                    "
-                  >
-                    <Package size={18} strokeWidth={2.2} />
-                    My Orders
-                  </Link>
+                  {user.role !== "admin" && (
+                    <Link
+                      to="/orders"
+                      onClick={() => setIsProfileOpen(false)}
+                      className="
+      flex
+      items-center
+      gap-3
+      rounded-2xl
+      px-3
+      py-3
+      text-sm
+      font-bold
+      text-slate-300
+      transition-all
+      duration-200
+      hover:bg-sky-400/10
+      hover:text-sky-400
+    "
+                    >
+                      <Package size={17} strokeWidth={2.2} />
+                      My Orders
+                    </Link>
+                  )}
 
                   {user.role === "admin" && (
                     <Link
@@ -956,10 +958,10 @@ const Navbar = () => {
                         py-3.5
                         text-sm
                         font-bold
-                        text-slate-700
+                        text-slate-300
                         transition-all
-                        hover:bg-cyan-50
-                        hover:text-cyan-700
+                        hover:bg-sky-400/10
+                        hover:text-sky-400
                       "
                     >
                       <Settings
@@ -985,7 +987,7 @@ const Navbar = () => {
                       font-bold
                       text-red-600
                       transition-all
-                      hover:bg-red-50
+                      hover:bg-red-500/10
                     "
                   >
                     <LogOut
@@ -1004,8 +1006,8 @@ const Navbar = () => {
                     mt-1
                     rounded-full
                     bg-gradient-to-r
-                    from-slate-950
-                    to-slate-800
+                    from-sky-400
+                    to-blue-600
                     px-4
                     py-3.5
                     text-center
@@ -1013,12 +1015,12 @@ const Navbar = () => {
                     font-black
                     text-white
                     shadow-lg
-                    shadow-slate-950/15
+                    shadow-black/30
                     transition-all
                     duration-300
-                    hover:from-cyan-500
-                    hover:to-cyan-600
-                    hover:shadow-cyan-500/25
+                    hover:from-sky-400
+                    hover:to-blue-600
+                    hover:shadow-sky-500/25
                     active:scale-[0.99]
                   "
                 >

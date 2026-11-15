@@ -137,7 +137,7 @@ const OrderDetails = () => {
         label: "Confirmed",
         icon: CheckCircle2,
         className:
-          "border-cyan-400/20 bg-cyan-500/10 text-cyan-400",
+          "border-sky-400/20 bg-sky-500/10 text-sky-400",
       };
     }
 
@@ -206,7 +206,7 @@ const OrderDetails = () => {
 
   if (loading) {
     return (
-      <main className="min-h-screen bg-[#05080d] text-white">
+      <main className="min-h-screen bg-[#0B1220] text-white">
         <div className="flex min-h-[75vh] items-center justify-center">
           <Loader />
         </div>
@@ -220,7 +220,7 @@ const OrderDetails = () => {
 
   if (error || !order) {
     return (
-      <main className="min-h-screen bg-[#05080d] text-white">
+      <main className="min-h-screen bg-[#0B1220] text-white">
 
         <section className="mx-auto flex min-h-[75vh] max-w-2xl items-center justify-center px-4 py-16">
 
@@ -229,8 +229,8 @@ const OrderDetails = () => {
               w-full
               rounded-3xl
               border
-              border-white/[0.08]
-              bg-white/[0.035]
+              border-[#263449]
+              bg-[#111C2E]
               p-8
               text-center
               shadow-2xl
@@ -267,7 +267,7 @@ const OrderDetails = () => {
                 font-bold
                 uppercase
                 tracking-[0.25em]
-                text-cyan-400
+                text-sky-400
               "
             >
               NEXORA
@@ -277,7 +277,7 @@ const OrderDetails = () => {
               Order Not Found
             </h1>
 
-            <p className="mx-auto mt-3 max-w-md text-sm leading-6 text-gray-500">
+            <p className="mx-auto mt-3 max-w-md text-sm leading-6 text-slate-400">
               {error ||
                 "We couldn't find the order you're looking for."}
             </p>
@@ -293,14 +293,14 @@ const OrderDetails = () => {
                   justify-center
                   gap-2
                   rounded-xl
-                  bg-cyan-500
+                  bg-sky-400
                   px-6
                   py-3
                   text-sm
                   font-bold
-                  text-[#031018]
+                  text-[#0B1220]
                   transition
-                  hover:bg-cyan-400
+                  hover:bg-sky-300
                   active:scale-[0.98]
                 "
               >
@@ -317,17 +317,17 @@ const OrderDetails = () => {
                   gap-2
                   rounded-xl
                   border
-                  border-white/[0.1]
-                  bg-white/[0.03]
+                  border-[#263449]
+                  bg-[#172338]
                   px-6
                   py-3
                   text-sm
                   font-semibold
-                  text-gray-300
+                  text-slate-300
                   transition
-                  hover:border-cyan-400/30
-                  hover:bg-cyan-400/5
-                  hover:text-cyan-400
+                  hover:border-sky-400/30
+                  hover:bg-sky-400/5
+                  hover:text-sky-400
                 "
               >
                 <ArrowLeft size={16} />
@@ -399,7 +399,7 @@ const OrderDetails = () => {
   ========================================= */
 
   return (
-    <main className="min-h-screen bg-[#05080d] text-white">
+    <main className="min-h-screen bg-[#0B1220] text-white">
 
       {/* =====================================
           TOP GLOW
@@ -416,7 +416,7 @@ const OrderDetails = () => {
           w-[700px]
           -translate-x-1/2
           rounded-full
-          bg-cyan-500/[0.05]
+          bg-sky-500/[0.05]
           blur-[120px]
         "
       />
@@ -429,8 +429,8 @@ const OrderDetails = () => {
         className="
           relative
           border-b
-          border-white/[0.06]
-          bg-[#070b11]/90
+          border-[#263449]
+          bg-[#111C2E]/90
           backdrop-blur-xl
         "
       >
@@ -456,9 +456,9 @@ const OrderDetails = () => {
               gap-2
               text-sm
               font-semibold
-              text-gray-500
+              text-slate-400
               transition
-              hover:text-cyan-400
+              hover:text-sky-400
             "
           >
             <ArrowLeft size={16} />
@@ -487,7 +487,7 @@ const OrderDetails = () => {
                   font-bold
                   uppercase
                   tracking-[0.25em]
-                  text-cyan-400
+                  text-sky-400
                 "
               >
                 NEXORA
@@ -517,7 +517,7 @@ const OrderDetails = () => {
                   items-center
                   gap-4
                   text-sm
-                  text-gray-500
+                  text-slate-400
                 "
               >
 
@@ -526,7 +526,7 @@ const OrderDetails = () => {
                   {formatDate(order?.createdAt)}
                 </span>
 
-                <span className="h-1 w-1 rounded-full bg-gray-700" />
+                <span className="h-1 w-1 rounded-full bg-slate-500" />
 
                 <span>
                   {orderItems.length}{" "}
@@ -599,8 +599,8 @@ const OrderDetails = () => {
                 overflow-hidden
                 rounded-2xl
                 border
-                border-white/[0.08]
-                bg-white/[0.035]
+                border-[#263449]
+                bg-[#111C2E]
                 shadow-xl
                 shadow-black/10
                 backdrop-blur-xl
@@ -615,7 +615,7 @@ const OrderDetails = () => {
                   items-center
                   justify-between
                   border-b
-                  border-white/[0.06]
+                  border-[#263449]
                   px-5
                   py-5
                   sm:px-6
@@ -634,8 +634,8 @@ const OrderDetails = () => {
                         items-center
                         justify-center
                         rounded-xl
-                        bg-cyan-400/10
-                        text-cyan-400
+                        bg-sky-400/10
+                        text-sky-400
                       "
                     >
                       <ShoppingBag size={17} />
@@ -647,7 +647,7 @@ const OrderDetails = () => {
 
                   </div>
 
-                  <p className="mt-2 text-xs text-gray-600">
+                  <p className="mt-2 text-xs text-slate-400">
                     {orderItems.length}{" "}
                     {orderItems.length === 1
                       ? "product"
@@ -661,7 +661,7 @@ const OrderDetails = () => {
 
               {/* Items */}
 
-              <div className="divide-y divide-white/[0.06]">
+              <div className="divide-y divide-[#263449]">
 
                 {orderItems.map(
                   (item, index) => {
@@ -712,7 +712,7 @@ const OrderDetails = () => {
                           px-5
                           py-5
                           transition
-                          hover:bg-white/[0.02]
+                          hover:bg-[#172338]
                           sm:px-6
                         "
                       >
@@ -732,8 +732,8 @@ const OrderDetails = () => {
                             overflow-hidden
                             rounded-xl
                             border
-                            border-white/[0.06]
-                            bg-[#080d14]
+                            border-[#263449]
+                            bg-[#0B1220]
                             sm:h-28
                             sm:w-28
                           "
@@ -750,7 +750,7 @@ const OrderDetails = () => {
                               -translate-x-1/2
                               -translate-y-1/2
                               rounded-full
-                              bg-cyan-500/[0.07]
+                              bg-sky-500/[0.07]
                               blur-2xl
                             "
                           />
@@ -800,11 +800,11 @@ const OrderDetails = () => {
                             className="
                               mt-2
                               text-xs
-                              text-gray-500
+                              text-slate-400
                             "
                           >
                             Quantity:{" "}
-                            <span className="font-bold text-gray-300">
+                            <span className="font-bold text-slate-300">
                               {quantity}
                             </span>
                           </p>
@@ -813,7 +813,7 @@ const OrderDetails = () => {
                             className="
                               mt-2
                               text-xs
-                              text-gray-500
+                              text-slate-400
                             "
                           >
                             {formatPrice(price)} ×{" "}
@@ -830,7 +830,7 @@ const OrderDetails = () => {
                             className="
                               text-sm
                               font-black
-                              text-cyan-400
+                              text-sky-400
                               sm:text-base
                             "
                           >
@@ -858,8 +858,8 @@ const OrderDetails = () => {
               className="
                 rounded-2xl
                 border
-                border-white/[0.08]
-                bg-white/[0.035]
+                border-[#263449]
+                bg-[#111C2E]
                 p-5
                 shadow-xl
                 shadow-black/10
@@ -878,8 +878,8 @@ const OrderDetails = () => {
                     items-center
                     justify-center
                     rounded-xl
-                    bg-cyan-400/10
-                    text-cyan-400
+                    bg-sky-400/10
+                    text-sky-400
                   "
                 >
                   <MapPin size={18} />
@@ -891,7 +891,7 @@ const OrderDetails = () => {
                     Shipping Address
                   </h2>
 
-                  <p className="mt-0.5 text-xs text-gray-600">
+                  <p className="mt-0.5 text-xs text-slate-400">
                     Delivery information
                   </p>
 
@@ -904,8 +904,8 @@ const OrderDetails = () => {
                   mt-5
                   rounded-xl
                   border
-                  border-white/[0.06]
-                  bg-[#080d14]
+                  border-[#263449]
+                  bg-[#0B1220]
                   p-5
                 "
               >
@@ -920,7 +920,7 @@ const OrderDetails = () => {
                     mt-2
                     text-sm
                     leading-6
-                    text-gray-500
+                    text-slate-400
                   "
                 >
                   {shippingAddress?.address ||
@@ -950,15 +950,15 @@ const OrderDetails = () => {
                       items-center
                       gap-2
                       border-t
-                      border-white/[0.06]
+                      border-[#263449]
                       pt-4
                       text-sm
-                      text-gray-500
+                      text-slate-400
                     "
                   >
                     <Phone
                       size={14}
-                      className="text-cyan-400"
+                      className="text-sky-400"
                     />
 
                     <span>
@@ -979,8 +979,8 @@ const OrderDetails = () => {
               className="
                 rounded-2xl
                 border
-                border-white/[0.08]
-                bg-white/[0.035]
+                border-[#263449]
+                bg-[#111C2E]
                 p-5
                 shadow-xl
                 shadow-black/10
@@ -1009,8 +1009,8 @@ const OrderDetails = () => {
                   className="
                     rounded-xl
                     border
-                    border-white/[0.06]
-                    bg-[#080d14]
+                    border-[#263449]
+                    bg-[#0B1220]
                     p-4
                   "
                 >
@@ -1034,7 +1034,7 @@ const OrderDetails = () => {
 
                     <div>
 
-                      <p className="text-[10px] font-bold uppercase tracking-wider text-gray-600">
+                      <p className="text-[10px] font-bold uppercase tracking-wider text-slate-400">
                         Payment Method
                       </p>
 
@@ -1057,8 +1057,8 @@ const OrderDetails = () => {
                   className="
                     rounded-xl
                     border
-                    border-white/[0.06]
-                    bg-[#080d14]
+                    border-[#263449]
+                    bg-[#0B1220]
                     p-4
                   "
                 >
@@ -1082,7 +1082,7 @@ const OrderDetails = () => {
 
                     <div>
 
-                      <p className="text-[10px] font-bold uppercase tracking-wider text-gray-600">
+                      <p className="text-[10px] font-bold uppercase tracking-wider text-slate-400">
                         Payment Status
                       </p>
 
@@ -1120,24 +1120,24 @@ const OrderDetails = () => {
                   gap-3
                   rounded-xl
                   border
-                  border-white/[0.06]
-                  bg-[#080d14]
+                  border-[#263449]
+                  bg-[#0B1220]
                   p-4
                 "
               >
 
                 <CalendarDays
                   size={17}
-                  className="text-cyan-400"
+                  className="text-sky-400"
                 />
 
                 <div>
 
-                  <p className="text-[10px] font-bold uppercase tracking-wider text-gray-600">
+                  <p className="text-[10px] font-bold uppercase tracking-wider text-slate-400">
                     Order Placed
                   </p>
 
-                  <p className="mt-1 text-sm font-semibold text-gray-300">
+                  <p className="mt-1 text-sm font-semibold text-slate-300">
                     {formatDateTime(
                       order?.createdAt
                     )}
@@ -1164,8 +1164,8 @@ const OrderDetails = () => {
                 overflow-hidden
                 rounded-2xl
                 border
-                border-white/[0.08]
-                bg-white/[0.035]
+                border-[#263449]
+                bg-[#111C2E]
                 shadow-2xl
                 shadow-black/20
                 backdrop-blur-xl
@@ -1180,7 +1180,7 @@ const OrderDetails = () => {
                   w-full
                   bg-gradient-to-r
                   from-transparent
-                  via-cyan-400
+                  via-sky-400
                   to-transparent
                 "
               />
@@ -1195,7 +1195,7 @@ const OrderDetails = () => {
 
                   <Package
                     size={19}
-                    className="text-cyan-400"
+                    className="text-sky-400"
                   />
 
                 </div>
@@ -1207,18 +1207,18 @@ const OrderDetails = () => {
                     mt-6
                     space-y-4
                     border-b
-                    border-white/[0.06]
+                    border-[#263449]
                     pb-5
                   "
                 >
 
                   <div className="flex items-center justify-between text-sm">
 
-                    <span className="text-gray-500">
+                    <span className="text-slate-400">
                       Subtotal
                     </span>
 
-                    <span className="font-semibold text-gray-300">
+                    <span className="font-semibold text-slate-300">
                       {formatPrice(
                         subtotal
                       )}
@@ -1228,7 +1228,7 @@ const OrderDetails = () => {
 
                   <div className="flex items-center justify-between text-sm">
 
-                    <span className="text-gray-500">
+                    <span className="text-slate-400">
                       Shipping
                     </span>
 
@@ -1236,7 +1236,7 @@ const OrderDetails = () => {
                       className={
                         shipping === 0
                           ? "font-bold text-emerald-400"
-                          : "font-semibold text-gray-300"
+                          : "font-semibold text-slate-300"
                       }
                     >
                       {shipping === 0
@@ -1250,11 +1250,11 @@ const OrderDetails = () => {
 
                   <div className="flex items-center justify-between text-sm">
 
-                    <span className="text-gray-500">
+                    <span className="text-slate-400">
                       Tax
                     </span>
 
-                    <span className="font-semibold text-gray-300">
+                    <span className="font-semibold text-slate-300">
                       {formatPrice(tax)}
                     </span>
 
@@ -1272,13 +1272,13 @@ const OrderDetails = () => {
                       Total
                     </p>
 
-                    <p className="mt-1 text-[10px] text-gray-600">
+                    <p className="mt-1 text-[10px] text-slate-400">
                       Including tax & shipping
                     </p>
 
                   </div>
 
-                  <p className="text-2xl font-black text-cyan-400">
+                  <p className="text-2xl font-black text-sky-400">
                     {formatPrice(total)}
                   </p>
 
@@ -1290,8 +1290,8 @@ const OrderDetails = () => {
                   className="
                     rounded-xl
                     border
-                    border-cyan-400/10
-                    bg-cyan-400/[0.04]
+                    border-sky-400/10
+                    bg-sky-400/[0.04]
                     p-4
                   "
                 >
@@ -1300,7 +1300,7 @@ const OrderDetails = () => {
 
                     <StatusIcon
                       size={16}
-                      className="text-cyan-400"
+                      className="text-sky-400"
                     />
 
                     <p className="text-sm font-bold text-white">
@@ -1309,9 +1309,9 @@ const OrderDetails = () => {
 
                   </div>
 
-                  <p className="mt-2 text-xs leading-5 text-gray-500">
+                  <p className="mt-2 text-xs leading-5 text-slate-400">
                     Your order is currently{" "}
-                    <span className="font-semibold text-gray-300">
+                    <span className="font-semibold text-slate-300">
                       {statusConfig.label.toLowerCase()}
                     </span>
                     .
@@ -1333,17 +1333,17 @@ const OrderDetails = () => {
                       gap-2
                       rounded-xl
                       border
-                      border-white/[0.1]
-                      bg-white/[0.03]
+                      border-[#263449]
+                      bg-[#172338]
                       px-5
                       py-3.5
                       text-sm
                       font-bold
-                      text-gray-300
+                      text-slate-300
                       transition
-                      hover:border-cyan-400/20
-                      hover:bg-cyan-400/5
-                      hover:text-cyan-400
+                      hover:border-sky-400/20
+                      hover:bg-sky-400/5
+                      hover:text-sky-400
                     "
                   >
                     <ArrowLeft size={16} />
@@ -1359,16 +1359,16 @@ const OrderDetails = () => {
                       justify-center
                       gap-2
                       rounded-xl
-                      bg-cyan-500
+                      bg-sky-400
                       px-5
                       py-3.5
                       text-sm
                       font-black
-                      text-[#031018]
+                      text-[#0B1220]
                       shadow-lg
-                      shadow-cyan-500/10
+                      shadow-sky-500/10
                       transition
-                      hover:bg-cyan-400
+                      hover:bg-sky-300
                       active:scale-[0.98]
                     "
                   >
@@ -1388,7 +1388,7 @@ const OrderDetails = () => {
                     gap-2
                     text-[10px]
                     font-medium
-                    text-gray-600
+                    text-slate-400
                   "
                 >
                   <ShieldCheck
@@ -1415,8 +1415,8 @@ const OrderDetails = () => {
       <section
         className="
           border-t
-          border-white/[0.06]
-          bg-[#070b11]
+          border-[#263449]
+          bg-[#111C2E]
         "
       >
 
@@ -1446,8 +1446,8 @@ const OrderDetails = () => {
                 items-center
                 justify-center
                 rounded-xl
-                bg-cyan-400/10
-                text-cyan-400
+                bg-sky-400/10
+                text-sky-400
               "
             >
               <ShieldCheck size={18} />
@@ -1459,7 +1459,7 @@ const OrderDetails = () => {
                 Secure Order
               </p>
 
-              <p className="mt-1 text-[10px] text-gray-600">
+              <p className="mt-1 text-[10px] text-slate-400">
                 Your order details are protected.
               </p>
 
@@ -1491,7 +1491,7 @@ const OrderDetails = () => {
                 Fast Delivery
               </p>
 
-              <p className="mt-1 text-[10px] text-gray-600">
+              <p className="mt-1 text-[10px] text-slate-400">
                 Reliable delivery to your doorstep.
               </p>
 
@@ -1523,7 +1523,7 @@ const OrderDetails = () => {
                 NEXORA Warranty
               </p>
 
-              <p className="mt-1 text-[10px] text-gray-600">
+              <p className="mt-1 text-[10px] text-slate-400">
                 Quality laptops, trusted service.
               </p>
 

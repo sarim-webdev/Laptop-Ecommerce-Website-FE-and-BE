@@ -338,9 +338,7 @@ export const createOrder = async (req, res, next) => {
           totalAmount: totalPrice,
         });
       }
-    } catch (emailError) {
-      console.error("Order confirmation email failed:", emailError.message);
-    }
+    } catch (emailError) {}
 
     /* =========================================
        RESPONSE
@@ -354,9 +352,7 @@ export const createOrder = async (req, res, next) => {
 
     try {
       await session.abortTransaction();
-    } catch (abortError) {
-      console.error("Transaction abort failed:", abortError.message);
-    }
+    } catch (abortError) {}
 
     next(error);
   } finally {
@@ -588,8 +584,7 @@ export const updateOrderStatus = async (req, res, next) => {
        FIND ORDER
     ========================================= */
 
-    const order = await Order.findById(id)
-      .populate("user", "name email");
+    const order = await Order.findById(id).populate("user", "name email");
 
     if (!order) {
       return errorResponse(res, 404, "Order not found.");
@@ -600,11 +595,7 @@ export const updateOrderStatus = async (req, res, next) => {
     ========================================= */
 
     if (order.orderStatus === orderStatus) {
-      return errorResponse(
-        res,
-        400,
-        `Order is already ${orderStatus}.`
-      );
+      return errorResponse(res, 400, `Order is already ${orderStatus}.`);
     }
 
     /* =========================================
@@ -615,7 +606,7 @@ export const updateOrderStatus = async (req, res, next) => {
       return errorResponse(
         res,
         400,
-        "A cancelled order cannot be moved to another status."
+        "A cancelled order cannot be moved to another status.",
       );
     }
 
@@ -623,14 +614,11 @@ export const updateOrderStatus = async (req, res, next) => {
        PREVENT UPDATING DELIVERED ORDER
     ========================================= */
 
-    if (
-      order.orderStatus === "Delivered" &&
-      orderStatus !== "Delivered"
-    ) {
+    if (order.orderStatus === "Delivered" && orderStatus !== "Delivered") {
       return errorResponse(
         res,
         400,
-        "A delivered order cannot be moved to another status."
+        "A delivered order cannot be moved to another status.",
       );
     }
 
@@ -639,27 +627,24 @@ export const updateOrderStatus = async (req, res, next) => {
     ========================================= */
 
     if (orderStatus === "Cancelled") {
-
       for (const item of order.orderItems) {
-
-        const updatedProduct =
-          await Product.findByIdAndUpdate(
-            item.product,
-            {
-              $inc: {
-                stock: item.quantity,
-              },
+        const updatedProduct = await Product.findByIdAndUpdate(
+          item.product,
+          {
+            $inc: {
+              stock: item.quantity,
             },
-            {
-              new: true,
-            }
-          );
+          },
+          {
+            new: true,
+          },
+        );
 
         if (!updatedProduct) {
           return errorResponse(
             res,
             404,
-            `Product for order item ${item.product} not found.`
+            `Product for order item ${item.product} not found.`,
           );
         }
       }
@@ -672,13 +657,9 @@ export const updateOrderStatus = async (req, res, next) => {
     ========================================= */
 
     if (orderStatus === "Delivered") {
-
       order.deliveredAt = new Date();
 
-      if (
-        order.paymentMethod === "COD" &&
-        order.paymentStatus === "Pending"
-      ) {
+      if (order.paymentMethod === "COD" && order.paymentStatus === "Pending") {
         order.paymentStatus = "Paid";
         order.paidAt = new Date();
       }
@@ -701,21 +682,14 @@ export const updateOrderStatus = async (req, res, next) => {
         await sendOrderStatusEmail({
           userEmail: order.user.email,
 
-          userName:
-            order.user.name || "Customer",
+          userName: order.user.name || "Customer",
 
-          orderId:
-            order._id.toString(),
+          orderId: order._id.toString(),
 
           status: orderStatus,
         });
       }
-    } catch (emailError) {
-      console.error(
-        "Order status email failed:",
-        emailError.message
-      );
-    }
+    } catch (emailError) {}
 
     /* =========================================
        RESPONSE
@@ -725,9 +699,8 @@ export const updateOrderStatus = async (req, res, next) => {
       res,
       200,
       "Order status updated successfully.",
-      order
+      order,
     );
-
   } catch (error) {
     next(error);
   }

@@ -232,7 +232,7 @@ const AdminProducts = () => {
       label: "In Stock",
       className:
         "border-emerald-400/20 bg-emerald-400/10 text-emerald-400",
-    };
+      };
   };
 
 
@@ -242,7 +242,7 @@ const AdminProducts = () => {
 
   if (loading) {
     return (
-      <div className="flex min-h-[60vh] items-center justify-center bg-[#05080d]">
+      <div className="flex min-h-[60vh] items-center justify-center bg-[#0B1220]">
         <Loader />
       </div>
     );
@@ -254,17 +254,17 @@ const AdminProducts = () => {
   ========================================= */
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-[#05080d] px-4 py-6 text-white sm:px-6 lg:px-8 lg:py-8">
+    <section className="relative min-h-screen overflow-hidden bg-[#0B1220] px-4 py-6 text-white sm:px-6 lg:px-8 lg:py-8">
 
       {/* =====================================
           BACKGROUND GLOWS
       ===================================== */}
 
-      <div className="pointer-events-none absolute -left-40 top-10 h-96 w-96 rounded-full bg-cyan-500/[0.06] blur-3xl" />
+      <div className="pointer-events-none absolute -left-40 top-10 h-96 w-96 rounded-full bg-sky-500/[0.06] blur-3xl" />
 
       <div className="pointer-events-none absolute -right-40 top-1/3 h-96 w-96 rounded-full bg-blue-600/[0.05] blur-3xl" />
 
-      <div className="pointer-events-none absolute bottom-0 left-1/3 h-80 w-80 rounded-full bg-cyan-500/[0.03] blur-3xl" />
+      <div className="pointer-events-none absolute bottom-0 left-1/3 h-80 w-80 rounded-full bg-sky-500/[0.03] blur-3xl" />
 
 
       <div className="relative mx-auto max-w-7xl space-y-6">
@@ -278,7 +278,7 @@ const AdminProducts = () => {
 
           <div>
 
-            <p className="text-sm font-bold uppercase tracking-[0.2em] text-cyan-400">
+            <p className="text-sm font-bold uppercase tracking-[0.2em] text-sky-400">
               NEXORA ADMINISTRATION
             </p>
 
@@ -286,7 +286,7 @@ const AdminProducts = () => {
               Products
             </h1>
 
-            <p className="mt-2 text-sm leading-6 text-slate-500 sm:text-base">
+            <p className="mt-2 text-sm leading-6 text-slate-400 sm:text-base">
               Manage your NEXORA laptop inventory
               and products.
             </p>
@@ -304,7 +304,7 @@ const AdminProducts = () => {
               type="button"
               onClick={handleRefresh}
               disabled={refreshing}
-              className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-[#0b1119] px-5 py-2.5 text-sm font-semibold text-slate-300 shadow-lg shadow-black/20 transition-all duration-300 hover:border-cyan-400/30 hover:bg-[#101923] hover:text-white disabled:cursor-not-allowed disabled:opacity-60"
+              className="inline-flex items-center justify-center gap-2 rounded-xl border border-[#263449] bg-[#111C2E] px-5 py-2.5 text-sm font-semibold text-slate-300 shadow-lg shadow-black/20 transition-all duration-300 hover:border-sky-400/30 hover:bg-[#172338] hover:text-white disabled:cursor-not-allowed disabled:opacity-60"
             >
 
               <RefreshCw
@@ -328,7 +328,7 @@ const AdminProducts = () => {
             <button
               type="button"
               onClick={handleAddProduct}
-              className="inline-flex items-center justify-center gap-2 rounded-xl bg-cyan-500 px-5 py-2.5 text-sm font-bold text-slate-950 shadow-lg shadow-cyan-500/10 transition-all duration-300 hover:bg-cyan-400"
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-sky-500 px-5 py-2.5 text-sm font-bold text-[#0B1220] shadow-lg shadow-sky-500/10 transition-all duration-300 hover:bg-sky-400"
             >
 
               <Plus size={18} />
@@ -374,13 +374,13 @@ const AdminProducts = () => {
 
           {/* Total */}
 
-          <div className="group rounded-2xl border border-white/10 bg-gradient-to-br from-[#0c131d] via-[#091019] to-[#05080d] p-5 shadow-xl shadow-black/20 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/20">
+          <div className="group rounded-2xl border border-[#263449] bg-gradient-to-br from-[#172338] via-[#111C2E] to-[#0B1220] p-5 shadow-xl shadow-black/20 transition duration-300 hover:-translate-y-1 hover:border-sky-400/20">
 
             <div className="flex items-start justify-between">
 
               <div>
 
-                <p className="text-sm font-medium text-slate-500">
+                <p className="text-sm font-medium text-slate-400">
                   Total Products
                 </p>
 
@@ -390,26 +390,26 @@ const AdminProducts = () => {
 
               </div>
 
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-cyan-400/20 bg-cyan-400/10 text-cyan-400">
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-sky-400/20 bg-sky-400/10 text-sky-400">
                 <Package size={22} />
               </div>
 
             </div>
 
-            <div className="mt-4 h-1 w-12 rounded-full bg-cyan-400" />
+            <div className="mt-4 h-1 w-12 rounded-full bg-sky-400" />
 
           </div>
 
 
           {/* In Stock */}
 
-          <div className="group rounded-2xl border border-white/10 bg-gradient-to-br from-[#0c131d] via-[#091019] to-[#05080d] p-5 shadow-xl shadow-black/20 transition duration-300 hover:-translate-y-1 hover:border-emerald-400/20">
+          <div className="group rounded-2xl border border-[#263449] bg-gradient-to-br from-[#172338] via-[#111C2E] to-[#0B1220] p-5 shadow-xl shadow-black/20 transition duration-300 hover:-translate-y-1 hover:border-emerald-400/20">
 
             <div className="flex items-start justify-between">
 
               <div>
 
-                <p className="text-sm font-medium text-slate-500">
+                <p className="text-sm font-medium text-slate-400">
                   In Stock
                 </p>
 
@@ -439,13 +439,13 @@ const AdminProducts = () => {
 
           {/* Low Stock */}
 
-          <div className="group rounded-2xl border border-white/10 bg-gradient-to-br from-[#0c131d] via-[#091019] to-[#05080d] p-5 shadow-xl shadow-black/20 transition duration-300 hover:-translate-y-1 hover:border-amber-400/20">
+          <div className="group rounded-2xl border border-[#263449] bg-gradient-to-br from-[#172338] via-[#111C2E] to-[#0B1220] p-5 shadow-xl shadow-black/20 transition duration-300 hover:-translate-y-1 hover:border-amber-400/20">
 
             <div className="flex items-start justify-between">
 
               <div>
 
-                <p className="text-sm font-medium text-slate-500">
+                <p className="text-sm font-medium text-slate-400">
                   Low Stock
                 </p>
 
@@ -483,13 +483,13 @@ const AdminProducts = () => {
 
           {/* Out Of Stock */}
 
-          <div className="group rounded-2xl border border-white/10 bg-gradient-to-br from-[#0c131d] via-[#091019] to-[#05080d] p-5 shadow-xl shadow-black/20 transition duration-300 hover:-translate-y-1 hover:border-red-400/20">
+          <div className="group rounded-2xl border border-[#263449] bg-gradient-to-br from-[#172338] via-[#111C2E] to-[#0B1220] p-5 shadow-xl shadow-black/20 transition duration-300 hover:-translate-y-1 hover:border-red-400/20">
 
             <div className="flex items-start justify-between">
 
               <div>
 
-                <p className="text-sm font-medium text-slate-500">
+                <p className="text-sm font-medium text-slate-400">
                   Out of Stock
                 </p>
 
@@ -523,11 +523,11 @@ const AdminProducts = () => {
             SEARCH
         ===================================== */}
 
-        <div className="overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-[#0c131d] via-[#091019] to-[#05080d] p-5 shadow-xl shadow-black/20">
+        <div className="overflow-hidden rounded-2xl border border-[#263449] bg-gradient-to-br from-[#172338] via-[#111C2E] to-[#0B1220] p-5 shadow-xl shadow-black/20">
 
           <div>
 
-            <span className="text-xs font-bold uppercase tracking-[0.18em] text-cyan-400">
+            <span className="text-xs font-bold uppercase tracking-[0.18em] text-sky-400">
               Product Inventory
             </span>
 
@@ -535,7 +535,7 @@ const AdminProducts = () => {
               Search Products
             </h2>
 
-            <p className="mt-1 text-xs text-slate-500">
+            <p className="mt-1 text-xs text-slate-400">
               Search products by name, brand or category.
             </p>
 
@@ -546,7 +546,7 @@ const AdminProducts = () => {
 
             <Search
               size={19}
-              className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500"
+              className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"
             />
 
             <input
@@ -556,7 +556,7 @@ const AdminProducts = () => {
                 setSearch(event.target.value)
               }
               placeholder="Search products by name, brand or category..."
-              className="w-full rounded-xl border border-white/10 bg-[#070c12] py-3 pl-11 pr-4 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-cyan-400/40 focus:ring-2 focus:ring-cyan-400/10"
+              className="w-full rounded-xl border border-[#263449] bg-[#0B1220] py-3 pl-11 pr-4 text-sm text-white outline-none transition placeholder:text-slate-400 focus:border-sky-400/40 focus:ring-2 focus:ring-sky-400/10"
             />
 
           </div>
@@ -568,16 +568,16 @@ const AdminProducts = () => {
             PRODUCTS TABLE
         ===================================== */}
 
-        <div className="overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-[#0c131d] via-[#091019] to-[#05080d] shadow-2xl shadow-black/30">
+        <div className="overflow-hidden rounded-3xl border border-[#263449] bg-gradient-to-br from-[#172338] via-[#111C2E] to-[#0B1220] shadow-2xl shadow-black/30">
 
 
           {/* Table Header */}
 
-          <div className="border-b border-white/10 px-6 py-5">
+          <div className="border-b border-[#263449] px-6 py-5">
 
             <div>
 
-              <span className="text-xs font-bold uppercase tracking-[0.18em] text-cyan-400">
+              <span className="text-xs font-bold uppercase tracking-[0.18em] text-sky-400">
                 NEXORA Inventory
               </span>
 
@@ -585,7 +585,7 @@ const AdminProducts = () => {
                 All Products
               </h2>
 
-              <p className="mt-1 text-xs text-slate-500">
+              <p className="mt-1 text-xs text-slate-400">
                 {filteredProducts.length}{" "}
                 {filteredProducts.length === 1
                   ? "product"
@@ -606,7 +606,7 @@ const AdminProducts = () => {
 
             <div className="px-6 py-20 text-center">
 
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-cyan-400/20 bg-cyan-400/10 text-cyan-400">
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-sky-400/20 bg-sky-400/10 text-sky-400">
                 <Package size={28} />
               </div>
 
@@ -614,7 +614,7 @@ const AdminProducts = () => {
                 No products found
               </h2>
 
-              <p className="mt-1 text-sm text-slate-500">
+              <p className="mt-1 text-sm text-slate-400">
                 Try changing your search or add
                 a new product.
               </p>
@@ -622,7 +622,7 @@ const AdminProducts = () => {
               <button
                 type="button"
                 onClick={handleAddProduct}
-                className="mt-5 inline-flex items-center gap-2 rounded-xl bg-cyan-500 px-5 py-2.5 text-sm font-bold text-slate-950 shadow-lg shadow-cyan-500/10 transition hover:bg-cyan-400"
+                className="mt-5 inline-flex items-center gap-2 rounded-xl bg-sky-500 px-5 py-2.5 text-sm font-bold text-[#0B1220] shadow-lg shadow-sky-500/10 transition hover:bg-sky-400"
               >
                 <Plus size={17} />
                 Add Product
@@ -640,31 +640,31 @@ const AdminProducts = () => {
 
               <table className="min-w-[1000px] w-full">
 
-                <thead className="border-b border-white/10 bg-white/[0.02]">
+                <thead className="border-b border-[#263449] bg-white/[0.02]">
 
                   <tr>
 
-                    <th className="px-6 py-4 text-left text-xs font-bold uppercase tracking-wider text-slate-500">
+                    <th className="px-6 py-4 text-left text-xs font-bold uppercase tracking-wider text-slate-400">
                       Product
                     </th>
 
-                    <th className="px-6 py-4 text-left text-xs font-bold uppercase tracking-wider text-slate-500">
+                    <th className="px-6 py-4 text-left text-xs font-bold uppercase tracking-wider text-slate-400">
                       Category
                     </th>
 
-                    <th className="px-6 py-4 text-left text-xs font-bold uppercase tracking-wider text-slate-500">
+                    <th className="px-6 py-4 text-left text-xs font-bold uppercase tracking-wider text-slate-400">
                       Price
                     </th>
 
-                    <th className="px-6 py-4 text-left text-xs font-bold uppercase tracking-wider text-slate-500">
+                    <th className="px-6 py-4 text-left text-xs font-bold uppercase tracking-wider text-slate-400">
                       Stock
                     </th>
 
-                    <th className="px-6 py-4 text-left text-xs font-bold uppercase tracking-wider text-slate-500">
+                    <th className="px-6 py-4 text-left text-xs font-bold uppercase tracking-wider text-slate-400">
                       Featured
                     </th>
 
-                    <th className="px-6 py-4 text-right text-xs font-bold uppercase tracking-wider text-slate-500">
+                    <th className="px-6 py-4 text-right text-xs font-bold uppercase tracking-wider text-slate-400">
                       Actions
                     </th>
 
@@ -673,7 +673,7 @@ const AdminProducts = () => {
                 </thead>
 
 
-                <tbody className="divide-y divide-white/[0.06]">
+                <tbody className="divide-y divide-[#263449]">
 
                   {filteredProducts.map(
                     (product) => {
@@ -693,7 +693,7 @@ const AdminProducts = () => {
 
                         <tr
                           key={product._id}
-                          className="transition duration-300 hover:bg-white/[0.025]"
+                          className="transition duration-300 hover:bg-[#172338]"
                         >
 
                           {/* Product */}
@@ -702,7 +702,7 @@ const AdminProducts = () => {
 
                             <div className="flex min-w-[280px] items-center gap-4">
 
-                              <div className="h-14 w-14 shrink-0 overflow-hidden rounded-xl border border-white/10 bg-[#070c12]">
+                              <div className="h-14 w-14 shrink-0 overflow-hidden rounded-xl border border-[#263449] bg-[#0B1220]">
 
                                 <img
                                   src={image}
@@ -722,7 +722,7 @@ const AdminProducts = () => {
                                   {product.name}
                                 </p>
 
-                                <p className="mt-1 text-xs text-slate-500">
+                                <p className="mt-1 text-xs text-slate-400">
                                   {product.brand ||
                                     "NEXORA"}
                                 </p>
@@ -771,7 +771,7 @@ const AdminProducts = () => {
                                 {stockStatus.label}
                               </span>
 
-                              <span className="text-xs text-slate-500">
+                              <span className="text-xs text-slate-400">
                                 {product.stock || 0}{" "}
                                 units
                               </span>
@@ -787,13 +787,13 @@ const AdminProducts = () => {
 
                             {product.featured ? (
 
-                              <span className="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1 text-xs font-semibold text-cyan-400">
+                              <span className="rounded-full border border-sky-400/20 bg-sky-400/10 px-3 py-1 text-xs font-semibold text-sky-400">
                                 Featured
                               </span>
 
                             ) : (
 
-                              <span className="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-xs font-semibold text-slate-500">
+                              <span className="rounded-full border border-[#263449] bg-[#172338] px-3 py-1 text-xs font-semibold text-slate-400">
                                 Standard
                               </span>
 
@@ -818,7 +818,7 @@ const AdminProducts = () => {
                                   )
                                 }
                                 title="View Product"
-                                className="inline-flex items-center justify-center rounded-lg border border-white/10 bg-white/[0.04] p-2 text-slate-400 transition hover:border-cyan-400/30 hover:bg-cyan-400/10 hover:text-cyan-400"
+                                className="inline-flex items-center justify-center rounded-lg border border-[#263449] bg-[#172338] p-2 text-slate-400 transition hover:border-sky-400/30 hover:bg-sky-400/10 hover:text-sky-400"
                               >
                                 <Eye size={16} />
                               </button>
@@ -834,7 +834,7 @@ const AdminProducts = () => {
                                   )
                                 }
                                 title="Edit Product"
-                                className="inline-flex items-center justify-center rounded-lg border border-white/10 bg-white/[0.04] p-2 text-slate-400 transition hover:border-blue-400/30 hover:bg-blue-400/10 hover:text-blue-400"
+                                className="inline-flex items-center justify-center rounded-lg border border-[#263449] bg-[#172338] p-2 text-slate-400 transition hover:border-blue-400/30 hover:bg-blue-400/10 hover:text-blue-400"
                               >
                                 <Pencil size={16} />
                               </button>
@@ -884,18 +884,18 @@ const AdminProducts = () => {
 
       {selectedProduct && (
 
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4 backdrop-blur-sm">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#0B1220]/80 p-4 backdrop-blur-sm">
 
-          <div className="max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-3xl border border-white/10 bg-[#0b1119] shadow-2xl shadow-black/60">
+          <div className="max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-3xl border border-[#263449] bg-[#111C2E] shadow-2xl shadow-black/60">
 
 
             {/* Modal Header */}
 
-            <div className="sticky top-0 z-10 flex items-center justify-between border-b border-white/10 bg-[#0b1119]/95 px-6 py-5 backdrop-blur">
+            <div className="sticky top-0 z-10 flex items-center justify-between border-b border-[#263449] bg-[#111C2E]/95 px-6 py-5 backdrop-blur">
 
               <div>
 
-                <p className="text-xs font-bold uppercase tracking-[0.18em] text-cyan-400">
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-sky-400">
                   NEXORA PRODUCT
                 </p>
 
@@ -903,7 +903,7 @@ const AdminProducts = () => {
                   Product Details
                 </h2>
 
-                <p className="mt-1 text-sm text-slate-500">
+                <p className="mt-1 text-sm text-slate-400">
                   {selectedProduct.name}
                 </p>
 
@@ -915,7 +915,7 @@ const AdminProducts = () => {
                 onClick={() =>
                   setSelectedProduct(null)
                 }
-                className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] text-slate-500 transition hover:border-red-400/20 hover:bg-red-400/10 hover:text-red-400"
+                className="flex h-10 w-10 items-center justify-center rounded-xl border border-[#263449] bg-[#172338] text-slate-400 transition hover:border-red-400/20 hover:bg-red-400/10 hover:text-red-400"
               >
                 <X size={20} />
               </button>
@@ -935,9 +935,9 @@ const AdminProducts = () => {
 
                 {/* Product */}
 
-                <div className="rounded-2xl border border-white/10 bg-[#070c12] p-4">
+                <div className="rounded-2xl border border-[#263449] bg-[#0B1220] p-4">
 
-                  <p className="text-xs font-bold uppercase tracking-wider text-slate-500">
+                  <p className="text-xs font-bold uppercase tracking-wider text-slate-400">
                     Product
                   </p>
 
@@ -950,9 +950,9 @@ const AdminProducts = () => {
 
                 {/* Brand */}
 
-                <div className="rounded-2xl border border-white/10 bg-[#070c12] p-4">
+                <div className="rounded-2xl border border-[#263449] bg-[#0B1220] p-4">
 
-                  <p className="text-xs font-bold uppercase tracking-wider text-slate-500">
+                  <p className="text-xs font-bold uppercase tracking-wider text-slate-400">
                     Brand
                   </p>
 
@@ -966,13 +966,13 @@ const AdminProducts = () => {
 
                 {/* Price */}
 
-                <div className="rounded-2xl border border-white/10 bg-[#070c12] p-4">
+                <div className="rounded-2xl border border-[#263449] bg-[#0B1220] p-4">
 
-                  <p className="text-xs font-bold uppercase tracking-wider text-slate-500">
+                  <p className="text-xs font-bold uppercase tracking-wider text-slate-400">
                     Price
                   </p>
 
-                  <p className="mt-2 font-bold text-cyan-400">
+                  <p className="mt-2 font-bold text-sky-400">
                     Rs.{" "}
                     {Number(
                       selectedProduct.price ||
@@ -985,9 +985,9 @@ const AdminProducts = () => {
 
                 {/* Stock */}
 
-                <div className="rounded-2xl border border-white/10 bg-[#070c12] p-4">
+                <div className="rounded-2xl border border-[#263449] bg-[#0B1220] p-4">
 
-                  <p className="text-xs font-bold uppercase tracking-wider text-slate-500">
+                  <p className="text-xs font-bold uppercase tracking-wider text-slate-400">
                     Stock
                   </p>
 
@@ -1006,11 +1006,11 @@ const AdminProducts = () => {
 
               <div>
 
-                <p className="text-xs font-bold uppercase tracking-wider text-slate-500">
+                <p className="text-xs font-bold uppercase tracking-wider text-slate-400">
                   Description
                 </p>
 
-                <div className="mt-2 rounded-2xl border border-white/10 bg-[#070c12] p-5 text-sm leading-7 text-slate-300">
+                <div className="mt-2 rounded-2xl border border-[#263449] bg-[#0B1220] p-5 text-sm leading-7 text-slate-300">
                   {selectedProduct.description ||
                     "No description available."}
                 </div>
@@ -1027,12 +1027,12 @@ const AdminProducts = () => {
 
                   <div>
 
-                    <p className="text-xs font-bold uppercase tracking-wider text-slate-500">
+                    <p className="text-xs font-bold uppercase tracking-wider text-slate-400">
                       Specifications
                     </p>
 
 
-                    <div className="mt-3 overflow-hidden rounded-2xl border border-white/10">
+                    <div className="mt-3 overflow-hidden rounded-2xl border border-[#263449]">
 
                       {Object.entries(
                         selectedProduct.specifications
@@ -1041,7 +1041,7 @@ const AdminProducts = () => {
 
                           <div
                             key={key}
-                            className="grid grid-cols-2 border-b border-white/[0.06] bg-[#070c12] px-4 py-3 last:border-b-0"
+                            className="grid grid-cols-2 border-b border-[#263449] bg-[#0B1220] px-4 py-3 last:border-b-0"
                           >
 
                             <span className="font-medium capitalize text-slate-400">
@@ -1071,14 +1071,14 @@ const AdminProducts = () => {
 
             {/* Modal Footer */}
 
-            <div className="flex justify-end border-t border-white/10 bg-[#070c12] px-6 py-4">
+            <div className="flex justify-end border-t border-[#263449] bg-[#0B1220] px-6 py-4">
 
               <button
                 type="button"
                 onClick={() =>
                   setSelectedProduct(null)
                 }
-                className="rounded-xl bg-cyan-500 px-5 py-2.5 text-sm font-bold text-slate-950 shadow-lg shadow-cyan-500/10 transition hover:bg-cyan-400"
+                className="rounded-xl bg-sky-500 px-5 py-2.5 text-sm font-bold text-[#0B1220] shadow-lg shadow-sky-500/10 transition hover:bg-sky-400"
               >
                 Close
               </button>

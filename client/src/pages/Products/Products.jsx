@@ -66,7 +66,7 @@ const Products = () => {
     <main
       className="
         min-h-screen
-        bg-black
+        bg-[#0B1220]
         text-white
       "
     >
@@ -79,8 +79,8 @@ const Products = () => {
           relative
           overflow-hidden
           border-b
-          border-white/10
-          bg-black
+          border-[#263449]
+          bg-[#0B1220]
           px-4
           py-14
           sm:px-6
@@ -100,7 +100,7 @@ const Products = () => {
             h-80
             w-80
             rounded-full
-            bg-cyan-500/10
+            bg-sky-500/10
             blur-3xl
           "
         />
@@ -130,7 +130,7 @@ const Products = () => {
             -translate-x-1/2
             bg-gradient-to-r
             from-transparent
-            via-cyan-400/50
+            via-sky-400/50
             to-transparent
           "
         />
@@ -143,7 +143,7 @@ const Products = () => {
               className="
                 h-px
                 w-8
-                bg-cyan-400
+                bg-sky-400
               "
             />
 
@@ -153,7 +153,7 @@ const Products = () => {
                 font-black
                 uppercase
                 tracking-[0.22em]
-                text-cyan-400
+                text-sky-400
                 sm:text-xs
               "
             >
@@ -177,7 +177,7 @@ const Products = () => {
             "
           >
             Explore Our
-            <span className="text-cyan-400">
+            <span className="text-sky-400">
               {" "}Laptops.
             </span>
           </h1>
@@ -215,7 +215,7 @@ const Products = () => {
                 h-1
                 w-1
                 rounded-full
-                bg-cyan-400
+                bg-sky-400
               "
             />
 
@@ -224,7 +224,7 @@ const Products = () => {
                 h-1
                 w-8
                 rounded-full
-                bg-cyan-400
+                bg-sky-400
               "
             />
 
@@ -233,7 +233,7 @@ const Products = () => {
                 h-1
                 w-2
                 rounded-full
-                bg-cyan-400/40
+                bg-sky-400/40
               "
             />
           </div>
@@ -248,7 +248,7 @@ const Products = () => {
         className="
           relative
           overflow-hidden
-          bg-black
+          bg-[#0B1220]
           px-4
           py-10
           sm:px-6
@@ -269,7 +269,7 @@ const Products = () => {
             w-96
             -translate-x-1/2
             rounded-full
-            bg-cyan-500/[0.035]
+            bg-sky-500/[0.035]
             blur-3xl
           "
         />
@@ -307,16 +307,16 @@ const Products = () => {
               to="/"
               className="
                 font-medium
-                text-slate-500
+                text-slate-400
                 transition
                 duration-200
-                hover:text-cyan-400
+                hover:text-sky-400
               "
             >
               Home
             </Link>
 
-            <span className="text-slate-700">
+            <span className="text-slate-600">
               /
             </span>
 
@@ -359,7 +359,7 @@ const Products = () => {
                     w-1
                     rounded-full
                     bg-gradient-to-b
-                    from-cyan-400
+                    from-sky-400
                     to-blue-500
                   "
                 />
@@ -380,7 +380,7 @@ const Products = () => {
                     className="
                       mt-1
                       text-sm
-                      text-slate-500
+                      text-slate-400
                     "
                   >
                     {products.length}{" "}
@@ -407,8 +407,8 @@ const Products = () => {
                 justify-center
                 rounded-[24px]
                 border
-                border-white/10
-                bg-[#0b0f14]
+                border-[#263449]
+                bg-[#111C2E]
                 shadow-[0_15px_60px_rgba(0,0,0,0.3)]
               "
             >
@@ -426,7 +426,7 @@ const Products = () => {
                 rounded-[24px]
                 border
                 border-red-500/20
-                bg-[#0b0f14]
+                bg-[#111C2E]
                 px-6
                 py-14
                 text-center
@@ -468,7 +468,7 @@ const Products = () => {
                 className="
                   mt-2
                   text-sm
-                  text-slate-500
+                  text-slate-400
                 "
               >
                 {error}
@@ -481,19 +481,19 @@ const Products = () => {
                   mt-6
                   rounded-full
                   bg-gradient-to-r
-                  from-cyan-500
-                  to-cyan-600
+                  from-sky-400
+                  to-blue-600
                   px-6
                   py-3
                   text-sm
                   font-black
-                  text-black
+                  text-[#0B1220]
                   shadow-lg
-                  shadow-cyan-500/20
+                  shadow-sky-500/20
                   transition-all
                   duration-300
                   hover:-translate-y-0.5
-                  hover:from-cyan-400
+                  hover:from-sky-300
                   hover:to-blue-500
                   active:translate-y-0
                 "
@@ -526,8 +526,8 @@ const Products = () => {
                 className="
                   rounded-[28px]
                   border
-                  border-white/10
-                  bg-[#0b0f14]
+                  border-[#263449]
+                  bg-[#111C2E]
                   px-6
                   py-16
                   text-center
@@ -544,8 +544,8 @@ const Products = () => {
                     justify-center
                     rounded-[20px]
                     border
-                    border-cyan-400/20
-                    bg-cyan-400/10
+                    border-sky-400/20
+                    bg-sky-400/10
                     text-2xl
                   "
                 >
@@ -571,7 +571,7 @@ const Products = () => {
                     max-w-md
                     text-sm
                     leading-6
-                    text-slate-500
+                    text-slate-400
                   "
                 >
                   There are currently no laptops

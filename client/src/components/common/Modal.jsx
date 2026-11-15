@@ -101,7 +101,7 @@ const Modal = ({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 px-4 py-6 backdrop-blur-sm"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-[#0B1220]/80 px-4 py-6 backdrop-blur-sm"
       onMouseDown={handleOverlayClick}
       role="presentation"
     >
@@ -112,7 +112,9 @@ const Modal = ({
           w-full
           overflow-hidden
           rounded-2xl
-          bg-white
+          border
+          border-[#263449]
+          bg-[#111C2E]
           shadow-2xl
         `}
         role="dialog"
@@ -129,11 +131,11 @@ const Modal = ({
         ========================================= */}
 
         {(title || showCloseButton) && (
-          <div className="flex items-center justify-between border-b border-gray-200 px-6 py-4">
+          <div className="flex items-center justify-between border-b border-[#263449] px-6 py-4">
             {title ? (
               <h2
                 id="modal-title"
-                className="text-lg font-semibold text-gray-900"
+                className="text-lg font-semibold text-white"
               >
                 {title}
               </h2>
@@ -145,7 +147,7 @@ const Modal = ({
               <button
                 type="button"
                 onClick={onClose}
-                className="flex h-8 w-8 items-center justify-center rounded-full text-2xl leading-none text-gray-500 transition hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="flex h-8 w-8 items-center justify-center rounded-full text-2xl leading-none text-slate-400 transition hover:bg-[#172338] hover:text-sky-400 focus:outline-none focus:ring-2 focus:ring-sky-400"
                 aria-label="Close modal"
               >
                 &times;

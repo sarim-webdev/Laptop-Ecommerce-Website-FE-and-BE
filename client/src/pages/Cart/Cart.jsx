@@ -33,7 +33,7 @@ const Cart = () => {
 
   if (loading && cartItems.length === 0) {
     return (
-      <main className="min-h-screen bg-[#05080d] text-white">
+      <main className="min-h-screen bg-[#0B1220] text-white">
 
         {/* Background Glow */}
 
@@ -48,7 +48,7 @@ const Cart = () => {
               w-72
               -translate-x-1/2
               rounded-full
-              bg-cyan-500/[0.06]
+              bg-sky-500/[0.06]
               blur-3xl
             "
           />
@@ -69,7 +69,7 @@ const Cart = () => {
 
   if (!cartItems.length) {
     return (
-      <main className="relative min-h-screen overflow-hidden bg-[#05080d] text-white">
+      <main className="relative min-h-screen overflow-hidden bg-[#0B1220] text-white">
 
         {/* Background Effects */}
 
@@ -84,7 +84,7 @@ const Cart = () => {
               w-80
               -translate-x-1/2
               rounded-full
-              bg-cyan-500/[0.06]
+              bg-sky-500/[0.06]
               blur-3xl
             "
           />
@@ -126,8 +126,8 @@ const Cart = () => {
               max-w-xl
               rounded-3xl
               border
-              border-white/[0.08]
-              bg-white/[0.025]
+              border-[#263449]
+              bg-[#111C2E]
               p-8
               text-center
               shadow-2xl
@@ -147,7 +147,7 @@ const Cart = () => {
                 w-24
                 bg-gradient-to-r
                 from-transparent
-                via-cyan-400
+                via-sky-400
                 to-transparent
               "
             />
@@ -164,11 +164,11 @@ const Cart = () => {
                 justify-center
                 rounded-3xl
                 border
-                border-cyan-400/10
-                bg-cyan-400/[0.06]
-                text-cyan-400
+                border-sky-400/10
+                bg-sky-400/[0.06]
+                text-sky-400
                 shadow-lg
-                shadow-cyan-500/[0.05]
+                shadow-sky-500/[0.05]
               "
             >
               <ShoppingBag size={40} strokeWidth={1.5} />
@@ -183,7 +183,7 @@ const Cart = () => {
                 font-bold
                 uppercase
                 tracking-[0.25em]
-                text-cyan-400
+                text-sky-400
               "
             >
               NEXORA
@@ -209,7 +209,7 @@ const Cart = () => {
                 max-w-md
                 text-sm
                 leading-6
-                text-gray-500
+                text-slate-400
                 sm:text-base
               "
             >
@@ -230,9 +230,9 @@ const Cart = () => {
                 gap-2
                 rounded-xl
                 border
-                border-cyan-400/20
+                border-sky-400/20
                 bg-gradient-to-r
-                from-cyan-500
+                from-sky-400
                 to-blue-600
                 px-6
                 py-3.5
@@ -240,11 +240,11 @@ const Cart = () => {
                 font-black
                 text-white
                 shadow-lg
-                shadow-cyan-500/10
+                shadow-sky-500/10
                 transition-all
                 duration-300
                 hover:-translate-y-0.5
-                hover:from-cyan-400
+                hover:from-sky-400
                 hover:to-blue-500
               "
             >
@@ -273,7 +273,7 @@ const Cart = () => {
   ========================================= */
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-[#05080d] text-white">
+    <main className="relative min-h-screen overflow-hidden bg-[#0B1220] text-white">
 
       {/* =====================================
           BACKGROUND EFFECTS
@@ -289,7 +289,7 @@ const Cart = () => {
             h-96
             w-96
             rounded-full
-            bg-cyan-500/[0.035]
+            bg-sky-500/[0.035]
             blur-3xl
           "
         />
@@ -317,8 +317,8 @@ const Cart = () => {
         className="
           relative
           border-b
-          border-white/[0.07]
-          bg-[#080d14]/80
+          border-[#263449]
+          bg-[#111C2E]/80
           backdrop-blur-xl
         "
       >
@@ -357,7 +357,7 @@ const Cart = () => {
                     font-black
                     uppercase
                     tracking-[0.25em]
-                    text-cyan-400
+                    text-sky-400
                   "
                 >
                   NEXORA
@@ -365,14 +365,14 @@ const Cart = () => {
 
                 <ChevronRight
                   size={13}
-                  className="text-gray-700"
+                  className="text-slate-500"
                 />
 
                 <span
                   className="
                     text-xs
                     font-medium
-                    text-gray-600
+                    text-slate-400
                   "
                 >
                   Cart
@@ -397,7 +397,7 @@ const Cart = () => {
                 className="
                   mt-2
                   text-sm
-                  text-gray-500
+                  text-slate-400
                   sm:text-base
                 "
               >
@@ -416,13 +416,13 @@ const Cart = () => {
                 gap-2
                 rounded-full
                 border
-                border-cyan-400/10
-                bg-cyan-400/[0.06]
+                border-sky-400/10
+                bg-sky-400/[0.06]
                 px-4
                 py-2
                 text-sm
                 font-bold
-                text-cyan-400
+                text-sky-400
               "
             >
 
@@ -538,8 +538,8 @@ const Cart = () => {
                 overflow-hidden
                 rounded-2xl
                 border
-                border-white/[0.08]
-                bg-[#080d14]
+                border-[#263449]
+                bg-[#111C2E]
                 shadow-2xl
                 shadow-black/20
               "
@@ -553,7 +553,7 @@ const Cart = () => {
                   flex-col
                   gap-3
                   border-b
-                  border-white/[0.07]
+                  border-[#263449]
                   px-5
                   py-5
                   sm:flex-row
@@ -569,7 +569,7 @@ const Cart = () => {
 
                     <ShoppingBag
                       size={17}
-                      className="text-cyan-400"
+                      className="text-sky-400"
                     />
 
                     <h2
@@ -588,7 +588,7 @@ const Cart = () => {
                     className="
                       mt-1
                       text-sm
-                      text-gray-600
+                      text-slate-400
                     "
                   >
                     {cartCount}{" "}
@@ -610,9 +610,9 @@ const Cart = () => {
                     gap-1.5
                     text-sm
                     font-bold
-                    text-cyan-400
+                    text-sky-400
                     transition
-                    hover:text-cyan-300
+                    hover:text-sky-300
                   "
                 >
                   Continue Shopping
@@ -631,7 +631,7 @@ const Cart = () => {
 
               {/* Items */}
 
-              <div className="divide-y divide-white/[0.06]">
+              <div className="divide-y divide-[#263449]">
 
                 {cartItems.map((item, index) => {
 
@@ -680,8 +680,8 @@ const Cart = () => {
         className="
           relative
           border-t
-          border-white/[0.07]
-          bg-[#080d14]/80
+          border-[#263449]
+          bg-[#111C2E]/80
         "
       >
 
@@ -706,12 +706,12 @@ const Cart = () => {
             className="
               rounded-2xl
               border
-              border-white/[0.06]
-              bg-white/[0.02]
+              border-[#263449]
+              bg-[#172338]
               p-5
               transition
-              hover:border-cyan-400/10
-              hover:bg-white/[0.03]
+              hover:border-sky-400/10
+              hover:bg-[#1D2B42]
             "
           >
 
@@ -727,9 +727,9 @@ const Cart = () => {
                   justify-center
                   rounded-xl
                   border
-                  border-cyan-400/10
-                  bg-cyan-400/[0.06]
-                  text-cyan-400
+                  border-sky-400/10
+                  bg-sky-400/[0.06]
+                  text-sky-400
                 "
               >
                 <ShieldCheck size={20} />
@@ -752,7 +752,7 @@ const Cart = () => {
                     mt-1
                     text-xs
                     leading-5
-                    text-gray-600
+                    text-slate-400
                   "
                 >
                   Your payment information is protected.
@@ -770,12 +770,12 @@ const Cart = () => {
             className="
               rounded-2xl
               border
-              border-white/[0.06]
-              bg-white/[0.02]
+              border-[#263449]
+              bg-[#172338]
               p-5
               transition
-              hover:border-cyan-400/10
-              hover:bg-white/[0.03]
+              hover:border-sky-400/10
+              hover:bg-[#1D2B42]
             "
           >
 
@@ -791,9 +791,9 @@ const Cart = () => {
                   justify-center
                   rounded-xl
                   border
-                  border-cyan-400/10
-                  bg-cyan-400/[0.06]
-                  text-cyan-400
+                  border-sky-400/10
+                  bg-sky-400/[0.06]
+                  text-sky-400
                 "
               >
                 <Truck size={20} />
@@ -816,7 +816,7 @@ const Cart = () => {
                     mt-1
                     text-xs
                     leading-5
-                    text-gray-600
+                    text-slate-400
                   "
                 >
                   Reliable delivery right to your doorstep.
@@ -834,12 +834,12 @@ const Cart = () => {
             className="
               rounded-2xl
               border
-              border-white/[0.06]
-              bg-white/[0.02]
+              border-[#263449]
+              bg-[#172338]
               p-5
               transition
-              hover:border-cyan-400/10
-              hover:bg-white/[0.03]
+              hover:border-sky-400/10
+              hover:bg-[#1D2B42]
             "
           >
 
@@ -855,9 +855,9 @@ const Cart = () => {
                   justify-center
                   rounded-xl
                   border
-                  border-cyan-400/10
-                  bg-cyan-400/[0.06]
-                  text-cyan-400
+                  border-sky-400/10
+                  bg-sky-400/[0.06]
+                  text-sky-400
                 "
               >
                 <CheckCircle2 size={20} />
@@ -880,7 +880,7 @@ const Cart = () => {
                     mt-1
                     text-xs
                     leading-5
-                    text-gray-600
+                    text-slate-400
                   "
                 >
                   Shop with confidence and peace of mind.

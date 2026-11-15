@@ -189,7 +189,7 @@ const AdminOrders = () => {
 
   if (loading) {
     return (
-      <div className="flex min-h-[60vh] items-center justify-center bg-[#05080d]">
+      <div className="flex min-h-[60vh] items-center justify-center bg-[#0B1220]">
         <Loader />
       </div>
     );
@@ -201,17 +201,17 @@ const AdminOrders = () => {
   ========================================= */
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-[#05080d] px-4 py-6 text-white sm:px-6 lg:px-8 lg:py-8">
+    <section className="relative min-h-screen overflow-hidden bg-[#0B1220] px-4 py-6 text-white sm:px-6 lg:px-8 lg:py-8">
 
       {/* =====================================
           BACKGROUND GLOWS
       ===================================== */}
 
-      <div className="pointer-events-none absolute -left-40 top-10 h-96 w-96 rounded-full bg-cyan-500/[0.06] blur-3xl" />
+      <div className="pointer-events-none absolute -left-40 top-10 h-96 w-96 rounded-full bg-sky-500/[0.06] blur-3xl" />
 
       <div className="pointer-events-none absolute -right-40 top-1/3 h-96 w-96 rounded-full bg-blue-600/[0.05] blur-3xl" />
 
-      <div className="pointer-events-none absolute bottom-0 left-1/3 h-80 w-80 rounded-full bg-cyan-500/[0.03] blur-3xl" />
+      <div className="pointer-events-none absolute bottom-0 left-1/3 h-80 w-80 rounded-full bg-sky-500/[0.03] blur-3xl" />
 
 
       <div className="relative mx-auto max-w-7xl space-y-6">
@@ -224,7 +224,7 @@ const AdminOrders = () => {
 
           <div>
 
-            <p className="text-sm font-bold uppercase tracking-[0.2em] text-cyan-400">
+            <p className="text-sm font-bold uppercase tracking-[0.2em] text-sky-400">
               NEXORA ADMINISTRATION
             </p>
 
@@ -232,7 +232,7 @@ const AdminOrders = () => {
               Orders
             </h1>
 
-            <p className="mt-2 text-sm leading-6 text-slate-500 sm:text-base">
+            <p className="mt-2 text-sm leading-6 text-slate-400 sm:text-base">
               Manage customer orders and monitor
               order fulfillment.
             </p>
@@ -246,7 +246,7 @@ const AdminOrders = () => {
             type="button"
             onClick={handleRefresh}
             disabled={refreshing}
-            className="inline-flex items-center justify-center rounded-xl border border-white/10 bg-[#0b1119] px-5 py-2.5 text-sm font-semibold text-slate-300 shadow-lg shadow-black/20 transition-all duration-300 hover:border-cyan-400/30 hover:bg-[#101923] hover:text-white disabled:cursor-not-allowed disabled:opacity-60"
+            className="inline-flex items-center justify-center rounded-xl border border-[#263449] bg-[#111C2E] px-5 py-2.5 text-sm font-semibold text-slate-300 shadow-lg shadow-black/20 transition-all duration-300 hover:border-sky-400/30 hover:bg-[#172338] hover:text-white disabled:cursor-not-allowed disabled:opacity-60"
           >
             {refreshing
               ? "Refreshing..."
@@ -287,9 +287,9 @@ const AdminOrders = () => {
 
           {/* Total Orders */}
 
-          <div className="group rounded-2xl border border-white/10 bg-gradient-to-br from-[#0c131d] via-[#091019] to-[#05080d] p-5 shadow-xl shadow-black/20 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/20">
+          <div className="group rounded-2xl border border-[#263449] bg-gradient-to-br from-[#172338] via-[#111C2E] to-[#0B1220] p-5 shadow-xl shadow-black/20 transition duration-300 hover:-translate-y-1 hover:border-sky-400/20">
 
-            <p className="text-sm font-medium text-slate-500">
+            <p className="text-sm font-medium text-slate-400">
               Total Orders
             </p>
 
@@ -297,16 +297,16 @@ const AdminOrders = () => {
               {orders.length}
             </p>
 
-            <div className="mt-4 h-1 w-12 rounded-full bg-cyan-400" />
+            <div className="mt-4 h-1 w-12 rounded-full bg-sky-400" />
 
           </div>
 
 
           {/* Processing */}
 
-          <div className="group rounded-2xl border border-white/10 bg-gradient-to-br from-[#0c131d] via-[#091019] to-[#05080d] p-5 shadow-xl shadow-black/20 transition duration-300 hover:-translate-y-1 hover:border-amber-400/20">
+          <div className="group rounded-2xl border border-[#263449] bg-gradient-to-br from-[#172338] via-[#111C2E] to-[#0B1220] p-5 shadow-xl shadow-black/20 transition duration-300 hover:-translate-y-1 hover:border-amber-400/20">
 
-            <p className="text-sm font-medium text-slate-500">
+            <p className="text-sm font-medium text-slate-400">
               Processing
             </p>
 
@@ -327,9 +327,9 @@ const AdminOrders = () => {
 
           {/* Shipped */}
 
-          <div className="group rounded-2xl border border-white/10 bg-gradient-to-br from-[#0c131d] via-[#091019] to-[#05080d] p-5 shadow-xl shadow-black/20 transition duration-300 hover:-translate-y-1 hover:border-blue-400/20">
+          <div className="group rounded-2xl border border-[#263449] bg-gradient-to-br from-[#172338] via-[#111C2E] to-[#0B1220] p-5 shadow-xl shadow-black/20 transition duration-300 hover:-translate-y-1 hover:border-blue-400/20">
 
-            <p className="text-sm font-medium text-slate-500">
+            <p className="text-sm font-medium text-slate-400">
               Shipped
             </p>
 
@@ -350,9 +350,9 @@ const AdminOrders = () => {
 
           {/* Delivered */}
 
-          <div className="group rounded-2xl border border-white/10 bg-gradient-to-br from-[#0c131d] via-[#091019] to-[#05080d] p-5 shadow-xl shadow-black/20 transition duration-300 hover:-translate-y-1 hover:border-emerald-400/20">
+          <div className="group rounded-2xl border border-[#263449] bg-gradient-to-br from-[#172338] via-[#111C2E] to-[#0B1220] p-5 shadow-xl shadow-black/20 transition duration-300 hover:-translate-y-1 hover:border-emerald-400/20">
 
-            <p className="text-sm font-medium text-slate-500">
+            <p className="text-sm font-medium text-slate-400">
               Delivered
             </p>
 
@@ -377,13 +377,13 @@ const AdminOrders = () => {
             FILTER
         ===================================== */}
 
-        <div className="rounded-3xl border border-white/10 bg-gradient-to-br from-[#0c131d] via-[#091019] to-[#05080d] shadow-2xl shadow-black/30">
+        <div className="rounded-3xl border border-[#263449] bg-gradient-to-br from-[#172338] via-[#111C2E] to-[#0B1220] shadow-2xl shadow-black/30">
 
           <div className="flex flex-col gap-4 px-6 py-5 sm:flex-row sm:items-center sm:justify-between">
 
             <div>
 
-              <span className="text-xs font-bold uppercase tracking-[0.18em] text-cyan-400">
+              <span className="text-xs font-bold uppercase tracking-[0.18em] text-sky-400">
                 Order Management
               </span>
 
@@ -391,7 +391,7 @@ const AdminOrders = () => {
                 Order Status
               </h2>
 
-              <p className="mt-1 text-xs text-slate-500">
+              <p className="mt-1 text-xs text-slate-400">
                 Filter orders by their current status.
               </p>
 
@@ -405,47 +405,47 @@ const AdminOrders = () => {
                   event.target.value
                 )
               }
-              className="rounded-xl border border-white/10 bg-[#0a1018] px-4 py-2.5 text-sm font-semibold text-slate-300 outline-none transition focus:border-cyan-400/50 focus:ring-2 focus:ring-cyan-400/10"
+              className="rounded-xl border border-[#263449] bg-[#0B1220] px-4 py-2.5 text-sm font-semibold text-slate-300 outline-none transition focus:border-sky-400/50 focus:ring-2 focus:ring-sky-400/10"
             >
 
               <option
                 value="All"
-                className="bg-[#0a1018]"
+                className="bg-[#0B1220]"
               >
                 All Orders
               </option>
 
               <option
                 value="Processing"
-                className="bg-[#0a1018]"
+                className="bg-[#0B1220]"
               >
                 Processing
               </option>
 
               <option
                 value="Confirmed"
-                className="bg-[#0a1018]"
+                className="bg-[#0B1220]"
               >
                 Confirmed
               </option>
 
               <option
                 value="Shipped"
-                className="bg-[#0a1018]"
+                className="bg-[#0B1220]"
               >
                 Shipped
               </option>
 
               <option
                 value="Delivered"
-                className="bg-[#0a1018]"
+                className="bg-[#0B1220]"
               >
                 Delivered
               </option>
 
               <option
                 value="Cancelled"
-                className="bg-[#0a1018]"
+                className="bg-[#0B1220]"
               >
                 Cancelled
               </option>
@@ -461,15 +461,15 @@ const AdminOrders = () => {
             ORDERS TABLE
         ===================================== */}
 
-        <div className="overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-[#0c131d] via-[#091019] to-[#05080d] shadow-2xl shadow-black/30">
+        <div className="overflow-hidden rounded-3xl border border-[#263449] bg-gradient-to-br from-[#172338] via-[#111C2E] to-[#0B1220] shadow-2xl shadow-black/30">
 
           {/* Table Header */}
 
-          <div className="border-b border-white/10 px-6 py-5">
+          <div className="border-b border-[#263449] px-6 py-5">
 
             <div>
 
-              <span className="text-xs font-bold uppercase tracking-[0.18em] text-cyan-400">
+              <span className="text-xs font-bold uppercase tracking-[0.18em] text-sky-400">
                 Order Management
               </span>
 
@@ -477,7 +477,7 @@ const AdminOrders = () => {
                 All Customer Orders
               </h2>
 
-              <p className="mt-1 text-xs text-slate-500">
+              <p className="mt-1 text-xs text-slate-400">
                 Review and manage customer orders.
               </p>
 
@@ -492,7 +492,7 @@ const AdminOrders = () => {
 
             <div className="px-6 py-16 text-center">
 
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-white/10 bg-[#070c12] text-2xl shadow-lg">
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-[#263449] bg-[#0B1220] text-2xl shadow-lg">
                 📦
               </div>
 
@@ -500,7 +500,7 @@ const AdminOrders = () => {
                 No orders found
               </h2>
 
-              <p className="mt-1 text-sm text-slate-500">
+              <p className="mt-1 text-sm text-slate-400">
                 Orders matching this filter
                 will appear here.
               </p>
@@ -515,31 +515,31 @@ const AdminOrders = () => {
 
                 {/* Table Head */}
 
-                <thead className="border-b border-white/10 bg-white/[0.02]">
+                <thead className="border-b border-[#263449] bg-white/[0.02]">
 
                   <tr>
 
-                    <th className="px-6 py-4 text-left text-xs font-bold uppercase tracking-wider text-slate-500">
+                    <th className="px-6 py-4 text-left text-xs font-bold uppercase tracking-wider text-slate-400">
                       Order
                     </th>
 
-                    <th className="px-6 py-4 text-left text-xs font-bold uppercase tracking-wider text-slate-500">
+                    <th className="px-6 py-4 text-left text-xs font-bold uppercase tracking-wider text-slate-400">
                       Customer
                     </th>
 
-                    <th className="px-6 py-4 text-left text-xs font-bold uppercase tracking-wider text-slate-500">
+                    <th className="px-6 py-4 text-left text-xs font-bold uppercase tracking-wider text-slate-400">
                       Items
                     </th>
 
-                    <th className="px-6 py-4 text-left text-xs font-bold uppercase tracking-wider text-slate-500">
+                    <th className="px-6 py-4 text-left text-xs font-bold uppercase tracking-wider text-slate-400">
                       Total
                     </th>
 
-                    <th className="px-6 py-4 text-left text-xs font-bold uppercase tracking-wider text-slate-500">
+                    <th className="px-6 py-4 text-left text-xs font-bold uppercase tracking-wider text-slate-400">
                       Status
                     </th>
 
-                    <th className="px-6 py-4 text-right text-xs font-bold uppercase tracking-wider text-slate-500">
+                    <th className="px-6 py-4 text-right text-xs font-bold uppercase tracking-wider text-slate-400">
                       Actions
                     </th>
 
@@ -584,7 +584,7 @@ const AdminOrders = () => {
                                 .toUpperCase()}
                             </p>
 
-                            <p className="mt-1 text-xs text-slate-600">
+                            <p className="mt-1 text-xs text-slate-400">
                               {order.createdAt
                                 ? new Date(
                                     order.createdAt
@@ -603,7 +603,7 @@ const AdminOrders = () => {
 
     {/* Customer Avatar */}
 
-    <div className="h-10 w-10 shrink-0 overflow-hidden rounded-xl border border-cyan-400/10 bg-cyan-400/5">
+    <div className="h-10 w-10 shrink-0 overflow-hidden rounded-xl border border-sky-400/10 bg-sky-400/5">
 
       {order.user?.avatar?.url ? (
         <img
@@ -612,7 +612,7 @@ const AdminOrders = () => {
           className="h-full w-full object-cover"
         />
       ) : (
-        <div className="flex h-full w-full items-center justify-center text-sm font-bold text-cyan-400">
+        <div className="flex h-full w-full items-center justify-center text-sm font-bold text-sky-400">
           {(customer || "C")
             .charAt(0)
             .toUpperCase()}
@@ -630,7 +630,7 @@ const AdminOrders = () => {
         {customer}
       </p>
 
-      <p className="mt-1 max-w-[180px] truncate text-xs text-slate-500">
+      <p className="mt-1 max-w-[180px] truncate text-xs text-slate-400">
         {order.user?.email ||
           order.shippingAddress?.phone ||
           "—"}
@@ -648,7 +648,7 @@ const AdminOrders = () => {
 
                           <td className="whitespace-nowrap px-6 py-5">
 
-                            <span className="rounded-lg border border-white/10 bg-white/[0.03] px-3 py-1.5 text-xs font-semibold text-slate-400">
+                            <span className="rounded-lg border border-[#263449] bg-white/[0.03] px-3 py-1.5 text-xs font-semibold text-slate-400">
                               {items.length}{" "}
                               {items.length === 1
                                 ? "item"
@@ -688,42 +688,42 @@ const AdminOrders = () => {
                                   event.target.value
                                 )
                               }
-                              className={`rounded-full border px-3 py-1.5 text-xs font-semibold outline-none transition focus:ring-2 focus:ring-cyan-400/20 ${getStatusClasses(
+                              className={`rounded-full border px-3 py-1.5 text-xs font-semibold outline-none transition focus:ring-2 focus:ring-sky-400/20 ${getStatusClasses(
                                 order.orderStatus
                               )}`}
                             >
 
                               <option
                                 value="Processing"
-                                className="bg-[#0a1018] text-amber-400"
+                                className="bg-[#0B1220] text-amber-400"
                               >
                                 Processing
                               </option>
 
                               <option
                                 value="Confirmed"
-                                className="bg-[#0a1018] text-indigo-400"
+                                className="bg-[#0B1220] text-indigo-400"
                               >
                                 Confirmed
                               </option>
 
                               <option
                                 value="Shipped"
-                                className="bg-[#0a1018] text-blue-400"
+                                className="bg-[#0B1220] text-blue-400"
                               >
                                 Shipped
                               </option>
 
                               <option
                                 value="Delivered"
-                                className="bg-[#0a1018] text-emerald-400"
+                                className="bg-[#0B1220] text-emerald-400"
                               >
                                 Delivered
                               </option>
 
                               <option
                                 value="Cancelled"
-                                className="bg-[#0a1018] text-red-400"
+                                className="bg-[#0B1220] text-red-400"
                               >
                                 Cancelled
                               </option>
@@ -744,7 +744,7 @@ const AdminOrders = () => {
                                   order
                                 )
                               }
-                              className="rounded-lg border border-white/10 bg-white/[0.04] px-3 py-2 text-xs font-semibold text-slate-300 transition hover:border-cyan-400/30 hover:bg-cyan-400/10 hover:text-cyan-400"
+                              className="rounded-lg border border-[#263449] bg-white/[0.04] px-3 py-2 text-xs font-semibold text-slate-300 transition hover:border-sky-400/30 hover:bg-sky-400/10 hover:text-sky-400"
                             >
                               View
                             </button>
@@ -777,17 +777,17 @@ const AdminOrders = () => {
 
       {selectedOrder && (
 
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4 backdrop-blur-sm">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#0B1220]/80 p-4 backdrop-blur-sm">
 
-          <div className="max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-3xl border border-white/10 bg-[#0b1119] shadow-2xl shadow-black/60">
+          <div className="max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-3xl border border-[#263449] bg-[#111C2E] shadow-2xl shadow-black/60">
 
             {/* Modal Header */}
 
-            <div className="sticky top-0 z-10 flex items-center justify-between border-b border-white/10 bg-[#0b1119]/95 px-6 py-5 backdrop-blur">
+            <div className="sticky top-0 z-10 flex items-center justify-between border-b border-[#263449] bg-[#111C2E]/95 px-6 py-5 backdrop-blur">
 
               <div>
 
-                <p className="text-xs font-bold uppercase tracking-[0.18em] text-cyan-400">
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-sky-400">
                   NEXORA ORDER
                 </p>
 
@@ -795,7 +795,7 @@ const AdminOrders = () => {
                   Order Details
                 </h2>
 
-                <p className="text-sm text-slate-500">
+                <p className="text-sm text-slate-400">
                   #
                   {selectedOrder._id
                     ?.slice(-8)
@@ -810,7 +810,7 @@ const AdminOrders = () => {
                 onClick={() =>
                   setSelectedOrder(null)
                 }
-                className="rounded-xl border border-white/10 bg-white/[0.04] p-2 text-slate-500 transition hover:border-red-400/20 hover:bg-red-400/10 hover:text-red-400"
+                className="rounded-xl border border-[#263449] bg-white/[0.04] p-2 text-slate-400 transition hover:border-red-400/20 hover:bg-red-400/10 hover:text-red-400"
               >
                 ✕
               </button>
@@ -826,11 +826,11 @@ const AdminOrders = () => {
                   CUSTOMER
               ===================================== */}
 
-              <div className="rounded-2xl border border-white/10 bg-[#070c12] p-5">
+              <div className="rounded-2xl border border-[#263449] bg-[#0B1220] p-5">
 
                 <div className="flex items-center gap-3">
 
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-cyan-400/20 bg-cyan-400/10 text-cyan-400">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-sky-400/20 bg-sky-400/10 text-sky-400">
                     👤
                   </div>
 
@@ -840,7 +840,7 @@ const AdminOrders = () => {
                       Customer
                     </h3>
 
-                    <p className="text-xs text-slate-500">
+                    <p className="text-xs text-slate-400">
                       Customer information
                     </p>
 
@@ -853,7 +853,7 @@ const AdminOrders = () => {
 
                   <div>
 
-                    <p className="text-xs font-bold uppercase tracking-wider text-slate-500">
+                    <p className="text-xs font-bold uppercase tracking-wider text-slate-400">
                       Name
                     </p>
 
@@ -870,7 +870,7 @@ const AdminOrders = () => {
 
                   <div>
 
-                    <p className="text-xs font-bold uppercase tracking-wider text-slate-500">
+                    <p className="text-xs font-bold uppercase tracking-wider text-slate-400">
                       Email
                     </p>
 
@@ -892,7 +892,7 @@ const AdminOrders = () => {
 
               {selectedOrder.shippingAddress && (
 
-                <div className="rounded-2xl border border-white/10 bg-[#070c12] p-5">
+                <div className="rounded-2xl border border-[#263449] bg-[#0B1220] p-5">
 
                   <div className="flex items-center gap-3">
 
@@ -906,7 +906,7 @@ const AdminOrders = () => {
                         Shipping Address
                       </h3>
 
-                      <p className="text-xs text-slate-500">
+                      <p className="text-xs text-slate-400">
                         Delivery information
                       </p>
 
@@ -915,7 +915,7 @@ const AdminOrders = () => {
                   </div>
 
 
-                  <div className="mt-5 rounded-2xl border border-white/10 bg-[#05080d] p-4 text-sm leading-7 text-slate-400">
+                  <div className="mt-5 rounded-2xl border border-[#263449] bg-[#0B1220] p-4 text-sm leading-7 text-slate-300">
 
                     <p className="font-semibold text-white">
                       {
@@ -984,13 +984,13 @@ const AdminOrders = () => {
                       Order Items
                     </h3>
 
-                    <p className="mt-1 text-xs text-slate-500">
+                    <p className="mt-1 text-xs text-slate-400">
                       Products included in this order
                     </p>
 
                   </div>
 
-                  <span className="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1 text-xs font-bold text-cyan-400">
+                  <span className="rounded-full border border-sky-400/20 bg-sky-400/10 px-3 py-1 text-xs font-bold text-sky-400">
                     {
                       (
                         selectedOrder.orderItems ||
@@ -1004,7 +1004,7 @@ const AdminOrders = () => {
                 </div>
 
 
-                <div className="divide-y divide-white/[0.06] overflow-hidden rounded-2xl border border-white/10 bg-[#070c12]">
+                <div className="divide-y divide-white/[0.06] overflow-hidden rounded-2xl border border-[#263449] bg-[#0B1220]">
 
                   {(
                     selectedOrder.orderItems ||
@@ -1035,7 +1035,7 @@ const AdminOrders = () => {
 
                           {/* Product Image */}
 
-                          <div className="h-16 w-16 shrink-0 overflow-hidden rounded-xl border border-white/10 bg-[#05080d]">
+                          <div className="h-16 w-16 shrink-0 overflow-hidden rounded-xl border border-[#263449] bg-[#0B1220]">
 
                             <img
                               src={image}
@@ -1059,7 +1059,7 @@ const AdminOrders = () => {
                                 "Product"}
                             </p>
 
-                            <p className="mt-1 text-xs text-slate-500">
+                            <p className="mt-1 text-xs text-slate-400">
                               Qty:{" "}
                               {item.quantity ||
                                 1}
@@ -1070,7 +1070,7 @@ const AdminOrders = () => {
 
                           {/* Price */}
 
-                          <p className="text-sm font-bold text-cyan-400">
+                          <p className="text-sm font-bold text-sky-400">
                             {formatPrice(
                               item.price ||
                               product.price
@@ -1097,9 +1097,9 @@ const AdminOrders = () => {
 
                 {/* Payment */}
 
-                <div className="rounded-2xl border border-white/10 bg-[#070c12] p-5">
+                <div className="rounded-2xl border border-[#263449] bg-[#0B1220] p-5">
 
-                  <p className="text-xs font-bold uppercase tracking-wider text-slate-500">
+                  <p className="text-xs font-bold uppercase tracking-wider text-slate-400">
                     Payment Method
                   </p>
 
@@ -1113,9 +1113,9 @@ const AdminOrders = () => {
 
                 {/* Status */}
 
-                <div className="rounded-2xl border border-white/10 bg-[#070c12] p-5">
+                <div className="rounded-2xl border border-[#263449] bg-[#0B1220] p-5">
 
-                  <p className="text-xs font-bold uppercase tracking-wider text-slate-500">
+                  <p className="text-xs font-bold uppercase tracking-wider text-slate-400">
                     Order Status
                   </p>
 
@@ -1137,21 +1137,21 @@ const AdminOrders = () => {
                   TOTAL
               ===================================== */}
 
-              <div className="flex flex-col gap-3 rounded-2xl border border-cyan-400/10 bg-gradient-to-r from-cyan-400/[0.06] to-blue-500/[0.04] p-5 sm:flex-row sm:items-center sm:justify-between">
+              <div className="flex flex-col gap-3 rounded-2xl border border-sky-400/10 bg-gradient-to-r from-sky-400/[0.06] to-blue-500/[0.04] p-5 sm:flex-row sm:items-center sm:justify-between">
 
                 <div>
 
-                  <p className="text-sm font-semibold text-slate-400">
+                  <p className="text-sm font-semibold text-slate-300">
                     Order Total
                   </p>
 
-                  <p className="mt-1 text-xs text-slate-600">
+                  <p className="mt-1 text-xs text-slate-400">
                     Final order amount
                   </p>
 
                 </div>
 
-                <span className="text-2xl font-black text-cyan-400">
+                <span className="text-2xl font-black text-sky-400">
                   {formatPrice(
                     selectedOrder.totalPrice ||
                     selectedOrder.totalAmount ||
@@ -1166,14 +1166,14 @@ const AdminOrders = () => {
 
             {/* Modal Footer */}
 
-            <div className="flex justify-end border-t border-white/10 bg-[#070c12] px-6 py-4">
+            <div className="flex justify-end border-t border-[#263449] bg-[#0B1220] px-6 py-4">
 
               <button
                 type="button"
                 onClick={() =>
                   setSelectedOrder(null)
                 }
-                className="rounded-xl bg-cyan-500 px-5 py-2.5 text-sm font-bold text-slate-950 shadow-lg shadow-cyan-500/10 transition hover:bg-cyan-400"
+                className="rounded-xl bg-sky-500 px-5 py-2.5 text-sm font-bold text-[#0B1220] shadow-lg shadow-sky-500/10 transition hover:bg-sky-400"
               >
                 Close
               </button>

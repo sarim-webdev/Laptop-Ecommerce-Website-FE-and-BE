@@ -6,7 +6,38 @@ html {
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: #000;
+  background: #0B1220;
   color: #fff;
   min-width: 320px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B1220;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    #38BDF8,
+    #2563EB
+  );
+  border-radius: 20px;
+  border: 2px solid #0B1220;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    180deg,
+    #7DD3FC,
+    #3B82F6
+  );
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #38BDF8 #0B1220;
 }

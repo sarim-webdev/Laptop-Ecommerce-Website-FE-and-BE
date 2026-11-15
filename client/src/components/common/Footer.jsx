@@ -8,13 +8,13 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-white/10 bg-[#05070b] text-slate-300">
+    <footer className="border-t border-[#263449] bg-[#0B1220] text-slate-300">
 
       {/* =========================================
           NEWSLETTER SECTION
       ========================================= */}
 
-      <div className="border-b border-white/10 bg-[#080b12]">
+      <div className="border-b border-[#263449] bg-[#111C2E]">
 
         <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
 
@@ -24,7 +24,7 @@ const Footer = () => {
 
             <div className="max-w-xl">
 
-              <span className="mb-3 inline-block text-xs font-bold uppercase tracking-[0.25em] text-cyan-400">
+              <span className="mb-3 inline-block text-xs font-bold uppercase tracking-[0.25em] text-sky-400">
                 Stay Updated
               </span>
 
@@ -60,17 +60,17 @@ const Footer = () => {
                 required
                 className="
                   w-full rounded-xl
-                  border border-white/10
-                  bg-white/[0.04]
+                  border border-[#263449]
+                  bg-[#0B1220]
                   px-4 py-3
                   text-sm text-white
                   outline-none
                   transition
-                  placeholder:text-slate-600
-                  focus:border-cyan-400
-                  focus:bg-white/[0.06]
+                  placeholder:text-slate-500
+                  focus:border-sky-400
+                  focus:bg-[#15243A]
                   focus:ring-4
-                  focus:ring-cyan-400/10
+                  focus:ring-sky-400/10
                 "
               />
 
@@ -78,21 +78,21 @@ const Footer = () => {
                 type="submit"
                 className="
                   rounded-xl
-                  bg-cyan-500
+                  bg-sky-400
                   px-6 py-3
                   text-sm font-bold
-                  text-slate-950
+                  text-[#0B1220]
                   shadow-lg
-                  shadow-cyan-500/10
+                  shadow-sky-500/10
                   transition
                   duration-200
-                  hover:bg-cyan-400
-                  hover:shadow-cyan-400/20
+                  hover:bg-sky-300
+                  hover:shadow-sky-400/20
                   focus:outline-none
                   focus:ring-2
-                  focus:ring-cyan-400
+                  focus:ring-sky-400
                   focus:ring-offset-2
-                  focus:ring-offset-[#080b12]
+                  focus:ring-offset-[#111C2E]
                 "
               >
                 Subscribe
@@ -132,20 +132,20 @@ const Footer = () => {
                   flex h-11 w-11
                   items-center justify-center
                   rounded-xl
-                  border border-cyan-400/20
-                  bg-cyan-400/10
+                  border border-sky-400/20
+                  bg-sky-400/10
                   shadow-lg
-                  shadow-cyan-500/10
+                  shadow-sky-500/10
                 "
               >
-                <span className="text-lg font-black text-cyan-400">
+                <span className="text-lg font-black text-sky-400">
                   N
                 </span>
               </div>
 
               <span className="text-2xl font-black tracking-tight text-white">
                 NEXORA
-                <span className="text-cyan-400">.</span>
+                <span className="text-sky-400">.</span>
               </span>
 
             </Link>
@@ -173,14 +173,14 @@ const Footer = () => {
                   flex h-10 w-10
                   items-center justify-center
                   rounded-xl
-                  border border-white/10
-                  bg-white/[0.03]
+                  border border-[#263449]
+                  bg-[#111C2E]
                   text-slate-400
                   transition
                   duration-200
-                  hover:border-blue-500/40
-                  hover:bg-blue-500/10
-                  hover:text-blue-400
+                  hover:border-sky-400/40
+                  hover:bg-sky-400/10
+                  hover:text-sky-400
                 "
               >
 
@@ -206,14 +206,14 @@ const Footer = () => {
                   flex h-10 w-10
                   items-center justify-center
                   rounded-xl
-                  border border-white/10
-                  bg-white/[0.03]
+                  border border-[#263449]
+                  bg-[#111C2E]
                   text-slate-400
                   transition
                   duration-200
-                  hover:border-pink-500/40
-                  hover:bg-pink-500/10
-                  hover:text-pink-400
+                  hover:border-sky-400/40
+                  hover:bg-sky-400/10
+                  hover:text-sky-400
                 "
               >
 
@@ -263,14 +263,14 @@ const Footer = () => {
                   flex h-10 w-10
                   items-center justify-center
                   rounded-xl
-                  border border-white/10
-                  bg-white/[0.03]
+                  border border-[#263449]
+                  bg-[#111C2E]
                   text-slate-400
                   transition
                   duration-200
-                  hover:border-white/30
-                  hover:bg-white/10
-                  hover:text-white
+                  hover:border-sky-400/40
+                  hover:bg-sky-400/10
+                  hover:text-sky-400
                 "
               >
 
@@ -298,14 +298,14 @@ const Footer = () => {
                   flex h-10 w-10
                   items-center justify-center
                   rounded-xl
-                  border border-white/10
-                  bg-white/[0.03]
+                  border border-[#263449]
+                  bg-[#111C2E]
                   text-slate-400
                   transition
                   duration-200
-                  hover:border-blue-500/40
-                  hover:bg-blue-500/10
-                  hover:text-blue-400
+                  hover:border-sky-400/40
+                  hover:bg-sky-400/10
+                  hover:text-sky-400
                 "
               >
 
@@ -355,14 +355,14 @@ const Footer = () => {
                       flex items-center gap-2
                       text-sm text-slate-400
                       transition
-                      hover:text-cyan-400
+                      hover:text-sky-400
                     "
                   >
 
                     <span
                       className="
                         h-px w-0
-                        bg-cyan-400
+                        bg-sky-400
                         transition-all
                         duration-200
                         group-hover:w-3
@@ -411,14 +411,14 @@ const Footer = () => {
                       flex items-center gap-2
                       text-sm text-slate-400
                       transition
-                      hover:text-cyan-400
+                      hover:text-sky-400
                     "
                   >
 
                     <span
                       className="
                         h-px w-0
-                        bg-cyan-400
+                        bg-sky-400
                         transition-all
                         duration-200
                         group-hover:w-3
@@ -460,9 +460,9 @@ const Footer = () => {
                     mt-0.5 flex h-10 w-10 shrink-0
                     items-center justify-center
                     rounded-xl
-                    border border-cyan-400/10
-                    bg-cyan-400/5
-                    text-cyan-400
+                    border border-sky-400/10
+                    bg-sky-400/5
+                    text-sky-400
                   "
                 >
 
@@ -488,7 +488,7 @@ const Footer = () => {
 
                 <div>
 
-                  <p className="text-xs font-semibold uppercase tracking-wider text-slate-600">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">
                     Address
                   </p>
 
@@ -510,9 +510,9 @@ const Footer = () => {
                     mt-0.5 flex h-10 w-10 shrink-0
                     items-center justify-center
                     rounded-xl
-                    border border-cyan-400/10
-                    bg-cyan-400/5
-                    text-cyan-400
+                    border border-sky-400/10
+                    bg-sky-400/5
+                    text-sky-400
                   "
                 >
 
@@ -540,7 +540,7 @@ const Footer = () => {
 
                 <div>
 
-                  <p className="text-xs font-semibold uppercase tracking-wider text-slate-600">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">
                     Email
                   </p>
 
@@ -550,7 +550,7 @@ const Footer = () => {
                       mt-1 block
                       text-sm text-slate-400
                       transition
-                      hover:text-cyan-400
+                      hover:text-sky-400
                     "
                   >
                     support@nexora.com
@@ -570,9 +570,9 @@ const Footer = () => {
                     mt-0.5 flex h-10 w-10 shrink-0
                     items-center justify-center
                     rounded-xl
-                    border border-cyan-400/10
-                    bg-cyan-400/5
-                    text-cyan-400
+                    border border-sky-400/10
+                    bg-sky-400/5
+                    text-sky-400
                   "
                 >
 
@@ -592,7 +592,7 @@ const Footer = () => {
 
                 <div>
 
-                  <p className="text-xs font-semibold uppercase tracking-wider text-slate-600">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">
                     Phone
                   </p>
 
@@ -602,7 +602,7 @@ const Footer = () => {
                       mt-1 block
                       text-sm text-slate-400
                       transition
-                      hover:text-cyan-400
+                      hover:text-sky-400
                     "
                   >
                     +92 300 1234567
@@ -625,7 +625,7 @@ const Footer = () => {
           BOTTOM FOOTER
       ========================================= */}
 
-      <div className="border-t border-white/10 bg-[#030509]">
+      <div className="border-t border-[#263449] bg-[#0B1220]">
 
         <div
           className="
@@ -639,7 +639,7 @@ const Footer = () => {
           "
         >
 
-          <p className="text-center text-sm text-slate-600 md:text-left">
+          <p className="text-center text-sm text-slate-500 md:text-left">
             © {currentYear} NEXORA. All rights reserved.
           </p>
 
@@ -647,23 +647,23 @@ const Footer = () => {
           <div className="flex flex-wrap items-center justify-center gap-6">
 
             <Link
-              to="/"
+              to="/privacy-policy"
               className="
-                text-sm text-slate-600
-                transition
-                hover:text-cyan-400
-              "
+    text-sm text-slate-500
+    transition
+    hover:text-sky-400
+  "
             >
               Privacy Policy
             </Link>
 
             <Link
-              to="/"
+              to="/terms-and-conditions"
               className="
-                text-sm text-slate-600
-                transition
-                hover:text-cyan-400
-              "
+    text-sm text-slate-500
+    transition
+    hover:text-sky-400
+  "
             >
               Terms & Conditions
             </Link>
@@ -671,9 +671,9 @@ const Footer = () => {
             <Link
               to="/contact"
               className="
-                text-sm text-slate-600
+                text-sm text-slate-500
                 transition
-                hover:text-cyan-400
+                hover:text-sky-400
               "
             >
               Support

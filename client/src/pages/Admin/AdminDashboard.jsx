@@ -135,13 +135,13 @@ const AdminDashboard = () => {
 
   if (loading) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-[#05080d] text-white">
+      <div className="flex min-h-screen items-center justify-center bg-[#0B1220] text-white">
 
         <div className="text-center">
 
-          <div className="mx-auto h-10 w-10 animate-spin rounded-full border-4 border-white/10 border-t-cyan-400" />
+          <div className="mx-auto h-10 w-10 animate-spin rounded-full border-4 border-white/10 border-t-sky-400" />
 
-          <p className="mt-4 text-sm text-slate-500">
+          <p className="mt-4 text-sm text-slate-400">
             Loading dashboard...
           </p>
 
@@ -157,18 +157,18 @@ const AdminDashboard = () => {
   ========================================= */
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-[#05080d] px-4 py-6 text-white sm:px-6 lg:px-8 lg:py-8">
+    <main className="relative min-h-screen overflow-hidden bg-[#0B1220] px-4 py-6 text-white sm:px-6 lg:px-8 lg:py-8">
 
 
       {/* =========================================
           BACKGROUND GLOWS
       ========================================= */}
 
-      <div className="pointer-events-none absolute -left-40 top-10 h-96 w-96 rounded-full bg-cyan-500/[0.06] blur-3xl" />
+      <div className="pointer-events-none absolute -left-40 top-10 h-96 w-96 rounded-full bg-sky-500/[0.06] blur-3xl" />
 
       <div className="pointer-events-none absolute -right-40 top-1/3 h-96 w-96 rounded-full bg-blue-600/[0.05] blur-3xl" />
 
-      <div className="pointer-events-none absolute bottom-0 left-1/3 h-80 w-80 rounded-full bg-cyan-500/[0.03] blur-3xl" />
+      <div className="pointer-events-none absolute bottom-0 left-1/3 h-80 w-80 rounded-full bg-sky-500/[0.03] blur-3xl" />
 
 
       <div className="relative mx-auto max-w-7xl space-y-6">
@@ -182,7 +182,7 @@ const AdminDashboard = () => {
 
           <div>
 
-            <span className="text-sm font-bold uppercase tracking-[0.2em] text-cyan-400">
+            <span className="text-sm font-bold uppercase tracking-[0.2em] text-sky-400">
               NEXORA ADMINISTRATION
             </span>
 
@@ -190,7 +190,7 @@ const AdminDashboard = () => {
               Dashboard
             </h1>
 
-            <p className="mt-2 max-w-xl text-sm leading-6 text-slate-500 sm:text-base">
+            <p className="mt-2 max-w-xl text-sm leading-6 text-slate-400 sm:text-base">
               Welcome back. Here's what's happening
               with NEXORA today.
             </p>
@@ -204,7 +204,7 @@ const AdminDashboard = () => {
             type="button"
             onClick={fetchDashboard}
             disabled={loading}
-            className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-[#0b1119] px-5 py-2.5 text-sm font-semibold text-slate-300 shadow-lg shadow-black/20 transition-all duration-300 hover:border-cyan-400/30 hover:bg-[#101923] hover:text-white disabled:cursor-not-allowed disabled:opacity-60"
+            className="inline-flex items-center justify-center gap-2 rounded-xl border border-[#263449] bg-[#111C2E] px-5 py-2.5 text-sm font-semibold text-slate-300 shadow-lg shadow-black/20 transition-all duration-300 hover:border-sky-400/30 hover:bg-[#172338] hover:text-white disabled:cursor-not-allowed disabled:opacity-60"
           >
 
             <span
@@ -297,22 +297,22 @@ const AdminDashboard = () => {
               RECENT USERS
           ========================================= */}
 
-          <section className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-[#0c131d] via-[#091019] to-[#05080d] shadow-2xl shadow-black/30">
+          <section className="relative overflow-hidden rounded-3xl border border-[#263449] bg-gradient-to-br from-[#172338] via-[#111C2E] to-[#0B1220] shadow-2xl shadow-black/30">
 
             {/* Glow */}
 
-            <div className="pointer-events-none absolute -right-32 -top-32 h-72 w-72 rounded-full bg-cyan-500/[0.04] blur-3xl" />
+            <div className="pointer-events-none absolute -right-32 -top-32 h-72 w-72 rounded-full bg-sky-500/[0.04] blur-3xl" />
 
 
             <div className="relative">
 
               {/* Header */}
 
-              <div className="flex flex-col gap-2 border-b border-white/10 px-6 py-5 sm:flex-row sm:items-center sm:justify-between">
+              <div className="flex flex-col gap-2 border-b border-[#263449] px-6 py-5 sm:flex-row sm:items-center sm:justify-between">
 
                 <div>
 
-                  <span className="text-xs font-bold uppercase tracking-[0.18em] text-cyan-400">
+                  <span className="text-xs font-bold uppercase tracking-[0.18em] text-sky-400">
                     Users
                   </span>
 
@@ -320,14 +320,14 @@ const AdminDashboard = () => {
                     Recent Users
                   </h2>
 
-                  <p className="mt-1 text-xs text-slate-500">
+                  <p className="mt-1 text-xs text-slate-400">
                     Latest registered customers.
                   </p>
 
                 </div>
 
 
-                <span className="inline-flex w-fit rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1 text-xs font-bold text-cyan-400">
+                <span className="inline-flex w-fit rounded-full border border-sky-400/20 bg-sky-400/10 px-3 py-1 text-xs font-bold text-sky-400">
                   {recentUsers.length}
                 </span>
 
@@ -340,7 +340,7 @@ const AdminDashboard = () => {
 
                 <div className="px-6 py-16 text-center">
 
-                  <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-white/10 bg-[#070c12] text-2xl shadow-lg">
+                  <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-[#263449] bg-[#0B1220] text-2xl shadow-lg">
                     👥
                   </div>
 
@@ -348,7 +348,7 @@ const AdminDashboard = () => {
                     No recent users
                   </h2>
 
-                  <p className="mt-1 text-sm text-slate-500">
+                  <p className="mt-1 text-sm text-slate-400">
                     New registered customers will appear here.
                   </p>
 
@@ -367,7 +367,7 @@ const AdminDashboard = () => {
 
                       {/* Avatar */}
 
-                      <div className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-full border border-white/10 bg-[#070c12] text-sm font-bold text-slate-400">
+                      <div className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-full border border-[#263449] bg-[#0B1220] text-sm font-bold text-slate-400">
 
                         {user.avatar?.url ? (
 
@@ -404,7 +404,7 @@ const AdminDashboard = () => {
                             "Unnamed User"}
                         </p>
 
-                        <p className="mt-1 truncate text-xs text-slate-500">
+                        <p className="mt-1 truncate text-xs text-slate-400">
                           {user.email ||
                             "No email"}
                         </p>
@@ -443,7 +443,7 @@ const AdminDashboard = () => {
               LOW STOCK PRODUCTS
           ========================================= */}
 
-          <section className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-[#0c131d] via-[#091019] to-[#05080d] shadow-2xl shadow-black/30">
+          <section className="relative overflow-hidden rounded-3xl border border-[#263449] bg-gradient-to-br from-[#172338] via-[#111C2E] to-[#0B1220] shadow-2xl shadow-black/30">
 
             {/* Glow */}
 
@@ -454,11 +454,11 @@ const AdminDashboard = () => {
 
               {/* Header */}
 
-              <div className="flex flex-col gap-2 border-b border-white/10 px-6 py-5 sm:flex-row sm:items-center sm:justify-between">
+              <div className="flex flex-col gap-2 border-b border-[#263449] px-6 py-5 sm:flex-row sm:items-center sm:justify-between">
 
                 <div>
 
-                  <span className="text-xs font-bold uppercase tracking-[0.18em] text-cyan-400">
+                  <span className="text-xs font-bold uppercase tracking-[0.18em] text-sky-400">
                     Inventory
                   </span>
 
@@ -466,7 +466,7 @@ const AdminDashboard = () => {
                     Low Stock Products
                   </h2>
 
-                  <p className="mt-1 text-xs text-slate-500">
+                  <p className="mt-1 text-xs text-slate-400">
                     Products that need inventory attention.
                   </p>
 
@@ -486,7 +486,7 @@ const AdminDashboard = () => {
 
                 <div className="px-6 py-16 text-center">
 
-                  <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-white/10 bg-[#070c12] text-2xl shadow-lg">
+                  <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-[#263449] bg-[#0B1220] text-2xl shadow-lg">
                     📦
                   </div>
 
@@ -494,7 +494,7 @@ const AdminDashboard = () => {
                     Inventory Looks Good
                   </h2>
 
-                  <p className="mt-1 text-sm text-slate-500">
+                  <p className="mt-1 text-sm text-slate-400">
                     All products have sufficient stock.
                   </p>
 
@@ -514,7 +514,7 @@ const AdminDashboard = () => {
 
                         {/* Product Image */}
 
-                        <div className="h-12 w-12 shrink-0 overflow-hidden rounded-xl border border-white/10 bg-[#070c12]">
+                        <div className="h-12 w-12 shrink-0 overflow-hidden rounded-xl border border-[#263449] bg-[#0B1220]">
 
                           {product.images?.[0]?.url ? (
 
@@ -549,7 +549,7 @@ const AdminDashboard = () => {
                               "Unnamed Product"}
                           </p>
 
-                          <p className="mt-1 text-xs text-slate-500">
+                          <p className="mt-1 text-xs text-slate-400">
 
                             Stock:{" "}
 

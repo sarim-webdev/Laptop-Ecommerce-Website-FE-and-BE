@@ -161,8 +161,8 @@ const MyOrders = () => {
       confirmed: {
         label: "Confirmed",
         className:
-          "border-cyan-400/15 bg-cyan-400/[0.07] text-cyan-300",
-        dot: "bg-cyan-400",
+          "border-sky-400/15 bg-sky-400/[0.07] text-sky-300",
+        dot: "bg-sky-400",
       },
 
       shipped: {
@@ -198,8 +198,8 @@ const MyOrders = () => {
       statusMap[normalizedStatus] || {
         label: status || "Pending",
         className:
-          "border-gray-400/15 bg-gray-400/[0.07] text-gray-300",
-        dot: "bg-gray-400",
+          "border-slate-400/15 bg-slate-400/[0.07] text-slate-300",
+        dot: "bg-slate-400",
       }
     );
   };
@@ -248,7 +248,7 @@ const MyOrders = () => {
 
   if (loading) {
     return (
-      <main className="min-h-screen bg-[#05080d]">
+      <main className="min-h-screen bg-[#0B1220]">
         <div className="flex min-h-[70vh] items-center justify-center">
           <Loader />
         </div>
@@ -261,13 +261,13 @@ const MyOrders = () => {
   ========================================= */
 
   return (
-    <main className="min-h-screen bg-[#05080d] text-white">
+    <main className="min-h-screen bg-[#0B1220] text-white">
 
       {/* =====================================
           HEADER
       ===================================== */}
 
-      <section className="border-b border-white/[0.06] bg-[#070b11]">
+      <section className="border-b border-[#263449] bg-[#111C2E]">
         <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
 
           <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
@@ -280,7 +280,7 @@ const MyOrders = () => {
                   font-black
                   uppercase
                   tracking-[0.25em]
-                  text-cyan-400
+                  text-sky-400
                 "
               >
                 NEXORA
@@ -305,7 +305,7 @@ const MyOrders = () => {
                   max-w-xl
                   text-sm
                   leading-6
-                  text-gray-500
+                  text-slate-400
                   sm:text-base
                 "
               >
@@ -331,18 +331,18 @@ const MyOrders = () => {
                 gap-2
                 rounded-xl
                 border
-                border-white/[0.08]
-                bg-white/[0.035]
+                border-[#263449]
+                bg-[#172338]
                 px-4
                 py-3
                 text-sm
                 font-bold
-                text-gray-300
+                text-slate-300
                 transition-all
                 duration-300
-                hover:border-cyan-400/20
-                hover:bg-cyan-400/[0.05]
-                hover:text-cyan-400
+                hover:border-sky-400/20
+                hover:bg-sky-400/[0.05]
+                hover:text-sky-400
                 disabled:cursor-not-allowed
                 disabled:opacity-50
               "
@@ -448,8 +448,8 @@ const MyOrders = () => {
               className="
                 rounded-2xl
                 border
-                border-white/[0.07]
-                bg-white/[0.03]
+                border-[#263449]
+                bg-[#111C2E]
                 p-5
                 backdrop-blur-xl
               "
@@ -465,15 +465,15 @@ const MyOrders = () => {
                     items-center
                     justify-center
                     rounded-xl
-                    bg-cyan-400/[0.08]
-                    text-cyan-400
+                    bg-sky-400/[0.08]
+                    text-sky-400
                   "
                 >
                   <ShoppingBag size={20} />
                 </div>
 
                 <div>
-                  <p className="text-xs font-semibold text-gray-600">
+                  <p className="text-xs font-semibold text-slate-400">
                     Total Orders
                   </p>
 
@@ -491,8 +491,8 @@ const MyOrders = () => {
               className="
                 rounded-2xl
                 border
-                border-white/[0.07]
-                bg-white/[0.03]
+                border-[#263449]
+                bg-[#111C2E]
                 p-5
                 backdrop-blur-xl
               "
@@ -516,13 +516,13 @@ const MyOrders = () => {
                 </div>
 
                 <div>
-                  <p className="text-xs font-semibold text-gray-600">
+                  <p className="text-xs font-semibold text-slate-400">
                     Current Page
                   </p>
 
                   <p className="mt-1 text-xl font-black text-white">
                     {pagination.currentPage}
-                    <span className="ml-1 text-sm text-gray-600">
+                    <span className="ml-1 text-sm text-slate-400">
                       / {pagination.totalPages}
                     </span>
                   </p>
@@ -537,8 +537,8 @@ const MyOrders = () => {
               className="
                 rounded-2xl
                 border
-                border-white/[0.07]
-                bg-white/[0.03]
+                border-[#263449]
+                bg-[#111C2E]
                 p-5
                 backdrop-blur-xl
               "
@@ -562,7 +562,7 @@ const MyOrders = () => {
                 </div>
 
                 <div>
-                  <p className="text-xs font-semibold text-gray-600">
+                  <p className="text-xs font-semibold text-slate-400">
                     Secure Delivery
                   </p>
 
@@ -590,8 +590,8 @@ const MyOrders = () => {
                 max-w-lg
                 rounded-3xl
                 border
-                border-white/[0.08]
-                bg-white/[0.035]
+                border-[#263449]
+                bg-[#111C2E]
                 p-8
                 text-center
                 shadow-2xl
@@ -611,9 +611,9 @@ const MyOrders = () => {
                   justify-center
                   rounded-2xl
                   border
-                  border-cyan-400/10
-                  bg-cyan-400/[0.06]
-                  text-cyan-400
+                  border-sky-400/10
+                  bg-sky-400/[0.06]
+                  text-sky-400
                 "
               >
                 <ShoppingBag size={36} />
@@ -638,7 +638,7 @@ const MyOrders = () => {
                   max-w-md
                   text-sm
                   leading-6
-                  text-gray-500
+                  text-slate-400
                 "
               >
                 You haven't placed any orders yet.
@@ -654,18 +654,18 @@ const MyOrders = () => {
                   items-center
                   gap-2
                   rounded-xl
-                  bg-cyan-500
+                  bg-sky-400
                   px-6
                   py-3.5
                   text-sm
                   font-black
-                  text-[#031018]
+                  text-[#0B1220]
                   shadow-lg
-                  shadow-cyan-500/10
+                  shadow-sky-500/10
                   transition-all
                   duration-300
-                  hover:bg-cyan-400
-                  hover:shadow-cyan-400/20
+                  hover:bg-sky-300
+                  hover:shadow-sky-400/20
                 "
               >
                 Explore Products
@@ -735,15 +735,15 @@ const MyOrders = () => {
                     overflow-hidden
                     rounded-3xl
                     border
-                    border-white/[0.08]
-                    bg-white/[0.035]
+                    border-[#263449]
+                    bg-[#111C2E]
                     shadow-2xl
                     shadow-black/10
                     backdrop-blur-xl
                     transition-all
                     duration-300
-                    hover:border-cyan-400/10
-                    hover:bg-white/[0.045]
+                    hover:border-sky-400/10
+                    hover:bg-[#172338]
                   "
                 >
 
@@ -757,7 +757,7 @@ const MyOrders = () => {
                       flex-col
                       gap-5
                       border-b
-                      border-white/[0.06]
+                      border-[#263449]
                       px-5
                       py-5
                       sm:px-6
@@ -778,7 +778,7 @@ const MyOrders = () => {
                             font-black
                             uppercase
                             tracking-[0.18em]
-                            text-gray-600
+                            text-slate-400
                           "
                         >
                           Order
@@ -790,7 +790,7 @@ const MyOrders = () => {
                             font-mono
                             text-sm
                             font-bold
-                            text-gray-300
+                            text-slate-300
                           "
                         >
                           #
@@ -809,7 +809,7 @@ const MyOrders = () => {
                             font-black
                             uppercase
                             tracking-[0.18em]
-                            text-gray-600
+                            text-slate-400
                           "
                         >
                           Ordered On
@@ -823,12 +823,12 @@ const MyOrders = () => {
                             gap-1.5
                             text-sm
                             font-semibold
-                            text-gray-300
+                            text-slate-300
                           "
                         >
                           <CalendarDays
                             size={14}
-                            className="text-gray-600"
+                            className="text-slate-400"
                           />
 
                           {formatDate(createdAt)}
@@ -844,7 +844,7 @@ const MyOrders = () => {
                             font-black
                             uppercase
                             tracking-[0.18em]
-                            text-gray-600
+                            text-slate-400
                           "
                         >
                           Total
@@ -855,7 +855,7 @@ const MyOrders = () => {
                             mt-1
                             text-sm
                             font-black
-                            text-cyan-400
+                            text-sky-400
                           "
                         >
                           {formatPrice(total)}
@@ -990,8 +990,8 @@ const MyOrders = () => {
                                   overflow-hidden
                                   rounded-xl
                                   border
-                                  border-white/[0.06]
-                                  bg-[#080d14]
+                                  border-[#263449]
+                                  bg-[#0B1220]
                                   p-1
                                 "
                               >
@@ -1009,7 +1009,7 @@ const MyOrders = () => {
                                 ) : (
                                   <Package
                                     size={22}
-                                    className="text-gray-700"
+                                    className="text-slate-500"
                                   />
                                 )}
 
@@ -1030,7 +1030,7 @@ const MyOrders = () => {
                                     text-sm
                                     font-bold
                                     leading-5
-                                    text-gray-200
+                                    text-slate-200
                                   "
                                 >
                                   {productName}
@@ -1050,11 +1050,11 @@ const MyOrders = () => {
                                   <p
                                     className="
                                       text-xs
-                                      text-gray-600
+                                      text-slate-400
                                     "
                                   >
                                     Qty:{" "}
-                                    <span className="text-gray-400">
+                                    <span className="text-slate-300">
                                       {quantity}
                                     </span>
                                   </p>
@@ -1062,11 +1062,11 @@ const MyOrders = () => {
                                   <p
                                     className="
                                       text-xs
-                                      text-gray-600
+                                      text-slate-400
                                     "
                                   >
                                     Price:{" "}
-                                    <span className="text-gray-400">
+                                    <span className="text-slate-300">
                                       {formatPrice(price)}
                                     </span>
                                   </p>
@@ -1110,7 +1110,7 @@ const MyOrders = () => {
                           mt-4
                           text-xs
                           font-semibold
-                          text-gray-600
+                          text-slate-400
                         "
                       >
                         + {orderItems.length - 3} more{" "}
@@ -1131,7 +1131,7 @@ const MyOrders = () => {
                         grid-cols-1
                         gap-3
                         border-t
-                        border-white/[0.06]
+                        border-[#263449]
                         pt-5
                         sm:grid-cols-2
                       "
@@ -1146,8 +1146,8 @@ const MyOrders = () => {
                           gap-3
                           rounded-xl
                           border
-                          border-white/[0.05]
-                          bg-black/10
+                          border-[#263449]
+                          bg-[#0B1220]
                           px-4
                           py-3
                         "
@@ -1155,15 +1155,15 @@ const MyOrders = () => {
 
                         <CreditCard
                           size={17}
-                          className="shrink-0 text-cyan-400"
+                          className="shrink-0 text-sky-400"
                         />
 
                         <div>
-                          <p className="text-[10px] font-bold uppercase tracking-wider text-gray-700">
+                          <p className="text-[10px] font-bold uppercase tracking-wider text-slate-500">
                             Payment
                           </p>
 
-                          <p className="mt-0.5 text-xs font-semibold text-gray-400">
+                          <p className="mt-0.5 text-xs font-semibold text-slate-300">
                             {getPaymentLabel(
                               paymentMethod
                             )}
@@ -1201,8 +1201,8 @@ const MyOrders = () => {
                           gap-3
                           rounded-xl
                           border
-                          border-white/[0.05]
-                          bg-black/10
+                          border-[#263449]
+                          bg-[#0B1220]
                           px-4
                           py-3
                         "
@@ -1210,15 +1210,15 @@ const MyOrders = () => {
 
                         <Truck
                           size={17}
-                          className="shrink-0 text-cyan-400"
+                          className="shrink-0 text-sky-400"
                         />
 
                         <div>
-                          <p className="text-[10px] font-bold uppercase tracking-wider text-gray-700">
+                          <p className="text-[10px] font-bold uppercase tracking-wider text-slate-500">
                             Delivery
                           </p>
 
-                          <p className="mt-0.5 text-xs font-semibold text-gray-400">
+                          <p className="mt-0.5 text-xs font-semibold text-slate-300">
                             {order?.shippingAddress
                               ?.city ||
                               "Address provided"}
@@ -1239,7 +1239,7 @@ const MyOrders = () => {
                         flex
                         justify-end
                         border-t
-                        border-white/[0.06]
+                        border-[#263449]
                         pt-5
                       "
                     >
@@ -1252,17 +1252,17 @@ const MyOrders = () => {
                           gap-2
                           rounded-xl
                           border
-                          border-cyan-400/10
-                          bg-cyan-400/[0.05]
+                          border-sky-400/10
+                          bg-sky-400/[0.05]
                           px-4
                           py-2.5
                           text-xs
                           font-black
-                          text-cyan-400
+                          text-sky-400
                           transition-all
                           duration-300
-                          hover:border-cyan-400/20
-                          hover:bg-cyan-400/[0.1]
+                          hover:border-sky-400/20
+                          hover:bg-sky-400/[0.1]
                         "
                       >
                         View Order Details
@@ -1293,8 +1293,8 @@ const MyOrders = () => {
               justify-between
               rounded-2xl
               border
-              border-white/[0.07]
-              bg-white/[0.03]
+              border-[#263449]
+              bg-[#111C2E]
               px-4
               py-4
             "
@@ -1316,16 +1316,16 @@ const MyOrders = () => {
                 gap-2
                 rounded-xl
                 border
-                border-white/[0.07]
-                bg-black/10
+                border-[#263449]
+                bg-[#0B1220]
                 px-3
                 py-2
                 text-xs
                 font-bold
-                text-gray-400
+                text-slate-300
                 transition
-                hover:border-cyan-400/20
-                hover:text-cyan-400
+                hover:border-sky-400/20
+                hover:text-sky-400
                 disabled:cursor-not-allowed
                 disabled:opacity-30
               "
@@ -1336,18 +1336,18 @@ const MyOrders = () => {
 
             <div className="text-center">
 
-              <p className="text-xs font-bold text-gray-500">
+              <p className="text-xs font-bold text-slate-400">
                 Page{" "}
-                <span className="text-cyan-400">
+                <span className="text-sky-400">
                   {pagination.currentPage}
                 </span>{" "}
                 of{" "}
-                <span className="text-gray-300">
+                <span className="text-slate-300">
                   {pagination.totalPages}
                 </span>
               </p>
 
-              <p className="mt-1 text-[10px] text-gray-700">
+              <p className="mt-1 text-[10px] text-slate-500">
                 {pagination.totalOrders} total orders
               </p>
 
@@ -1369,16 +1369,16 @@ const MyOrders = () => {
                 gap-2
                 rounded-xl
                 border
-                border-white/[0.07]
-                bg-black/10
+                border-[#263449]
+                bg-[#0B1220]
                 px-3
                 py-2
                 text-xs
                 font-bold
-                text-gray-400
+                text-slate-300
                 transition
-                hover:border-cyan-400/20
-                hover:text-cyan-400
+                hover:border-sky-400/20
+                hover:text-sky-400
                 disabled:cursor-not-allowed
                 disabled:opacity-30
               "

@@ -53,17 +53,17 @@ const TestimonialCard = ({ testimonial }) => {
         overflow-hidden
         rounded-2xl
         border
-        border-white/10
-        bg-white/[0.04]
+        border-[#263449]
+        bg-[#111C2E]
         p-5
         shadow-lg
         backdrop-blur-md
         transition-all
         duration-300
         hover:-translate-y-1
-        hover:border-cyan-400/30
-        hover:bg-white/[0.06]
-        hover:shadow-cyan-500/10
+        hover:border-sky-400/30
+        hover:bg-[#15243A]
+        hover:shadow-sky-500/10
         sm:w-[340px]
         sm:p-6
         lg:w-[370px]
@@ -83,7 +83,7 @@ const TestimonialCard = ({ testimonial }) => {
           h-28
           w-28
           rounded-full
-          bg-cyan-400/10
+          bg-sky-400/10
           opacity-0
           blur-3xl
           transition-opacity
@@ -112,10 +112,10 @@ const TestimonialCard = ({ testimonial }) => {
               rounded-full
               object-cover
               ring-2
-              ring-cyan-400/20
+              ring-sky-400/20
               transition-all
               duration-300
-              group-hover:ring-cyan-400/50
+              group-hover:ring-sky-400/50
               sm:h-12
               sm:w-12
             "
@@ -128,7 +128,7 @@ const TestimonialCard = ({ testimonial }) => {
               {testimonial.name}
             </h3>
 
-            <p className="mt-0.5 truncate text-xs text-gray-400 sm:text-sm">
+            <p className="mt-0.5 truncate text-xs text-slate-400 sm:text-sm">
               {testimonial.role}
             </p>
 
@@ -148,19 +148,19 @@ const TestimonialCard = ({ testimonial }) => {
             justify-center
             rounded-xl
             border
-            border-cyan-400/10
-            bg-cyan-400/10
+            border-sky-400/10
+            bg-sky-400/10
             transition-all
             duration-300
-            group-hover:border-cyan-400/30
-            group-hover:bg-cyan-400
+            group-hover:border-sky-400/30
+            group-hover:bg-sky-400
             sm:h-10
             sm:w-10
           "
         >
           <Quote
             size={18}
-            className="text-cyan-400 transition-colors duration-300 group-hover:text-black"
+            className="text-sky-400 transition-colors duration-300 group-hover:text-[#0B1220]"
             fill="currentColor"
           />
         </div>
@@ -179,7 +179,7 @@ const TestimonialCard = ({ testimonial }) => {
           <Star
             key={index}
             size={15}
-            className="text-cyan-400 sm:h-4 sm:w-4"
+            className="text-sky-400 sm:h-4 sm:w-4"
             fill="currentColor"
           />
         ))}
@@ -189,7 +189,7 @@ const TestimonialCard = ({ testimonial }) => {
           REVIEW
       ========================================= */}
 
-      <p className="relative mt-4 text-sm leading-6 text-gray-300 sm:leading-7">
+      <p className="relative mt-4 text-sm leading-6 text-slate-300 sm:leading-7">
         “{testimonial.review}”
       </p>
 
@@ -207,7 +207,7 @@ const TestimonialCard = ({ testimonial }) => {
           origin-left
           scale-x-0
           bg-gradient-to-r
-          from-cyan-400
+          from-sky-400
           to-blue-500
           transition-transform
           duration-300
@@ -256,7 +256,7 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <section className="relative overflow-hidden bg-black py-12 sm:py-14 md:py-16 lg:py-16">
+    <section className="relative overflow-hidden bg-[#0B1220] py-12 sm:py-14 md:py-16 lg:py-16">
 
       {/* =========================================
           DECORATIVE BACKGROUND
@@ -271,7 +271,7 @@ const Testimonials = () => {
           h-72
           w-72
           rounded-full
-          bg-cyan-500/10
+          bg-sky-400/5
           blur-3xl
           sm:h-80
           sm:w-80
@@ -287,7 +287,7 @@ const Testimonials = () => {
           h-72
           w-72
           rounded-full
-          bg-blue-600/10
+          bg-blue-500/5
           blur-3xl
           sm:h-80
           sm:w-80
@@ -306,13 +306,13 @@ const Testimonials = () => {
 
           <div className="mb-4 inline-flex items-center gap-2 sm:mb-5">
 
-            <span className="h-px w-6 bg-cyan-400 sm:w-8" />
+            <span className="h-px w-6 bg-sky-400 sm:w-8" />
 
-            <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-cyan-400 sm:text-sm sm:tracking-[0.2em]">
+            <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-sky-400 sm:text-sm sm:tracking-[0.2em]">
               Customer Stories
             </span>
 
-            <span className="h-px w-6 bg-cyan-400 sm:w-8" />
+            <span className="h-px w-6 bg-sky-400 sm:w-8" />
 
           </div>
 
@@ -341,7 +341,7 @@ const Testimonials = () => {
               max-w-xl
               text-sm
               leading-6
-              text-gray-400
+              text-slate-400
               sm:text-base
               sm:leading-7
               lg:text-lg
@@ -379,7 +379,7 @@ const Testimonials = () => {
             h-full
             w-12
             bg-gradient-to-r
-            from-black
+            from-[#0B1220]
             to-transparent
             sm:w-24
             lg:w-32
@@ -398,7 +398,7 @@ const Testimonials = () => {
             h-full
             w-12
             bg-gradient-to-l
-            from-black
+            from-[#0B1220]
             to-transparent
             sm:w-24
             lg:w-32
@@ -430,7 +430,7 @@ const Testimonials = () => {
 
       <div className="mt-7 text-center sm:mt-8">
 
-        <p className="text-[10px] font-medium uppercase tracking-[0.18em] text-gray-600 sm:text-xs">
+        <p className="text-[10px] font-medium uppercase tracking-[0.18em] text-slate-500 sm:text-xs">
           Hover to pause
         </p>
 

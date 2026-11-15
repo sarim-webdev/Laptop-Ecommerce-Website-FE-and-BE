@@ -362,7 +362,7 @@ const Profile = () => {
 
   if (authLoading) {
     return (
-      <main className="flex min-h-screen items-center justify-center bg-[#05080d]">
+      <main className="flex min-h-screen items-center justify-center bg-[#0B1220]">
         <Loader />
       </main>
     );
@@ -374,10 +374,10 @@ const Profile = () => {
 
   if (!user) {
     return (
-      <main className="flex min-h-screen items-center justify-center bg-[#05080d] px-4 text-white">
-        <div className="w-full max-w-md rounded-3xl border border-white/10 bg-[#0b1119] p-8 text-center shadow-2xl shadow-black/30">
+      <main className="flex min-h-screen items-center justify-center bg-[#0B1220] px-4 text-white">
+        <div className="w-full max-w-md rounded-3xl border border-[#263449] bg-[#111C2E] p-8 text-center shadow-2xl shadow-black/30">
 
-          <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-cyan-400/20 bg-cyan-400/10 text-2xl text-cyan-400">
+          <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-sky-400/20 bg-sky-400/10 text-2xl text-sky-400">
             👤
           </div>
 
@@ -385,14 +385,14 @@ const Profile = () => {
             Please Sign In
           </h1>
 
-          <p className="mt-2 text-sm leading-6 text-gray-500">
+          <p className="mt-2 text-sm leading-6 text-slate-400">
             You need to sign in to access your
             NEXORA profile.
           </p>
 
           <Link
             to="/sign-in"
-            className="mt-6 inline-flex rounded-xl bg-cyan-400 px-6 py-3 text-sm font-bold text-black transition-all duration-300 hover:bg-cyan-300"
+            className="mt-6 inline-flex rounded-xl bg-sky-400 px-6 py-3 text-sm font-bold text-[#0B1220] transition-all duration-300 hover:bg-sky-300"
           >
             Sign In
           </Link>
@@ -429,17 +429,17 @@ const Profile = () => {
   ========================================= */
 
   return (
-    <main className="min-h-screen bg-[#05080d] text-white">
+    <main className="min-h-screen bg-[#0B1220] text-white">
 
       {/* =========================================
           HERO
       ========================================= */}
 
-      <section className="relative overflow-hidden border-b border-white/10 bg-[#05080d] px-4 py-16 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden border-b border-[#263449] bg-[#0B1220] px-4 py-16 sm:px-6 lg:px-8">
 
         {/* Background Glows */}
 
-        <div className="pointer-events-none absolute -left-40 top-0 h-80 w-80 rounded-full bg-cyan-500/10 blur-3xl" />
+        <div className="pointer-events-none absolute -left-40 top-0 h-80 w-80 rounded-full bg-sky-500/10 blur-3xl" />
 
         <div className="pointer-events-none absolute -right-40 bottom-0 h-80 w-80 rounded-full bg-blue-600/10 blur-3xl" />
 
@@ -449,7 +449,7 @@ const Profile = () => {
 
             <div>
 
-              <span className="text-sm font-bold uppercase tracking-[0.25em] text-cyan-400">
+              <span className="text-sm font-bold uppercase tracking-[0.25em] text-sky-400">
                 NEXORA Account
               </span>
 
@@ -457,7 +457,7 @@ const Profile = () => {
                 My Profile
               </h1>
 
-              <p className="mt-4 max-w-2xl text-sm leading-7 text-gray-400 sm:text-base">
+              <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-400 sm:text-base">
                 Manage your personal information,
                 profile photo, and account security
                 from one place.
@@ -467,7 +467,7 @@ const Profile = () => {
 
             <Link
               to="/products"
-              className="w-fit rounded-xl border border-white/10 bg-white/[0.04] px-5 py-3 text-sm font-bold text-white backdrop-blur transition-all duration-300 hover:border-cyan-400/30 hover:bg-cyan-400 hover:text-black"
+              className="w-fit rounded-xl border border-[#263449] bg-[#172338] px-5 py-3 text-sm font-bold text-white backdrop-blur transition-all duration-300 hover:border-sky-400/30 hover:bg-sky-400 hover:text-[#0B1220]"
             >
               Continue Shopping →
             </Link>
@@ -486,7 +486,7 @@ const Profile = () => {
 
         {/* Background Glows */}
 
-        <div className="pointer-events-none absolute left-1/4 top-20 h-72 w-72 rounded-full bg-cyan-500/[0.03] blur-3xl" />
+        <div className="pointer-events-none absolute left-1/4 top-20 h-72 w-72 rounded-full bg-sky-500/[0.03] blur-3xl" />
 
         <div className="pointer-events-none absolute bottom-10 right-1/4 h-72 w-72 rounded-full bg-blue-600/[0.03] blur-3xl" />
 
@@ -518,11 +518,11 @@ const Profile = () => {
                 PROFILE CARD
             =================================== */}
 
-            <div className="relative h-fit overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-[#0c131d] via-[#091019] to-[#05080d] p-6 shadow-2xl shadow-black/30 sm:p-8">
+            <div className="relative h-fit overflow-hidden rounded-3xl border border-[#263449] bg-gradient-to-br from-[#111C2E] via-[#172338] to-[#0B1220] p-6 shadow-2xl shadow-black/30 sm:p-8">
 
               {/* Card Glow */}
 
-              <div className="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-cyan-500/10 blur-3xl" />
+              <div className="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-sky-500/10 blur-3xl" />
 
               <div className="relative">
 
@@ -539,14 +539,14 @@ const Profile = () => {
                           user.name ||
                           "NEXORA User"
                         }
-                        className="h-32 w-32 rounded-full object-cover ring-4 ring-cyan-400/10"
+                        className="h-32 w-32 rounded-full object-cover ring-4 ring-sky-400/10"
                         onError={(event) => {
                           event.currentTarget.style.display =
                             "none";
                         }}
                       />
                     ) : (
-                      <div className="flex h-32 w-32 items-center justify-center rounded-full border border-cyan-400/20 bg-gradient-to-br from-cyan-400/20 to-blue-600/20 text-4xl font-black text-cyan-400 ring-4 ring-cyan-400/10">
+                      <div className="flex h-32 w-32 items-center justify-center rounded-full border border-sky-400/20 bg-gradient-to-br from-sky-400/20 to-blue-600/20 text-4xl font-black text-sky-400 ring-4 ring-sky-400/10">
                         {initials}
                       </div>
                     )}
@@ -557,7 +557,7 @@ const Profile = () => {
                       type="button"
                       onClick={handleAvatarClick}
                       disabled={avatarLoading}
-                      className="absolute bottom-0 right-0 flex h-10 w-10 items-center justify-center rounded-full border border-cyan-300/20 bg-cyan-400 text-lg font-bold text-black shadow-lg shadow-cyan-500/20 transition-all duration-300 hover:bg-cyan-300 disabled:cursor-not-allowed disabled:opacity-50"
+                      className="absolute bottom-0 right-0 flex h-10 w-10 items-center justify-center rounded-full border border-sky-300/20 bg-sky-400 text-lg font-bold text-[#0B1220] shadow-lg shadow-sky-500/20 transition-all duration-300 hover:bg-sky-300 disabled:cursor-not-allowed disabled:opacity-50"
                       title="Change profile photo"
                     >
                       ✎
@@ -582,13 +582,13 @@ const Profile = () => {
                       "NEXORA User"}
                   </h2>
 
-                  <p className="mt-2 break-all text-sm text-gray-500">
+                  <p className="mt-2 break-all text-sm text-slate-400">
                     {user.email}
                   </p>
 
                   {/* Role */}
 
-                  <span className="mt-5 inline-flex rounded-full border border-cyan-400/20 bg-cyan-400/10 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-cyan-400">
+                  <span className="mt-5 inline-flex rounded-full border border-sky-400/20 bg-sky-400/10 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-sky-400">
                     {user.role || "Customer"}
                   </span>
 
@@ -596,13 +596,13 @@ const Profile = () => {
 
                 {/* Avatar Actions */}
 
-                <div className="mt-8 border-t border-white/10 pt-7">
+                <div className="mt-8 border-t border-[#263449] pt-7">
 
                   <button
                     type="button"
                     onClick={handleAvatarClick}
                     disabled={avatarLoading}
-                    className="w-full rounded-xl bg-cyan-400 px-4 py-3 text-sm font-black text-black transition-all duration-300 hover:bg-cyan-300 disabled:cursor-not-allowed disabled:opacity-50"
+                    className="w-full rounded-xl bg-sky-400 px-4 py-3 text-sm font-black text-[#0B1220] transition-all duration-300 hover:bg-sky-300 disabled:cursor-not-allowed disabled:opacity-50"
                   >
                     {avatarLoading
                       ? "Uploading..."
@@ -626,10 +626,10 @@ const Profile = () => {
 
                 {/* Account Info */}
 
-                <div className="mt-8 space-y-5 border-t border-white/10 pt-7">
+                <div className="mt-8 space-y-5 border-t border-[#263449] pt-7">
 
                   <div>
-                    <p className="text-xs font-bold uppercase tracking-[0.15em] text-gray-600">
+                    <p className="text-xs font-bold uppercase tracking-[0.15em] text-slate-400">
                       Account Status
                     </p>
 
@@ -645,11 +645,11 @@ const Profile = () => {
                   </div>
 
                   <div>
-                    <p className="text-xs font-bold uppercase tracking-[0.15em] text-gray-600">
+                    <p className="text-xs font-bold uppercase tracking-[0.15em] text-slate-400">
                       Email
                     </p>
 
-                    <p className="mt-2 break-all text-sm text-gray-400">
+                    <p className="mt-2 break-all text-sm text-slate-300">
                       {user.email}
                     </p>
                   </div>
@@ -670,17 +670,17 @@ const Profile = () => {
                   PERSONAL INFORMATION
               ================================= */}
 
-              <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-[#0b1119] p-6 shadow-2xl shadow-black/30 sm:p-8">
+              <div className="relative overflow-hidden rounded-3xl border border-[#263449] bg-[#111C2E] p-6 shadow-2xl shadow-black/30 sm:p-8">
 
                 {/* Glow */}
 
-                <div className="pointer-events-none absolute -right-20 -top-20 h-56 w-56 rounded-full bg-cyan-500/[0.05] blur-3xl" />
+                <div className="pointer-events-none absolute -right-20 -top-20 h-56 w-56 rounded-full bg-sky-500/[0.05] blur-3xl" />
 
                 <div className="relative">
 
                   <div className="mb-8">
 
-                    <span className="text-xs font-bold uppercase tracking-[0.2em] text-cyan-400">
+                    <span className="text-xs font-bold uppercase tracking-[0.2em] text-sky-400">
                       Account Settings
                     </span>
 
@@ -688,7 +688,7 @@ const Profile = () => {
                       Personal Information
                     </h2>
 
-                    <p className="mt-2 text-sm leading-6 text-gray-500">
+                    <p className="mt-2 text-sm leading-6 text-slate-400">
                       Update your basic NEXORA
                       account information.
                     </p>
@@ -710,7 +710,7 @@ const Profile = () => {
 
                         <label
                           htmlFor="name"
-                          className="mb-2 block text-sm font-semibold text-gray-300"
+                          className="mb-2 block text-sm font-semibold text-slate-300"
                         >
                           Full Name
                         </label>
@@ -724,7 +724,7 @@ const Profile = () => {
                           placeholder="Enter your name"
                           autoComplete="name"
                           required
-                          className="w-full rounded-xl border border-white/10 bg-[#070c12] px-4 py-3 text-sm text-white placeholder:text-gray-600 outline-none transition-all duration-300 focus:border-cyan-400/60 focus:bg-[#0a1119] focus:ring-2 focus:ring-cyan-400/10"
+                          className="w-full rounded-xl border border-[#263449] bg-[#0B1220] px-4 py-3 text-sm text-white placeholder:text-slate-400 outline-none transition-all duration-300 focus:border-sky-400/60 focus:bg-[#172338] focus:ring-2 focus:ring-sky-400/10"
                         />
 
                       </div>
@@ -735,7 +735,7 @@ const Profile = () => {
 
                         <label
                           htmlFor="email"
-                          className="mb-2 block text-sm font-semibold text-gray-300"
+                          className="mb-2 block text-sm font-semibold text-slate-300"
                         >
                           Email Address
                         </label>
@@ -746,10 +746,10 @@ const Profile = () => {
                           type="email"
                           value={formData.email}
                           disabled
-                          className="w-full cursor-not-allowed rounded-xl border border-white/5 bg-[#070c12] px-4 py-3 text-sm text-gray-600"
+                          className="w-full cursor-not-allowed rounded-xl border border-[#263449] bg-[#0B1220] px-4 py-3 text-sm text-slate-400"
                         />
 
-                        <p className="mt-2 text-xs text-gray-600">
+                        <p className="mt-2 text-xs text-slate-400">
                           Email cannot be changed
                           from this page.
                         </p>
@@ -762,7 +762,7 @@ const Profile = () => {
 
                         <label
                           htmlFor="phone"
-                          className="mb-2 block text-sm font-semibold text-gray-300"
+                          className="mb-2 block text-sm font-semibold text-slate-300"
                         >
                           Phone Number
                         </label>
@@ -775,7 +775,7 @@ const Profile = () => {
                           onChange={handleChange}
                           placeholder="+92 300 1234567"
                           autoComplete="tel"
-                          className="w-full rounded-xl border border-white/10 bg-[#070c12] px-4 py-3 text-sm text-white placeholder:text-gray-600 outline-none transition-all duration-300 focus:border-cyan-400/60 focus:bg-[#0a1119] focus:ring-2 focus:ring-cyan-400/10"
+                          className="w-full rounded-xl border border-[#263449] bg-[#0B1220] px-4 py-3 text-sm text-white placeholder:text-slate-400 outline-none transition-all duration-300 focus:border-sky-400/60 focus:bg-[#172338] focus:ring-2 focus:ring-sky-400/10"
                         />
 
                       </div>
@@ -786,7 +786,7 @@ const Profile = () => {
 
                         <label
                           htmlFor="address"
-                          className="mb-2 block text-sm font-semibold text-gray-300"
+                          className="mb-2 block text-sm font-semibold text-slate-300"
                         >
                           Address
                         </label>
@@ -799,14 +799,14 @@ const Profile = () => {
                           onChange={handleChange}
                           placeholder="Enter your address"
                           autoComplete="street-address"
-                          className="w-full rounded-xl border border-white/10 bg-[#070c12] px-4 py-3 text-sm text-white placeholder:text-gray-600 outline-none transition-all duration-300 focus:border-cyan-400/60 focus:bg-[#0a1119] focus:ring-2 focus:ring-cyan-400/10"
+                          className="w-full rounded-xl border border-[#263449] bg-[#0B1220] px-4 py-3 text-sm text-white placeholder:text-slate-400 outline-none transition-all duration-300 focus:border-sky-400/60 focus:bg-[#172338] focus:ring-2 focus:ring-sky-400/10"
                         />
 
                       </div>
 
                     </div>
 
-                    <div className="flex justify-end border-t border-white/10 pt-6">
+                    <div className="flex justify-end border-t border-[#263449] pt-6">
 
                       <Button
                         type="submit"
@@ -829,7 +829,7 @@ const Profile = () => {
                   CHANGE PASSWORD
               ================================= */}
 
-              <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-[#0b1119] p-6 shadow-2xl shadow-black/30 sm:p-8">
+              <div className="relative overflow-hidden rounded-3xl border border-[#263449] bg-[#111C2E] p-6 shadow-2xl shadow-black/30 sm:p-8">
 
                 {/* Glow */}
 
@@ -839,7 +839,7 @@ const Profile = () => {
 
                   <div className="mb-8">
 
-                    <span className="text-xs font-bold uppercase tracking-[0.2em] text-cyan-400">
+                    <span className="text-xs font-bold uppercase tracking-[0.2em] text-sky-400">
                       Security
                     </span>
 
@@ -847,7 +847,7 @@ const Profile = () => {
                       Change Password
                     </h2>
 
-                    <p className="mt-2 text-sm leading-6 text-gray-500">
+                    <p className="mt-2 text-sm leading-6 text-slate-400">
                       Keep your NEXORA account secure
                       with a strong password.
                     </p>
@@ -883,7 +883,7 @@ const Profile = () => {
 
                       <label
                         htmlFor="currentPassword"
-                        className="mb-2 block text-sm font-semibold text-gray-300"
+                        className="mb-2 block text-sm font-semibold text-slate-300"
                       >
                         Current Password
                       </label>
@@ -901,7 +901,7 @@ const Profile = () => {
                         placeholder="Enter current password"
                         autoComplete="current-password"
                         required
-                        className="w-full rounded-xl border border-white/10 bg-[#070c12] px-4 py-3 text-sm text-white placeholder:text-gray-600 outline-none transition-all duration-300 focus:border-cyan-400/60 focus:bg-[#0a1119] focus:ring-2 focus:ring-cyan-400/10"
+                        className="w-full rounded-xl border border-[#263449] bg-[#0B1220] px-4 py-3 text-sm text-white placeholder:text-slate-400 outline-none transition-all duration-300 focus:border-sky-400/60 focus:bg-[#172338] focus:ring-2 focus:ring-sky-400/10"
                       />
 
                     </div>
@@ -914,7 +914,7 @@ const Profile = () => {
 
                         <label
                           htmlFor="newPassword"
-                          className="mb-2 block text-sm font-semibold text-gray-300"
+                          className="mb-2 block text-sm font-semibold text-slate-300"
                         >
                           New Password
                         </label>
@@ -932,7 +932,7 @@ const Profile = () => {
                           placeholder="Enter new password"
                           autoComplete="new-password"
                           required
-                          className="w-full rounded-xl border border-white/10 bg-[#070c12] px-4 py-3 text-sm text-white placeholder:text-gray-600 outline-none transition-all duration-300 focus:border-cyan-400/60 focus:bg-[#0a1119] focus:ring-2 focus:ring-cyan-400/10"
+                          className="w-full rounded-xl border border-[#263449] bg-[#0B1220] px-4 py-3 text-sm text-white placeholder:text-slate-400 outline-none transition-all duration-300 focus:border-sky-400/60 focus:bg-[#172338] focus:ring-2 focus:ring-sky-400/10"
                         />
 
                       </div>
@@ -943,7 +943,7 @@ const Profile = () => {
 
                         <label
                           htmlFor="confirmPassword"
-                          className="mb-2 block text-sm font-semibold text-gray-300"
+                          className="mb-2 block text-sm font-semibold text-slate-300"
                         >
                           Confirm Password
                         </label>
@@ -961,14 +961,14 @@ const Profile = () => {
                           placeholder="Confirm new password"
                           autoComplete="new-password"
                           required
-                          className="w-full rounded-xl border border-white/10 bg-[#070c12] px-4 py-3 text-sm text-white placeholder:text-gray-600 outline-none transition-all duration-300 focus:border-cyan-400/60 focus:bg-[#0a1119] focus:ring-2 focus:ring-cyan-400/10"
+                          className="w-full rounded-xl border border-[#263449] bg-[#0B1220] px-4 py-3 text-sm text-white placeholder:text-slate-400 outline-none transition-all duration-300 focus:border-sky-400/60 focus:bg-[#172338] focus:ring-2 focus:ring-sky-400/10"
                         />
 
                       </div>
 
                     </div>
 
-                    <div className="flex justify-end border-t border-white/10 pt-6">
+                    <div className="flex justify-end border-t border-[#263449] pt-6">
 
                       <Button
                         type="submit"

@@ -301,14 +301,14 @@ const SignUp = () => {
 
   if (authLoading) {
     return (
-      <main className="flex min-h-screen items-center justify-center bg-[#05070a]">
+      <main className="flex min-h-screen items-center justify-center bg-[#0B1220]">
         <Loader />
       </main>
     );
   }
 
   return (
-    <main className="min-h-screen bg-[#05070a] px-4 py-6 text-white sm:px-6 lg:px-8">
+    <main className="min-h-screen bg-[#0B1220] px-4 py-6 text-white sm:px-6 lg:px-8">
 
       {/* =========================================
           PAGE CONTAINER
@@ -316,17 +316,17 @@ const SignUp = () => {
 
       <div className="mx-auto flex min-h-[calc(100vh-3rem)] max-w-7xl items-center">
 
-        <div className="grid w-full overflow-hidden rounded-[28px] border border-white/[0.08] bg-[#090c10] shadow-2xl shadow-black/50 lg:grid-cols-[0.85fr_1.15fr]">
+        <div className="grid w-full overflow-hidden rounded-[28px] border border-[#263449] bg-[#111C2E] shadow-2xl shadow-black/50 lg:grid-cols-[0.85fr_1.15fr]">
 
           {/* =========================================
               LEFT BRAND PANEL
           ========================================= */}
 
-          <section className="relative hidden overflow-hidden bg-[#070a0e] p-10 lg:flex lg:flex-col lg:justify-between xl:p-14">
+          <section className="relative hidden overflow-hidden bg-[#0B1220] p-10 lg:flex lg:flex-col lg:justify-between xl:p-14">
 
             {/* Glow */}
 
-            <div className="absolute -left-32 -top-32 h-80 w-80 rounded-full bg-cyan-500/[0.08] blur-3xl" />
+            <div className="absolute -left-32 -top-32 h-80 w-80 rounded-full bg-sky-500/[0.08] blur-3xl" />
 
             <div className="absolute -bottom-32 -right-32 h-80 w-80 rounded-full bg-blue-600/[0.08] blur-3xl" />
 
@@ -339,23 +339,23 @@ const SignUp = () => {
                 className="text-3xl font-black tracking-tight"
               >
                 NEXORA
-                <span className="text-cyan-400">.</span>
+                <span className="text-sky-400">.</span>
               </Link>
 
               <div className="mt-24">
 
-                <span className="inline-flex rounded-full border border-cyan-400/20 bg-cyan-400/[0.06] px-3 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-cyan-400">
+                <span className="inline-flex rounded-full border border-sky-400/20 bg-sky-400/[0.06] px-3 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-sky-400">
                   NEXORA ACCOUNT
                 </span>
 
                 <h1 className="mt-6 max-w-lg text-4xl font-black leading-[1.08] tracking-tight xl:text-5xl">
                   Your technology.
-                  <span className="block text-cyan-400">
+                  <span className="block text-sky-400">
                     Your experience.
                   </span>
                 </h1>
 
-                <p className="mt-6 max-w-md text-sm leading-7 text-gray-500">
+                <p className="mt-6 max-w-md text-sm leading-7 text-slate-400">
                   Create your NEXORA account and enjoy a
                   smarter way to discover premium laptops,
                   manage your orders and personalize your
@@ -368,9 +368,9 @@ const SignUp = () => {
 
             {/* Bottom Info */}
 
-            <div className="relative mt-16 border-t border-white/[0.07] pt-6">
+            <div className="relative mt-16 border-t border-[#263449] pt-6">
 
-              <div className="flex items-center justify-between text-xs text-gray-600">
+              <div className="flex items-center justify-between text-xs text-slate-500">
                 <span>Premium Technology</span>
                 <span>Secure Shopping</span>
                 <span>Easy Tracking</span>
@@ -395,7 +395,7 @@ const SignUp = () => {
                 className="text-2xl font-black tracking-tight"
               >
                 NEXORA
-                <span className="text-cyan-400">.</span>
+                <span className="text-sky-400">.</span>
               </Link>
 
             </div>
@@ -406,7 +406,7 @@ const SignUp = () => {
 
               <div className="mb-7">
 
-                <p className="text-xs font-bold uppercase tracking-[0.2em] text-cyan-400">
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-sky-400">
                   Create your account
                 </p>
 
@@ -414,7 +414,7 @@ const SignUp = () => {
                   Get started with NEXORA
                 </h2>
 
-                <p className="mt-2 text-sm text-gray-500">
+                <p className="mt-2 text-sm text-slate-400">
                   Enter your details below to create your account.
                 </p>
 
@@ -454,7 +454,7 @@ const SignUp = () => {
 
                   <div className="mb-4 flex items-center gap-3">
 
-                    <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-cyan-400/10 text-xs font-bold text-cyan-400">
+                    <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-sky-400/10 text-xs font-bold text-sky-400">
                       01
                     </div>
 
@@ -463,7 +463,7 @@ const SignUp = () => {
                         Personal Information
                       </h3>
 
-                      <p className="text-xs text-gray-600">
+                      <p className="text-xs text-slate-500">
                         Basic account details
                       </p>
                     </div>
@@ -477,7 +477,7 @@ const SignUp = () => {
                     <div>
                       <label
                         htmlFor="name"
-                        className="mb-2 block text-xs font-semibold text-gray-400"
+                        className="mb-2 block text-xs font-semibold text-slate-300"
                       >
                         Full Name
                       </label>
@@ -500,7 +500,7 @@ const SignUp = () => {
                     <div>
                       <label
                         htmlFor="email"
-                        className="mb-2 block text-xs font-semibold text-gray-400"
+                        className="mb-2 block text-xs font-semibold text-slate-300"
                       >
                         Email Address
                       </label>
@@ -523,7 +523,7 @@ const SignUp = () => {
                     <div className="sm:col-span-2">
                       <label
                         htmlFor="phone"
-                        className="mb-2 block text-xs font-semibold text-gray-400"
+                        className="mb-2 block text-xs font-semibold text-slate-300"
                       >
                         Phone Number
                       </label>
@@ -553,7 +553,7 @@ const SignUp = () => {
 
                   <div className="mb-4 flex items-center gap-3">
 
-                    <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-cyan-400/10 text-xs font-bold text-cyan-400">
+                    <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-sky-400/10 text-xs font-bold text-sky-400">
                       02
                     </div>
 
@@ -562,18 +562,18 @@ const SignUp = () => {
                         Profile Picture
                       </h3>
 
-                      <p className="text-xs text-gray-600">
+                      <p className="text-xs text-slate-500">
                         Optional
                       </p>
                     </div>
 
                   </div>
 
-                  <div className="flex items-center gap-4 rounded-2xl border border-white/[0.07] bg-white/[0.025] p-4">
+                  <div className="flex items-center gap-4 rounded-2xl border border-[#263449] bg-[#0B1220] p-4">
 
                     {/* Avatar */}
 
-                    <div className="flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-white/[0.04]">
+                    <div className="flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-[#263449] bg-[#172338]">
 
                       {avatarPreview ? (
                         <img
@@ -582,7 +582,7 @@ const SignUp = () => {
                           className="h-full w-full object-cover"
                         />
                       ) : (
-                        <span className="text-xl text-gray-600">
+                        <span className="text-xl text-slate-500">
                           👤
                         </span>
                       )}
@@ -593,7 +593,7 @@ const SignUp = () => {
 
                       <label
                         htmlFor="avatar"
-                        className="inline-flex cursor-pointer rounded-lg border border-cyan-400/20 bg-cyan-400/10 px-3.5 py-2 text-xs font-bold text-cyan-400 transition hover:bg-cyan-400/15"
+                        className="inline-flex cursor-pointer rounded-lg border border-sky-400/20 bg-sky-400/10 px-3.5 py-2 text-xs font-bold text-sky-400 transition hover:bg-sky-400/15"
                       >
                         Choose Image
                       </label>
@@ -610,7 +610,7 @@ const SignUp = () => {
 
                       <div className="mt-2 flex items-center gap-3">
 
-                        <p className="text-[11px] text-gray-600">
+                        <p className="text-[11px] text-slate-500">
                           JPG, PNG or WEBP • Max 5MB
                         </p>
 
@@ -640,7 +640,7 @@ const SignUp = () => {
 
                   <div className="mb-4 flex items-center gap-3">
 
-                    <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-cyan-400/10 text-xs font-bold text-cyan-400">
+                    <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-sky-400/10 text-xs font-bold text-sky-400">
                       03
                     </div>
 
@@ -649,7 +649,7 @@ const SignUp = () => {
                         Account Security
                       </h3>
 
-                      <p className="text-xs text-gray-600">
+                      <p className="text-xs text-slate-500">
                         Protect your account
                       </p>
                     </div>
@@ -663,7 +663,7 @@ const SignUp = () => {
                     <div>
                       <label
                         htmlFor="password"
-                        className="mb-2 block text-xs font-semibold text-gray-400"
+                        className="mb-2 block text-xs font-semibold text-slate-300"
                       >
                         Password
                       </label>
@@ -686,7 +686,7 @@ const SignUp = () => {
                     <div>
                       <label
                         htmlFor="confirmPassword"
-                        className="mb-2 block text-xs font-semibold text-gray-400"
+                        className="mb-2 block text-xs font-semibold text-slate-300"
                       >
                         Confirm Password
                       </label>
@@ -706,7 +706,7 @@ const SignUp = () => {
 
                   </div>
 
-                  <p className="mt-2 text-[11px] text-gray-600">
+                  <p className="mt-2 text-[11px] text-slate-500">
                     Password must contain at least 8 characters.
                   </p>
 
@@ -720,7 +720,7 @@ const SignUp = () => {
 
                   <div className="mb-4 flex items-center gap-3">
 
-                    <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-cyan-400/10 text-xs font-bold text-cyan-400">
+                    <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-sky-400/10 text-xs font-bold text-sky-400">
                       04
                     </div>
 
@@ -729,7 +729,7 @@ const SignUp = () => {
                         Delivery Address
                       </h3>
 
-                      <p className="text-xs text-gray-600">
+                      <p className="text-xs text-slate-500">
                         Used for your future orders
                       </p>
                     </div>
@@ -743,7 +743,7 @@ const SignUp = () => {
                     <div>
                       <label
                         htmlFor="address"
-                        className="mb-2 block text-xs font-semibold text-gray-400"
+                        className="mb-2 block text-xs font-semibold text-slate-300"
                       >
                         Street Address
                       </label>
@@ -767,7 +767,7 @@ const SignUp = () => {
                       <div>
                         <label
                           htmlFor="city"
-                          className="mb-2 block text-xs font-semibold text-gray-400"
+                          className="mb-2 block text-xs font-semibold text-slate-300"
                         >
                           City
                         </label>
@@ -787,7 +787,7 @@ const SignUp = () => {
                       <div>
                         <label
                           htmlFor="state"
-                          className="mb-2 block text-xs font-semibold text-gray-400"
+                          className="mb-2 block text-xs font-semibold text-slate-300"
                         >
                           State / Province
                         </label>
@@ -813,7 +813,7 @@ const SignUp = () => {
                       <div>
                         <label
                           htmlFor="postalCode"
-                          className="mb-2 block text-xs font-semibold text-gray-400"
+                          className="mb-2 block text-xs font-semibold text-slate-300"
                         >
                           Postal Code
                         </label>
@@ -834,7 +834,7 @@ const SignUp = () => {
                       <div>
                         <label
                           htmlFor="country"
-                          className="mb-2 block text-xs font-semibold text-gray-400"
+                          className="mb-2 block text-xs font-semibold text-slate-300"
                         >
                           Country
                         </label>
@@ -867,14 +867,14 @@ const SignUp = () => {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="flex w-full items-center justify-center rounded-xl bg-cyan-400 px-5 py-3.5 text-sm font-black text-black shadow-lg shadow-cyan-400/10 transition duration-300 hover:bg-cyan-300 hover:shadow-cyan-400/20 disabled:cursor-not-allowed disabled:opacity-50"
+                    className="flex w-full items-center justify-center rounded-xl bg-sky-400 px-5 py-3.5 text-sm font-black text-[#0B1220] shadow-lg shadow-sky-400/10 transition duration-300 hover:bg-sky-300 hover:shadow-sky-400/20 disabled:cursor-not-allowed disabled:opacity-50"
                   >
                     {loading
                       ? "Creating Account..."
                       : "Create NEXORA Account"}
                   </button>
 
-                  <p className="mt-3 text-center text-[11px] leading-5 text-gray-600">
+                  <p className="mt-3 text-center text-[11px] leading-5 text-slate-500">
                     By creating an account, you agree to our
                     terms and shopping policies.
                   </p>
@@ -887,15 +887,15 @@ const SignUp = () => {
                   SIGN IN
               ========================================= */}
 
-              <div className="mt-7 border-t border-white/[0.07] pt-6">
+              <div className="mt-7 border-t border-[#263449] pt-6">
 
-                <p className="text-center text-sm text-gray-500">
+                <p className="text-center text-sm text-slate-400">
 
                   Already have an account?{" "}
 
                   <Link
                     to="/sign-in"
-                    className="font-bold text-cyan-400 transition hover:text-cyan-300"
+                    className="font-bold text-sky-400 transition hover:text-sky-300"
                   >
                     Sign In
                   </Link>
@@ -921,8 +921,8 @@ const SignUp = () => {
           .form-input {
             width: 100%;
             border-radius: 0.75rem;
-            border: 1px solid rgba(255,255,255,0.08);
-            background: rgba(255,255,255,0.025);
+            border: 1px solid #263449;
+            background: #0B1220;
             padding: 0.8rem 0.95rem;
             font-size: 0.875rem;
             color: white;
@@ -931,17 +931,17 @@ const SignUp = () => {
           }
 
           .form-input::placeholder {
-            color: rgb(75 85 99);
+            color: #64748b;
           }
 
           .form-input:hover {
-            border-color: rgba(255,255,255,0.15);
+            border-color: #475569;
           }
 
           .form-input:focus {
-            border-color: rgba(34,211,238,0.55);
-            background: rgba(255,255,255,0.04);
-            box-shadow: 0 0 0 3px rgba(34,211,238,0.08);
+            border-color: rgba(56,189,248,0.55);
+            background: #111C2E;
+            box-shadow: 0 0 0 3px rgba(56,189,248,0.08);
           }
         `}
       </style>

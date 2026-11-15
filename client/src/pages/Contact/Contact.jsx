@@ -90,23 +90,23 @@ const Contact = () => {
   };
 
   return (
-    <main className="min-h-screen bg-[#05080d] text-white">
+    <main className="min-h-screen bg-[#0B1220] text-white">
 
       {/* =========================================
           HERO
       ========================================= */}
 
-      <section className="relative overflow-hidden border-b border-white/10 bg-[#05080d] px-4 py-20 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden border-b border-[#263449] bg-[#0B1220] px-4 py-20 sm:px-6 lg:px-8">
 
         {/* Background Glow */}
 
-        <div className="pointer-events-none absolute -left-40 top-10 h-80 w-80 rounded-full bg-cyan-500/10 blur-3xl" />
+        <div className="pointer-events-none absolute -left-40 top-10 h-80 w-80 rounded-full bg-sky-500/10 blur-3xl" />
 
         <div className="pointer-events-none absolute -right-40 bottom-0 h-80 w-80 rounded-full bg-blue-600/10 blur-3xl" />
 
         <div className="relative mx-auto max-w-7xl text-center">
 
-          <span className="text-sm font-bold uppercase tracking-[0.25em] text-cyan-400">
+          <span className="text-sm font-bold uppercase tracking-[0.25em] text-sky-400">
             Get In Touch
           </span>
 
@@ -114,7 +114,7 @@ const Contact = () => {
             Contact NEXORA
           </h1>
 
-          <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-gray-400 sm:text-lg">
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-slate-400 sm:text-lg">
             Have a question about our laptops, orders, or services?
             Our team is here to help.
           </p>
@@ -130,7 +130,7 @@ const Contact = () => {
 
         {/* Background Glow */}
 
-        <div className="pointer-events-none absolute left-1/4 top-20 h-72 w-72 rounded-full bg-cyan-500/[0.04] blur-3xl" />
+        <div className="pointer-events-none absolute left-1/4 top-20 h-72 w-72 rounded-full bg-sky-500/[0.04] blur-3xl" />
 
         <div className="pointer-events-none absolute bottom-10 right-1/4 h-72 w-72 rounded-full bg-blue-600/[0.04] blur-3xl" />
 
@@ -140,15 +140,15 @@ const Contact = () => {
               LEFT SIDE
           ========================================= */}
 
-          <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-[#0c131d] via-[#091019] to-[#05080d] p-8 shadow-2xl shadow-black/30 sm:p-10">
+          <div className="relative overflow-hidden rounded-3xl border border-[#263449] bg-gradient-to-br from-[#172338] via-[#111C2E] to-[#0B1220] p-8 shadow-2xl shadow-black/30 sm:p-10">
 
             {/* Card Glow */}
 
-            <div className="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-cyan-500/10 blur-3xl" />
+            <div className="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-sky-500/10 blur-3xl" />
 
             <div className="relative">
 
-              <span className="text-sm font-bold uppercase tracking-[0.2em] text-cyan-400">
+              <span className="text-sm font-bold uppercase tracking-[0.2em] text-sky-400">
                 NEXORA Support
               </span>
 
@@ -156,7 +156,7 @@ const Contact = () => {
                 We're here to help.
               </h2>
 
-              <p className="mt-5 leading-7 text-gray-400">
+              <p className="mt-5 leading-7 text-slate-400">
                 Whether you need help choosing the right laptop,
                 have a question about your order, or simply want
                 to learn more about NEXORA, feel free to contact us.
@@ -170,7 +170,7 @@ const Contact = () => {
 
                 <div className="group flex gap-4">
 
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-cyan-400/20 bg-cyan-400/10 text-lg text-cyan-400 transition-all duration-300 group-hover:border-cyan-400/40 group-hover:bg-cyan-400 group-hover:text-black">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-sky-400/20 bg-sky-400/10 text-lg text-sky-400 transition-all duration-300 group-hover:border-sky-400/40 group-hover:bg-sky-400 group-hover:text-[#0B1220]">
                     ✉
                   </div>
 
@@ -179,7 +179,7 @@ const Contact = () => {
                       Email
                     </h3>
 
-                    <p className="mt-1 text-sm text-gray-500">
+                    <p className="mt-1 text-sm text-slate-400">
                       support@nexora.com
                     </p>
                   </div>
@@ -190,7 +190,7 @@ const Contact = () => {
 
                 <div className="group flex gap-4">
 
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-cyan-400/20 bg-cyan-400/10 text-lg text-cyan-400 transition-all duration-300 group-hover:border-cyan-400/40 group-hover:bg-cyan-400 group-hover:text-black">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-sky-400/20 bg-sky-400/10 text-lg text-sky-400 transition-all duration-300 group-hover:border-sky-400/40 group-hover:bg-sky-400 group-hover:text-[#0B1220]">
                     ☎
                   </div>
 
@@ -199,7 +199,7 @@ const Contact = () => {
                       Phone
                     </h3>
 
-                    <p className="mt-1 text-sm text-gray-500">
+                    <p className="mt-1 text-sm text-slate-400">
                       +92 300 1234567
                     </p>
                   </div>
@@ -210,7 +210,7 @@ const Contact = () => {
 
                 <div className="group flex gap-4">
 
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-cyan-400/20 bg-cyan-400/10 text-lg text-cyan-400 transition-all duration-300 group-hover:border-cyan-400/40 group-hover:bg-cyan-400 group-hover:text-black">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-sky-400/20 bg-sky-400/10 text-lg text-sky-400 transition-all duration-300 group-hover:border-sky-400/40 group-hover:bg-sky-400 group-hover:text-[#0B1220]">
                     💬
                   </div>
 
@@ -219,7 +219,7 @@ const Contact = () => {
                       Customer Support
                     </h3>
 
-                    <p className="mt-1 text-sm text-gray-500">
+                    <p className="mt-1 text-sm text-slate-400">
                       Monday - Saturday, 9:00 AM - 6:00 PM
                     </p>
                   </div>
@@ -230,7 +230,7 @@ const Contact = () => {
 
               {/* Bottom Accent */}
 
-              <div className="mt-10 h-px w-full bg-gradient-to-r from-cyan-400/40 via-cyan-400/10 to-transparent" />
+              <div className="mt-10 h-px w-full bg-gradient-to-r from-sky-400/40 via-sky-400/10 to-transparent" />
 
             </div>
           </div>
@@ -239,11 +239,11 @@ const Contact = () => {
               CONTACT FORM
           ========================================= */}
 
-          <div className="rounded-3xl border border-white/10 bg-[#0b1119] p-6 shadow-2xl shadow-black/30 sm:p-10">
+          <div className="rounded-3xl border border-[#263449] bg-[#111C2E] p-6 shadow-2xl shadow-black/30 sm:p-10">
 
             <div className="mb-8">
 
-              <span className="text-xs font-bold uppercase tracking-[0.2em] text-cyan-400">
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-sky-400">
                 Contact Form
               </span>
 
@@ -251,7 +251,7 @@ const Contact = () => {
                 Send us a message
               </h2>
 
-              <p className="mt-2 text-sm leading-6 text-gray-500">
+              <p className="mt-2 text-sm leading-6 text-slate-400">
                 Fill out the form below and our team will get
                 back to you as soon as possible.
               </p>
@@ -299,7 +299,7 @@ const Contact = () => {
 
                   <label
                     htmlFor="name"
-                    className="mb-2 block text-sm font-semibold text-gray-300"
+                    className="mb-2 block text-sm font-semibold text-slate-300"
                   >
                     Full Name
                   </label>
@@ -313,7 +313,7 @@ const Contact = () => {
                     placeholder="Your name"
                     autoComplete="name"
                     required
-                    className="w-full rounded-xl border border-white/10 bg-[#070c12] px-4 py-3 text-sm text-white placeholder:text-gray-600 outline-none transition-all duration-300 focus:border-cyan-400/60 focus:bg-[#0a1119] focus:ring-2 focus:ring-cyan-400/10"
+                    className="w-full rounded-xl border border-[#263449] bg-[#0B1220] px-4 py-3 text-sm text-white placeholder:text-slate-500 outline-none transition-all duration-300 focus:border-sky-400/60 focus:bg-[#172338] focus:ring-2 focus:ring-sky-400/10"
                   />
 
                 </div>
@@ -324,7 +324,7 @@ const Contact = () => {
 
                   <label
                     htmlFor="email"
-                    className="mb-2 block text-sm font-semibold text-gray-300"
+                    className="mb-2 block text-sm font-semibold text-slate-300"
                   >
                     Email Address
                   </label>
@@ -338,7 +338,7 @@ const Contact = () => {
                     placeholder="you@example.com"
                     autoComplete="email"
                     required
-                    className="w-full rounded-xl border border-white/10 bg-[#070c12] px-4 py-3 text-sm text-white placeholder:text-gray-600 outline-none transition-all duration-300 focus:border-cyan-400/60 focus:bg-[#0a1119] focus:ring-2 focus:ring-cyan-400/10"
+                    className="w-full rounded-xl border border-[#263449] bg-[#0B1220] px-4 py-3 text-sm text-white placeholder:text-slate-500 outline-none transition-all duration-300 focus:border-sky-400/60 focus:bg-[#172338] focus:ring-2 focus:ring-sky-400/10"
                   />
 
                 </div>
@@ -353,7 +353,7 @@ const Contact = () => {
 
                 <label
                   htmlFor="phone"
-                  className="mb-2 block text-sm font-semibold text-gray-300"
+                  className="mb-2 block text-sm font-semibold text-slate-300"
                 >
                   Phone Number
                 </label>
@@ -366,7 +366,7 @@ const Contact = () => {
                   onChange={handleChange}
                   placeholder="+92 300 1234567"
                   autoComplete="tel"
-                  className="w-full rounded-xl border border-white/10 bg-[#070c12] px-4 py-3 text-sm text-white placeholder:text-gray-600 outline-none transition-all duration-300 focus:border-cyan-400/60 focus:bg-[#0a1119] focus:ring-2 focus:ring-cyan-400/10"
+                  className="w-full rounded-xl border border-[#263449] bg-[#0B1220] px-4 py-3 text-sm text-white placeholder:text-slate-500 outline-none transition-all duration-300 focus:border-sky-400/60 focus:bg-[#172338] focus:ring-2 focus:ring-sky-400/10"
                 />
 
               </div>
@@ -379,7 +379,7 @@ const Contact = () => {
 
                 <label
                   htmlFor="subject"
-                  className="mb-2 block text-sm font-semibold text-gray-300"
+                  className="mb-2 block text-sm font-semibold text-slate-300"
                 >
                   Subject
                 </label>
@@ -392,7 +392,7 @@ const Contact = () => {
                   onChange={handleChange}
                   placeholder="How can we help?"
                   required
-                  className="w-full rounded-xl border border-white/10 bg-[#070c12] px-4 py-3 text-sm text-white placeholder:text-gray-600 outline-none transition-all duration-300 focus:border-cyan-400/60 focus:bg-[#0a1119] focus:ring-2 focus:ring-cyan-400/10"
+                  className="w-full rounded-xl border border-[#263449] bg-[#0B1220] px-4 py-3 text-sm text-white placeholder:text-slate-500 outline-none transition-all duration-300 focus:border-sky-400/60 focus:bg-[#172338] focus:ring-2 focus:ring-sky-400/10"
                 />
 
               </div>
@@ -405,7 +405,7 @@ const Contact = () => {
 
                 <label
                   htmlFor="message"
-                  className="mb-2 block text-sm font-semibold text-gray-300"
+                  className="mb-2 block text-sm font-semibold text-slate-300"
                 >
                   Message
                 </label>
@@ -418,7 +418,7 @@ const Contact = () => {
                   onChange={handleChange}
                   placeholder="Write your message here..."
                   required
-                  className="w-full resize-none rounded-xl border border-white/10 bg-[#070c12] px-4 py-3 text-sm text-white placeholder:text-gray-600 outline-none transition-all duration-300 focus:border-cyan-400/60 focus:bg-[#0a1119] focus:ring-2 focus:ring-cyan-400/10"
+                  className="w-full resize-none rounded-xl border border-[#263449] bg-[#0B1220] px-4 py-3 text-sm text-white placeholder:text-slate-500 outline-none transition-all duration-300 focus:border-sky-400/60 focus:bg-[#172338] focus:ring-2 focus:ring-sky-400/10"
                 />
 
               </div>

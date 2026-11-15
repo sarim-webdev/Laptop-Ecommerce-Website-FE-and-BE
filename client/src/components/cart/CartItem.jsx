@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import {
@@ -143,17 +144,17 @@ const CartItem = ({ item }) => {
         overflow-hidden
         rounded-2xl
         border
-        border-slate-700/60
+        border-[#263449]
         bg-gradient-to-br
-        from-[#111c2d]
-        via-[#0b1422]
-        to-[#070d17]
+        from-[#111C2E]
+        via-[#0B1220]
+        to-[#172338]
         p-4
         shadow-[0_15px_45px_rgba(0,0,0,0.25)]
         transition-all
         duration-300
-        hover:border-cyan-400/30
-        hover:shadow-[0_15px_50px_rgba(34,211,238,0.08)]
+        hover:border-sky-400/30
+        hover:shadow-[0_15px_50px_rgba(56,189,248,0.08)]
         sm:p-5
       "
     >
@@ -171,11 +172,11 @@ const CartItem = ({ item }) => {
           h-40
           w-40
           rounded-full
-          bg-cyan-500/[0.06]
+          bg-sky-400/[0.06]
           blur-3xl
           transition-all
           duration-500
-          group-hover:bg-cyan-500/[0.10]
+          group-hover:bg-sky-400/[0.10]
         "
       />
 
@@ -188,13 +189,13 @@ const CartItem = ({ item }) => {
           h-40
           w-40
           rounded-full
-          bg-blue-600/[0.05]
+          bg-blue-500/[0.05]
           blur-3xl
         "
       />
 
       {/* =====================================
-          TOP CYAN ACCENT
+          TOP SKY ACCENT
       ===================================== */}
 
       <div
@@ -207,8 +208,8 @@ const CartItem = ({ item }) => {
           origin-left
           scale-x-0
           bg-gradient-to-r
-          from-cyan-400
-          via-blue-500
+          from-sky-400
+          via-blue-600
           to-transparent
           transition-transform
           duration-500
@@ -248,10 +249,10 @@ const CartItem = ({ item }) => {
             overflow-hidden
             rounded-xl
             border
-            border-slate-700/60
+            border-[#263449]
             bg-gradient-to-br
-            from-[#162438]
-            to-[#080f1a]
+            from-[#111C2E]
+            to-[#172338]
             sm:h-36
             sm:w-36
           "
@@ -270,11 +271,11 @@ const CartItem = ({ item }) => {
               -translate-x-1/2
               -translate-y-1/2
               rounded-full
-              bg-cyan-400/[0.10]
+              bg-sky-400/[0.10]
               blur-3xl
               transition-all
               duration-500
-              group-hover:bg-cyan-400/[0.16]
+              group-hover:bg-sky-400/[0.16]
             "
           />
 
@@ -344,7 +345,7 @@ const CartItem = ({ item }) => {
                   text-white
                   transition-colors
                   duration-300
-                  hover:text-cyan-400
+                  hover:text-sky-400
                 "
               >
                 {name}
@@ -360,7 +361,7 @@ const CartItem = ({ item }) => {
                     font-medium
                     uppercase
                     tracking-[0.12em]
-                    text-slate-500
+                    text-slate-400
                   "
                 >
                   {product.brand}
@@ -491,7 +492,7 @@ const CartItem = ({ item }) => {
                   className="
                     mt-1
                     text-[11px]
-                    text-slate-500
+                    text-slate-400
                   "
                 >
                   {formatPrice(price)} ×{" "}
@@ -516,7 +517,7 @@ const CartItem = ({ item }) => {
               justify-between
               gap-4
               border-t
-              border-slate-700/50
+              border-[#263449]/70
               pt-4
             "
           >
@@ -534,7 +535,7 @@ const CartItem = ({ item }) => {
                   font-bold
                   uppercase
                   tracking-[0.18em]
-                  text-slate-500
+                  text-slate-400
                 "
               >
                 Quantity
@@ -547,8 +548,8 @@ const CartItem = ({ item }) => {
                   overflow-hidden
                   rounded-xl
                   border
-                  border-slate-700
-                  bg-[#080f1a]
+                  border-[#263449]
+                  bg-[#0B1220]
                   shadow-inner
                 "
               >
@@ -574,8 +575,8 @@ const CartItem = ({ item }) => {
                     justify-center
                     text-slate-400
                     transition-all
-                    hover:bg-cyan-400/10
-                    hover:text-cyan-400
+                    hover:bg-sky-400/10
+                    hover:text-sky-400
                     disabled:cursor-not-allowed
                     disabled:opacity-30
                   "
@@ -594,7 +595,7 @@ const CartItem = ({ item }) => {
                     items-center
                     justify-center
                     border-x
-                    border-slate-700
+                    border-[#263449]
                     px-2
                     text-sm
                     font-bold
@@ -628,8 +629,8 @@ const CartItem = ({ item }) => {
                     justify-center
                     text-slate-400
                     transition-all
-                    hover:bg-cyan-400/10
-                    hover:text-cyan-400
+                    hover:bg-sky-400/10
+                    hover:text-sky-400
                     disabled:cursor-not-allowed
                     disabled:opacity-30
                   "
@@ -664,7 +665,7 @@ const CartItem = ({ item }) => {
                     font-bold
                     uppercase
                     tracking-[0.18em]
-                    text-slate-500
+                    text-slate-400
                   "
                 >
                   Subtotal
@@ -675,7 +676,7 @@ const CartItem = ({ item }) => {
                     mt-1
                     text-base
                     font-extrabold
-                    text-cyan-400
+                    text-sky-400
                   "
                 >
                   {formatPrice(subtotal)}

@@ -3,12 +3,15 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout";
 import AdminLayout from "../layouts/AdminLayout";
 import ProtectedRoute from "./ProtectedRoute";
+import ScrollToTop from "../components/common/ScrollToTop";
 
 // Public
 import Home from "../pages/Home/Home";
 import Products from "../pages/Products/Products";
 import ProductDetails from "../pages/Products/ProductDetails";
 import Contact from "../pages/Contact/Contact";
+import PrivacyPolicy from "../pages/Legal/PrivacyPolicy";
+import TermsAndConditions from "../pages/Legal/TermsAndConditions";
 
 // Auth
 import SignIn from "../pages/Auth/SignIn";
@@ -39,6 +42,8 @@ const AppRoutes = () => {
   return (
     <BrowserRouter>
 
+      <ScrollToTop />
+
       <Routes>
 
         {/* =========================================
@@ -54,6 +59,16 @@ const AppRoutes = () => {
           <Route path="/products/:id" element={<ProductDetails />} />
 
           <Route path="/contact" element={<Contact />} />
+
+          <Route
+            path="/privacy-policy"
+            element={<PrivacyPolicy />}
+          />
+
+          <Route
+            path="/terms-and-conditions"
+            element={<TermsAndConditions />}
+          />
 
           {/* USER PROTECTED ROUTES */}
 

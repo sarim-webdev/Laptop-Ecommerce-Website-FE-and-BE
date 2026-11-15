@@ -21,26 +21,14 @@ const transporter = nodemailer.createTransport({
 export const verifyEmailService = async () => {
   try {
     await transporter.verify();
-
-    console.log("✅ Email service is ready");
-  } catch (error) {
-    console.error(
-      "❌ Email service verification failed:",
-      error.message
-    );
-  }
+  } catch (error) {}
 };
 
 /* =========================================
    SEND EMAIL
 ========================================= */
 
-export const sendEmail = async ({
-  to,
-  subject,
-  html,
-  text,
-}) => {
+export const sendEmail = async ({ to, subject, html, text }) => {
   try {
     if (!to) {
       throw new Error("Recipient email is required");
@@ -56,17 +44,8 @@ export const sendEmail = async ({
 
     const info = await transporter.sendMail(mailOptions);
 
-    console.log(
-      `📧 Email sent successfully: ${info.messageId}`
-    );
-
     return info;
   } catch (error) {
-    console.error(
-      "❌ Email sending failed:",
-      error.message
-    );
-
     throw new Error("Failed to send email");
   }
 };
@@ -75,10 +54,7 @@ export const sendEmail = async ({
    WELCOME EMAIL
 ========================================= */
 
-export const sendWelcomeEmail = async (
-  userEmail,
-  userName
-) => {
+export const sendWelcomeEmail = async (userEmail, userName) => {
   return sendEmail({
     to: userEmail,
 

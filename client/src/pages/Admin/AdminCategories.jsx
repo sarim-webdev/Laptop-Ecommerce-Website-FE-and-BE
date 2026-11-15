@@ -343,7 +343,7 @@ const AdminCategories = () => {
 
   if (loading) {
     return (
-      <div className="flex min-h-[60vh] items-center justify-center bg-[#05080d]">
+      <div className="flex min-h-[60vh] items-center justify-center bg-[#0B1220]">
         <Loader />
       </div>
     );
@@ -355,17 +355,17 @@ const AdminCategories = () => {
   ========================================= */
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-[#05080d] px-4 py-6 text-white sm:px-6 lg:px-8 lg:py-8">
+    <section className="relative min-h-screen overflow-hidden bg-[#0B1220] px-4 py-6 text-white sm:px-6 lg:px-8 lg:py-8">
 
       {/* =====================================
           BACKGROUND GLOWS
       ===================================== */}
 
-      <div className="pointer-events-none absolute -left-40 top-10 h-96 w-96 rounded-full bg-cyan-500/[0.06] blur-3xl" />
+      <div className="pointer-events-none absolute -left-40 top-10 h-96 w-96 rounded-full bg-sky-400/[0.06] blur-3xl" />
 
       <div className="pointer-events-none absolute -right-40 top-1/3 h-96 w-96 rounded-full bg-blue-600/[0.05] blur-3xl" />
 
-      <div className="pointer-events-none absolute bottom-0 left-1/3 h-80 w-80 rounded-full bg-cyan-500/[0.03] blur-3xl" />
+      <div className="pointer-events-none absolute bottom-0 left-1/3 h-80 w-80 rounded-full bg-sky-400/[0.03] blur-3xl" />
 
 
       <div className="relative mx-auto max-w-7xl space-y-6">
@@ -378,7 +378,7 @@ const AdminCategories = () => {
 
           <div>
 
-            <p className="text-sm font-bold uppercase tracking-[0.2em] text-cyan-400">
+            <p className="text-sm font-bold uppercase tracking-[0.2em] text-sky-400">
               NEXORA ADMINISTRATION
             </p>
 
@@ -386,7 +386,7 @@ const AdminCategories = () => {
               Categories
             </h1>
 
-            <p className="mt-2 text-sm leading-6 text-slate-500 sm:text-base">
+            <p className="mt-2 text-sm leading-6 text-slate-400 sm:text-base">
               Manage product categories for your
               NEXORA laptop store.
             </p>
@@ -398,7 +398,7 @@ const AdminCategories = () => {
             type="button"
             onClick={handleRefresh}
             disabled={refreshing}
-            className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-[#0b1119] px-5 py-2.5 text-sm font-semibold text-slate-300 shadow-lg shadow-black/20 transition-all duration-300 hover:border-cyan-400/30 hover:bg-[#101923] hover:text-white disabled:cursor-not-allowed disabled:opacity-60"
+            className="inline-flex items-center justify-center gap-2 rounded-xl border border-[#263449] bg-[#111C2E] px-5 py-2.5 text-sm font-semibold text-slate-300 shadow-lg shadow-black/20 transition-all duration-300 hover:border-sky-400/30 hover:bg-[#172338] hover:text-white disabled:cursor-not-allowed disabled:opacity-60"
           >
 
             <RefreshCw
@@ -480,13 +480,13 @@ const AdminCategories = () => {
 
           {/* Total Categories */}
 
-          <div className="group rounded-2xl border border-white/10 bg-gradient-to-br from-[#0c131d] via-[#091019] to-[#05080d] p-5 shadow-xl shadow-black/20 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/20">
+          <div className="group rounded-2xl border border-[#263449] bg-gradient-to-br from-[#172338] via-[#111C2E] to-[#0B1220] p-5 shadow-xl shadow-black/20 transition duration-300 hover:-translate-y-1 hover:border-sky-400/20">
 
             <div className="flex items-center justify-between">
 
               <div>
 
-                <p className="text-sm font-medium text-slate-500">
+                <p className="text-sm font-medium text-slate-400">
                   Total Categories
                 </p>
 
@@ -497,27 +497,27 @@ const AdminCategories = () => {
               </div>
 
 
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-400/10 text-cyan-400">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-sky-400/10 text-sky-400">
                 <FolderOpen size={22} />
               </div>
 
             </div>
 
 
-            <div className="mt-4 h-1 w-12 rounded-full bg-cyan-400" />
+            <div className="mt-4 h-1 w-12 rounded-full bg-sky-400" />
 
           </div>
 
 
           {/* Category Status */}
 
-          <div className="group rounded-2xl border border-white/10 bg-gradient-to-br from-[#0c131d] via-[#091019] to-[#05080d] p-5 shadow-xl shadow-black/20 transition duration-300 hover:-translate-y-1 hover:border-emerald-400/20">
+          <div className="group rounded-2xl border border-[#263449] bg-gradient-to-br from-[#172338] via-[#111C2E] to-[#0B1220] p-5 shadow-xl shadow-black/20 transition duration-300 hover:-translate-y-1 hover:border-emerald-400/20">
 
             <div className="flex items-center justify-between">
 
               <div>
 
-                <p className="text-sm font-medium text-slate-500">
+                <p className="text-sm font-medium text-slate-400">
                   Category Status
                 </p>
 
@@ -546,13 +546,13 @@ const AdminCategories = () => {
             CATEGORY FORM
         ===================================== */}
 
-        <div className="rounded-3xl border border-white/10 bg-gradient-to-br from-[#0c131d] via-[#091019] to-[#05080d] p-5 shadow-2xl shadow-black/30 sm:p-6">
+        <div className="rounded-3xl border border-[#263449] bg-gradient-to-br from-[#172338] via-[#111C2E] to-[#0B1220] p-5 shadow-2xl shadow-black/30 sm:p-6">
 
           <div className="mb-6 flex items-start justify-between gap-4">
 
             <div>
 
-              <span className="text-xs font-bold uppercase tracking-[0.18em] text-cyan-400">
+              <span className="text-xs font-bold uppercase tracking-[0.18em] text-sky-400">
                 Category Management
               </span>
 
@@ -562,7 +562,7 @@ const AdminCategories = () => {
                   : "Add New Category"}
               </h2>
 
-              <p className="mt-1 text-sm text-slate-500">
+              <p className="mt-1 text-sm text-slate-400">
                 {editingId
                   ? "Update the selected category."
                   : "Create a category for your laptop products."}
@@ -577,7 +577,7 @@ const AdminCategories = () => {
                 type="button"
                 onClick={handleCancelEdit}
                 disabled={saving}
-                className="rounded-xl border border-white/10 bg-white/[0.04] p-2 text-slate-500 transition hover:border-red-400/20 hover:bg-red-400/10 hover:text-red-400 disabled:opacity-50"
+                className="rounded-xl border border-[#263449] bg-[#172338] p-2 text-slate-400 transition hover:border-red-400/20 hover:bg-red-400/10 hover:text-red-400 disabled:opacity-50"
                 title="Cancel Edit"
               >
                 <X size={19} />
@@ -613,7 +613,7 @@ const AdminCategories = () => {
                 placeholder="e.g. Gaming Laptops"
                 disabled={saving}
                 autoComplete="off"
-                className="w-full rounded-xl border border-white/10 bg-[#070c12] px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-cyan-400/40 focus:ring-2 focus:ring-cyan-400/10 disabled:cursor-not-allowed disabled:opacity-60"
+                className="w-full rounded-xl border border-[#263449] bg-[#0B1220] px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-500 focus:border-sky-400/40 focus:ring-2 focus:ring-sky-400/10 disabled:cursor-not-allowed disabled:opacity-60"
               />
 
             </div>
@@ -639,7 +639,7 @@ const AdminCategories = () => {
                 placeholder="e.g. High-performance laptops for gaming"
                 disabled={saving}
                 autoComplete="off"
-                className="w-full rounded-xl border border-white/10 bg-[#070c12] px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-cyan-400/40 focus:ring-2 focus:ring-cyan-400/10 disabled:cursor-not-allowed disabled:opacity-60"
+                className="w-full rounded-xl border border-[#263449] bg-[#0B1220] px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-500 focus:border-sky-400/40 focus:ring-2 focus:ring-sky-400/10 disabled:cursor-not-allowed disabled:opacity-60"
               />
 
             </div>
@@ -652,7 +652,7 @@ const AdminCategories = () => {
               <button
                 type="submit"
                 disabled={saving}
-                className="inline-flex items-center gap-2 rounded-xl bg-cyan-400 px-5 py-3 text-sm font-bold text-slate-950 shadow-lg shadow-cyan-500/10 transition hover:bg-cyan-300 disabled:cursor-not-allowed disabled:opacity-60"
+                className="inline-flex items-center gap-2 rounded-xl bg-sky-400 px-5 py-3 text-sm font-bold text-[#0B1220] shadow-lg shadow-sky-500/10 transition hover:bg-sky-300 disabled:cursor-not-allowed disabled:opacity-60"
               >
 
                 {editingId ? (
@@ -676,7 +676,7 @@ const AdminCategories = () => {
                   type="button"
                   onClick={handleCancelEdit}
                   disabled={saving}
-                  className="rounded-xl border border-white/10 bg-white/[0.04] px-5 py-3 text-sm font-semibold text-slate-300 transition hover:border-white/20 hover:bg-white/[0.08] hover:text-white disabled:cursor-not-allowed disabled:opacity-60"
+                  className="rounded-xl border border-[#263449] bg-[#172338] px-5 py-3 text-sm font-semibold text-slate-300 transition hover:border-[#263449] hover:bg-[#1D2B42] hover:text-white disabled:cursor-not-allowed disabled:opacity-60"
                 >
                   Cancel
                 </button>
@@ -694,15 +694,15 @@ const AdminCategories = () => {
             CATEGORIES TABLE
         ===================================== */}
 
-        <div className="overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-[#0c131d] via-[#091019] to-[#05080d] shadow-2xl shadow-black/30">
+        <div className="overflow-hidden rounded-3xl border border-[#263449] bg-gradient-to-br from-[#172338] via-[#111C2E] to-[#0B1220] shadow-2xl shadow-black/30">
 
           {/* TABLE HEADER */}
 
-          <div className="border-b border-white/10 px-6 py-5">
+          <div className="border-b border-[#263449] px-6 py-5">
 
             <div>
 
-              <span className="text-xs font-bold uppercase tracking-[0.18em] text-cyan-400">
+              <span className="text-xs font-bold uppercase tracking-[0.18em] text-sky-400">
                 Inventory Structure
               </span>
 
@@ -710,7 +710,7 @@ const AdminCategories = () => {
                 All Categories
               </h2>
 
-              <p className="mt-1 text-xs text-slate-500">
+              <p className="mt-1 text-xs text-slate-400">
                 {categories.length}{" "}
                 {categories.length === 1
                   ? "category"
@@ -729,7 +729,7 @@ const AdminCategories = () => {
 
             <div className="px-6 py-16 text-center">
 
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-white/10 bg-[#070c12] text-cyan-400 shadow-lg">
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-[#263449] bg-[#0B1220] text-sky-400 shadow-lg">
                 <FolderOpen size={28} />
               </div>
 
@@ -737,7 +737,7 @@ const AdminCategories = () => {
                 No categories found
               </h3>
 
-              <p className="mt-1 text-sm text-slate-500">
+              <p className="mt-1 text-sm text-slate-400">
                 Create your first category using
                 the form above.
               </p>
@@ -752,19 +752,19 @@ const AdminCategories = () => {
 
               <table className="min-w-[700px] w-full">
 
-                <thead className="border-b border-white/10 bg-white/[0.02]">
+                <thead className="border-b border-[#263449] bg-[#172338]">
 
                   <tr>
 
-                    <th className="px-6 py-4 text-left text-xs font-bold uppercase tracking-wider text-slate-500">
+                    <th className="px-6 py-4 text-left text-xs font-bold uppercase tracking-wider text-slate-400">
                       Category
                     </th>
 
-                    <th className="px-6 py-4 text-left text-xs font-bold uppercase tracking-wider text-slate-500">
+                    <th className="px-6 py-4 text-left text-xs font-bold uppercase tracking-wider text-slate-400">
                       Description
                     </th>
 
-                    <th className="px-6 py-4 text-right text-xs font-bold uppercase tracking-wider text-slate-500">
+                    <th className="px-6 py-4 text-right text-xs font-bold uppercase tracking-wider text-slate-400">
                       Actions
                     </th>
 
@@ -773,13 +773,13 @@ const AdminCategories = () => {
                 </thead>
 
 
-                <tbody className="divide-y divide-white/[0.06]">
+                <tbody className="divide-y divide-[#263449]">
 
                   {categories.map((category) => (
 
                     <tr
                       key={category._id}
-                      className="transition duration-300 hover:bg-white/[0.025]"
+                      className="transition duration-300 hover:bg-[#172338]"
                     >
 
                       {/* CATEGORY */}
@@ -788,7 +788,7 @@ const AdminCategories = () => {
 
                         <div className="flex items-center gap-3">
 
-                          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-cyan-400/10 text-cyan-400">
+                          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-sky-400/10 text-sky-400">
                             <FolderOpen size={18} />
                           </div>
 
@@ -799,7 +799,7 @@ const AdminCategories = () => {
                               {category.name}
                             </p>
 
-                            <p className="mt-1 text-xs text-slate-600">
+                            <p className="mt-1 text-xs text-slate-500">
                               ID: {category._id}
                             </p>
 
@@ -836,7 +836,7 @@ const AdminCategories = () => {
                               handleEdit(category)
                             }
                             title="Edit Category"
-                            className="inline-flex items-center justify-center rounded-lg border border-white/10 bg-white/[0.04] p-2 text-slate-400 transition hover:border-blue-400/30 hover:bg-blue-400/10 hover:text-blue-400"
+                            className="inline-flex items-center justify-center rounded-lg border border-[#263449] bg-[#172338] p-2 text-slate-400 transition hover:border-sky-400/30 hover:bg-sky-400/10 hover:text-sky-400"
                           >
                             <Pencil size={16} />
                           </button>

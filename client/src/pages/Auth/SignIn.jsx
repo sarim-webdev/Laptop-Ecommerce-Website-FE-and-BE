@@ -92,24 +92,24 @@ const SignIn = () => {
 
   if (authLoading) {
     return (
-      <main className="flex min-h-screen items-center justify-center bg-black">
+      <main className="flex min-h-screen items-center justify-center bg-[#0B1220]">
         <Loader />
       </main>
     );
   }
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-black px-4 py-10 text-white sm:px-6 lg:px-8">
+    <main className="relative min-h-screen overflow-hidden bg-[#0B1220] px-4 py-10 text-white sm:px-6 lg:px-8">
 
       {/* =========================================
           BACKGROUND GLOW
       ========================================= */}
 
-      <div className="pointer-events-none absolute -left-40 top-10 h-80 w-80 rounded-full bg-cyan-500/10 blur-3xl" />
+      <div className="pointer-events-none absolute -left-40 top-10 h-80 w-80 rounded-full bg-sky-500/10 blur-3xl" />
 
       <div className="pointer-events-none absolute -right-40 bottom-10 h-96 w-96 rounded-full bg-blue-600/10 blur-3xl" />
 
-      <div className="pointer-events-none absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-400/5 blur-3xl" />
+      <div className="pointer-events-none absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-sky-500/5 blur-3xl" />
 
       {/* =========================================
           MAIN CONTAINER
@@ -117,17 +117,17 @@ const SignIn = () => {
 
       <div className="relative mx-auto flex min-h-[calc(100vh-5rem)] max-w-6xl items-center">
 
-        <div className="grid w-full overflow-hidden rounded-3xl border border-white/10 bg-[#080b0f]/90 shadow-2xl shadow-black/50 backdrop-blur-xl lg:grid-cols-2">
+        <div className="grid w-full overflow-hidden rounded-3xl border border-[#263449] bg-[#111C2E]/90 shadow-2xl shadow-black/50 backdrop-blur-xl lg:grid-cols-2">
 
           {/* =========================================
               LEFT SIDE
           ========================================= */}
 
-          <div className="relative hidden overflow-hidden border-r border-white/10 bg-gradient-to-br from-[#0b1117] via-[#080b0f] to-black p-12 lg:flex lg:flex-col lg:justify-center">
+          <div className="relative hidden overflow-hidden border-r border-[#263449] bg-gradient-to-br from-[#172338] via-[#111C2E] to-[#0B1220] p-12 lg:flex lg:flex-col lg:justify-center">
 
             {/* Decorative Glow */}
 
-            <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-cyan-400/10 blur-3xl" />
+            <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-sky-500/10 blur-3xl" />
 
             <div className="pointer-events-none absolute -bottom-32 -left-20 h-80 w-80 rounded-full bg-blue-600/10 blur-3xl" />
 
@@ -140,12 +140,12 @@ const SignIn = () => {
                 className="inline-block text-3xl font-black tracking-tight text-white"
               >
                 NEXORA
-                <span className="text-cyan-400">.</span>
+                <span className="text-sky-400">.</span>
               </Link>
 
               {/* Label */}
 
-              <p className="mt-10 text-sm font-bold uppercase tracking-[0.25em] text-cyan-400">
+              <p className="mt-10 text-sm font-bold uppercase tracking-[0.25em] text-sky-400">
                 Welcome Back
               </p>
 
@@ -153,14 +153,14 @@ const SignIn = () => {
 
               <h1 className="mt-5 text-4xl font-black leading-tight tracking-tight text-white xl:text-5xl">
                 Power your world
-                <span className="block text-cyan-400">
+                <span className="block text-sky-400">
                   with NEXORA.
                 </span>
               </h1>
 
               {/* Description */}
 
-              <p className="mt-6 max-w-lg text-base leading-7 text-gray-400">
+              <p className="mt-6 max-w-lg text-base leading-7 text-slate-400">
                 Sign in to manage your account, explore premium
                 laptops, track your orders, and enjoy a seamless
                 shopping experience.
@@ -170,29 +170,29 @@ const SignIn = () => {
 
               <div className="mt-9 space-y-4">
 
-                <div className="flex items-center gap-3 text-sm text-gray-300">
-                  <span className="flex h-8 w-8 items-center justify-center rounded-lg border border-cyan-400/20 bg-cyan-400/10 text-cyan-400">
+                <div className="flex items-center gap-3 text-sm text-slate-300">
+                  <span className="flex h-8 w-8 items-center justify-center rounded-lg border border-sky-400/20 bg-sky-400/10 text-sky-400">
                     ✓
                   </span>
                   Premium laptops
                 </div>
 
-                <div className="flex items-center gap-3 text-sm text-gray-300">
-                  <span className="flex h-8 w-8 items-center justify-center rounded-lg border border-cyan-400/20 bg-cyan-400/10 text-cyan-400">
+                <div className="flex items-center gap-3 text-sm text-slate-300">
+                  <span className="flex h-8 w-8 items-center justify-center rounded-lg border border-sky-400/20 bg-sky-400/10 text-sky-400">
                     ✓
                   </span>
                   Secure checkout
                 </div>
 
-                <div className="flex items-center gap-3 text-sm text-gray-300">
-                  <span className="flex h-8 w-8 items-center justify-center rounded-lg border border-cyan-400/20 bg-cyan-400/10 text-cyan-400">
+                <div className="flex items-center gap-3 text-sm text-slate-300">
+                  <span className="flex h-8 w-8 items-center justify-center rounded-lg border border-sky-400/20 bg-sky-400/10 text-sky-400">
                     ✓
                   </span>
                   Fast delivery
                 </div>
 
-                <div className="flex items-center gap-3 text-sm text-gray-300">
-                  <span className="flex h-8 w-8 items-center justify-center rounded-lg border border-cyan-400/20 bg-cyan-400/10 text-cyan-400">
+                <div className="flex items-center gap-3 text-sm text-slate-300">
+                  <span className="flex h-8 w-8 items-center justify-center rounded-lg border border-sky-400/20 bg-sky-400/10 text-sky-400">
                     ✓
                   </span>
                   Dedicated customer support
@@ -218,7 +218,7 @@ const SignIn = () => {
                 className="text-2xl font-black tracking-tight text-white"
               >
                 NEXORA
-                <span className="text-cyan-400">.</span>
+                <span className="text-sky-400">.</span>
               </Link>
 
             </div>
@@ -229,7 +229,7 @@ const SignIn = () => {
 
               <div className="mb-8">
 
-                <p className="text-xs font-bold uppercase tracking-[0.25em] text-cyan-400">
+                <p className="text-xs font-bold uppercase tracking-[0.25em] text-sky-400">
                   NEXORA ACCOUNT
                 </p>
 
@@ -237,7 +237,7 @@ const SignIn = () => {
                   Sign In
                 </h2>
 
-                <p className="mt-2 text-sm leading-6 text-gray-400">
+                <p className="mt-2 text-sm leading-6 text-slate-400">
                   Enter your account details to continue.
                 </p>
 
@@ -268,7 +268,7 @@ const SignIn = () => {
 
                   <label
                     htmlFor="email"
-                    className="mb-2 block text-sm font-semibold text-gray-300"
+                    className="mb-2 block text-sm font-semibold text-slate-300"
                   >
                     Email Address
                   </label>
@@ -286,8 +286,8 @@ const SignIn = () => {
                       w-full
                       rounded-xl
                       border
-                      border-white/10
-                      bg-white/[0.04]
+                      border-[#263449]
+                      bg-[#0B1220]
                       px-4
                       py-3.5
                       text-sm
@@ -295,12 +295,12 @@ const SignIn = () => {
                       outline-none
                       transition-all
                       duration-200
-                      placeholder:text-gray-600
-                      hover:border-white/20
-                      focus:border-cyan-400/60
-                      focus:bg-white/[0.06]
+                      placeholder:text-slate-500
+                      hover:border-slate-500
+                      focus:border-sky-400/60
+                      focus:bg-[#111C2E]
                       focus:ring-4
-                      focus:ring-cyan-400/10
+                      focus:ring-sky-400/10
                     "
                   />
 
@@ -314,14 +314,14 @@ const SignIn = () => {
 
                     <label
                       htmlFor="password"
-                      className="block text-sm font-semibold text-gray-300"
+                      className="block text-sm font-semibold text-slate-300"
                     >
                       Password
                     </label>
 
                     <Link
                       to="/forgot-password"
-                      className="text-xs font-semibold text-cyan-400 transition hover:text-cyan-300"
+                      className="text-xs font-semibold text-sky-400 transition hover:text-sky-300"
                     >
                       Forgot password?
                     </Link>
@@ -341,8 +341,8 @@ const SignIn = () => {
                       w-full
                       rounded-xl
                       border
-                      border-white/10
-                      bg-white/[0.04]
+                      border-[#263449]
+                      bg-[#0B1220]
                       px-4
                       py-3.5
                       text-sm
@@ -350,12 +350,12 @@ const SignIn = () => {
                       outline-none
                       transition-all
                       duration-200
-                      placeholder:text-gray-600
-                      hover:border-white/20
-                      focus:border-cyan-400/60
-                      focus:bg-white/[0.06]
+                      placeholder:text-slate-500
+                      hover:border-slate-500
+                      focus:border-sky-400/60
+                      focus:bg-[#111C2E]
                       focus:ring-4
-                      focus:ring-cyan-400/10
+                      focus:ring-sky-400/10
                     "
                   />
 
@@ -373,18 +373,18 @@ const SignIn = () => {
                     items-center
                     justify-center
                     rounded-xl
-                    bg-cyan-400
+                    bg-sky-400
                     px-5
                     py-3.5
                     text-sm
                     font-bold
-                    text-black
+                    text-[#0B1220]
                     shadow-lg
-                    shadow-cyan-400/10
+                    shadow-sky-400/10
                     transition-all
                     duration-300
-                    hover:bg-cyan-300
-                    hover:shadow-cyan-400/20
+                    hover:bg-sky-300
+                    hover:shadow-sky-400/20
                     disabled:cursor-not-allowed
                     disabled:opacity-50
                   "
@@ -400,25 +400,25 @@ const SignIn = () => {
 
               <div className="my-7 flex items-center gap-4">
 
-                <div className="h-px flex-1 bg-white/10" />
+                <div className="h-px flex-1 bg-[#263449]" />
 
-                <span className="text-xs text-gray-600">
+                <span className="text-xs text-slate-500">
                   OR
                 </span>
 
-                <div className="h-px flex-1 bg-white/10" />
+                <div className="h-px flex-1 bg-[#263449]" />
 
               </div>
 
               {/* SIGN UP */}
 
-              <p className="text-center text-sm text-gray-500">
+              <p className="text-center text-sm text-slate-400">
 
                 Don't have an account?{" "}
 
                 <Link
                   to="/sign-up"
-                  className="font-bold text-cyan-400 transition hover:text-cyan-300"
+                  className="font-bold text-sky-400 transition hover:text-sky-300"
                 >
                   Create an account
                 </Link>

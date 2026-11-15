@@ -64,24 +64,24 @@ const OrderTable = ({
   const getStatusStyle = (status) => {
     const styles = {
       Processing:
-        "bg-yellow-50 text-yellow-700 border-yellow-200",
+        "bg-amber-400/10 text-amber-400 border-amber-400/20",
 
       Confirmed:
-        "bg-blue-50 text-blue-700 border-blue-200",
+        "bg-sky-400/10 text-sky-400 border-sky-400/20",
 
       Shipped:
-        "bg-purple-50 text-purple-700 border-purple-200",
+        "bg-purple-400/10 text-purple-400 border-purple-400/20",
 
       Delivered:
-        "bg-green-50 text-green-700 border-green-200",
+        "bg-emerald-400/10 text-emerald-400 border-emerald-400/20",
 
       Cancelled:
-        "bg-red-50 text-red-700 border-red-200",
+        "bg-red-400/10 text-red-400 border-red-400/20",
     };
 
     return (
       styles[status] ||
-      "bg-gray-50 text-gray-700 border-gray-200"
+      "bg-slate-400/10 text-slate-400 border-slate-400/20"
     );
   };
 
@@ -116,10 +116,10 @@ const OrderTable = ({
 
   if (loading) {
     return (
-      <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
+      <div className="overflow-hidden rounded-2xl border border-[#263449] bg-[#0B1220] shadow-sm">
 
         <div className="flex items-center justify-center px-6 py-16">
-          <div className="h-8 w-8 animate-spin rounded-full border-4 border-gray-200 border-t-gray-900" />
+          <div className="h-8 w-8 animate-spin rounded-full border-4 border-[#263449] border-t-sky-400" />
         </div>
 
       </div>
@@ -132,17 +132,17 @@ const OrderTable = ({
 
   if (!orders.length) {
     return (
-      <div className="rounded-2xl border border-gray-200 bg-white px-6 py-16 text-center shadow-sm">
+      <div className="rounded-2xl border border-[#263449] bg-[#0B1220] px-6 py-16 text-center shadow-sm">
 
-        <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-gray-100 text-2xl">
+        <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[#111C2E] text-2xl">
           📦
         </div>
 
-        <h3 className="mt-4 text-lg font-bold text-gray-900">
+        <h3 className="mt-4 text-lg font-bold text-white">
           No orders found
         </h3>
 
-        <p className="mt-1 text-sm text-gray-500">
+        <p className="mt-1 text-sm text-slate-400">
           There are currently no orders to display.
         </p>
 
@@ -151,27 +151,27 @@ const OrderTable = ({
   }
 
   return (
-    <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
+    <div className="overflow-hidden rounded-2xl border border-[#263449] bg-[#0B1220] shadow-sm">
 
       {/* =========================================
           HEADER
       ========================================= */}
 
-      <div className="border-b border-gray-200 px-6 py-5">
+      <div className="border-b border-[#263449] px-6 py-5">
 
         <div className="flex flex-col justify-between gap-2 sm:flex-row sm:items-center">
 
           <div>
-            <h2 className="text-lg font-bold text-gray-900">
+            <h2 className="text-lg font-bold text-white">
               Orders
             </h2>
 
-            <p className="mt-1 text-sm text-gray-500">
+            <p className="mt-1 text-sm text-slate-400">
               Manage and track customer orders.
             </p>
           </div>
 
-          <span className="w-fit rounded-full bg-gray-100 px-3 py-1 text-xs font-semibold text-gray-600">
+          <span className="w-fit rounded-full border border-[#263449] bg-[#111C2E] px-3 py-1 text-xs font-semibold text-slate-300">
             {orders.length}{" "}
             {orders.length === 1
               ? "Order"
@@ -190,31 +190,31 @@ const OrderTable = ({
 
         <table className="min-w-[1000px] w-full">
 
-          <thead className="bg-gray-50">
+          <thead className="bg-[#111C2E]">
 
-            <tr className="border-b border-gray-200 text-left">
+            <tr className="border-b border-[#263449] text-left">
 
-              <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-gray-500">
+              <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-400">
                 Order
               </th>
 
-              <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-gray-500">
+              <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-400">
                 Customer
               </th>
 
-              <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-gray-500">
+              <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-400">
                 Items
               </th>
 
-              <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-gray-500">
+              <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-400">
                 Total
               </th>
 
-              <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-gray-500">
+              <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-400">
                 Status
               </th>
 
-              <th className="px-6 py-4 text-right text-xs font-bold uppercase tracking-wider text-gray-500">
+              <th className="px-6 py-4 text-right text-xs font-bold uppercase tracking-wider text-slate-400">
                 Action
               </th>
 
@@ -222,7 +222,7 @@ const OrderTable = ({
 
           </thead>
 
-          <tbody className="divide-y divide-gray-100">
+          <tbody className="divide-y divide-[#263449]">
 
             {orders.map((order) => {
               const orderId =
@@ -239,7 +239,7 @@ const OrderTable = ({
               return (
                 <tr
                   key={orderId}
-                  className="transition hover:bg-gray-50"
+                  className="transition hover:bg-[#172338]"
                 >
 
                   {/* Order */}
@@ -248,12 +248,12 @@ const OrderTable = ({
 
                     <Link
                       to={`/admin/orders/${orderId}`}
-                      className="font-bold text-gray-900 hover:text-blue-600"
+                      className="font-bold text-white hover:text-sky-400"
                     >
                       #{getOrderNumber(order)}
                     </Link>
 
-                    <p className="mt-1 text-xs text-gray-500">
+                    <p className="mt-1 text-xs text-slate-400">
                       {order?.createdAt
                         ? new Date(
                             order.createdAt
@@ -267,11 +267,11 @@ const OrderTable = ({
 
                   <td className="px-6 py-4">
 
-                    <p className="text-sm font-semibold text-gray-900">
+                    <p className="text-sm font-semibold text-slate-200">
                       {getCustomerName(order)}
                     </p>
 
-                    <p className="mt-1 max-w-[200px] truncate text-xs text-gray-500">
+                    <p className="mt-1 max-w-[200px] truncate text-xs text-slate-400">
                       {getCustomerEmail(order)}
                     </p>
 
@@ -281,7 +281,7 @@ const OrderTable = ({
 
                   <td className="px-6 py-4">
 
-                    <span className="rounded-full bg-gray-100 px-3 py-1 text-xs font-semibold text-gray-600">
+                    <span className="rounded-full border border-[#263449] bg-[#111C2E] px-3 py-1 text-xs font-semibold text-slate-300">
                       {items.length}{" "}
                       {items.length === 1
                         ? "item"
@@ -294,7 +294,7 @@ const OrderTable = ({
 
                   <td className="px-6 py-4">
 
-                    <span className="text-sm font-bold text-gray-900">
+                    <span className="text-sm font-bold text-slate-200">
                       {formatPrice(
                         getTotal(order)
                       )}
@@ -347,7 +347,7 @@ const OrderTable = ({
 
                     <Link
                       to={`/admin/orders/${orderId}`}
-                      className="inline-flex rounded-lg bg-gray-900 px-3 py-2 text-sm font-semibold text-white transition hover:bg-gray-800"
+                      className="inline-flex rounded-lg bg-sky-400 px-3 py-2 text-sm font-semibold text-[#0B1220] transition hover:bg-sky-300"
                     >
                       View
                     </Link>

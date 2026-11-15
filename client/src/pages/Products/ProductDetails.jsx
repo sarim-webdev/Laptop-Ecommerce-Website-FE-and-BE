@@ -34,8 +34,8 @@ const StarRating = ({
               type="button"
               onClick={() => onChange(star)}
               className={`${size} transition hover:scale-110 ${active
-                ? "text-cyan-400"
-                : "text-gray-700 hover:text-cyan-400"
+                ? "text-sky-400"
+                : "text-slate-700 hover:text-sky-400"
                 }`}
             >
               ★
@@ -47,8 +47,8 @@ const StarRating = ({
           <span
             key={star}
             className={`${size} ${active
-              ? "text-cyan-400"
-              : "text-gray-700"
+              ? "text-sky-400"
+              : "text-slate-700"
               }`}
           >
             ★
@@ -218,11 +218,6 @@ const ProductDetails = () => {
             limit: 10,
           }
         );
-
-      console.log(
-        "REVIEWS RESPONSE:",
-        response
-      );
 
       const data =
         response?.data ||
@@ -527,7 +522,7 @@ const ProductDetails = () => {
 
   if (loading) {
     return (
-      <main className="flex min-h-screen items-center justify-center bg-[#05070a]">
+      <main className="flex min-h-screen items-center justify-center bg-[#0B1220]">
         <Loader />
       </main>
     );
@@ -539,9 +534,9 @@ const ProductDetails = () => {
 
   if (error || !product) {
     return (
-      <main className="flex min-h-screen items-center justify-center bg-[#05070a] px-4">
+      <main className="flex min-h-screen items-center justify-center bg-[#0B1220] px-4">
 
-        <div className="w-full max-w-md rounded-3xl border border-white/10 bg-white/[0.04] p-8 text-center shadow-2xl shadow-black/40 backdrop-blur-xl">
+        <div className="w-full max-w-md rounded-3xl border border-[#263449] bg-[#111C2E] p-8 text-center shadow-2xl shadow-black/40 backdrop-blur-xl">
 
           <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-red-400/20 bg-red-500/10 text-2xl font-black text-red-400">
             !
@@ -551,14 +546,14 @@ const ProductDetails = () => {
             Product Not Found
           </h1>
 
-          <p className="mt-2 text-sm leading-6 text-gray-400">
+          <p className="mt-2 text-sm leading-6 text-slate-400">
             {error ||
               "The product you're looking for doesn't exist."}
           </p>
 
           <Link
             to="/products"
-            className="mt-6 inline-flex rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-3 text-sm font-bold text-white shadow-lg shadow-cyan-500/20 transition hover:-translate-y-0.5 hover:from-cyan-400 hover:to-blue-500"
+            className="mt-6 inline-flex rounded-xl bg-gradient-to-r from-sky-400 to-blue-600 px-6 py-3 text-sm font-bold text-white shadow-lg shadow-sky-500/20 transition hover:-translate-y-0.5 hover:from-sky-300 hover:to-blue-500"
           >
             Back to Products
           </Link>
@@ -645,41 +640,41 @@ const ProductDetails = () => {
   ========================================= */
 
   return (
-    <main className="min-h-screen bg-[#05070a] text-white">
+    <main className="min-h-screen bg-[#0B1220] text-white">
 
       {/* =========================================
           BREADCRUMB
       ========================================= */}
 
-      <div className="border-b border-white/[0.06] bg-[#070a0f]">
+      <div className="border-b border-[#263449] bg-[#111C2E]">
 
         <div className="mx-auto max-w-7xl px-4 py-5 sm:px-6 lg:px-8">
 
-          <div className="flex flex-wrap items-center gap-2 text-sm text-gray-500">
+          <div className="flex flex-wrap items-center gap-2 text-sm text-slate-400">
 
             <Link
               to="/"
-              className="transition hover:text-cyan-400"
+              className="transition hover:text-sky-400"
             >
               Home
             </Link>
 
-            <span className="text-gray-700">
+            <span className="text-slate-600">
               /
             </span>
 
             <Link
               to="/products"
-              className="transition hover:text-cyan-400"
+              className="transition hover:text-sky-400"
             >
               Products
             </Link>
 
-            <span className="text-gray-700">
+            <span className="text-slate-600">
               /
             </span>
 
-            <span className="max-w-[220px] truncate font-medium text-gray-300">
+            <span className="max-w-[220px] truncate font-medium text-slate-300">
               {name}
             </span>
 
@@ -697,7 +692,7 @@ const ProductDetails = () => {
 
         {/* Background Glow */}
 
-        <div className="pointer-events-none absolute -left-40 top-20 h-96 w-96 rounded-full bg-cyan-500/[0.06] blur-3xl" />
+        <div className="pointer-events-none absolute -left-40 top-20 h-96 w-96 rounded-full bg-sky-500/[0.06] blur-3xl" />
 
         <div className="pointer-events-none absolute -right-40 top-40 h-96 w-96 rounded-full bg-blue-600/[0.06] blur-3xl" />
 
@@ -711,9 +706,9 @@ const ProductDetails = () => {
 
             <div>
 
-              <div className="group relative overflow-hidden rounded-[28px] border border-white/10 bg-gradient-to-br from-white/[0.07] to-white/[0.025] shadow-2xl shadow-black/30 backdrop-blur-xl">
+              <div className="group relative overflow-hidden rounded-[28px] border border-[#263449] bg-gradient-to-br from-[#172338] to-[#111C2E] shadow-2xl shadow-black/30 backdrop-blur-xl">
 
-                <div className="pointer-events-none absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-500/[0.08] blur-3xl" />
+                <div className="pointer-events-none absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-sky-500/[0.08] blur-3xl" />
 
                 <div className="relative h-[400px] w-full overflow-hidden sm:h-[520px]">
 
@@ -752,10 +747,10 @@ const ProductDetails = () => {
                             productImage
                           )
                         }
-                        className={`h-20 w-20 shrink-0 overflow-hidden rounded-xl border-2 bg-white/[0.04] p-2 transition ${selectedImage ===
+                        className={`h-20 w-20 shrink-0 overflow-hidden rounded-xl border-2 bg-[#111C2E] p-2 transition ${selectedImage ===
                           productImage
-                          ? "border-cyan-400 bg-cyan-400/10 shadow-lg shadow-cyan-500/10"
-                          : "border-white/10 hover:border-cyan-400/40"
+                          ? "border-sky-400 bg-sky-400/10 shadow-lg shadow-sky-500/10"
+                          : "border-[#263449] hover:border-sky-400/40"
                           }`}
                       >
                         <img
@@ -781,7 +776,7 @@ const ProductDetails = () => {
               {/* Category */}
 
               {category && (
-                <span className="w-fit rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.15em] text-cyan-400">
+                <span className="w-fit rounded-full border border-sky-400/20 bg-sky-400/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.15em] text-sky-400">
                   {typeof category ===
                     "object"
                     ? category.name
@@ -798,9 +793,9 @@ const ProductDetails = () => {
               {/* Brand */}
 
               {brand && (
-                <p className="mt-3 text-sm font-medium text-gray-500">
+                <p className="mt-3 text-sm font-medium text-slate-400">
                   Brand:{" "}
-                  <span className="text-gray-200">
+                  <span className="text-slate-200">
                     {brand}
                   </span>
                 </p>
@@ -817,13 +812,13 @@ const ProductDetails = () => {
                   size="text-lg"
                 />
 
-                <span className="text-sm font-bold text-gray-200">
+                <span className="text-sm font-bold text-slate-200">
                   {averageRating.toFixed(
                     1
                   )}
                 </span>
 
-                <span className="text-sm text-gray-500">
+                <span className="text-sm text-slate-400">
                   ({totalReviews} reviews)
                 </span>
 
@@ -832,7 +827,7 @@ const ProductDetails = () => {
               {/* Description */}
 
               {description && (
-                <p className="mt-6 max-w-2xl leading-7 text-gray-400">
+                <p className="mt-6 max-w-2xl leading-7 text-slate-300">
                   {description}
                 </p>
               )}
@@ -851,7 +846,7 @@ const ProductDetails = () => {
                 {oldPrice &&
                   Number(oldPrice) >
                   Number(price) && (
-                    <span className="pb-1 text-lg text-gray-600 line-through">
+                    <span className="pb-1 text-lg text-slate-500 line-through">
                       $
                       {Number(
                         oldPrice
@@ -879,18 +874,18 @@ const ProductDetails = () => {
 
               {/* Divider */}
 
-              <div className="my-8 border-t border-white/[0.08]" />
+              <div className="my-8 border-t border-[#263449]" />
 
               {/* Quantity */}
 
               {!isOutOfStock && (
                 <div>
 
-                  <p className="mb-3 text-sm font-bold text-gray-300">
+                  <p className="mb-3 text-sm font-bold text-slate-300">
                     Quantity
                   </p>
 
-                  <div className="flex w-fit items-center overflow-hidden rounded-xl border border-white/10 bg-white/[0.04]">
+                  <div className="flex w-fit items-center overflow-hidden rounded-xl border border-[#263449] bg-[#111C2E]">
 
                     <button
                       type="button"
@@ -901,12 +896,12 @@ const ProductDetails = () => {
                         quantity <=
                         1
                       }
-                      className="h-11 w-11 text-lg font-bold text-gray-300 transition hover:bg-white/[0.08] hover:text-cyan-400 disabled:cursor-not-allowed disabled:opacity-40"
+                      className="h-11 w-11 text-lg font-bold text-slate-300 transition hover:bg-[#172338] hover:text-sky-400 disabled:cursor-not-allowed disabled:opacity-40"
                     >
                       −
                     </button>
 
-                    <span className="flex h-11 w-12 items-center justify-center border-x border-white/10 text-sm font-bold text-white">
+                    <span className="flex h-11 w-12 items-center justify-center border-x border-[#263449] text-sm font-bold text-white">
                       {quantity}
                     </span>
 
@@ -919,7 +914,7 @@ const ProductDetails = () => {
                         quantity >=
                         Number(stock)
                       }
-                      className="h-11 w-11 text-lg font-bold text-gray-300 transition hover:bg-white/[0.08] hover:text-cyan-400 disabled:cursor-not-allowed disabled:opacity-40"
+                      className="h-11 w-11 text-lg font-bold text-slate-300 transition hover:bg-[#172338] hover:text-sky-400 disabled:cursor-not-allowed disabled:opacity-40"
                     >
                       +
                     </button>
@@ -942,7 +937,7 @@ const ProductDetails = () => {
                     isOutOfStock ||
                     cartLoading
                   }
-                  className="flex-1 rounded-xl border border-cyan-400/40 bg-cyan-400/[0.06] px-6 py-3.5 text-sm font-bold text-cyan-400 transition hover:border-cyan-400 hover:bg-cyan-400 hover:text-black hover:shadow-lg hover:shadow-cyan-500/20 disabled:cursor-not-allowed disabled:opacity-50"
+                  className="flex-1 rounded-xl border border-sky-400/40 bg-sky-400/[0.06] px-6 py-3.5 text-sm font-bold text-sky-400 transition hover:border-sky-400 hover:bg-sky-400 hover:text-[#0B1220] hover:shadow-lg hover:shadow-sky-500/20 disabled:cursor-not-allowed disabled:opacity-50"
                 >
                   {cartLoading
                     ? "Adding..."
@@ -958,7 +953,7 @@ const ProductDetails = () => {
                     isOutOfStock ||
                     cartLoading
                   }
-                  className="flex-1 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-3.5 text-sm font-black text-white shadow-lg shadow-cyan-500/20 transition hover:-translate-y-0.5 hover:from-cyan-400 hover:to-blue-500 hover:shadow-cyan-500/30 disabled:cursor-not-allowed disabled:opacity-50"
+                  className="flex-1 rounded-xl bg-gradient-to-r from-sky-400 to-blue-600 px-6 py-3.5 text-sm font-black text-white shadow-lg shadow-sky-500/20 transition hover:-translate-y-0.5 hover:from-sky-300 hover:to-blue-500 hover:shadow-sky-500/30 disabled:cursor-not-allowed disabled:opacity-50"
                 >
                   Buy Now →
                 </button>
@@ -969,32 +964,32 @@ const ProductDetails = () => {
 
               <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-3">
 
-                <div className="rounded-xl border border-white/[0.08] bg-white/[0.035] p-4 text-center transition hover:border-cyan-400/20 hover:bg-cyan-400/[0.04]">
+                <div className="rounded-xl border border-[#263449] bg-[#111C2E] p-4 text-center transition hover:border-sky-400/20 hover:bg-[#172338]">
                   <div className="text-xl">
                     🚚
                   </div>
 
-                  <p className="mt-1 text-xs font-bold text-gray-300">
+                  <p className="mt-1 text-xs font-bold text-slate-300">
                     Fast Delivery
                   </p>
                 </div>
 
-                <div className="rounded-xl border border-white/[0.08] bg-white/[0.035] p-4 text-center transition hover:border-cyan-400/20 hover:bg-cyan-400/[0.04]">
+                <div className="rounded-xl border border-[#263449] bg-[#111C2E] p-4 text-center transition hover:border-sky-400/20 hover:bg-[#172338]">
                   <div className="text-xl">
                     🛡️
                   </div>
 
-                  <p className="mt-1 text-xs font-bold text-gray-300">
+                  <p className="mt-1 text-xs font-bold text-slate-300">
                     1-Year Warranty
                   </p>
                 </div>
 
-                <div className="rounded-xl border border-white/[0.08] bg-white/[0.035] p-4 text-center transition hover:border-cyan-400/20 hover:bg-cyan-400/[0.04]">
+                <div className="rounded-xl border border-[#263449] bg-[#111C2E] p-4 text-center transition hover:border-sky-400/20 hover:bg-[#172338]">
                   <div className="text-xl">
                     🔒
                   </div>
 
-                  <p className="mt-1 text-xs font-bold text-gray-300">
+                  <p className="mt-1 text-xs font-bold text-slate-300">
                     Secure Checkout
                   </p>
                 </div>
@@ -1012,13 +1007,13 @@ const ProductDetails = () => {
           {Object.keys(
             specifications
           ).length > 0 && (
-              <div className="mt-16 border-t border-white/[0.08] pt-10">
+              <div className="mt-16 border-t border-[#263449] pt-10">
 
                 <h2 className="text-2xl font-black text-white">
                   Specifications
                 </h2>
 
-                <div className="mt-6 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.035] backdrop-blur-xl">
+                <div className="mt-6 overflow-hidden rounded-2xl border border-[#263449] bg-[#111C2E] backdrop-blur-xl">
 
                   {Object.entries(
                     specifications
@@ -1026,17 +1021,17 @@ const ProductDetails = () => {
                     ([key, value]) => (
                       <div
                         key={key}
-                        className="grid grid-cols-1 gap-2 border-b border-white/[0.07] px-5 py-4 last:border-b-0 sm:grid-cols-2"
+                        className="grid grid-cols-1 gap-2 border-b border-[#263449] px-5 py-4 last:border-b-0 sm:grid-cols-2"
                       >
 
-                        <span className="font-semibold capitalize text-gray-500">
+                        <span className="font-semibold capitalize text-slate-400">
                           {key.replace(
                             /([A-Z])/g,
                             " $1"
                           )}
                         </span>
 
-                        <span className="text-gray-200 sm:text-right">
+                        <span className="text-slate-200 sm:text-right">
                           {String(value)}
                         </span>
 
@@ -1053,7 +1048,7 @@ const ProductDetails = () => {
               REVIEWS SECTION
           ========================================= */}
 
-          <section className="mt-20 border-t border-white/[0.08] pt-12">
+          <section className="mt-20 border-t border-[#263449] pt-12">
 
             {/* Header */}
 
@@ -1061,7 +1056,7 @@ const ProductDetails = () => {
 
               <div>
 
-                <p className="text-xs font-bold uppercase tracking-[0.2em] text-cyan-400">
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-sky-400">
                   Customer Feedback
                 </p>
 
@@ -1069,13 +1064,13 @@ const ProductDetails = () => {
                   Reviews & Ratings
                 </h2>
 
-                <p className="mt-2 text-sm text-gray-500">
+                <p className="mt-2 text-sm text-slate-400">
                   See what customers think about this product.
                 </p>
 
               </div>
 
-              <div className="text-sm text-gray-500">
+              <div className="text-sm text-slate-400">
                 {totalReviews}{" "}
                 {totalReviews === 1
                   ? "review"
@@ -1092,9 +1087,9 @@ const ProductDetails = () => {
 
               {/* Average */}
 
-              <div className="rounded-3xl border border-white/10 bg-gradient-to-br from-white/[0.06] to-white/[0.025] p-6 backdrop-blur-xl">
+              <div className="rounded-3xl border border-[#263449] bg-gradient-to-br from-[#172338] to-[#111C2E] p-6 backdrop-blur-xl">
 
-                <p className="text-xs font-bold uppercase tracking-widest text-gray-500">
+                <p className="text-xs font-bold uppercase tracking-widest text-slate-400">
                   Overall Rating
                 </p>
 
@@ -1106,7 +1101,7 @@ const ProductDetails = () => {
                     )}
                   </span>
 
-                  <span className="pb-2 text-sm text-gray-500">
+                  <span className="pb-2 text-sm text-slate-400">
                     / 5
                   </span>
 
@@ -1121,9 +1116,9 @@ const ProductDetails = () => {
                   />
                 </div>
 
-                <p className="mt-4 text-sm text-gray-500">
+                <p className="mt-4 text-sm text-slate-400">
                   Based on{" "}
-                  <span className="font-bold text-gray-300">
+                  <span className="font-bold text-slate-300">
                     {totalReviews}
                   </span>{" "}
                   customer reviews
@@ -1133,7 +1128,7 @@ const ProductDetails = () => {
 
               {/* Breakdown */}
 
-              <div className="rounded-3xl border border-white/10 bg-white/[0.035] p-6 backdrop-blur-xl">
+              <div className="rounded-3xl border border-[#263449] bg-[#111C2E] p-6 backdrop-blur-xl">
 
                 <div className="space-y-4">
 
@@ -1144,17 +1139,17 @@ const ProductDetails = () => {
                         className="flex items-center gap-3"
                       >
 
-                        <div className="flex w-10 items-center gap-1 text-sm font-bold text-gray-300">
+                        <div className="flex w-10 items-center gap-1 text-sm font-bold text-slate-300">
                           {star}
-                          <span className="text-cyan-400">
+                          <span className="text-sky-400">
                             ★
                           </span>
                         </div>
 
-                        <div className="h-2 flex-1 overflow-hidden rounded-full bg-white/[0.08]">
+                        <div className="h-2 flex-1 overflow-hidden rounded-full bg-[#263449]">
 
                           <div
-                            className="h-full rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 transition-all duration-500"
+                            className="h-full rounded-full bg-gradient-to-r from-sky-400 to-blue-500 transition-all duration-500"
                             style={{
                               width: `${getRatingPercentage(
                                 star
@@ -1164,7 +1159,7 @@ const ProductDetails = () => {
 
                         </div>
 
-                        <span className="w-10 text-right text-xs font-bold text-gray-500">
+                        <span className="w-10 text-right text-xs font-bold text-slate-400">
                           {
                             ratingCounts[
                             star
@@ -1186,7 +1181,7 @@ const ProductDetails = () => {
                 REVIEW FORM
             ===================================== */}
 
-            <div className="mt-8 rounded-3xl border border-white/10 bg-gradient-to-br from-white/[0.06] to-white/[0.025] p-6 shadow-2xl shadow-black/20 backdrop-blur-xl sm:p-8">
+            <div className="mt-8 rounded-3xl border border-[#263449] bg-gradient-to-br from-[#172338] to-[#111C2E] p-6 shadow-2xl shadow-black/20 backdrop-blur-xl sm:p-8">
 
               <div className="flex items-start justify-between gap-4">
 
@@ -1196,28 +1191,28 @@ const ProductDetails = () => {
                     Write a Review
                   </h3>
 
-                  <p className="mt-1 text-sm text-gray-500">
+                  <p className="mt-1 text-sm text-slate-400">
                     Share your experience with this product.
                   </p>
 
                 </div>
 
-                <div className="hidden h-12 w-12 items-center justify-center rounded-2xl border border-cyan-400/20 bg-cyan-400/10 text-xl text-cyan-400 sm:flex">
+                <div className="hidden h-12 w-12 items-center justify-center rounded-2xl border border-sky-400/20 bg-sky-400/10 text-xl text-sky-400 sm:flex">
                   ★
                 </div>
 
               </div>
 
               {!isAuthenticated ? (
-                <div className="mt-6 rounded-2xl border border-cyan-400/20 bg-cyan-400/[0.05] p-5">
+                <div className="mt-6 rounded-2xl border border-sky-400/20 bg-sky-400/[0.05] p-5">
 
-                  <p className="text-sm text-gray-400">
+                  <p className="text-sm text-slate-300">
                     You need to be logged in to write a review.
                   </p>
 
                   <Link
                     to="/sign-in"
-                    className="mt-4 inline-flex rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 px-5 py-2.5 text-sm font-bold text-white transition hover:from-cyan-400 hover:to-blue-500"
+                    className="mt-4 inline-flex rounded-xl bg-gradient-to-r from-sky-400 to-blue-600 px-5 py-2.5 text-sm font-bold text-white transition hover:from-sky-300 hover:to-blue-500"
                   >
                     Sign In to Review
                   </Link>
@@ -1235,7 +1230,7 @@ const ProductDetails = () => {
 
                   <div>
 
-                    <label className="text-sm font-bold text-gray-300">
+                    <label className="text-sm font-bold text-slate-300">
                       Your Rating
                     </label>
 
@@ -1258,7 +1253,7 @@ const ProductDetails = () => {
 
                   <div className="mt-6">
 
-                    <label className="text-sm font-bold text-gray-300">
+                    <label className="text-sm font-bold text-slate-300">
                       Review Title
                     </label>
 
@@ -1275,7 +1270,7 @@ const ProductDetails = () => {
                       }
                       maxLength={150}
                       placeholder="e.g. Excellent laptop!"
-                      className="mt-2 w-full rounded-xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-white outline-none placeholder:text-gray-600 transition focus:border-cyan-400/50 focus:ring-2 focus:ring-cyan-400/10"
+                      className="mt-2 w-full rounded-xl border border-[#263449] bg-[#0B1220] px-4 py-3 text-sm text-white outline-none placeholder:text-slate-500 transition focus:border-sky-400/50 focus:ring-2 focus:ring-sky-400/10"
                     />
 
                   </div>
@@ -1284,7 +1279,7 @@ const ProductDetails = () => {
 
                   <div className="mt-5">
 
-                    <label className="text-sm font-bold text-gray-300">
+                    <label className="text-sm font-bold text-slate-300">
                       Your Review
                     </label>
 
@@ -1301,10 +1296,10 @@ const ProductDetails = () => {
                       maxLength={1000}
                       rows={5}
                       placeholder="Tell other customers about your experience..."
-                      className="mt-2 w-full resize-none rounded-xl border border-white/10 bg-black/20 px-4 py-3 text-sm leading-6 text-white outline-none placeholder:text-gray-600 transition focus:border-cyan-400/50 focus:ring-2 focus:ring-cyan-400/10"
+                      className="mt-2 w-full resize-none rounded-xl border border-[#263449] bg-[#0B1220] px-4 py-3 text-sm leading-6 text-white outline-none placeholder:text-slate-500 transition focus:border-sky-400/50 focus:ring-2 focus:ring-sky-400/10"
                     />
 
-                    <p className="mt-2 text-right text-xs text-gray-600">
+                    <p className="mt-2 text-right text-xs text-slate-500">
                       {
                         reviewComment.length
                       }
@@ -1328,7 +1323,7 @@ const ProductDetails = () => {
                     disabled={
                       reviewSubmitting
                     }
-                    className="mt-5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-3 text-sm font-black text-white shadow-lg shadow-cyan-500/20 transition hover:-translate-y-0.5 hover:from-cyan-400 hover:to-blue-500 disabled:cursor-not-allowed disabled:opacity-50"
+                    className="mt-5 rounded-xl bg-gradient-to-r from-sky-400 to-blue-600 px-6 py-3 text-sm font-black text-white shadow-lg shadow-sky-500/20 transition hover:-translate-y-0.5 hover:from-sky-300 hover:to-blue-500 disabled:cursor-not-allowed disabled:opacity-50"
                   >
                     {reviewSubmitting
                       ? "Submitting..."
@@ -1352,17 +1347,17 @@ const ProductDetails = () => {
                   Customer Reviews
                 </h3>
 
-                <span className="text-sm text-gray-600">
+                <span className="text-sm text-slate-400">
                   Latest first
                 </span>
 
               </div>
 
               {reviewsLoading ? (
-                <div className="rounded-3xl border border-white/10 bg-white/[0.035] p-8 text-center">
-                  <div className="mx-auto h-8 w-8 animate-spin rounded-full border-2 border-cyan-400/20 border-t-cyan-400" />
+                <div className="rounded-3xl border border-[#263449] bg-[#111C2E] p-8 text-center">
+                  <div className="mx-auto h-8 w-8 animate-spin rounded-full border-2 border-sky-400/20 border-t-sky-400" />
 
-                  <p className="mt-4 text-sm text-gray-500">
+                  <p className="mt-4 text-sm text-slate-400">
                     Loading reviews...
                   </p>
                 </div>
@@ -1374,9 +1369,9 @@ const ProductDetails = () => {
                 </div>
               ) : productReviews.length ===
                 0 ? (
-                <div className="rounded-3xl border border-white/10 bg-white/[0.035] p-10 text-center">
+                <div className="rounded-3xl border border-[#263449] bg-[#111C2E] p-10 text-center">
 
-                  <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-cyan-400/20 bg-cyan-400/10 text-2xl text-cyan-400">
+                  <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-sky-400/20 bg-sky-400/10 text-2xl text-sky-400">
                     ★
                   </div>
 
@@ -1384,7 +1379,7 @@ const ProductDetails = () => {
                     No reviews yet
                   </h4>
 
-                  <p className="mt-2 text-sm text-gray-500">
+                  <p className="mt-2 text-sm text-slate-400">
                     Be the first customer to review this product.
                   </p>
 
@@ -1422,7 +1417,7 @@ const ProductDetails = () => {
                           key={
                             review._id
                           }
-                          className="rounded-3xl border border-white/10 bg-gradient-to-br from-white/[0.055] to-white/[0.02] p-6 backdrop-blur-xl sm:p-7"
+                          className="rounded-3xl border border-[#263449] bg-gradient-to-br from-[#172338] to-[#111C2E] p-6 backdrop-blur-xl sm:p-7"
                         >
 
                           {/* Review Header */}
@@ -1441,10 +1436,10 @@ const ProductDetails = () => {
                                   alt={
                                     reviewerName
                                   }
-                                  className="h-12 w-12 shrink-0 rounded-2xl border border-white/10 object-cover"
+                                  className="h-12 w-12 shrink-0 rounded-2xl border border-[#263449] object-cover"
                                 />
                               ) : (
-                                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-cyan-400/20 bg-cyan-400/10 text-lg font-black text-cyan-400">
+                                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-sky-400/20 bg-sky-400/10 text-lg font-black text-sky-400">
                                   {reviewerName
                                     .charAt(
                                       0
@@ -1480,7 +1475,7 @@ const ProductDetails = () => {
                                     size="text-sm"
                                   />
 
-                                  <span className="text-xs text-gray-600">
+                                  <span className="text-xs text-slate-500">
                                     {new Date(
                                       review.createdAt
                                     ).toLocaleDateString()}
@@ -1505,7 +1500,7 @@ const ProductDetails = () => {
                                         review
                                       )
                                     }
-                                    className="rounded-lg border border-white/10 bg-white/[0.04] px-3 py-2 text-xs font-bold text-gray-400 transition hover:border-cyan-400/30 hover:text-cyan-400"
+                                    className="rounded-lg border border-[#263449] bg-[#172338] px-3 py-2 text-xs font-bold text-slate-300 transition hover:border-sky-400/30 hover:text-sky-400"
                                   >
                                     Edit
                                   </button>
@@ -1548,10 +1543,10 @@ const ProductDetails = () => {
                                   review._id
                                 )
                               }
-                              className="mt-6 border-t border-white/[0.08] pt-6"
+                              className="mt-6 border-t border-[#263449] pt-6"
                             >
 
-                              <label className="text-sm font-bold text-gray-300">
+                              <label className="text-sm font-bold text-slate-300">
                                 Rating
                               </label>
 
@@ -1586,7 +1581,7 @@ const ProductDetails = () => {
                                   150
                                 }
                                 placeholder="Review title"
-                                className="mt-5 w-full rounded-xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-white outline-none placeholder:text-gray-600 focus:border-cyan-400/50"
+                                className="mt-5 w-full rounded-xl border border-[#263449] bg-[#0B1220] px-4 py-3 text-sm text-white outline-none placeholder:text-slate-500 focus:border-sky-400/50"
                               />
 
                               <textarea
@@ -1607,7 +1602,7 @@ const ProductDetails = () => {
                                 }
                                 rows={4}
                                 placeholder="Your review"
-                                className="mt-4 w-full resize-none rounded-xl border border-white/10 bg-black/20 px-4 py-3 text-sm leading-6 text-white outline-none placeholder:text-gray-600 focus:border-cyan-400/50"
+                                className="mt-4 w-full resize-none rounded-xl border border-[#263449] bg-[#0B1220] px-4 py-3 text-sm leading-6 text-white outline-none placeholder:text-slate-500 focus:border-sky-400/50"
                               />
 
                               <div className="mt-4 flex flex-wrap gap-3">
@@ -1617,7 +1612,7 @@ const ProductDetails = () => {
                                   disabled={
                                     editSubmitting
                                   }
-                                  className="rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 px-5 py-2.5 text-sm font-bold text-white disabled:opacity-50"
+                                  className="rounded-xl bg-gradient-to-r from-sky-400 to-blue-600 px-5 py-2.5 text-sm font-bold text-white disabled:opacity-50"
                                 >
                                   {editSubmitting
                                     ? "Saving..."
@@ -1629,7 +1624,7 @@ const ProductDetails = () => {
                                   onClick={
                                     handleCancelEdit
                                   }
-                                  className="rounded-xl border border-white/10 bg-white/[0.04] px-5 py-2.5 text-sm font-bold text-gray-400 transition hover:text-white"
+                                  className="rounded-xl border border-[#263449] bg-[#172338] px-5 py-2.5 text-sm font-bold text-slate-300 transition hover:text-white"
                                 >
                                   Cancel
                                 </button>
@@ -1652,7 +1647,7 @@ const ProductDetails = () => {
                               {/* Review Comment */}
 
                               {review.comment && (
-                                <p className="mt-3 leading-7 text-gray-400">
+                                <p className="mt-3 leading-7 text-slate-300">
                                   {
                                     review.comment
                                   }

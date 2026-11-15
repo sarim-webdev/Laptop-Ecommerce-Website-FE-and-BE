@@ -1,19 +1,10 @@
 import User from "../models/User.js";
 
-import {
-  hashPassword,
-  comparePassword,
-} from "../utils/hashPassword.js";
+import { hashPassword, comparePassword } from "../utils/hashPassword.js";
 
-import {
-  successResponse,
-  errorResponse,
-} from "../utils/apiResponse.js";
+import { successResponse, errorResponse } from "../utils/apiResponse.js";
 
-import {
-  uploadImage,
-  deleteImage,
-} from "../services/cloudinaryService.js";
+import { uploadImage, deleteImage } from "../services/cloudinaryService.js";
 
 /* =========================================
    GET PROFILE
@@ -26,19 +17,10 @@ export const getProfile = async (req, res, next) => {
     const user = await User.findById(userId).select("-password");
 
     if (!user) {
-      return errorResponse(
-        res,
-        404,
-        "User not found"
-      );
+      return errorResponse(res, 404, "User not found");
     }
 
-    return successResponse(
-      res,
-      200,
-      "Profile fetched successfully",
-      user
-    );
+    return successResponse(res, 200, "Profile fetched successfully", user);
   } catch (error) {
     next(error);
   }
@@ -56,42 +38,26 @@ export const updateProfile = async (req, res, next) => {
   try {
     const userId = req.user.id;
 
-    const {
-      name,
-      email,
-      phone,
-      address,
-    } = req.body;
+    const { name, email, phone, address } = req.body;
 
     const user = await User.findById(userId);
 
     if (!user) {
-      return errorResponse(
-        res,
-        404,
-        "User not found"
-      );
+      return errorResponse(res, 404, "User not found");
     }
 
     /* =========================================
        CHECK EMAIL DUPLICATE
     ========================================= */
 
-    if (
-      email &&
-      email.toLowerCase() !== user.email
-    ) {
+    if (email && email.toLowerCase() !== user.email) {
       const existingUser = await User.findOne({
         email: email.toLowerCase(),
         _id: { $ne: userId },
       });
 
       if (existingUser) {
-        return errorResponse(
-          res,
-          409,
-          "Email is already registered"
-        );
+        return errorResponse(res, 409, "Email is already registered");
       }
 
       user.email = email.toLowerCase();
@@ -122,8 +88,7 @@ export const updateProfile = async (req, res, next) => {
 
       if (user.addresses.length > 0) {
         // Existing address update
-        user.addresses[0].address =
-          trimmedAddress;
+        user.addresses[0].address = trimmedAddress;
       } else if (trimmedAddress) {
         // Create first address
         user.addresses.push({
@@ -148,15 +113,13 @@ export const updateProfile = async (req, res, next) => {
        GET UPDATED USER
     ========================================= */
 
-    const updatedUser = await User.findById(
-      userId
-    ).select("-password");
+    const updatedUser = await User.findById(userId).select("-password");
 
     return successResponse(
       res,
       200,
       "Profile updated successfully",
-      updatedUser
+      updatedUser,
     );
   } catch (error) {
     next(error);
@@ -167,62 +130,39 @@ export const updateProfile = async (req, res, next) => {
    CHANGE PASSWORD
 ========================================= */
 
-export const changePassword = async (
-  req,
-  res,
-  next
-) => {
+export const changePassword = async (req, res, next) => {
   try {
     const userId = req.user.id;
 
-    const {
-      currentPassword,
-      newPassword,
-    } = req.body;
+    const { currentPassword, newPassword } = req.body;
 
-    const user = await User.findById(
-      userId
-    ).select("+password");
+    const user = await User.findById(userId).select("+password");
 
     if (!user) {
-      return errorResponse(
-        res,
-        404,
-        "User not found"
-      );
+      return errorResponse(res, 404, "User not found");
     }
 
     /* =========================================
        CHECK CURRENT PASSWORD
     ========================================= */
 
-    const isMatch = await comparePassword(
-      currentPassword,
-      user.password
-    );
+    const isMatch = await comparePassword(currentPassword, user.password);
 
     if (!isMatch) {
-      return errorResponse(
-        res,
-        401,
-        "Current password is incorrect"
-      );
+      return errorResponse(res, 401, "Current password is incorrect");
     }
 
     /* =========================================
        CHECK SAME PASSWORD
     ========================================= */
 
-    const samePassword = await comparePassword(
-      newPassword,
-      user.password
-    );
+    const samePassword = await comparePassword(newPassword, user.password);
 
     if (samePassword) {
       return errorResponse(
         res,
         400,
-        "New password must be different from current password"
+        "New password must be different from current password",
       );
     }
 
@@ -230,16 +170,11 @@ export const changePassword = async (
        HASH NEW PASSWORD
     ========================================= */
 
-    user.password =
-      await hashPassword(newPassword);
+    user.password = await hashPassword(newPassword);
 
     await user.save();
 
-    return successResponse(
-      res,
-      200,
-      "Password changed successfully"
-    );
+    return successResponse(res, 200, "Password changed successfully");
   } catch (error) {
     next(error);
   }
@@ -249,40 +184,25 @@ export const changePassword = async (
    UPLOAD AVATAR
 ========================================= */
 
-export const uploadAvatar = async (
-  req,
-  res,
-  next
-) => {
+export const uploadAvatar = async (req, res, next) => {
   try {
     const userId = req.user.id;
 
     if (!req.file) {
-      return errorResponse(
-        res,
-        400,
-        "Please upload an avatar image"
-      );
+      return errorResponse(res, 400, "Please upload an avatar image");
     }
 
     const user = await User.findById(userId);
 
     if (!user) {
-      return errorResponse(
-        res,
-        404,
-        "User not found"
-      );
+      return errorResponse(res, 404, "User not found");
     }
 
     /* =========================================
        UPLOAD NEW AVATAR TO CLOUDINARY
     ========================================= */
 
-    const image = await uploadImage(
-      req.file.buffer,
-      "nexora/profiles"
-    );
+    const image = await uploadImage(req.file.buffer, "nexora/profiles");
 
     /* =========================================
        DELETE OLD AVATAR
@@ -290,15 +210,8 @@ export const uploadAvatar = async (
 
     if (user.avatar?.publicId) {
       try {
-        await deleteImage(
-          user.avatar.publicId
-        );
-      } catch (error) {
-        console.error(
-          "Old avatar deletion failed:",
-          error.message
-        );
-      }
+        await deleteImage(user.avatar.publicId);
+      } catch (error) {}
     }
 
     /* =========================================
@@ -312,15 +225,13 @@ export const uploadAvatar = async (
 
     await user.save();
 
-    const updatedUser = await User.findById(
-      userId
-    ).select("-password");
+    const updatedUser = await User.findById(userId).select("-password");
 
     return successResponse(
       res,
       200,
       "Avatar uploaded successfully",
-      updatedUser
+      updatedUser,
     );
   } catch (error) {
     next(error);
@@ -331,22 +242,14 @@ export const uploadAvatar = async (
    DELETE AVATAR
 ========================================= */
 
-export const deleteAvatar = async (
-  req,
-  res,
-  next
-) => {
+export const deleteAvatar = async (req, res, next) => {
   try {
     const userId = req.user.id;
 
     const user = await User.findById(userId);
 
     if (!user) {
-      return errorResponse(
-        res,
-        404,
-        "User not found"
-      );
+      return errorResponse(res, 404, "User not found");
     }
 
     /* =========================================
@@ -354,20 +257,14 @@ export const deleteAvatar = async (
     ========================================= */
 
     if (!user.avatar?.publicId) {
-      return errorResponse(
-        res,
-        404,
-        "No avatar found"
-      );
+      return errorResponse(res, 404, "No avatar found");
     }
 
     /* =========================================
        DELETE FROM CLOUDINARY
     ========================================= */
 
-    await deleteImage(
-      user.avatar.publicId
-    );
+    await deleteImage(user.avatar.publicId);
 
     /* =========================================
        REMOVE AVATAR FROM DATABASE
@@ -380,15 +277,13 @@ export const deleteAvatar = async (
 
     await user.save();
 
-    const updatedUser = await User.findById(
-      userId
-    ).select("-password");
+    const updatedUser = await User.findById(userId).select("-password");
 
     return successResponse(
       res,
       200,
       "Avatar deleted successfully",
-      updatedUser
+      updatedUser,
     );
   } catch (error) {
     next(error);

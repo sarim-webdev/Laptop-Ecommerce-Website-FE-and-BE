@@ -69,8 +69,8 @@ const AdminSidebar = ({ isOpen, onClose }) => {
       <aside
         className={`
           fixed left-0 top-0 z-50 flex h-screen w-72 flex-col
-          border-r border-white/10
-          bg-[#05080d]
+          border-r border-[#263449]
+          bg-[#0B1220]
           shadow-2xl shadow-black/40
           transition-transform duration-300
           lg:static lg:z-auto lg:translate-x-0
@@ -82,11 +82,11 @@ const AdminSidebar = ({ isOpen, onClose }) => {
             LOGO / BRAND
         ========================================= */}
 
-        <div className="relative flex h-16 shrink-0 items-center justify-between border-b border-white/10 px-5">
+        <div className="relative flex h-16 shrink-0 items-center justify-between border-b border-[#263449] px-5">
 
           {/* Subtle Glow */}
 
-          <div className="pointer-events-none absolute -left-10 top-0 h-20 w-32 rounded-full bg-cyan-500/10 blur-3xl" />
+          <div className="pointer-events-none absolute -left-10 top-0 h-20 w-32 rounded-full bg-sky-400/10 blur-3xl" />
 
           <NavLink
             to="/admin"
@@ -96,11 +96,11 @@ const AdminSidebar = ({ isOpen, onClose }) => {
 
             {/* Logo Icon */}
 
-            <div className="flex h-9 w-9 items-center justify-center rounded-xl border border-cyan-400/20 bg-gradient-to-br from-cyan-400/20 to-blue-600/20 shadow-lg shadow-cyan-500/10">
+            <div className="flex h-9 w-9 items-center justify-center rounded-xl border border-sky-400/20 bg-gradient-to-br from-sky-400/20 to-blue-600/20 shadow-lg shadow-sky-500/10">
 
               <Store
                 size={19}
-                className="text-cyan-400"
+                className="text-sky-400"
               />
 
             </div>
@@ -110,11 +110,11 @@ const AdminSidebar = ({ isOpen, onClose }) => {
 
             <div>
 
-              <h1 className="bg-gradient-to-r from-white via-cyan-100 to-cyan-400 bg-clip-text text-lg font-black tracking-[0.15em] text-transparent">
+              <h1 className="bg-gradient-to-r from-white via-sky-100 to-sky-400 bg-clip-text text-lg font-black tracking-[0.15em] text-transparent">
                 NEXORA
               </h1>
 
-              <p className="text-[9px] font-semibold uppercase tracking-[0.2em] text-gray-600">
+              <p className="text-[9px] font-semibold uppercase tracking-[0.2em] text-slate-400">
                 Administration
               </p>
 
@@ -128,7 +128,7 @@ const AdminSidebar = ({ isOpen, onClose }) => {
           <button
             type="button"
             onClick={onClose}
-            className="rounded-xl border border-white/10 p-2 text-gray-500 transition-all duration-300 hover:border-red-400/20 hover:bg-red-400/10 hover:text-red-400 lg:hidden"
+            className="rounded-xl border border-[#263449] p-2 text-slate-400 transition-all duration-300 hover:border-red-400/20 hover:bg-red-400/10 hover:text-red-400 lg:hidden"
             aria-label="Close menu"
           >
             <X size={20} />
@@ -145,7 +145,7 @@ const AdminSidebar = ({ isOpen, onClose }) => {
 
           {/* Management Label */}
 
-          <p className="mb-3 px-3 text-[10px] font-bold uppercase tracking-[0.2em] text-gray-600">
+          <p className="mb-3 px-3 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">
             Management
           </p>
 
@@ -169,23 +169,22 @@ const AdminSidebar = ({ isOpen, onClose }) => {
                     rounded-xl px-3 py-3
                     text-sm font-medium
                     transition-all duration-300
-                    ${
-                      isActive
-                        ? `
-                          border border-cyan-400/20
+                    ${isActive
+                      ? `
+                          border border-sky-400/20
                           bg-gradient-to-r
-                          from-cyan-400/15
-                          to-blue-500/5
+                          from-sky-400/15
+                          to-blue-600/5
                           text-white
                           shadow-lg
-                          shadow-cyan-500/5
+                          shadow-sky-500/5
                         `
-                        : `
+                      : `
                           border border-transparent
-                          text-gray-500
-                          hover:border-white/5
-                          hover:bg-white/[0.04]
-                          hover:text-gray-200
+                          text-slate-300
+                          hover:border-[#263449]
+                          hover:bg-[#172338]
+                          hover:text-white
                         `
                     }
                     `
@@ -196,7 +195,7 @@ const AdminSidebar = ({ isOpen, onClose }) => {
                       {/* Active Indicator */}
 
                       {isActive && (
-                        <span className="absolute left-0 top-1/2 h-6 w-0.5 -translate-y-1/2 rounded-full bg-cyan-400 shadow-lg shadow-cyan-400/60" />
+                        <span className="absolute left-0 top-1/2 h-6 w-0.5 -translate-y-1/2 rounded-full bg-sky-400 shadow-lg shadow-sky-400/60" />
                       )}
 
 
@@ -206,10 +205,9 @@ const AdminSidebar = ({ isOpen, onClose }) => {
                         size={19}
                         className={`
                           transition-all duration-300
-                          ${
-                            isActive
-                              ? "text-cyan-400"
-                              : "text-gray-600 group-hover:text-cyan-400"
+                          ${isActive
+                            ? "text-sky-400"
+                            : "text-slate-400 group-hover:text-sky-400"
                           }
                         `}
                       />
@@ -225,7 +223,7 @@ const AdminSidebar = ({ isOpen, onClose }) => {
                       {/* Active Glow Dot */}
 
                       {isActive && (
-                        <span className="ml-auto h-1.5 w-1.5 rounded-full bg-cyan-400 shadow-lg shadow-cyan-400/70" />
+                        <span className="ml-auto h-1.5 w-1.5 rounded-full bg-sky-400 shadow-lg shadow-sky-400/70" />
                       )}
 
                     </>
@@ -243,21 +241,20 @@ const AdminSidebar = ({ isOpen, onClose }) => {
 
           <div className="mt-8">
 
-            <p className="mb-3 px-3 text-[10px] font-bold uppercase tracking-[0.2em] text-gray-600">
+            <p className="mb-3 px-3 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">
               Store
             </p>
 
 
             <NavLink
               to="/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center gap-3 rounded-xl border border-transparent px-3 py-3 text-sm font-medium text-gray-500 transition-all duration-300 hover:border-cyan-400/10 hover:bg-cyan-400/5 hover:text-gray-200"
+              onClick={onClose}
+              className="group flex items-center gap-3 rounded-xl border border-transparent px-3 py-3 text-sm font-medium text-slate-300 transition-all duration-300 hover:border-sky-400/20 hover:bg-sky-400/10 hover:text-sky-400"
             >
 
               <Store
                 size={19}
-                className="text-gray-600 transition-colors duration-300 group-hover:text-cyan-400"
+                className="text-slate-400 transition-colors duration-300 group-hover:text-sky-400"
               />
 
               <span>
@@ -266,7 +263,7 @@ const AdminSidebar = ({ isOpen, onClose }) => {
 
               <ExternalLink
                 size={15}
-                className="ml-auto text-gray-700 transition-colors duration-300 group-hover:text-cyan-400"
+                className="ml-auto text-slate-400 transition-colors duration-300 group-hover:text-sky-400"
               />
 
             </NavLink>
@@ -280,15 +277,15 @@ const AdminSidebar = ({ isOpen, onClose }) => {
             BOTTOM SECTION
         ========================================= */}
 
-        <div className="shrink-0 border-t border-white/10 p-4">
+        <div className="shrink-0 border-t border-[#263449] p-4">
 
           {/* System Status Card */}
 
-          <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-[#0c131d] via-[#091019] to-[#05080d] p-4">
+          <div className="relative overflow-hidden rounded-2xl border border-[#263449] bg-gradient-to-br from-[#172338] via-[#111C2E] to-[#0B1220] p-4">
 
             {/* Glow */}
 
-            <div className="pointer-events-none absolute -right-8 -top-8 h-24 w-24 rounded-full bg-cyan-500/10 blur-2xl" />
+            <div className="pointer-events-none absolute -right-8 -top-8 h-24 w-24 rounded-full bg-sky-400/10 blur-2xl" />
 
 
             <div className="relative">
@@ -305,7 +302,7 @@ const AdminSidebar = ({ isOpen, onClose }) => {
 
                 </span>
 
-                <span className="text-xs font-semibold text-gray-300">
+                <span className="text-xs font-semibold text-slate-300">
                   System Online
                 </span>
 
@@ -314,7 +311,7 @@ const AdminSidebar = ({ isOpen, onClose }) => {
 
               {/* Description */}
 
-              <p className="text-[11px] leading-5 text-gray-600">
+              <p className="text-[11px] leading-5 text-slate-400">
                 NEXORA administration panel is running normally.
               </p>
 
@@ -325,7 +322,7 @@ const AdminSidebar = ({ isOpen, onClose }) => {
 
           {/* Copyright */}
 
-          <p className="mt-4 text-center text-[10px] font-medium text-gray-700">
+          <p className="mt-4 text-center text-[10px] font-medium text-slate-400">
             © {new Date().getFullYear()} NEXORA
           </p>
 

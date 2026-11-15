@@ -344,10 +344,10 @@ const ProductForm = ({
           BASIC INFORMATION
       ========================================= */}
 
-      <section className="rounded-2xl border border-slate-800 bg-slate-950 p-6 shadow-xl shadow-slate-950/20">
+      <section className="rounded-2xl border border-[#263449] bg-[#0B1220] p-6 shadow-xl shadow-black/20">
 
         <div className="mb-6 flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-cyan-500/10 text-cyan-400">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-sky-400/10 text-sky-400">
             <Package size={20} />
           </div>
 
@@ -385,7 +385,7 @@ const ProductForm = ({
               onChange={handleChange}
               placeholder="e.g. NEXORA ProBook X1"
               disabled={loading}
-              className="w-full rounded-xl border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 disabled:opacity-50"
+              className="w-full rounded-xl border border-[#263449] bg-[#111C2E] px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-400 focus:border-sky-400 focus:ring-2 focus:ring-sky-400/20 disabled:opacity-50"
             />
           </div>
 
@@ -407,7 +407,7 @@ const ProductForm = ({
               onChange={handleChange}
               placeholder="Write a detailed product description..."
               disabled={loading}
-              className="w-full resize-none rounded-xl border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 disabled:opacity-50"
+              className="w-full resize-none rounded-xl border border-[#263449] bg-[#111C2E] px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-400 focus:border-sky-400 focus:ring-2 focus:ring-sky-400/20 disabled:opacity-50"
             />
           </div>
         </div>
@@ -417,7 +417,7 @@ const ProductForm = ({
           PRICING & INVENTORY
       ========================================= */}
 
-      <section className="rounded-2xl border border-slate-800 bg-slate-950 p-6 shadow-xl shadow-slate-950/20">
+      <section className="rounded-2xl border border-[#263449] bg-[#0B1220] p-6 shadow-xl shadow-black/20">
 
         <div className="mb-6">
           <h2 className="text-lg font-bold text-white">
@@ -451,7 +451,7 @@ const ProductForm = ({
               onChange={handleChange}
               placeholder="0.00"
               disabled={loading}
-              className="w-full rounded-xl border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
+              className="w-full rounded-xl border border-[#263449] bg-[#111C2E] px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-400 focus:border-sky-400 focus:ring-2 focus:ring-sky-400/20"
             />
           </div>
 
@@ -475,7 +475,7 @@ const ProductForm = ({
               onChange={handleChange}
               placeholder="0"
               disabled={loading}
-              className="w-full rounded-xl border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
+              className="w-full rounded-xl border border-[#263449] bg-[#111C2E] px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-400 focus:border-sky-400 focus:ring-2 focus:ring-sky-400/20"
             />
           </div>
 
@@ -495,7 +495,7 @@ const ProductForm = ({
               value={formData.category}
               onChange={handleChange}
               disabled={loading}
-              className="w-full rounded-xl border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white outline-none transition focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
+              className="w-full rounded-xl border border-[#263449] bg-[#111C2E] px-4 py-3 text-sm text-white outline-none transition focus:border-sky-400 focus:ring-2 focus:ring-sky-400/20"
             >
               <option value="">
                 Select category
@@ -540,14 +540,14 @@ const ProductForm = ({
               onChange={handleChange}
               placeholder="e.g. NEXORA"
               disabled={loading}
-              className="w-full rounded-xl border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
+              className="w-full rounded-xl border border-[#263449] bg-[#111C2E] px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-400 focus:border-sky-400 focus:ring-2 focus:ring-sky-400/20"
             />
           </div>
         </div>
 
         {/* Featured */}
 
-        <div className="mt-6 rounded-xl border border-slate-800 bg-slate-900 p-4">
+        <div className="mt-6 rounded-xl border border-[#263449] bg-[#111C2E] p-4">
           <label className="flex cursor-pointer items-center gap-3">
 
             <input
@@ -556,7 +556,7 @@ const ProductForm = ({
               checked={formData.featured}
               onChange={handleChange}
               disabled={loading}
-              className="h-4 w-4 rounded border-slate-600 bg-slate-800 text-cyan-500 focus:ring-cyan-500"
+              className="h-4 w-4 rounded border-[#263449] bg-[#0B1220] text-sky-400 focus:ring-sky-400"
             />
 
             <span>
@@ -564,7 +564,7 @@ const ProductForm = ({
                 Featured Product
               </span>
 
-              <span className="mt-0.5 block text-xs text-slate-500">
+              <span className="mt-0.5 block text-xs text-slate-400">
                 Show this product in featured
                 sections.
               </span>
@@ -577,7 +577,7 @@ const ProductForm = ({
           PRODUCT IMAGES
       ========================================= */}
 
-      <section className="rounded-2xl border border-slate-800 bg-slate-950 p-6 shadow-xl shadow-slate-950/20">
+      <section className="rounded-2xl border border-[#263449] bg-[#0B1220] p-6 shadow-xl shadow-black/20">
 
         <div className="mb-6">
           <h2 className="text-lg font-bold text-white">
@@ -591,9 +591,9 @@ const ProductForm = ({
 
         <label
           htmlFor="images"
-          className="flex cursor-pointer flex-col items-center justify-center rounded-2xl border-2 border-dashed border-slate-700 bg-slate-900 px-6 py-10 text-center transition hover:border-cyan-500 hover:bg-cyan-500/5"
+          className="flex cursor-pointer flex-col items-center justify-center rounded-2xl border-2 border-dashed border-[#263449] bg-[#111C2E] px-6 py-10 text-center transition hover:border-sky-400 hover:bg-sky-400/10"
         >
-          <div className="flex h-14 w-14 items-center justify-center rounded-full bg-cyan-500/10 text-cyan-400">
+          <div className="flex h-14 w-14 items-center justify-center rounded-full bg-sky-400/10 text-sky-400">
             <Upload size={24} />
           </div>
 
@@ -601,7 +601,7 @@ const ProductForm = ({
             Click to upload images
           </p>
 
-          <p className="mt-1 text-xs text-slate-500">
+          <p className="mt-1 text-xs text-slate-400">
             PNG, JPG, JPEG or WEBP · Max 5 images
           </p>
 
@@ -625,7 +625,7 @@ const ProductForm = ({
               (preview, index) => (
                 <div
                   key={`${preview}-${index}`}
-                  className="group relative aspect-square overflow-hidden rounded-xl border border-slate-700 bg-slate-900"
+                  className="group relative aspect-square overflow-hidden rounded-xl border border-[#263449] bg-[#111C2E]"
                 >
                   <img
                     src={preview}
@@ -653,7 +653,7 @@ const ProductForm = ({
           SPECIFICATIONS
       ========================================= */}
 
-      <section className="rounded-2xl border border-slate-800 bg-slate-950 p-6 shadow-xl shadow-slate-950/20">
+      <section className="rounded-2xl border border-[#263449] bg-[#0B1220] p-6 shadow-xl shadow-black/20">
 
         <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
 
@@ -672,7 +672,7 @@ const ProductForm = ({
             type="button"
             onClick={addSpecification}
             disabled={loading}
-            className="inline-flex items-center justify-center gap-2 rounded-xl bg-cyan-500 px-4 py-2.5 text-sm font-bold text-slate-950 transition hover:bg-cyan-400 disabled:opacity-50"
+            className="inline-flex items-center justify-center gap-2 rounded-xl bg-sky-400 px-4 py-2.5 text-sm font-bold text-[#0B1220] transition hover:bg-sky-300 disabled:opacity-50"
           >
             <Plus size={17} />
             Add Specification
@@ -682,12 +682,12 @@ const ProductForm = ({
         <div className="mt-6 space-y-3">
 
           {specifications.length === 0 && (
-            <div className="rounded-xl border border-dashed border-slate-700 px-5 py-8 text-center">
-              <p className="text-sm font-medium text-slate-400">
+            <div className="rounded-xl border border-dashed border-[#263449] px-5 py-8 text-center">
+              <p className="text-sm font-medium text-slate-300">
                 No specifications added.
               </p>
 
-              <p className="mt-1 text-xs text-slate-600">
+              <p className="mt-1 text-xs text-slate-400">
                 Click "Add Specification" to add
                 product details.
               </p>
@@ -698,7 +698,7 @@ const ProductForm = ({
             (specification, index) => (
               <div
                 key={index}
-                className="flex flex-col gap-3 rounded-xl border border-slate-800 bg-slate-900 p-4 sm:flex-row"
+                className="flex flex-col gap-3 rounded-xl border border-[#263449] bg-[#111C2E] p-4 sm:flex-row"
               >
                 <input
                   type="text"
@@ -712,7 +712,7 @@ const ProductForm = ({
                   }
                   placeholder="Key e.g. RAM"
                   disabled={loading}
-                  className="flex-1 rounded-lg border border-slate-700 bg-slate-950 px-3 py-2.5 text-sm text-white outline-none placeholder:text-slate-600 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
+                  className="flex-1 rounded-lg border border-[#263449] bg-[#0B1220] px-3 py-2.5 text-sm text-white outline-none placeholder:text-slate-400 focus:border-sky-400 focus:ring-2 focus:ring-sky-400/20"
                 />
 
                 <input
@@ -727,7 +727,7 @@ const ProductForm = ({
                   }
                   placeholder="Value e.g. 16GB"
                   disabled={loading}
-                  className="flex-1 rounded-lg border border-slate-700 bg-slate-950 px-3 py-2.5 text-sm text-white outline-none placeholder:text-slate-600 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
+                  className="flex-1 rounded-lg border border-[#263449] bg-[#0B1220] px-3 py-2.5 text-sm text-white outline-none placeholder:text-slate-400 focus:border-sky-400 focus:ring-2 focus:ring-sky-400/20"
                 />
 
                 <button
@@ -768,7 +768,7 @@ const ProductForm = ({
             type="button"
             onClick={onCancel}
             disabled={loading}
-            className="rounded-xl border border-slate-700 bg-slate-900 px-6 py-3 text-sm font-semibold text-slate-300 transition hover:bg-slate-800 disabled:opacity-50"
+            className="rounded-xl border border-[#263449] bg-[#111C2E] px-6 py-3 text-sm font-semibold text-slate-300 transition hover:bg-[#172338] disabled:opacity-50"
           >
             Cancel
           </button>
@@ -777,7 +777,7 @@ const ProductForm = ({
         <button
           type="submit"
           disabled={loading}
-          className="rounded-xl bg-cyan-500 px-6 py-3 text-sm font-bold text-slate-950 shadow-lg shadow-cyan-500/10 transition hover:bg-cyan-400 disabled:cursor-not-allowed disabled:opacity-50"
+          className="rounded-xl bg-sky-400 px-6 py-3 text-sm font-bold text-[#0B1220] shadow-lg shadow-sky-500/10 transition hover:bg-sky-300 disabled:cursor-not-allowed disabled:opacity-50"
         >
           {loading
             ? "Saving..."
